@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.38.2" />
+
+
+<title>そろそろ日記をリニューアルしたい（有言不実行） -  野村政行の「堪忍袋の緒を締めろ！」</title>
+<meta property="og:title" content="そろそろ日記をリニューアルしたい（有言不実行） -  野村政行の「堪忍袋の緒を締めろ！」">
+
+
+
+  
+
+
+
+
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/solid.js" integrity="sha384-Q7KAHqDd5trmfsv85beYZBsUmw0lsreFBQZfsEhzUtUn5HhpjVzwY0Aq4z8DY9sA" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/brands.js" integrity="sha384-6jhVhr5a+Z1nLr9h+fd7ocMEo847wnGFelCHddaOOACUeZNoQwFXTxh4ysXVam8u" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/fontawesome.js" integrity="sha384-M2FSA4xMm1G9m4CNXM49UcDHeWcDZNucAlz1WVHxohug0Uw1K+IpUhp/Wjg0y6qG" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="http://diary.a3size.com/css/main.min.css" media="all">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="http://diary.a3size.com/" class="nav-logo">
+    <img src="http://diary.a3size.com/images/title.svg" alt="野村政行の「堪忍袋の緒を締めろ！」">
+  </a>
+
+  <ul class="nav-links">
+    
+      
+      <li><a href="/tags"><i class="fas fa-tags"></i> Tags</a></li>
+      
+    
+      
+      <li><a href="/about/"><i class="fas fa-info-circle"></i> About</a></li>
+      
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article">
+    
+    <span class="article-date"><i class="fas fa-book"></i> 2017-08-30</span>
+    
+    <h1 class="article-title">そろそろ日記をリニューアルしたい（有言不実行）</h1>
+
+    <div class="article-content">
+      <p>ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろうか、と何度も考えていた。</p>
+
+<p>で、CMSの入れ替えとなると日記データの互換性が気になるわけだ。試しにネット上で見つけたコンバーターを利用させていただいてWordPressにぶっ込むテストをしてみたら、うーん。おおよそは上手くコンバートできているが、ちょくちょくおかしなところもあり。一つ一つの日記を丁寧に確認作業するとして、えーと投稿数は、……「932」ですか。うへぇ。一番古い日記(このCMSになってから)が2004年3月だもんなぁ。最近は全然日記書いていなかったけれども、チリも積もれば山となる。駄文も折り重ねれば月に届く。そうしてまた今日の分も書いているので、またコンバート対象の日記が増えるわけですよ。<a href="http://www.ginei.jp/" target="_blank">銀河の歴史がまた一ページ</a>ですよ。</p>
+
+<p>ところで、かなり今更ながら<a href="https://www.docker.com/" target="_blank">Docker</a>は便利だ、という話を、そういえばこの日記に記していなかったと思い唐突に書き留めておく。</p>
+
+<p>テスト用のdocker-compose.ymlなどいくつかのファイルを準備しておいて、今回みたいに「ちょっとWordPress立ち上げてみよう」と思ったらコピペしてちょいちょいっとすれば、作業用のWordPressがローカルPC内に立ち上がるという。これは便利すぎる。</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">version:<span style="color:#666"> </span><span style="color:#ed9d13">&#39;3&#39;</span><span style="color:#666">
+</span><span style="color:#666"></span>services:<span style="color:#666">
+</span><span style="color:#666">    </span>db:<span style="color:#666">
+</span><span style="color:#666">        </span>container_name:<span style="color:#666"> </span>a3size-db<span style="color:#666">
+</span><span style="color:#666">        </span>image:<span style="color:#666"> </span>mysql:latest<span style="color:#666">
+</span><span style="color:#666">        </span>volumes:<span style="color:#666">
+</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./db:/var/lib/mysql<span style="color:#666">
+</span><span style="color:#666">        </span>env_file:<span style="color:#666"> </span>.env<span style="color:#666">
+</span><span style="color:#666">    </span>wordpress:<span style="color:#666">
+</span><span style="color:#666">        </span>container_name:<span style="color:#666"> </span>a3size-web<span style="color:#666">
+</span><span style="color:#666">        </span>depends_on:<span style="color:#666">
+</span><span style="color:#666">            </span>-<span style="color:#666"> </span>db<span style="color:#666">
+</span><span style="color:#666">        </span>image:<span style="color:#666"> </span>wordpress:latest<span style="color:#666">
+</span><span style="color:#666">        </span>ports:<span style="color:#666">
+</span><span style="color:#666">            </span>-<span style="color:#666"> </span><span style="color:#3677a9">8080</span>:<span style="color:#3677a9">80</span><span style="color:#666">
+</span><span style="color:#666">        </span>volumes:<span style="color:#666">
+</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./wp_html:/var/www/html<span style="color:#666">
+</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./public/wp-content/plugins:/var/www/html/wp-content/plugins<span style="color:#666">
+</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./public/wp-content/themes/a3size:/var/www/html/wp-content/themes/a3size<span style="color:#666">
+</span><span style="color:#666">        </span>env_file:<span style="color:#666"> </span>.env</code></pre></div>
+<p>詳しいことは気が向いたら書くことにする。そもそも今日はこんなことを書きたかったわけではなく、生存報告が目的なので。</p>
+
+    </div>
+ 
+    <hr>
+    <ul class="article-taxonomy">
+      
+    
+      
+      <li>
+        <i class="fas fa-tags"></i> <a href="/tags/a3size">a3size</a>
+      </li>
+      
+    </ul>
+  </article>
+
+</main>
+
+
+<ul class="page-links">
+  <li>
+    
+    <a href="http://diary.a3size.com/2017/05/31/" aria-label="Previous"><span aria-hidden="true"><i class="fas fa-angle-left"></i> 前へ</span></a>
+    
+  </li>
+  <li>
+    
+    <a href="http://diary.a3size.com/2018/01/04/" aria-label="Next"><span aria-hidden="true">次へ <i class="fas fa-angle-right"></i></span></a>
+    
+  </li>
+</ul>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          
+            
+            <li><a href="http://diary.a3size.com/index.xml" type="application/rss+xml" target="_blank"><i class="fas fa-rss"></i> RSSフィード</a></li>
+          
+          
+            
+            <li><a href="https://twitter.com/king_nomura" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            
+          
+            
+            <li><a href="https://www.facebook.com/nomura.masayuki" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            
+          
+            
+            <li><a href="https://github.com/king-nomura" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+            
+          
+        </ul>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
+

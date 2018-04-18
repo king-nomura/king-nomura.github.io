@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A3size on  野村政行の「堪忍袋の緒を締めろ！」</title>
+    <link>http://diary.a3size.com/tags/a3size/</link>
+    <description>Recent content in A3size on  野村政行の「堪忍袋の緒を締めろ！」</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>nomura masayuki</copyright>
+    <lastBuildDate>Wed, 30 Aug 2017 03:00:01 +0000</lastBuildDate>
+    
+	<atom:link href="http://diary.a3size.com/tags/a3size/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>そろそろ日記をリニューアルしたい（有言不実行）</title>
+      <link>http://diary.a3size.com/2017/08/30/</link>
+      <pubDate>Wed, 30 Aug 2017 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2017/08/30/</guid>
+      <description>ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろう</description>
+    </item>
+    
+    <item>
+      <title>約7年以上ぶりにPCを組み立てた話・序</title>
+      <link>http://diary.a3size.com/2016/07/16/</link>
+      <pubDate>Sat, 16 Jul 2016 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2016/07/16/</guid>
+      <description>メインマシンをMacにしてから7年が経った。Windowsは仮想化アプリを使ってMac内で立ち上げるものとなってしまい、自作PCはすっかりオ</description>
+    </item>
+    
+    <item>
+      <title>サーバ設定の変更テスト中です</title>
+      <link>http://diary.a3size.com/2014/04/06/</link>
+      <pubDate>Sun, 06 Apr 2014 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2014/04/06/</guid>
+      <description>あーあー。 テストテスト。 只今マイクのテスト中。 あ、そうそう「パトレイバー」の実写版を観ましたよ。第1話は押井守節が全開でもう楽しくて仕方なか</description>
+    </item>
+    
+    <item>
+      <title>最近観た映画メモ</title>
+      <link>http://diary.a3size.com/2014/02/05/</link>
+      <pubDate>Wed, 05 Feb 2014 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2014/02/05/</guid>
+      <description>もう2月かぁ。確定申告の季節だねぇ。 この数ヶ月で観た映画の中では「ゼロ・グラビティ」と「かぐや姫の物語」が心に刺さりまくった。ストーリーは既</description>
+    </item>
+    
+    <item>
+      <title>日記の設定を微調整</title>
+      <link>http://diary.a3size.com/2011/04/19/</link>
+      <pubDate>Tue, 19 Apr 2011 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2011/04/19/</guid>
+      <description>iPhone用（というか横が480pxのデバイス用）のスタイルをCSSに書き加えたり、FeedBurnerを試験的に導入してみたりと、ちょこ</description>
+    </item>
+    
+    <item>
+      <title>tDiary3.0.0を導入した</title>
+      <link>http://diary.a3size.com/2010/08/28/</link>
+      <pubDate>Sat, 28 Aug 2010 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2010/08/28/</guid>
+      <description>本日はRubyのイベントが行われているようで、その席上でtDiaryの3系が正式リリースされたそうだ。 というわけで早速アップデート。何が変わ</description>
+    </item>
+    
+    <item>
+      <title>Windows7 RC 64bit版を試す</title>
+      <link>http://diary.a3size.com/2009/05/09/</link>
+      <pubDate>Sat, 09 May 2009 03:00:02 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2009/05/09/</guid>
+      <description>RC版が公開されたということで、自宅のPCにWindows7をインストールしてみた。XPとのデュアルブート環境になる。 OSのインストール自体</description>
+    </item>
+    
+    <item>
+      <title>tDiary 2.3.1</title>
+      <link>http://diary.a3size.com/2008/10/20/</link>
+      <pubDate>Mon, 20 Oct 2008 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2008/10/20/</guid>
+      <description>tDiaryの最新版（開発版）にアップデートした。アップデート直後にエラーが出たので慌てて以前のバージョンに戻そうとしたんだが、FTPで4年</description>
+    </item>
+    
+    <item>
+      <title>tDiary 2.2.1</title>
+      <link>http://diary.a3size.com/2008/03/02/</link>
+      <pubDate>Sun, 02 Mar 2008 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2008/03/02/</guid>
+      <description>粛々とバージョンアップ。ツッコミコメント欄の挙動が変わったらしい。 ところで、最近、WindowsではなくLinux(Xubuntu)のOpe</description>
+    </item>
+    
+    <item>
+      <title>日記消えた＆RSSについて</title>
+      <link>http://diary.a3size.com/2007/12/29/</link>
+      <pubDate>Sat, 29 Dec 2007 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2007/12/29/</guid>
+      <description>昨日の朝、ネットが繋がったので一行だけ日記書いたつもりだったのに夜に見たら消えていた……。いや確かに書いたんだ！会社の人も見たって言ってたも</description>
+    </item>
+    
+  </channel>
+</rss>

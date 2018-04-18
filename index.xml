@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> 野村政行の「堪忍袋の緒を締めろ！」</title>
+    <link>http://diary.a3size.com/</link>
+    <description>Recent content on  野村政行の「堪忍袋の緒を締めろ！」</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>nomura masayuki</copyright>
+    <lastBuildDate>Tue, 13 Feb 2018 03:00:01 +0000</lastBuildDate>
+    
+        <atom:link href="http://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>Macの音声入力で日記を書くテスト</title>
+      <link>http://diary.a3size.com/2018/02/13/</link>
+      <pubDate>Tue, 13 Feb 2018 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2018/02/13/</guid>
+      <description>&lt;p&gt;流行に乗っかって、この文章マックの音声入力で書いてみている。新しい行新しい行&lt;/p&gt;
+
+&lt;p&gt;この文章ハ3回目。久々に変なシャベリカタをしていてキモチ悪い。人間サマが、マックに合わせて、喋り方を変えてやっている。なんて親切だ。&lt;/p&gt;
+
+&lt;p&gt;音声入力でプログラムを書くには、それなりの設定とそれなりの訓練が必要そう。ダイタイにして、日本語と英語をごちゃまぜにしゃべっているのはよくない。いふへ留守番。ほらね、まくいかない。&lt;/p&gt;
+
+&lt;p&gt;あと、自分の妄想お口に出してイルのが、かなり恥ずかしい。うまく変換されないので、さらに文章が恥ずかしい。&lt;/p&gt;
+
+&lt;p&gt;シャベルのが疲れてきた。うん、照れるったほうが早いような気がする。そんなに発音悪いのかなあ。それともマイクが遠いのかな。それともしゃべる速度がマックに会っていないのかな。マックがカタカナになるの気持ち悪い。マクドと区別がつかない。&lt;/p&gt;
+
+&lt;p&gt;文章を書きながら、書き直したいなと何度も思うのに、音声入力を止めたくないからどんどんおかしな文章が出来上がっていく。Backspaceがほしい。あるのかな。なんでバックスペースちゃんと英語になるのはてな?新しい行&lt;/p&gt;
+
+&lt;p&gt;酸素が足りない。喋るの飽きた。おしまい。おしマイケル。&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Intel ME FWを自己責任でアップデートした</title>
+      <link>http://diary.a3size.com/2018/02/09/</link>
+      <pubDate>Fri, 09 Feb 2018 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2018/02/09/</guid>
+      <description>&lt;p&gt;もう二か月以上も前の話題なのだが、&lt;a href=&#34;https://www.intel.co.jp/content/www/jp/ja/support/articles/000025619/software.html56&#34; target=&#34;_blank&#34;&gt;インテル® マネジメント・エンジンの重要なファームウェア・アップデート (Intel-SA-00086)&lt;/a&gt;という事案があって。今ググったら、初報は去年の11月だった、えらい前の話で恐縮でございます。要するに、IntelのCPUにセキュリティ上の問題がみつかったのでマザーボードの会社のサイトから配布されるIntel ME(Management Engine)のFW(ファームウェア)アップデートをやってくれ、ということだった。&lt;/p&gt;
+
+&lt;p&gt;というわけで、使用しているMSI社のH170 GAMING M3について、BIOSのアップデートがあるものだと思ってぼぉーっと二か月も待っていたのだが、新しい世代のマザーボードについてはアナウンスがあったがH170チップセット系のマザーボードについては一向に該当のアップデートが来る気配がない。もはやH170なんて過去のものだ、そんなものに貴重な開発リソースを割くことはできない、と。世間の風は冷たい。&lt;/p&gt;
+
+&lt;p&gt;メーカーがやってくれないなら、自己責任で対策すればいいじゃない。&lt;/p&gt;
+
+&lt;p&gt;というわけで、自己責任でIntel ME FWを広大なネットの海のどこからか拾ってきて適用した。参考にさせていただいたのは、こちらです。(&lt;a href=&#34;http://www.nozoana.work/article/455978527.html&#34; target=&#34;_blank&#34;&gt;i7 8700KのIntel ME FWを、MSI Z370 Tomahawkからアップデートしてみた～Intel H170/H270/Z170/Z270/Z370シリーズのIntel MEファームウェアを更新する方法～: ログヲーク ～仮想通貨や日々思ったことの日記～&lt;/a&gt;)。&lt;/p&gt;
+
+&lt;p&gt;自作PCブームの初期の頃は、ハードウェアのパッケージに付属しているドライバ類はバージョンが古いので、最新のドライバをネットで探してくるのは当たり前の作業だった。その際に、販売元(海外メーカーの日本代理店)のWebサイトは情報が古かったりメンテナンスされていないことが多かったので、製造元や場合によっては使用されているチップのメーカーのサイトからダウンロードしてきたりした。更には同じメーカーの別のチップのドライバを設定ファイルをちょっといじって強引に突っ込んだりした。ただし、結構な確率でOSが立ち上がらなくなる。それでも、壊れてもいいからやってみようと思えば、案外いろんなことができる。&lt;/p&gt;
+
+&lt;p&gt;そんな感じで、要はIntel ME FWをどこから見つけてくるか、なのだが、上記の記事を参考にして、&lt;a href=&#34;http://www.station-drivers.com/index.php?option=com_remository&amp;amp;Itemid=352&amp;amp;func=startdown&amp;amp;id=3303&amp;amp;lang=en&#34; target=&#34;_blank&#34;&gt;Intel Management Engine (ME / AMT) Firmware Version 11.8.50.3434 (S &amp;amp; H) (5MB)&lt;/a&gt;を適用することにした。このstation-drivers.comが安全なサイトかどうか確信は持てない、というあたりが自己責任な部分で、今回のケースではあとは「最新のマザーボードに買い直す」くらいしか選択肢がないからまあいいかな、と。&lt;/p&gt;
+
+&lt;p&gt;無事ファームウェアをアップデートして、Intelのサイトにある「intel-sa-00086 検出ツール」で対策完了を確認。終わり。&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>2017年に観た映画について</title>
+      <link>http://diary.a3size.com/2018/01/04/</link>
+      <pubDate>Thu, 04 Jan 2018 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2018/01/04/</guid>
+      <description>&lt;p&gt;この日記をWordPressに移行しようと思って、どうせやるならデザイン変えようと思って、そう思っていたらなんと年を越していた。壮大な「やるやる詐欺」に自分がハマっている。毎年春先には開店休業状態になるので、その頃にWordPressに引っ越すことにしよう。そうしよう。&lt;/p&gt;
+
+&lt;p&gt;というわけで、とりあえず今年も一年間で観た映画の記録をまとめた。例によってランキング風ではあるが厳密では無いし、そもそも今思い返してみて「ああ、もう一度観てみたいなぁ」と思ったかどうかのランキングなので。良かったかどうかとは微妙に違うかも知れない。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/e/2PACX-1vRpc5DX-Aw_6eeZjT3SFNZBCz7tVNKTpFox77lW_kG6-2KQHiQY0erbuITxNp0_DopC3KJ00qJuo1xz/pubhtml?gid=432144618&amp;amp;single=true&#34; target=&#34;_blank&#34;&gt;もう一度観たい映画2017&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    
+    
+    <item>
+      <title>そろそろ日記をリニューアルしたい（有言不実行）</title>
+      <link>http://diary.a3size.com/2017/08/30/</link>
+      <pubDate>Wed, 30 Aug 2017 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2017/08/30/</guid>
+      <description>&lt;p&gt;ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろうか、と何度も考えていた。&lt;/p&gt;
+
+&lt;p&gt;で、CMSの入れ替えとなると日記データの互換性が気になるわけだ。試しにネット上で見つけたコンバーターを利用させていただいてWordPressにぶっ込むテストをしてみたら、うーん。おおよそは上手くコンバートできているが、ちょくちょくおかしなところもあり。一つ一つの日記を丁寧に確認作業するとして、えーと投稿数は、……「932」ですか。うへぇ。一番古い日記(このCMSになってから)が2004年3月だもんなぁ。最近は全然日記書いていなかったけれども、チリも積もれば山となる。駄文も折り重ねれば月に届く。そうしてまた今日の分も書いているので、またコンバート対象の日記が増えるわけですよ。&lt;a href=&#34;http://www.ginei.jp/&#34; target=&#34;_blank&#34;&gt;銀河の歴史がまた一ページ&lt;/a&gt;ですよ。&lt;/p&gt;
+
+&lt;p&gt;ところで、かなり今更ながら&lt;a href=&#34;https://www.docker.com/&#34; target=&#34;_blank&#34;&gt;Docker&lt;/a&gt;は便利だ、という話を、そういえばこの日記に記していなかったと思い唐突に書き留めておく。&lt;/p&gt;
+
+&lt;p&gt;テスト用のdocker-compose.ymlなどいくつかのファイルを準備しておいて、今回みたいに「ちょっとWordPress立ち上げてみよう」と思ったらコピペしてちょいちょいっとすれば、作業用のWordPressがローカルPC内に立ち上がるという。これは便利すぎる。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-YAML&#34; data-lang=&#34;YAML&#34;&gt;version:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#ed9d13&#34;&gt;&amp;#39;3&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;&lt;/span&gt;services:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;    &lt;/span&gt;db:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;        &lt;/span&gt;container_name:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;a3size-db&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;        &lt;/span&gt;image:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;mysql:latest&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;        &lt;/span&gt;volumes:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;            &lt;/span&gt;-&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;./db:/var/lib/mysql&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;        &lt;/span&gt;env_file:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;.env&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;    &lt;/span&gt;wordpress:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;        &lt;/span&gt;container_name:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;a3size-web&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;        &lt;/span&gt;depends_on:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;            &lt;/span&gt;-&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;db&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;        &lt;/span&gt;image:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;wordpress:latest&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;        &lt;/span&gt;ports:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;            &lt;/span&gt;-&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#3677a9&#34;&gt;8080&lt;/span&gt;:&lt;span style=&#34;color:#3677a9&#34;&gt;80&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;        &lt;/span&gt;volumes:&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;            &lt;/span&gt;-&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;./wp_html:/var/www/html&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;            &lt;/span&gt;-&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;./public/wp-content/plugins:/var/www/html/wp-content/plugins&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;            &lt;/span&gt;-&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;./public/wp-content/themes/a3size:/var/www/html/wp-content/themes/a3size&lt;span style=&#34;color:#666&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;        &lt;/span&gt;env_file:&lt;span style=&#34;color:#666&#34;&gt; &lt;/span&gt;.env&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;詳しいことは気が向いたら書くことにする。そもそも今日はこんなことを書きたかったわけではなく、生存報告が目的なので。&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>ハイラル城に入りたくない</title>
+      <link>http://diary.a3size.com/2017/05/31/</link>
+      <pubDate>Wed, 31 May 2017 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2017/05/31/</guid>
+      <description>&lt;p&gt;日記の更新がすっかり滞っている。本当はOculus Riftで遊んでみたゲームの考察とか3D酔いの話を書きたかったんだが、急に&lt;a href=&#34;https://www.nintendo.co.jp/zelda/&#34; target=&#34;_blank&#34;&gt;ハイラル平原を駆け巡りたくなって&lt;/a&gt;(更にいえば、「スプラトゥーン2」のための待機)、それのせいで色々なゲームを中断せざるを得ない状況になり。そのうちにいよいよハイラル城の中に入らねばならない状況に追い込まれた（＝ラスボスと戦え）のだが、ゴリ押しでなんとか生き延びてきたウデマエの英雄に何を期待しているのだ怖くてそんなん無理無理！と、ずっと崖を登って現実逃避している。ゲームの中でも現実逃避とは、そもそもゲームの中の現実とは一体。&lt;/p&gt;
+
+&lt;p&gt;そういえば最近、東京近郊の手軽に登れる山にいくつか行ってみたのだが、崖をみるたびに登れそうな錯覚や、尾根から尾根にパラセールで移動したくなる妄想が起こる。現実とは一体。&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>今年観た映画の話</title>
+      <link>http://diary.a3size.com/2016/12/26/</link>
+      <pubDate>Mon, 26 Dec 2016 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2016/12/26/</guid>
+      <description>&lt;p&gt;今年は秋からものすごく忙しくなってしまって、あまり映画を観に行けなかった。もう今年は観に行けなさそうなので、今年も&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1mXWmPNwnH5qu4sd4G8VrnFbaUzctMnXxY6HetVUh5Xg/pubhtml?gid=1123529751&amp;#038;single=true&#34; target=&#34;_blank&#34;&gt;もう一度観たい映画ランキング&lt;/a&gt;にまとめてみた。&lt;/p&gt;
+
+&lt;p&gt;異論は認める。&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>最近遊んだゲームの話</title>
+      <link>http://diary.a3size.com/2016/10/22/</link>
+      <pubDate>Sat, 22 Oct 2016 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2016/10/22/</guid>
+      <description>&lt;p&gt;本当に偶然なのだ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://store.steampowered.com/?l=japa
+nese&#34; target=&#34;_blank&#34;&gt;Steam&lt;/a&gt;のバーゲンのときについ勢いで買ったまま、インストールもせずに放っておかれていたゲームを遊ぼうと思ったのだ。Windows機も組み上がったことだしね。&lt;/p&gt;
+
+&lt;p&gt;で、以前から気になっていた「&lt;a href=&#34;http://www.jp.square-enix.com/lis/&#34; target=&#34;_blank&#34;&gt;Life is Strange&lt;/a&gt;」をプレイした。同ジャンルだと「&lt;a href=&#34;http://www.jp.playstation.com/software/title/bcjs30040.html&#34; target=&#34;_blank&#34;&gt;Heavy Rain&lt;/a&gt;」などの&lt;a href=&#34;http://www.quanticdream.com/fr/&#34; target=&#34;_blank&#34;&gt;quantic dream&lt;/a&gt;が有名だが、これはパブリッシャーはSquare Enix、開発はフランスのDONTNODというスタジオらしい。&lt;/p&gt;
+
+&lt;p&gt;いやぁ、泣いたわぁ。ベタな展開なのに。&lt;/p&gt;
+
+&lt;p&gt;ストーリーをなぞっていくゲームなのでネタバレしないが、ともかく主人公の時間を巻き戻せるという能力に絡んだ話で。&lt;/p&gt;
+
+&lt;p&gt;で、偶然このゲームをプレイし終えた頃に、国産ADVで非常に評判の高かった「&lt;a href=&#34;https://ja.m.wikipedia.org/wiki/STEINS;GATE&#34; target=&#34;_blank&#34;&gt;STEINS;GATE&lt;/a&gt;」がSteamでDL販売を開始して。昔の作品でアニメ化もされたのでストーリーをご存知の方も多いと思うが、これも主人公が時間を巻き戻せる能力を手に入れる話なのだ。&lt;/p&gt;
+
+&lt;p&gt;いやぁ、泣いたわぁ。アニメみてストーリー知っていたのに、それが目の前で再現されているのがもう。ゲームが先とかアニメが先とかどうでもいいのよ。面白ければ！&lt;/p&gt;
+
+&lt;p&gt;つまり、だ。もしもやり直せるのならああしたかった、というifの感情というか。人生百点満点を取りたいのでリセットマラソンをするというか。「STEINS;GATE」のようにエロゲーのフォーマットを踏襲しているタイプのゲームの場合は特にわかりやすいが、全ての可能性の先（エンディング）を確認したいという欲求があってだな。その欲求に素直な作品っていうだけで、分かりやすくて面白い。&lt;/p&gt;
+
+&lt;p&gt;ひょっとするとライトノベルで定番の「ある日突然異世界に行っちゃったら英雄になった」的なifも、根幹で同じような感情を揺さぶられるから面白いのだろうか。&lt;/p&gt;
+
+&lt;p&gt;で。&lt;/p&gt;
+
+&lt;p&gt;今話題の映画「&lt;a href=&#34;http://www.kiminona.com/index.html&#34; target=&#34;_blank&#34;&gt;君の名は&lt;/a&gt;」も観たわけですよ。お分かりいただけるだろうか。未見の方には分からないオチで申し訳ない。&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>VRに感動した</title>
+      <link>http://diary.a3size.com/2016/10/18/</link>
+      <pubDate>Tue, 18 Oct 2016 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2016/10/18/</guid>
+      <description>&lt;p&gt;ここまでの日記で、そこそこの金額と労力を費やしてOculus RiftによるVR環境を構築したことを書いた。そう、安くないんだ。なので、この買い物の結果、一体どんな知見や感動が手に入ったのかはとても重要なのだ。&lt;/p&gt;
+
+&lt;p&gt;Oculus Rift、というかVRのファーストインプレッションは「やべぇ時代が来ちまったぜ」だった。……みんなそういうよね、はい。&lt;/p&gt;
+
+&lt;p&gt;もうちょっと自分なりに掘り下げてみる。&lt;/p&gt;
+
+&lt;p&gt;まず驚いたのは、ぐるり水平方向の前後左右360°が描かれていることよりも、天地、特に足下が描かれていることのインパクトだった。Oculus Riftの初回起動時に出てくるデモコンテンツの中に高層建造物の上の鉄骨から街を見下ろすというデモがあって、足下の更に下をのぞき込むことができた。頭を動かすとちゃんとのぞき込めるのだ。深淵を覗くならば、……いやそうじゃなくて。カメラの映像からでは見えないもの、隠れていたもの、横側や裏側に回り込める感覚はとても新鮮だ。&lt;/p&gt;
+
+&lt;p&gt;3D映画は「視点」を立体視するものだ。監督が意図した視点、画角とフォーカスを観客は強制される。飛び出てくるものをみているのは監督であり、装置を介してそれを共有している。それに対してVRは、少なくとも視点に関しては観客の自由になる。みたいと思ったところをみることができる。俯瞰してもいいし、みたいものだけに寄って見てもいい。&lt;/p&gt;
+
+&lt;p&gt;昨今のオープンワールド型のゲームにおいてストーリー上どうしてもユーザーに見てもらう必要があるシーンでは、カメラはコントロールされなければならないため、「イベントシーン」として通常のゲーム画面と区別される。この、「コントロールを奪う状態」をVRではどうやって実装するのだろうか。ゲーム作者側の腕の見せ所となるだろう。&lt;/p&gt;
+
+&lt;p&gt;例えばゲーム内で「映像」をみているなどの「見立て」をするか、ユーザーが乗り物に乗っていて「正面」を見ざるを得なくするか。いずれにせよ、ユーザーの目を奪い取れない以上は、ユーザーに「こっちを見て！」とお願いすることになるのだろう。&lt;/p&gt;
+
+&lt;p&gt;正面といえば。ビックリするほど自分が向いている方向が分からなくなる。ゲームを終えてOculus Riftのホーム画面に戻ったり、Oculus Riftを外してみると、PCのディスプレイに対してまっすぐ立っていたつもりが斜めになっていたりする。流石に後ろを向いているということはないが。&lt;/p&gt;
+
+&lt;p&gt;恐らく、微妙に現実の向きとVR上の向きがズレていくのだろう。そのせいなのか、これまた微妙に体が宙に浮いているというか、目の高さがずれている気もする。これらはチューニングで解決できるのか、またはVRの限界なのか……。3Dメガネとは全然違って、体が持っていかれる感じがするのだ。&lt;/p&gt;
+
+&lt;p&gt;そしてVR酔いである。普段から乗り物に弱いせいなのか、やはり酔う。これは辛い。目線を逸らせられないのだ。映画館の3Dメガネは、疲れたら外したり目を逸らせばいい。だが、VRはずっと眼球の前に映像が出ている。下を向いても地面が仮想空間なのだと脳の何処かが気づいてしまって、ゾゾっとくるのだ。&lt;/p&gt;
+
+&lt;p&gt;VR酔いについては様々な研究がされているようだが、まだ確実な原因や対策の発見には至っていないようなので、これからの研究に期待したい。&lt;/p&gt;
+
+&lt;p&gt;まぁともかく。VRでMinecraftの世界に入ったときの感動はとても大きく、VRってスゲーというとてもチープな感想でしか日記をまとめられない自分がちっぽけにみえるのですよ。&lt;/p&gt;
+
+&lt;p&gt;ところでVR専用のエッチなゲームが出るようなのですが、経費で落ちますかね。&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>約7年以上ぶりにPCを組み立てた話・終「シミュレーション不足」</title>
+      <link>http://diary.a3size.com/2016/09/28/</link>
+      <pubDate>Wed, 28 Sep 2016 03:00:01 +0000</pubDate>
+      
+      <guid>http://diary.a3size.com/2016/09/28/</guid>
+      <description>&lt;p&gt;前回までの&lt;a href=&#34;http://www.jp.square-enix.com/lis/&#34; target=&#34;_blank&#34;&gt;おっさん is Strange&lt;/a&gt;は：Windows 7のインストールは順調に進んだ。&lt;/p&gt;
+
+&lt;p&gt;起動したWindows 7にまずはドライバをぶち込んでいく。ぼやぼやしているとWindows Updateに先を越されるから、急がねば。昔のようにインストールにクセのあるドライバは無かったが、相変わらず各社とも色んな不思議なユーティリティをぶち込んでくる。DOSとかWindows 9xくらいまではMicrosoft標準ドライバでは機能やパフォーマンスが足りなかったので、各社のドライバや独自ユーティリティがどうしても必要だった。今ではその役割も薄れて、むしろ玄人ならうまいこと「インストールしないように」するものだ、というのが暗黙の了解になっている気がする。玄人しかPCを組み立てようと思わないはずなのに不思議だね。まぁ今回は、この数年Windows機を組み立てていなかったので最近は便利なものもあるのかも知れない、というころでユーティリティ類は一旦素直に入れてみることにした。動作が重くなるなら外すし、何ならWindowsから再インストールするさ。このマシンはメイン機じゃないからね。&lt;/p&gt;
+
+&lt;p&gt;そしてWindows 7をアップデートしていく。コレをやらないとWindows 10にアップグレードできないし、やれたとしても何らかの事情で7にダウングレードする必要に迫られたときが面倒だと思ったからだ。小一時間（もっとかかったかな？）が経過して、Windows 7が安定動作していることを確認したら、いよいよアップグレード用のおせっかいウィンドウをクリックする。&lt;/p&gt;
+
+&lt;p&gt;どれくらいの時間が過ぎただろうか。別の世界では存在していたWindows 9が一瞬画面を横切り(ウソです)、Windows 10がやってくる。成功だ。ではさっそくMicrosoftアカウントを紐付けして……。&lt;/p&gt;
+
+&lt;p&gt;「＠」が「”」になってしまう。もしかして、キーボードが日本語配列？まただよ。ま・た・だ・ヨ！どうしてLogitech diNovo Edgeはいつも英語配列と認識されてくれないんだヨ！Logitechのドライバやユーティリティは何をしているんだヨ！&lt;/p&gt;
+
+&lt;p&gt;大体、Windowsのインストール時には英語配列を選択しているのに、インストールが終わったら日本語配列になっているんだから、んもーぅ。そこから、レジストリやキーボードのドライバをあれやこれやして英語配列だと気づかせる作業にまた小一時間を費やす。毎回、どういう手順が正解なのか分からないままいつの間にか認識されてしまうから困ったもんだ。&lt;/p&gt;
+
+&lt;p&gt;さて、あらかた準備は終わった。最後に取り付けるのは、Oculus Riftだ。ようやく……、ようやく辿り着いたぞ。&lt;/p&gt;
+
+&lt;p&gt;Oculus Riftの箱を開ける。特徴的なヘッドセットと、マイクスタンドのようなセンサー、その他リモコンとXBox用コントローラーが付属している。ヘッドセットからHDMIとUSBケーブル、センサーからもUSBケーブルが出ているのでさっそく繋ごう。&lt;/p&gt;
+
+&lt;p&gt;……あれ？HDMI端子はディスプレイに繋いでいるぞ？ひょっとして、端子が足りない？……そうか、普段使用するディスプレイ用とは別に、Oculus Rift専用のHDMI端子が必要なのか！気づかなかったー！Oculus Riftのページで何度も必要スペック確認していたのに、全然気づいていなかったよ！&lt;/p&gt;
+
+&lt;p&gt;ビデオボードにはDVI-DやDisplay Portの端子もあるが、ディスプレイ側の端子が足りない。ディスプレイ側のDVI-DはMacBook Proに繋いでいるし、あとはD-Sub15……、アナログで繋ぐって……、さすがに嫌だなぁ。&lt;/p&gt;
+
+&lt;p&gt;とりあえずディスプレイをマザーボードのHDMI端子に繋ぎかえてみるも、ビデオボードがあるせいでオンボードのVGA機能は無効になっている。この日記を書くに当たって改めてマザーボードのBIOSを確認すると、初期値ではオンボードVGAのマルチモニター機能が無効化されていたが、これを有効化すればよかったようだ。だがこのときはBIOS設定にまで気が回らずに別のアイディアが浮かんだ。USBディスプレイを繋げばいいんじゃないか？と。&lt;/p&gt;
+
+&lt;p&gt;押し入れからUSB接続の小型ディスプレイを引っ張り出してくる。接続するとドライバのインストールが自動的に始まり、しばらくすると無事画面が映った。画面は小さいながらもこれでなんとかインストールが再開できるだろう、と思いきや。Oculus Riftのドライバインストールは何度試しても、途中で必ず失敗する。もしやと思い検索すると、どうやらUSBディスプレイのドライバはOculus Riftのドライバ競合してしまうらしい。んもーぅ。&lt;/p&gt;
+
+&lt;p&gt;今回のPC組み立ては万事この調子で、とにかく事前調査不足が祟って先に進まなくなってばかりだった。すっかり勘が鈍ったんだなぁ。&lt;/p&gt;
+
+&lt;p&gt;次の日(組み立てはじめてから3日目)、Display PortをHDMIに変換するアダプタを買ってきた。これによりビデオボードのDisplay PortをHDMIに変換してディスプレイに、本来のHDMIにはOculus Riftを繋ぐことができた。やっと完成だ。長かった……。&lt;/p&gt;
+</description>
+    </item>
+    
+    
+  </channel>
+</rss>
