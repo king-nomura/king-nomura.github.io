@@ -1,0 +1,229 @@
+<html>
+<head>
+  <title>野村政行のこだわり日記</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<link rel="stylesheet" href="/mnomura/diary.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" text="#000033" leftmargin="0" marginwidth="0" topmargin="10" marginheight="10" link="#0033FF" vlink="#333333" alink="#6699CC">
+<a href="/mnomura/index.html"><img src="/mnomura/images/toppage.gif" width="65" height="15" border="0"></a>
+<table width="535" border="0" cellspacing="0" cellpadding="0">
+  <tr align="center" bgcolor="#FFFFFF"> 
+    <td width="67"><a href="/mnomura/log/machine.html"><img src="/mnomura/images/machine.gif" width="46" height="46" vspace="5" alt="機械いじり" border="0"></a></td>
+    <td width="66"><a href="/mnomura/log/anime.html"><img src="/mnomura/images/anime.gif" width="46" height="46" vspace="5" alt="まんが・アニメ・映画" border="0"></a></td>
+    <td width="66"><a href="/mnomura/log/music.html"><img src="/mnomura/images/music.gif" width="46" height="46" vspace="5" alt="音楽" border="0"></a></td>
+    <td width="66"><a href="/mnomura/log/network.html"><img src="/mnomura/images/network.gif" width="46" height="46" vspace="5" alt="ネットワーク" border="0"></a></td>
+    <td width="66"><a href="/mnomura/log/social.html"><img src="/mnomura/images/news.gif" width="46" height="46" vspace="5" alt="時事・社会" border="0"></a></td>
+    <td width="66"><a href="/mnomura/log/gourmet.html"><img src="/mnomura/images/gourmet.gif" width="46" height="46" vspace="5" alt="食生活" border="0"></a></td>
+    <td width="66"><a href="/mnomura/log/subculture.html"><img src="/mnomura/images/sub-culture.gif" width="46" height="46" vspace="5" alt="サブカルチャー" border="0"></a></td>
+    <td width="66"><a href="/mnomura/log/etc.html"><img src="/mnomura/images/etc.gif" width="46" height="46" vspace="5" alt="雑談" border="0"></a></td>
+  </tr>
+</table>
+<table width="109" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="46"><img src="/mnomura/images/spacer.gif" width="122" height="45" border="0" alt="0"></td>
+    <td width="47"><a href="/mnomura/diary/20031021.html"><img src="/mnomura/images/next.gif" width="45" height="27" border="0" alt="next"></a></td>
+  </tr>
+</table>
+<table width="535" border="0" cellspacing="0" cellpadding="0" class="column">
+  <tr>
+    <td><img src="/mnomura/images/spacer.gif" width="118" height="1" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="54" height="1" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="363" height="1" alt="" border="0"></td>
+  </tr>
+  <tr>
+    <td align="right" class="date">2003-10-20<br>
+      20:18</td>
+    <td align="center"><a href="/mnomura/log/network.html"><img src="/mnomura/images/network.gif" width="46" height="46" vspace="5" alt="ネットワーク" border="0"></a></td>
+    <td class="title">spam対策</td>
+  </tr>
+</table>
+<table width="535" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="114"><img src="/mnomura/images/spacer.gif" width="118" height="2" alt="" border="0"></td>
+    <td width="54"><img src="/mnomura/images/spacer.gif" width="54" height="2" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="328" height="2" alt="" border="0"></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2" align="center" height="20">&nbsp;</td>
+    <td height="20" valign="top" class="text"><p>しばらくspamを収集したりしてみたが、一向に面白くないので、やはりフィルタリングすることにした。<a href="http://www.nakka.com/soft/npop/" target="_blank">nPOP</a>で。恐らく、誰にも役に立たないだろうがメモっておく。<br>
+      特徴は、
+          <br>
+          1. 海外からのメールらしきものは削除(Content-Typeにcharset=iso-8859-1、 Dateが-0400)。<br>
+          2. multipartじゃないHTMLの削除(Content-Typeがtext/html)。論外。<br>
+          3. User-AgentやX-Mailerが怪しい。また、Microsoftという単語が入っていた場合は、忌み嫌うことにした。<br>
+          4. メールにX-Priority(重要度)を設定しているような輩には消えていただく。</p>
+      <p class="textsmall">        FILTER-0_Enable=1<br>
+        FILTER-0_Action=3<br>
+        FILTER-0_Header1=&quot;Content-Type:&quot;<br>
+        FILTER-0_Content1=&quot;*charset=&quot;iso-8859-1&quot;*&quot;<br>
+        FILTER-0_Header2=<br>
+        FILTER-0_Content2=<br>
+        FILTER-1_Enable=1<br>
+        FILTER-1_Action=3<br>
+        FILTER-1_Header1=&quot;Content-Type:&quot;<br>
+        FILTER-1_Content1=&quot;*charset=us-ascii*&quot;<br>
+        FILTER-1_Header2=<br>
+        FILTER-1_Content2=<br>
+        FILTER-2_Enable=1<br>
+        FILTER-2_Action=3<br>
+        FILTER-2_Header1=&quot;User-Agent:&quot;<br>
+        FILTER-2_Content1=&quot;AOL 7.0 for Windows US*&quot;<br>
+        FILTER-2_Header2=<br>
+        FILTER-2_Content2=<br>
+        FILTER-3_Enable=1<br>
+        FILTER-3_Action=3<br>
+        FILTER-3_Header1=&quot;X-Mailer:&quot;<br>
+        FILTER-3_Content1=&quot;The Bat! *&quot;<br>
+        FILTER-3_Header2=<br>
+        FILTER-3_Content2=<br>
+        FILTER-4_Enable=1<br>
+        FILTER-4_Action=3<br>
+        FILTER-4_Header1=&quot;X-Mailer:&quot;<br>
+        FILTER-4_Content1=&quot;Microsoft *&quot;<br>
+        FILTER-4_Header2=<br>
+        FILTER-4_Content2=<br>
+        FILTER-5_Enable=1<br>
+        FILTER-5_Action=3<br>
+        FILTER-5_Header1=&quot;Date:&quot;<br>
+        FILTER-5_Content1=&quot;*0400*&quot;<br>
+        FILTER-5_Header2=<br>
+        FILTER-5_Content2=<br>
+        FILTER-6_Enable=1<br>
+        FILTER-6_Action=3<br>
+        FILTER-6_Header1=&quot;Content-Type:&quot;<br>
+        FILTER-6_Content1=&quot;text/html&quot;<br>
+        FILTER-6_Header2=<br>
+        FILTER-6_Content2=<br>
+        FILTER-7_Enable=1<br>
+        FILTER-7_Action=3<br>
+        FILTER-7_Header1=&quot;X-Priority:&quot;<br>
+        FILTER-7_Content1=&quot;1&quot;<br>
+        FILTER-7_Header2=<br>
+        FILTER-7_Content2=<br>
+        FILTER-8_Enable=1<br>
+        FILTER-8_Action=3<br>
+        FILTER-8_Header1=&quot;Subject:&quot;<br>
+        FILTER-8_Content1=&quot;未承諾広告*&quot;<br>
+        FILTER-8_Header2=<br>
+        FILTER-8_Content2=<br>
+        FILTER-9_Enable=1<br>
+        FILTER-9_Action=3<br>
+        FILTER-9_Header1=&quot;X-Mailer:&quot;<br>
+        FILTER-9_Content1=&quot;eGroups*&quot;<br>
+        FILTER-9_Header2=<br>
+        FILTER-9_Content2=<br>
+      </p></td>
+  </tr>
+  <tr>
+    <td width="114"><img src="/mnomura/images/spacer.gif" width="118" height="15" alt="" border="0"></td>
+    <td width="54"><img src="/mnomura/images/spacer.gif" width="54" height="15" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="363" height="20" alt="" border="0"></td>
+  </tr>
+</table>
+<table width="535" border="0" cellspacing="0" cellpadding="0" class="column">
+  <tr>
+    <td><img src="/mnomura/images/spacer.gif" width="118" height="1" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="54" height="1" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="363" height="1" alt="" border="0"></td>
+  </tr>
+  <tr>
+    <td align="right" class="date">2003-10-20<br>
+      14:40</td>
+    <td align="center"><a href="/mnomura/log/social.html"><img src="/mnomura/images/news.gif" width="46" height="46" vspace="5" alt="時事・社会" border="0"></a></td>
+    <td class="title">道路公団、藤井総裁の乱</td>
+  </tr>
+</table>
+<table width="535" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="114"><img src="/mnomura/images/spacer.gif" width="118" height="2" alt="" border="0"></td>
+    <td width="54"><img src="/mnomura/images/spacer.gif" width="54" height="2" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="328" height="2" alt="" border="0"></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2" align="center" height="20">&nbsp;</td>
+    <td height="20" valign="top" class="text">聴聞会も開かれたが、議論が完全にずれている。<br>
+      思うに、藤井総裁の「総裁として、そして公団として、公団の構造的欠陥（あるいは外部から指摘されている諸多の問題点）について改善や誤解の解消などの明確な行動を取れなかった能力不足」を理由に辞任だろう。他にどんな理由も要らないと思う。全て蛇足だ。</td>
+  </tr>
+  <tr>
+    <td width="114"><img src="/mnomura/images/spacer.gif" width="118" height="15" alt="" border="0"></td>
+    <td width="54"><img src="/mnomura/images/spacer.gif" width="54" height="15" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="363" height="20" alt="" border="0"></td>
+  </tr>
+</table>
+<table width="535" border="0" cellspacing="0" cellpadding="0" class="column">
+  <tr>
+    <td><img src="/mnomura/images/spacer.gif" width="118" height="1" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="54" height="1" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="363" height="1" alt="" border="0"></td>
+  </tr>
+  <tr>
+    <td align="right" class="date">2003-10-17<br>
+      14:30</td>
+    <td align="center"><a href="/mnomura/log/machine.html"><img src="/mnomura/images/machine.gif" width="46" height="46" vspace="5" alt="機械いじり" border="0"></a></td>
+    <td class="title">TV番組を保存する</td>
+  </tr>
+</table>
+<table width="535" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="114"><img src="/mnomura/images/spacer.gif" width="118" height="2" alt="" border="0"></td>
+    <td width="54"><img src="/mnomura/images/spacer.gif" width="54" height="2" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="328" height="2" alt="" border="0"></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2" align="center" height="20">&nbsp;</td>
+    <td height="20" valign="top" class="text">VHSデッキがアンテナに接続されていないことが判明した。<br>
+      すなわち、我が家では地上波アナログ放送の録画はPCによって行われている。<br>
+      大抵の番組は、観終わったら削除している。ドラマやアニメのように放送話数が決まっていれば保存しておこうかという気分になるが、第一話がつまらなかったりすると、やっぱり削除してしまう。<br>
+      保存とはこれまではCD-Rに焼くことだったのだが、せっかくDVD-R/RW、+R/RWが焼けるドライブに買い換えたので、どれかの規格で焼いてみたいと思うこの頃。しかし、どの規格が適しているのかが分からない。う～む。<br>
+      それよりもハードディスクの買い換えが急務のような気がしてきた。あまり空き容量がない（5～6GB程度）のでいくつもの番組を残したままにしておけない。観たら消す、観たら消すを繰り返しているうちは良いのだが、大人なんだし、もうちょっとゆとりのある生活をしたいものだ。<br>
+      あと、関係ないといえば関係ないが<a href="http://www.logitech.com/index.cfm?page=products/details&CRID=1&CONTENTID=7321&countryid=19&languageid=1" target="_blank">Logitech
+      diNovo Media Desktop</a>というキーボードとマウスのセットが欲しい。英語配列のままで、日本でも発売されないだろうか。</td>
+  </tr>
+  <tr>
+    <td width="114"><img src="/mnomura/images/spacer.gif" width="118" height="15" alt="" border="0"></td>
+    <td width="54"><img src="/mnomura/images/spacer.gif" width="54" height="15" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="363" height="20" alt="" border="0"></td>
+  </tr>
+</table>
+<table width="535" border="0" cellspacing="0" cellpadding="0" class="column">
+  <tr>
+    <td><img src="/mnomura/images/spacer.gif" width="118" height="1" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="54" height="1" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="363" height="1" alt="" border="0"></td>
+  </tr>
+  <tr>
+    <td align="right" class="date">2003-10-15<br>
+      15:24</td>
+    <td align="center"><a href="/mnomura/log/etc.html"><img src="/mnomura/images/etc.gif" width="46" height="46" vspace="5" alt="雑談" border="0"></a></td>
+    <td class="title">散歩</td>
+  </tr>
+</table>
+<table width="535" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="114"><img src="/mnomura/images/spacer.gif" width="118" height="2" alt="" border="0"></td>
+    <td width="54"><img src="/mnomura/images/spacer.gif" width="54" height="2" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="328" height="2" alt="" border="0"></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2" align="center" height="20"><p><img src="/mnomura/photos/20031015shosenkyo.jpg" alt="2003.10.15 昇仙峡" width="160" height="120" vspace="10"></p>
+        <p>&nbsp;</p>
+    </td>
+    <td height="20" valign="top" class="text">連休は、ちょっと甲府まで散歩に出ていた。<br>
+      何かにつけてタイミングが良く、大雨にあたることも無かった。<br>
+      <br>
+      F1ではM.シューマッハの総合優勝が歯切れ悪く決まったのだが、佐藤琢磨が6位入賞してくれたお陰で気分がよかった。</td>
+  </tr>
+  <tr>
+    <td width="114"><img src="/mnomura/images/spacer.gif" width="118" height="15" alt="" border="0"></td>
+    <td width="54"><img src="/mnomura/images/spacer.gif" width="54" height="15" alt="" border="0"></td>
+    <td><img src="/mnomura/images/spacer.gif" width="363" height="20" alt="" border="0"></td>
+  </tr>
+</table>
+<table width="109" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="46"><img src="/mnomura/images/spacer.gif" width="122" height="45" border="0" alt="0"></td>
+    <td width="47"><a href="/mnomura/diary/20031007.html"><img src="/mnomura/images/previous.gif" width="45" height="30" alt="previous" border="0"></a></td>
+  </tr>
+</table>
+</body>
+</html>

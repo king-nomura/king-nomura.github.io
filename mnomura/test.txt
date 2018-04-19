@@ -1,0 +1,4 @@
+imagename=photos/20011120desk.jpg&title=2002/04/22 01:30&comment=これはテストです。
+リンクの実験↓
+<a href="http://www.asahi.com/" target="_blank">http://asahi.com/</a>
+これが実用レベルになったら、リニューアル。

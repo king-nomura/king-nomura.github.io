@@ -1,0 +1,207 @@
+.white {  font-size: 10px; color: #FFFFFF; line-height: 180%}
+.date {  font-size: 12px; color: #006699; line-height: 14px}
+.text {  font-size: 12px; color: #000033; line-height: 180%}
+.title {  font-size: 12px; line-height: 14px; font-weight: bold; color: #003366}
+.column {  border: solid; border-color: #999999 #999999 #999999 black; border-width: 1px 1px 1px 0px}
+.textsmall { font-size: 11px; color: #003366; line-height: 150%; font-style: normal}
+.indexMail {
+	position: absolute;
+	left: 145px;
+	top: 22px;
+	width: 130px;
+	text-align: right;
+	height: 12px;
+	z-index: 15;
+}
+.indexBody {
+	position: absolute;
+	left: 0px;
+	top: 210px;
+	width: 535px;
+}
+.footer {
+	position: relative;
+	left: 0px;
+	bottom: 0px;
+}
+.indexTitleText {
+	font-size: 10px;
+	color: #333333;
+	line-height: 180%;
+	width: 145px;
+	position: absolute;
+	left: 127px;
+	top: 65px;
+	z-index: 11;
+	height: 45px;
+}
+.mainText {
+	font-size: 12px;
+	color: #333333;
+	line-height: 180%;
+	width: 429px;
+	position: relative;
+	left: 106px;
+	top: 0px;
+	height: auto;
+	right: 0px;
+}
+.mainBlock {
+	height: auto;
+	padding-bottom: 20px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 535;
+	background-color: #FFFFFF;
+}
+.blockMark {
+	position: absolute;
+	left: 106px;
+	top: 0px;
+	width: 66px;
+}
+.blockTitle {
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: bold;
+	color: #003333;
+	position: absolute;
+	top: 22px;
+	left: 172px;
+	vertical-align: middle;
+	width: 363px;
+	height: 12px;
+}
+.blockHeader {
+	border: solid;
+	border-color: #003366;
+	border-width: 1px 1px 1px 0px;
+	height: 56px;
+	width: 535px;
+	position: relative;
+	top: 0px;
+}
+.blockTimestamp {
+	font-size: 12px;
+	color: #003366;
+	line-height: 14px;
+	text-align: right;
+	width: 106px;
+	top: 14px;
+	position: absolute;
+	height: 42px;
+	left: 0px;
+}
+.rightAlign {
+	text-align: right;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+.controlMark {
+
+	position: relative;
+	left: 106px;
+	top: 0px;
+	width: 66px;
+}
+.logtop {
+	position: absolute;
+	left: 0px;
+	top: 15px;
+	width: 535px;
+}
+.logBody {
+	position: absolute;
+	left: 0px;
+	top: 100px;
+	width: 535px;
+}
+.gotoTop {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 65;
+	height: 15;
+}
+.indexTitle {
+	background-color: #333333;
+	position: absolute;
+	z-index: 0;
+	left: 0px;
+	top: 0px;
+	height: auto;
+	width: auto;
+}
+.indexTitlePict {
+	position: absolute;
+	top: 16px;
+	left: 285px;
+	width: 240px;
+	height: 180px;
+	z-index: 10;
+}
+.indexTitleTitle {
+	position: absolute;
+	top: 141px;
+	height: 47px;
+	width: 183px;
+	z-index: 20;
+	background-color: #333333;
+	left: 358px;
+	border: 2px solid #FFFFFF;
+}
+.indexMenu {
+	position: absolute;
+	width: 264px;
+	left: 9px;
+	top: 83px;
+	height: 112px;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	z-index: 6;
+}
+.indexAbout {
+	position: absolute;
+	left: 145px;
+	top: 66px;
+	width: 130px;
+	text-align: right;
+	height: 12px;
+}
+.indexOld {
+	position: absolute;
+	left: 145px;
+	top: 52px;
+	width: 130px;
+	text-align: right;
+	height: 12px;
+}
+a:link {
+	color: #990000;
+	text-decoration: underline;
+}
+a:visited {
+	color: #663300;
+	text-decoration: underline;
+}
+a:hover {
+	color: #990000;
+	text-decoration: underline;
+}
+a:active {
+	color: #FF3333;
+	text-decoration: underline;
+}
+.mainImage {
+	text-align: center;
+	padding: 5px;
+	height: auto;
+	float: left;
+	width: 170px;
+	clear: none;
+}
+body {
+	background-color: #FFFFFF;
+}

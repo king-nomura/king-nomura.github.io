@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 //EN">
+<html>
+<head>
+  <title>ＤＯＳ／Ｖ日記</title>
+
+  <script language="JavaScript">
+  <!--
+  if (document.images){
+    var pic0 = new Image();
+    pic0.src = "../image/up.gif";
+    var pic0f = new Image();
+    pic0f.src = "../image/up-f.gif";
+    var pic1 = new Image();
+    pic1.src = "../image/left.gif";
+    var pic1f = new Image();
+    pic1f.src = "../image/left-f.gif";
+    var pic2 = new Image();
+    pic2.src = "../image/right.gif";
+    var pic2f = new Image();
+    pic2f.src = "../image/right-f.gif";
+  }
+  function In(n){
+    if (document.images){
+      document.images[n].src=eval(n+"f.src");
+    }
+  }
+  function Out(n){
+    if (document.images){
+      document.images[n].src=eval(n+".src");
+    }
+  }
+  // -->
+  </script>
+
+  <style type="text/css">
+  <!--
+   span {line-height:120%}
+  -->
+  </style>
+
+</head>
+
+<body background="/mnomura/old/image/bg.gif" bgcolor="#c8a46e" text="#000000"
+ link="#336633" alink="#669933" vlink="#336633"
+ marginheight="15" topmargin="15">
+
+
+  <a href="/mnomura/old/dosv/index.html" onMouseOver="In('pic0')" onMouseOut="Out('pic0')"><img
+  src="/mnomura/old/image/up.gif" width="14" height="24" border="0" alt="戻る" name="pic0"></a>
+<img src="/mnomura/old/image/dosv.gif" width="101" height="21" border="0" alt="ＤＯＳ／Ｖ日記"><br clear="all">
+<table border="0" cellpadding="5" cellspacing="0">
+<tr>
+ <td rowspan="2" valign="top">
+  <img src="/mnomura/old/image/pixel.gif" width="40" height="1" border="0" alt="0"><br clear="all">
+  <a href="/mnomura/old/dosv/dosv0036.html" onMouseOver="In('pic1')" onMouseOut="Out('pic1')"><img
+  src="/mnomura/old/image/left.gif" width="26" height="12" border="0" alt="前へ" name="pic1"></a>
+ </td>
+ <td>
+ </td>
+</tr>
+<tr>
+ <td>
+<h3>第３７回「BeOS in VAIO」(2000/05/01)</h3>
+<span>
+<p>
+　ついに<a href="http://www.be.com/">BeOS</a>の最新版、Release 5 Personal Edition を導入した。それもノートパソコンにである。<br>
+　我が「電脳鷲羽５０５」ことSony VAIO PCG-505GX でBeOSは実に快適に動作している。実はこのページも、BeOS上で書いているのだ。この程度の用事ならWindowsを立ち上げなくてもよくなった。あ～、うれしいぃ。<p>
+　BeOS Release 5は50Mb程のファイルを無料ダウンロードして、Windows上で展開することでインストールが開始される。本来ならBFSという独自のファイルシステムを用意しなければならないのだが、このPersonal Editionは体験版としての役割もあることから、「Windows（MS-DOS） のファイルシステム上に仮想パーティション（実態は一つのファイル）」を用意してそこから起動する、というものだ。このファイルが500Mbの決め打ち。ハードディスクの空きが少ない状態ではちょっときつかったがしょうがない。<Br>
+　インストール自体は非常に簡単。なんの設定も必要ない。デスクトップやスタートボタンに「BeOS」のアイコンが登場して、それを押せば次回起動をBeOSに設定して再起動をかけるという仕組み。手動で、CONFIG.SYSとAUTOEXEC.BATを書き直して、Windows起動時にメニューが出るように設定することも可能。これもMS-DOS時代を知っている人なら楽勝だろう。<br>
+　ちなみに、デスクトップマシンのBeOSもバージョンアップしておいた。こちらは、まず上記のようにRelease 5をインストールしたのち、「ブートディスク作成」プログラムからフロッピーディスクを作成、そのフロッピーで起動（このときにスペースキーを押していないと、旧OSが立ち上がってしまう）して、ApplicationsからInstallerを起動、インストール場所にBFSを設定してドン！、とする。これまた簡単、しかも以前の環境を壊すことがない。まあ、今時、OSはこの程度ができなきゃだめだね。<Br>
+　さて、ノートパソコンの方のBeOSは、大学でネットに接続する実験を開始。まずはPCMCIAのEthernet Cardを認識させる。僕の持っているのはコネクタ部が壊れかけているPlanex ENW-3500-T。とても古いカードであるが、ネットから<a href=""http://www.ne.jp/asahi/geek/piano/BePE/PCMCIA/>PCMCIAの設定方法</a>を解説したページを発見し、その通りにしたら動いてしまった。あら簡単。<br>
+　これでWeb表示が可能になったわけだが、日本語フォントがまだ入っていない。BeOSのダウンロードを行ったFTPサイトから、日本語キットを入手。これはフォントとIMEがセットになったもの。<br>
+　さて、いよいよNetPositiveでWebサーフィン！とりあえず自分のページを確認。おお、意識したつもりもないが、ちゃんと表示できるではないか！次に、Dream Passportでの表示を確認しているという<a href="http://www.caramelpot.co.jp/">アルバイト先</a>のページ。これもばっちり！<Br>
+　続いてメール。Mail-Itというソフトがフリーになったらしいので入手。Subjectの日本語をそのまんまJISで送るというバグがあるらしいが、閲覧用なら大丈夫だろう、マルチアカウントだし。<p>
+　 これでモデムが使えればいうことないが、あいにく手元にある電話はPHSのみ。そこでSII PHS DATA 32SをBeOSに認識させてみることにした。へへへ、ちょっとすごいだろ。<br>
+　といってもやり方は上記紹介のページにあるとおり。注意すべき点は僕の環境ではPCMCIA ModemがSerial 3になっている点くらいなもんか。メールの読み書きのような単純作業をさせるほど、普段使っているWindowsがいかにトロいかが分かる。<p>
+　IP Messengerも導入してみた。これは現在β版ということもあって、こちらからはローカルネットワークしかみることができないなどの欠点もあるから今後に期待。IP Messengerさえまともに使えるようになれば、いよいよ本当にWindowsからの移行を考えてもいいんじゃないかな。<br>
+　以上、ほめまくりのレビューになってしまったが、ちょっと他人とは違うことをやってみたい方、今ならフリーですぜ、BeOS！
+</p>
+</span>
+
+<div align="right">
+  <a href="/mnomura/old/dosv/dosv0038.html" onMouseOver="In('pic2')" onMouseOut="Out('pic2')"><img
+  src="/mnomura/old/image/right.gif" width="26" height="12" border="0" alt="次へ" name="pic2"></a>
+</div>
+
+<font size=-1>
+<p>
+(C)Copyright Nomura Masayuki all rights reserved.
+</p>
+</font></span>
+</div>
+
+ </td>
+</tr>
+</table>
+
+</body>
+</html>

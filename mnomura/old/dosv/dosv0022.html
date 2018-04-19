@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 //EN">
+<html>
+<head>
+  <title>ＤＯＳ／Ｖ日記</title>
+
+  <script language="JavaScript">
+  <!--
+  if (document.images){
+    var pic0 = new Image();
+    pic0.src = "../image/up.gif";
+    var pic0f = new Image();
+    pic0f.src = "../image/up-f.gif";
+    var pic1 = new Image();
+    pic1.src = "../image/left.gif";
+    var pic1f = new Image();
+    pic1f.src = "../image/left-f.gif";
+    var pic2 = new Image();
+    pic2.src = "../image/right.gif";
+    var pic2f = new Image();
+    pic2f.src = "../image/right-f.gif";
+  }
+  function In(n){
+    if (document.images){
+      document.images[n].src=eval(n+"f.src");
+    }
+  }
+  function Out(n){
+    if (document.images){
+      document.images[n].src=eval(n+".src");
+    }
+  }
+  // -->
+  </script>
+
+  <style type="text/css">
+  <!--
+   span {line-height:120%}
+  -->
+  </style>
+
+</head>
+
+<body background="/mnomura/old/image/bg.gif" bgcolor="#c8a46e" text="#000000"
+ link="#336633" alink="#669933" vlink="#336633"
+ marginheight="15" topmargin="15">
+
+
+  <a href="/mnomura/old/dosv/index.html" onMouseOver="In('pic0')" onMouseOut="Out('pic0')"><img
+  src="/mnomura/old/image/up.gif" width="14" height="24" border="0" alt="戻る" name="pic0"></a>
+<img src="/mnomura/old/image/dosv.gif" width="101" height="21" border="0" alt="ＤＯＳ／Ｖ日記"><br clear="all">
+<table border="0" cellpadding="5" cellspacing="0">
+<tr>
+ <td rowspan="2" valign="top">
+  <img src="/mnomura/old/image/pixel.gif" width="40" height="1" border="0" alt="0"><br clear="all">
+  <a href="/mnomura/old/dosv/dosv0021.html" onMouseOver="In('pic1')" onMouseOut="Out('pic1')"><img
+  src="/mnomura/old/image/left.gif" width="26" height="12" border="0" alt="前へ" name="pic1"></a>
+ </td>
+ <td>
+ </td>
+</tr>
+<tr>
+ <td>
+<h3>第２２回「続・３つのＯＳ」(1999/10/25)</h3>
+<span>
+<p>
+　ＣＰＵを２枚にした後、何も考えずにコンピュータを立ち上げてみることにした。<Br>
+　起動画面、ＣＰＵが何の問題も無く認識されている。IDE周りも全部認識。よしよし。おお！SCSIがBIOS上で認識された！って当たり前か、同じメーカーの製品だ。それにしても、今までBIOSなしのSCSIカードだったんで引け目を感じていたのだが、これでBIOSありカードと何も変わらなくなってしまった。<Br>
+　さて、ＯＳとしてまともに動いたのはBeOSだけであった。BeOSはみかけ上の何の変化もなく、２枚のＣＰＵを認識してしまった。恐ろしいといえば、恐ろしい。１枚でも２枚でも同じ原理で動いていると考えていいようだ。<Br>
+　Windows95はシングルＣＰＵのみ対応するＯＳなので、何の変化もなく動いてくれても良さそうなものだが、そうではなかった。マザーボードが変わったので、マザーに関わるデバイス類が再認識された。ＰＣＩブリッジやらポート類である。普段は絶対に再インストールしないデバイス類なので、再インストールのメッセージが何個も出てきて、戸惑ってしまった。まあ、仮にもプラグアンドプレイなＯＳを謳っているだけあって、何も考えずにＯＫを押せばいいようだ。さて、再起動。<br>
+　デバイスマネージャを確認する。びっくりマークがついた「不明なデバイス」が二つほど発見されるも、ＯＳ自体は正常に動く。ってことは、この二つは不必要なデバイスかも知れないし、同じデバイスを誤って二回認識してしまったのかもしれない。こんなときは、削除してみるのがよい。えい。<br>
+　さて、再起動。ありゃ、また「発見」された。一体これはなんだ？「PCI Bridge」と書いてあるが、うーん。分からん。<Br>
+　更に、IDEをUltra/DMAに対応させるドライバをダウンロードしてあったので、インストールしてみる。再起動。<br>
+　……立ち上がらんではないか。「Windows保護エラー」という、ちょっとクールなエラーが出る。セーフモードで起動して、ドライバをアンインストールする。しょうがない、普通のドライバで動かそう。まあ、ビデオ出力のないマシンなので、それほど転送速度を気にする場面もないし。ちょっと損した気もしないでもないがWindows95はメインに使っているＯＳではないので、ちょっと保留ということにしておこう。<br>
+　問題はWindowsNTである。NTはマルチプロセッサ対応、ＣＰＵを２つとも認識させることができるのだが、このままでは駄目。インストールしたときにＣＰＵが１個だったらば、再インストールしない限り２つ以上は認識してくれないという原則になっている。<Br>
+　だが、原則には例外があって、特にＭ＄製品は例外が多すぎることでも有名である。ネットで調べてみたらば、WindowsNTのリソースキットというものの中に、「uptomp.exe」というソフトがあるらしく、それを実行すればよいらしい。<br>
+　とりあえずシングルＣＰＵしか認識しないNTを立ち上げて、NTのCD-ROMの中からuptomp.exeを探す。ない。はて？<br>
+　ネットで再び調べる。リソースキットはダウンロードしてこなくてはならないらしいことが分かった。しかも、7MBもある。むー。大学へ行ってダウンロードしよう。<Br>
+　uptomp.exeは米国のＭ＄サイトに置いてあった。ダウンロードとインストールは成功だ。さて、おもむろに立ち上げてみる。……全部、英語じゃねーかよ。どれどれ、チップセットの種類を選べと言っているようにも見えるが、英語なので分からん。プルダウンメニューを見る。一番下に文字化けしているが「標準ＰＣ」と読めなくもない選択肢が見える。これかな？でも違うかも。「ＩＢＭ」とかいう文字も見える。ＤＯＳ／ＶのことをＩＢＭ ＰＣとも表記することもあるし。……ＩＢＭにしてみようか。<Br>
+　再起動。失敗。やられた、やっぱり「標準ＰＣ」にすればよかったのかな？こうなったらば、もう再インストールしかない。結局は再インストールなんだな、Ｍ＄製品は。<br>
+　こちらもIDEドライバを更新してみたが、今度は成功。もう、95使うの止めようかな……。
+<p>
+　僕はベンチマークを取らないので、どれくらい早くなったかは体感でしか語れない。が、BeOSはびっくりするくらいに早くなった。ＣＰＵ自体のグレードが上がったのと、２枚になったことで４倍近い速度差があるように思う。「GL Teapot」というＯＳに付属しているベンチ・デモの数値が４倍近く、「ストレスがない」とはこのことか、というスムースぶり。今までが遅すぎたのだな、きっと。<br>
+　WindowsNTの場合、タスクが増えるほどＣＰＵが２枚になった実感が沸く。大学や友人が所有しているマシンと比べても、ＣＰＵ自体の性能では差がなくてもタスクが増えるほど作業環境に差が生じている。NTの場合、ソフトウェアがマルチプロセッサに対応していると更に効果が出るようになると言う。……それって、逆にいえばＯＳがマルチプロセッサに対応しても、ソフトウェア自体にはあんまり利点がないってことではなかろうか。
+　Windows95はシングルＣＰＵしか対応していない。98にしても同じこと。家庭用ＯＳっていうのはこうゆうことなんだろうな。つくづく利用価値のないＯＳだな、きっともう二度と立ち上げないんじゃなかろうか。
+</p>
+
+</span>
+
+<div align="right">
+  <a href="/mnomura/old/dosv/dosv0023.html" onMouseOver="In('pic2')" onMouseOut="Out('pic2')"><img
+  src="/mnomura/old/image/right.gif" width="26" height="12" border="0" alt="次へ" name="pic2"></a>
+</div>
+
+<font size=-1>
+<p>
+(C)Copyright Nomura Masayuki all rights reserved.
+</p>
+</font></span>
+</div>
+
+ </td>
+</tr>
+</table>
+
+</body>
+</html>

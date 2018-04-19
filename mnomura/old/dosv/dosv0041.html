@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 //EN">
+<html>
+<head>
+  <title>ＤＯＳ／Ｖ日記</title>
+
+  <script language="JavaScript">
+  <!--
+  if (document.images){
+    var pic0 = new Image();
+    pic0.src = "../image/up.gif";
+    var pic0f = new Image();
+    pic0f.src = "../image/up-f.gif";
+    var pic1 = new Image();
+    pic1.src = "../image/left.gif";
+    var pic1f = new Image();
+    pic1f.src = "../image/left-f.gif";
+    var pic2 = new Image();
+    pic2.src = "../image/right.gif";
+    var pic2f = new Image();
+    pic2f.src = "../image/right-f.gif";
+  }
+  function In(n){
+    if (document.images){
+      document.images[n].src=eval(n+"f.src");
+    }
+  }
+  function Out(n){
+    if (document.images){
+      document.images[n].src=eval(n+".src");
+    }
+  }
+  // -->
+  </script>
+
+  <style type="text/css">
+  <!--
+   span,dl {line-height:120%}
+  -->
+  </style>
+
+</head>
+
+<body background="/mnomura/old/image/bg.gif" bgcolor="#c8a46e" text="#000000"
+ link="#336633" alink="#669933" vlink="#336633"
+ marginheight="15" topmargin="15">
+
+
+  <a href="/mnomura/old/dosv/index.html" onMouseOver="In('pic0')" onMouseOut="Out('pic0')"><img
+  src="/mnomura/old/image/up.gif" width="14" height="24" border="0" alt="戻る" name="pic0"></a>
+<img src="/mnomura/old/image/dosv.gif" width="101" height="21" border="0" alt="ＤＯＳ／Ｖ日記"><br clear="all">
+<table border="0" cellpadding="5" cellspacing="0">
+<tr>
+ <td rowspan="2" valign="top">
+  <img src="/mnomura/old/image/pixel.gif" width="40" height="1" border="0" alt="0"><br clear="all">
+  <a href="/mnomura/old/dosv/dosv0040.html" onMouseOver="In('pic1')" onMouseOut="Out('pic1')"><img
+  src="/mnomura/old/image/left.gif" width="26" height="12" border="0" alt="前へ" name="pic1"></a>
+ </td>
+ <td>
+ </td>
+</tr>
+<tr>
+ <td>
+<h3>第４１回「特殊作業環境構築」(2000/10/02)</h3>
+<span>
+<p>
+　コンピュータというのは<b>けっこうお馬鹿</b>なもので、特にWindowsは標準の環境で使っていて心地よいものではない。<br>
+　ずっと作業していくためには身の周りをしっかりとした環境に整える必要がある。時にそれはAdobe Photoshopのような高価なソフトウェアであったり17インチのディスプレイだったり、大容量ファイルサーバだったりするが、また他方では、<a href="http://homepage1.nifty.com/kazubon/">TClock</a>のようなフリーソフトだったりもする。
+<p>
+　TClockはタスクバーの時計を改造する定番フリーソフトであるが、ntpサーバーに時刻を定期的にチェックしに行く機能や、忌々しい「スタート」ボタンをかっこよくしてくれる機能があって便利。環境改造系では<a href="http://www.asahi-net.or.jp/~vr4m-ikw/">窓の手</a>も定番である。こちらは忌々しいIE4以降から追加されまくったエクスプローラー拡張機能なんかを排除してくれる。Microsoftが用意してくれる機能で実用に耐えうるものはそんなにないのに、やたらと主張してくるから始末が悪い。このように機能をOFFにするソフトが無ければ、劣悪な操作環境を強要されてしまうだろう。<br>
+　メモ帳も使い勝手がひどいので、もちろんテキストエディタを導入する。社内では<a href="http://www.vivi-vine.org/">Vivi</a>が普及しているが、僕は<a href="http://hp.vector.co.jp/authors/VA016528/">テキストエディタ(sakura)</a>を使っている。Viviはシェアウェアなので敬遠している。テキストエディタはソースが公開されていて、現在は作者のたけさんよりも<a href="http://members.tripod.co.jp/sakura_editor/">げんたさんのバージョン</a>の方がどんどん良くなっている。テキストエディタは他に秀丸などが有名だが、フリーで高機能なものは非常に少ないのだ。<br>
+　あと、フリーソフトの定番といえばランチャーソフトだ。みんな「スタート」ボタンが嫌いなんだね、とても多くのソフトがある。僕は、つい最近公開された<a href="http://wwww.nakka.com/soft/nlaunch/">nLaunch</a>を使っている。この作者さんの作品としては、Webサイトを巡回して更新されたかをチェックする<a href="http://www.nakka.com/wwwc/">WWWC</a>や、フロッピー１枚に入りきってしまうメーラー<a href="http://www.nakka.com/soft/npop/">nPOP</a>が超有名で僕も愛用している。nLaunchは全く機能が簡潔なランチャーで、ショートカットキーでポップアップウィンドウが出てきて、アイコンを選ぶ、というだけ。スキンに対応しているのも気に入ったが、なにより普段は全く見えないからうっとおしくないのがいい。
+<p>
+　Palm(この間買ったCLIE)にもソフトを入れている。メーラーだけは、マルチアカウント対応ということでシェアウェアの<a href="http://www.as.to/~mu/popj/">POPJ</a>を使用しているが、それ以外はフリーソフトで固めていこうと思っている。例えばHackソフト（Palmの根幹機能を簡単に書き換えるためのソフト）としてはHack Masterという超有名ソフトがあるが、僕はそれの互換であるEVPlugBaseというフリーソフトを使っている。互換ということで多少の心配は残るが、Palmはユーザー層が厚いので不具合の情報などはすぐに入手できる。
+<p>
+　フリーソフトを選ぶのは非常に難しい。特に、欲しいと思う機能を満たすソフトは、何種類もあるように見えるものだ。だがよくよく使い比べてみると、自分に似合ったソフトはほとんどないことに気づく。環境と整えるということのなんと難しいことか。ただ一つ云えるのは、標準の環境や何かを買ってきただけの環境では<b>全く仕事がしづらくて仕方ない</b>ということだ。これって重要な問題なんじゃない？パッケージで売っているソフトウェア各社さま。
+</p>
+　おまけ：<br>
+　ソフトも重要だが、ハードも重要。以下のように社内では<b>サンダル</b>が健康的でよろしい。また、パソコンデスクの下には<b>すのこ</b>を敷いて、<b>素足</b>で作業するのが心地よいのである。できるなら畳敷きにしたいくらいだ。
+</span>
+
+<div align="right">
+  <a href="/mnomura/old/dosv/dosv0042.html" onMouseOver="In('pic2')" onMouseOut="Out('pic2')"><img
+  src="/mnomura/old/image/right.gif" width="26" height="12" border="0" alt="次へ" name="pic2"></a>
+</div>
+
+<div align="center">
+<img src="/mnomura/old/dosv/image/20001002desk.jpg" width="120" height="160" alt="会社の環境"> 
+</div>
+
+<div align="right">
+<span>
+<font size=-1>
+<p>
+(C)Copyright Nomura Masayuki all rights reserved.
+</p>
+</font>
+</span>
+</div>
+
+ </td>
+</tr>
+</table>
+
+</body>
+</html>

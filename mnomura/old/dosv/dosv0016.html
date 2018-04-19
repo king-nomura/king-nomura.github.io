@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 //EN">
+<html>
+<head>
+  <title>ＤＯＳ／Ｖ日記</title>
+
+  <script language="JavaScript">
+  <!--
+  if (document.images){
+    var pic0 = new Image();
+    pic0.src = "../image/up.gif";
+    var pic0f = new Image();
+    pic0f.src = "../image/up-f.gif";
+    var pic1 = new Image();
+    pic1.src = "../image/left.gif";
+    var pic1f = new Image();
+    pic1f.src = "../image/left-f.gif";
+    var pic2 = new Image();
+    pic2.src = "../image/right.gif";
+    var pic2f = new Image();
+    pic2f.src = "../image/right-f.gif";
+  }
+  function In(n){
+    if (document.images){
+      document.images[n].src=eval(n+"f.src");
+    }
+  }
+  function Out(n){
+    if (document.images){
+      document.images[n].src=eval(n+".src");
+    }
+  }
+  // -->
+  </script>
+
+  <style type="text/css">
+  <!--
+   span {line-height:120%}
+  -->
+  </style>
+
+</head>
+
+<body background="/mnomura/old/image/bg.gif" bgcolor="#c8a46e" text="#000000"
+ link="#336633" alink="#669933" vlink="#336633"
+ marginheight="15" topmargin="15">
+
+
+  <a href="/mnomura/old/dosv/index.html" onMouseOver="In('pic0')" onMouseOut="Out('pic0')"><img
+  src="/mnomura/old/image/up.gif" width="14" height="24" border="0" alt="戻る" name="pic0"></a>
+<img src="/mnomura/old/image/dosv.gif" width="101" height="21" border="0" alt="ＤＯＳ／Ｖ日記"><br clear="all">
+<table border="0" cellpadding="5" cellspacing="0">
+<tr>
+ <td rowspan="2" valign="top">
+  <img src="/mnomura/old/image/pixel.gif" width="40" height="1" border="0" alt="0"><br clear="all">
+  <a href="/mnomura/old/dosv/dosv0015.html" onMouseOver="In('pic1')" onMouseOut="Out('pic1')"><img
+
+  src="/mnomura/old/image/left.gif" width="26" height="12" border="0" alt="前へ" name="pic1"></a>
+ </td>
+ <td>
+ </td>
+</tr>
+<tr>
+ <td>
+<h3>第１６回「ＯＳ地獄」(1999/07/01)</h3>
+
+<span>
+<p>
+　なんてこったい、気付いたら更新をすっかり忘れていたではないか。酷いな、僕。<br>
+
+　この間、一体何をしていたんだ、お前のマシンはどうなってしまったんだ、という皆様の期待を軽く裏切ってしまうと、このところトラブルとは全くといっていいほど無縁であったのだ。Windows95、WindowsNT、BeOSの三つとも安定動作。ハードウェアも、タブレットの電源アダプタが故障したくらいで、全く変化無し。グレードアップしたくても金が無い、といった状態。DOS/V野郎としては非常に甘ったれた日々であるといえる。例えるなら紆余曲折した川の流れが下流に行くに従っておとなしくなる、といった具合。<br>
+
+　いや、全くトラブルと無縁だったわけではない。なにせ天下のM$製品OSを使用しているのだから、今回はその辺のトラブルを。まあ、トラブル慣れした身で言わせてもらえば、「ジャブ」ってとこっすかね、へへっ。
+
+<p>
+
+　Visual C++を購入しました。こういう高価な製品は学割が利くうちに手元に欲しいものですな。大学にいると、「コピーして手に入れる」という犯罪行為を目の当たりにすることが容易だが（今更隠しても仕様が無いので書いてしまうぞ）、野村流に言わせてもらえば「ライセンスとるなら今しか！」である。<Br>
+
+　で、Version 6をお持ちの方ならご存知の「Internet Explorer 4必須」という条件。バイトの関係でIE3を使えない環境は不利であるので、これには参った。真剣に「VCを返品しようか」などという歪んだ発想まで出る始末。レジストリやEXEファイルの位置を変更したりして、なんとかVCを騙そうとしたが、野村は一つも成功させられなかった。<br>
+
+　だって、IEってばWindowsの重要な部分と重なっているんだもん、無理だわさ。IEはブラウザじゃないね、あれは実はWindowsバージョンアップだったんだ。それならWebブラウズの機能を外して欲しい。<br>
+
+　幸いにしてこのマシンは天下のトリプル・ブートである。Windows95のIEは３にしたまま、WindowsNTのIEを４にした。つい最近、５へとバージョンアップさせたが、今度は「４モード」が使えるオプションがあって一安心。M$はWeb開発者向けに旧バージョンブラウザを再配布すべきだ。少なくともあと５年は。
+
+<p>
+
+　話題は変わって大学祭。マシンの数が足りないので我がマシンも借り出されたが、PentiumIIでは無いので、脇役扱い。いいね、脇。黒いし、キーボードは変だし、脇役にぴたし。<br>
+
+　DirectX6の描画を安定動作させるために、我がマシンを除いた残り全てのマシンにWindows98をインストールする。自動的にインストール係は僕。で、はっきりいってこれが上手く行かない。ドライバ周りが揃わないとかは可愛いもんで、OSインストール時にコケルものが続出。<Br>
+
+　それまでNTを入れていたマシンは、当然フォーマットもNTFSなわけで、更にブート領域もNTのものになっている。この辺がさくっと切り替わってくれない。皆はFDISKというコマンドの使い方を良く知らない。勉強しような、OS使いはこのコマンドに頼る部分が大きいのだぞ。で、さくっとパーティション自体を削除。大概はこれで上手く行く。<br>
+
+　Windows98用にハードディスクを買い足した者もおる。賢いといえる。ただ彼の場合はケーブルのマスターとスレイブ、更にはプライマリーとセカンダリを間違えていたのでブートできなかった。ぷぷ。いや、笑ってはいけない、僕も自家用Linuxのときにやった。<br>
+
+　さて、あるマシンはどうやっても、インストール時にエラーが出る。こういうときは初歩的なOSに立ち返るのがよい。Windows95の出番だ。ハードディスクを外して、別のマシンに接続してアーカイブを転送。戻して、そのアーカイブでインストール開始。Windows95の破壊的なインストールは、どんな状態のマシンであっても強制的にWindows95にしてくれる。いいOSだな、メーカーにとっては。<br>
+
+<p>
+
+　前述した通り、自家用Linuxサーバーを導入した。研究会の資産を転用し、ノートパソコンのハードディスク（340MB）を付けた特別仕様である（このハードディスクの接続を間違っていて、LILOが立ち上がらなかったんだよ、ずっと。恥ずかしいー）。<br>
+
+　我がサーバーはベッドの下にある。ワークマシンからの距離はざっと１ｍ。マシンの前に座り、足でサーバーの電源を入れることができる、究極のイントラである。また、このネットワークにはノートパソコンも時々加わり、最大で２人もの人がWebサーバー、FTPサーバーを活用できるのだ。すげー。<br>
+
+　CGIを勉強している。Linuxはインストールが簡単で、自分で設定しなくてもPerlのCGIが走るApacheが導入されるのが嬉しかった。素人くさい反応でごめんなさい。
+
+</p>
+
+</span>
+
+<div align="right">
+  <a href="/mnomura/old/dosv/dosv0017.html" onMouseOver="In('pic2')" onMouseOut="Out('pic2')"><img
+  src="/mnomura/old/image/right.gif" width="26" height="12" border="0" alt="次へ" name="pic2"></a>
+</div>
+
+<font size=-1>
+
+<p>
+(C)Copyright Nomura Masayuki all rights reserved.
+</p>
+</font></span>
+</div>
+
+ </td>
+</tr>
+</table>
+
+</body>
+</html>

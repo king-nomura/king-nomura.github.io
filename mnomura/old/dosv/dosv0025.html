@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 //EN">
+<html>
+<head>
+  <title>ＤＯＳ／Ｖ日記</title>
+
+  <script language="JavaScript">
+  <!--
+  if (document.images){
+    var pic0 = new Image();
+    pic0.src = "../image/up.gif";
+    var pic0f = new Image();
+    pic0f.src = "../image/up-f.gif";
+    var pic1 = new Image();
+    pic1.src = "../image/left.gif";
+    var pic1f = new Image();
+    pic1f.src = "../image/left-f.gif";
+    var pic2 = new Image();
+    pic2.src = "../image/right.gif";
+    var pic2f = new Image();
+    pic2f.src = "../image/right-f.gif";
+  }
+  function In(n){
+    if (document.images){
+      document.images[n].src=eval(n+"f.src");
+    }
+  }
+  function Out(n){
+    if (document.images){
+      document.images[n].src=eval(n+".src");
+    }
+  }
+  // -->
+  </script>
+
+  <style type="text/css">
+  <!--
+   span {line-height:120%}
+  -->
+  </style>
+
+</head>
+
+<body background="/mnomura/old/image/bg.gif" bgcolor="#c8a46e" text="#000000"
+ link="#336633" alink="#669933" vlink="#336633"
+ marginheight="15" topmargin="15">
+
+
+  <a href="/mnomura/old/dosv/index.html" onMouseOver="In('pic0')" onMouseOut="Out('pic0')"><img
+  src="/mnomura/old/image/up.gif" width="14" height="24" border="0" alt="戻る" name="pic0"></a>
+<img src="/mnomura/old/image/dosv.gif" width="101" height="21" border="0" alt="ＤＯＳ／Ｖ日記"><br clear="all">
+<table border="0" cellpadding="5" cellspacing="0">
+<tr>
+ <td rowspan="2" valign="top">
+  <img src="/mnomura/old/image/pixel.gif" width="40" height="1" border="0" alt="0"><br clear="all">
+  <a href="/mnomura/old/dosv/dosv0024.html" onMouseOver="In('pic1')" onMouseOut="Out('pic1')"><img
+  src="/mnomura/old/image/left.gif" width="26" height="12" border="0" alt="前へ" name="pic1"></a>
+ </td>
+ <td>
+ </td>
+</tr>
+<tr>
+ <td>
+<h3>第２５回「シリーズ・嗚呼、サーバー。（１）」(1999/12/13)</h3>
+<span>
+<p>
+　大学の授業で、Webサーバーを立てた。それはそれは大変だった。Windowsのマシンを組み立てるのとは訳が違うし、今回は外部からアクセスのあるマシンを組み立てるのだから、色々と気を付けなくてはならないからだ。特に昨今は、ハッキングやらクラッキングやらが多いのである。<br>
+　サーバーを立てると決めたとき、分からないことは先輩に相談すればいいや、と思っていたのだが、どうやら先輩は<a href="http://www.caramelpot.co.jp/">会社</a>の社長として多忙な日々を送っているらしいので、しょうがないから自分で作ることにした。社長は年季の入ったLinuxユーザーだが、今回の授業で指導して下さっている<a href="http://common.kyushu-id.ac.jp/~fujimura/">教授</a>が言うには、Linuxは現在アタックされまくっているらしい。有名になるということは辛いのである。<br>
+　そこで今回はFreeBSDにした。2年前にインストールをしたことがあったのだが、もうすっかり手順も何もかも忘れているので、本を片手にやってみることにした。マシンは公開講座のときに学科が購入したDOS/V機の部品を寄せ集めたもの。大学に端局申請もして、同級生に九州大学（我が芸工大のネット上の上流になる）からFreeBSDのディスクイメージを取得してもらって、さあスタート！<br>
+　以前、TURBO Linuxをインストールしたときには日本語のインストーラーが立ちあがったが、今回は全部英語のようだ。バージョンは2.2.8となっている。ふむ。インストーラーの英語は非常に簡単な上に手順は全て対話型なので、Custumを選択しても困ることはない。スムーズに終了。再起動。なんだよ、なんの問題もないじゃないか。<br>
+　さて、どんなソフトを入れようか。LinuxではRedHatなどでお馴染みのPackageがあるが、FreeBSDではportsというものがあって、やっぱり選んでコマンド一発で入っていくらしい。Gooで<a href="http://www.fujie.org/">FreeBSDに詳しいページ</a>を発見したのでそこを参考にする……。まてよ、なんかおかしいな。バージョンが合わないぞ。<br>
+　なんてこったい。九州大学のFTPサーバーを自分で調べて見たら、FreeBSDの最新リリースは3.3じゃないか。もー、○島君てば、「releases」って書いてあったらリリース版のことでしょうが。早くも「カーネルの再構築」ですかい。もー。<br>
+　FreeBSDのセットアップツールである「sysinstall」に、カーネルのアップデートのコマンドが用意されている。こいつを使う。だが、どうやら失敗。まだ何も設定していないんだから、面倒でも一からやり直した方が良さそうだ。<br>
+　新しいFreeBSDもインストールは英語。もう馴れましたよーだ。FTPは九州大学、ちょっとディレクトリ名が長くなるが、それは愛嬌。ウチの学科は大学内を100Mで引っ張ってきているので、他の学科よりもネットが早いぜ、イエー。<Br>
+　そんな折、教授が様子を見に来た。マシンの構成を確認して、「これはだめだ」と一言。教授いわく、「/var」（UNIXで、ログやメールのスプールといった流動するデータを扱う領域）をとにかく大きくして、データの類は全部そこに突っ込んでしまえ、とのこと。こうするとバックアップが非常に簡単になる。なるほど。やり直しか。
+<p>
+　さて、テキストベースで作業をすると、Netscapeを立ち上げて便利なページを参照しながら各種設定を行う、なんて行為ができないので、X-Window（WindowsとかMacのようなGUIを使えるようにするモノ）をインストールするのが便利である。で、以前Linuxを立てたときには、OSのインストール時に「X-Deverop」を選んでから不必要なツールをオプションから抜く、といった手法を取っていたのだ。だがFreeBSDの場合、あまり細かい設定ができない、「X-User」にしないとエライたくさんのソースが入ってしまうことが分かった。これは結構、恥ずかしいミスであった。<br>
+　また、便利だ便利だとあちこちで賞賛されているportsだが、「マシンにあらかじめインストールする」を選択するとそれのために200MBも消費するという、かなりエライことになってしまうことが分かった。というか、画面の説明を読むとそう書いてあったことに気づいた。専用線に繋がっているこのサーバーの場合は「あらかじめ」とかいう設定はいらないし、そんなに頻繁にソフトを増やすこともないだろうから、このオプションはキャンセルした。現に今、僕はこの機能は使っていないし（というか、この時オプションをNoにしたせいで一部機能が使えなくなったからだが）、使わなくても最近のソフトは非常にインストールがしやすいのだ。
+<p>
+　ここまでがFreeBSDのインストールである。Linuxは簡単だ、と巷では言われているが、僕から言わせればFreeBSDだって異常に簡単である。インストールが難しいのはWindowsくらいなものだ。<br>
+　次回はWebサーバーにするためにどんなソフトをインストールしたのかを伝えようかね。普通、こういうページは「初めてインストールする人」用のマニュアルのように書くんだろうが、このページは違う。このページは日記であってマニュアルではない。大体、Web上にあるページを参考にしてサーバーを立てているのだから、Web上を探せば手本となったページ自体が発見できるので、そっちの方がいいに決まっているのだから。<br>
+　予告すると、次回は多分muleとapacheとsendmail。それからfml、PostgreSQL、analog、namazuで完成かな？こんだけあれば十分でしょう。アタックかけられたらそれをネタにセキュリティの話をしますね。
+</p>
+
+</span>
+
+<div align="right">
+  <a href="/mnomura/old/dosv/dosv0026.html" onMouseOver="In('pic2')" onMouseOut="Out('pic2')"><img
+  src="/mnomura/old/image/right.gif" width="26" height="12" border="0" alt="次へ" name="pic2"></a>
+</div>
+
+<font size=-1>
+<p>
+(C)Copyright Nomura Masayuki all rights reserved.
+</p>
+</font></span>
+</div>
+
+ </td>
+</tr>
+</table>
+
+</body>
+</html>

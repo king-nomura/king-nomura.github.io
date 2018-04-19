@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 //EN">
+<html>
+<head>
+  <title>ＤＯＳ／Ｖ日記</title>
+
+  <script language="JavaScript">
+  <!--
+  if (document.images){
+    var pic0 = new Image();
+    pic0.src = "../image/up.gif";
+    var pic0f = new Image();
+    pic0f.src = "../image/up-f.gif";
+    var pic1 = new Image();
+    pic1.src = "../image/left.gif";
+    var pic1f = new Image();
+    pic1f.src = "../image/left-f.gif";
+    var pic2 = new Image();
+    pic2.src = "../image/right.gif";
+    var pic2f = new Image();
+    pic2f.src = "../image/right-f.gif";
+  }
+  function In(n){
+    if (document.images){
+      document.images[n].src=eval(n+"f.src");
+    }
+  }
+  function Out(n){
+    if (document.images){
+      document.images[n].src=eval(n+".src");
+    }
+  }
+  // -->
+  </script>
+
+  <style type="text/css">
+  <!--
+   span {line-height:120%}
+  -->
+  </style>
+
+</head>
+
+<body background="/mnomura/old/image/bg.gif" bgcolor="#c8a46e" text="#000000"
+ link="#336633" alink="#669933" vlink="#336633"
+ marginheight="15" topmargin="15">
+
+
+  <a href="/mnomura/old/dosv/index.html" onMouseOver="In('pic0')" onMouseOut="Out('pic0')"><img
+  src="/mnomura/old/image/up.gif" width="14" height="24" border="0" alt="戻る" name="pic0"></a>
+<img src="/mnomura/old/image/dosv.gif" width="101" height="21" border="0" alt="ＤＯＳ／Ｖ日記"><br clear="all">
+<table border="0" cellpadding="5" cellspacing="0">
+<tr>
+ <td rowspan="2" valign="top">
+  <img src="/mnomura/old/image/pixel.gif" width="40" height="1" border="0" alt="0"><br clear="all">
+  <a href="/mnomura/old/dosv/dosv0008.html" onMouseOver="In('pic1')" onMouseOut="Out('pic1')"><img
+  src="/mnomura/old/image/left.gif" width="26" height="12" border="0" alt="前へ" name="pic1"></a>
+ </td>
+ <td>
+ </td>
+</tr>
+<tr>
+ <td>
+<h3>第９回「電源・再び」(1998/02/23)</h3>
+<span>
+<p>
+　まずは連絡。野村のNEWマシン(学生寮にて動かすためのマシン)が完成である。<br>
+　真っ黒。いえ、財政ではなく、マシンが。黒いボディを買ったのは以前ここに書いた通り。その後すぐに黒いCD-ROM(中身は松下寿の12倍速)をGETしたまでは良かったのだが、黒いFDDともなるとなかなか手に入らない。ソフトアイランドの店員に頼んで入荷してもらったわけだ。<br>
+　買いに行った日、ソフトアイランド福岡店は通常の白いFDDが在庫切れで、<strong>黒いのしかない</strong>という異常な事態が起こっていたが、まあそれもよし。<br>
+　とりあえず、スペックなぞを。
+<ul>
+ <li>CPU : AMD K6-233 (リテール品、ネット通販にて。K6マークのシールが付いてきた)
+ <li>M/B : MicroStar MS-5163 (Aladdin IV+で83MHz設定あり)
+ <li>MEMORY : 64MB (EDO 16MB x 4) 余り物を流用
+ <li>HDD : IBM DHEA-34330 (IDE 4.3GB UltraDMA対応、惚れ込んで買った)
+ <li>FDD : MITSUMI D353-BK <font size=-1>＜- BK だから黒い訳ね</font>
+ <li>CD-ROM : 不明 12倍速 (黒い。ドライブは松下製、12倍速以上は信用していない)
+ <li>VGA : IO-DATA GA-PGDX4/PCI (S3 VirgeDX 4MB、余り物を流用)
+ <li>SOUND : Creative SoundBlaster AWE32 (AWE64が動かせない以上、これしかない)
+ <li>SCSI : Tekram DC-310 (PCIでは最安のSCSIカード)
+</ul>
+<p>
+　ふう、こんなところか……。まあ見ての通りのゲームマシンである(ホントか？)。
+<p>
+　閑話休題。今日は再び電源について語らせてもらう。以前(第４回)ではサービスコンセントから電源を供給しようという話をしたが、ATXのケースだと電源回りの管理のためにサービスコンセントがないらしい。うーん、上に書いた黒いマシンはATXなので、コンセントがないのだ。これは辛い。<br>
+　野村は年末にタブレットを買ったので、この電源もサービスコンセントから回している。それ単体では消費電力は対したことはないが、「塵も積もれば……」というのでもうそろそろ気にかけねば、と思っていた頃の話である。<br>
+<p>
+　大学の研究会でUNIXマシンを作ることとなった。余っているマシンを流用しようということになり、以前<strong>韓国語のWIndows NT 3.51</strong>を入れたマシンに白羽の矢が立った。ところがトリアタマな野村は、adoministratorのパスワードを失念してしまい、ともかくDOSから入れ直すことにしたのだ。<br>
+　で、CD-ROMが問題となった。他の機器はともかくも、CD-ROMだけはそのメーカーの作ったドライバが必要となる。件のマシンに刺さっているCD-ROMは出処が不明でドライバを見つけられなかった。<br>
+　野村は考えた。おいらの大学で使っているマシンの8倍速(IMES製)をこれに回そう。あれは音がうるさくて気に入らん。家でノートパソコン用に使っていたSCSI4倍速の方が静かでいい。<br>
+　家から外付けCD-ROMを<strong>抜き身で</strong>持ってきた野村は、おもむろにマシンを分解した。そうだ、どうせならこの煩雑なケーブル周りをすっきりさせよう、ふんふんふん、よしできた。<br>
+　まずは試運転である。試運転のときはカバーをしない、というのが野村の流儀。おもむろに電気を入れると、<br>
+<h3>バチバチバチ！！</h3>
+む、なにやら焦げ臭い、げげ！！<strong>火花が散ったぞ！</strong>何が起こった？煙がもくもくと上がっている！とりあえず電源を切ろう！
+<p>
+　原因は、FDDの電源ケーブルの差し込みが甘かったところにほこりが入ったという典型的なものであった。無残にこげた電源ケーブル。幸いなことに被害はケーブルだけであったが、FDDの電源ケーブルはHDDにも刺さっていたので、処置が遅れていたら目も当てられなかっただろう。<br>
+　こうして野村マシンの電源ユニットは逝った。一年、持たなかった。悔しいことに、SCSIのCD-ROMはすこぶる順調に動いている。火花を散らしたFDDでさえ、快適に動いていた。<br>
+　ちなみに、電源は、ケースを買うのと同じくらいの値段である。
+</p>
+</span>
+
+<div align="right">
+  <a href="/mnomura/old/dosv/dosv0010.html" onMouseOver="In('pic2')" onMouseOut="Out('pic2')"><img
+  src="/mnomura/old/image/right.gif" width="26" height="12" border="0" alt="次へ" name="pic2"></a>
+</div>
+
+<font size=-1>
+<p>
+(C)Copyright Nomura Masayuki all rights reserved.
+</p>
+</font></span>
+</div>
+
+ </td>
+</tr>
+</table>
+
+</body>
+</html>

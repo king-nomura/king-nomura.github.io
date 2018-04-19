@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 //EN">
+<html>
+<head>
+  <title>ＤＯＳ／Ｖ日記</title>
+
+  <script language="JavaScript">
+  <!--
+  if (document.images){
+    var pic0 = new Image();
+    pic0.src = "../image/up.gif";
+    var pic0f = new Image();
+    pic0f.src = "../image/up-f.gif";
+    var pic1 = new Image();
+    pic1.src = "../image/left.gif";
+    var pic1f = new Image();
+    pic1f.src = "../image/left-f.gif";
+    var pic2 = new Image();
+    pic2.src = "../image/right.gif";
+    var pic2f = new Image();
+    pic2f.src = "../image/right-f.gif";
+  }
+  function In(n){
+    if (document.images){
+      document.images[n].src=eval(n+"f.src");
+    }
+  }
+  function Out(n){
+    if (document.images){
+      document.images[n].src=eval(n+".src");
+    }
+  }
+  // -->
+  </script>
+
+  <style type="text/css">
+  <!--
+   span {line-height:120%}
+  -->
+  </style>
+
+</head>
+
+<body background="/mnomura/old/image/bg.gif" bgcolor="#c8a46e" text="#000000"
+ link="#336633" alink="#669933" vlink="#336633"
+ marginheight="15" topmargin="15">
+
+
+  <a href="/mnomura/old/dosv/index.html" onMouseOver="In('pic0')" onMouseOut="Out('pic0')"><img
+  src="/mnomura/old/image/up.gif" width="14" height="24" border="0" alt="戻る" name="pic0"></a>
+<img src="/mnomura/old/image/dosv.gif" width="101" height="21" border="0" alt="ＤＯＳ／Ｖ日記"><br clear="all">
+<table border="0" cellpadding="5" cellspacing="0">
+<tr>
+ <td rowspan="2" valign="top">
+  <img src="/mnomura/old/image/pixel.gif" width="40" height="1" border="0" alt="0"><br clear="all">
+  <a href="/mnomura/old/dosv/dosv0013.html" onMouseOver="In('pic1')" onMouseOut="Out('pic1')"><img
+  src="/mnomura/old/image/left.gif" width="26" height="12" border="0" alt="前へ" name="pic1"></a>
+ </td>
+ <td>
+ </td>
+</tr>
+<tr>
+ <td>
+<h3>第１４回「３つのＯＳ」(1998/12/07)</h3>
+<span>
+<p>
+　一口にＯＳといえども、様々なＯＳが存在する。パソコンでの代表選手は<a href="http://www.microsoft.com/">Windowsシリーズ</a>と<a href="http://www.apple.com/">Mac OS</a>である。そしてワークステーション、サーバーの分野ではUNIX系ＯＳがよく使われている。<br>
+　僕のマシンには３つのＯＳがインストールしてある。といっても、Intel系のチップを使っている（つまりDOS/V）であるがゆえに、Mac OSはインストールできない。LINUXというUNIX系OSをインストールすることは考えたことがあるが、頻繁にハードの環境を変えるし、ネットにつながっていないので利点がなく、まだ行っていない。我がマシンの３つのＯＳとは、Windows95、WindowsNT、<a href="http://www.be.com/">BeOS</a>である。<br>
+　Windows95はOSR2などという気の利いたものではない、普通のものだ。OSR2になってから安定性が増したとも言われるが、別に今の状態で不安定ではないし、むしろOSR2のおせっかいな仕組み（異常終了のときにスキャンディスクが走るとか）が気に食わなくてイヤ～んなイメージが強いのだ。<Br>
+　WindowsNTは大学で使うときにネットワークやユーザー管理の面で信頼が置けるので使っていた。大容量のファイルを扱う必要がある場合などにも、メモリ管理がWindows95よりはマシである。ハングしてもOSが落ちないというのも大容量ファイルを扱うときに有効である。だが、今使っているISAのネットワークカードが認識されていない。きつい。今、このOSは死んでいるといっても過言ではない。<br>
+　そしてBeOSである。以前も書いたが、私はRelease3を購入した。友人T氏（の母）のクレジットカードを使用してBe本社より通販で入手したのだ。ついでにＴシャツも買った。2色も買った。更についでにFedexってどんくらい早いんだろう？ってことでFedexで注文した。そうしたらクレジットの関係で入金が15日遅れて、あんまり「早い」と思えなくなってしまった。届いた頃にはそんなことはどうでも良くなっていて、「あの余分な料金は無駄に思えてきた」と愚痴った。閑話休題。<br>
+　3.1と3.2のアップグレードも行った。Beはすこぶる順調である。Release3の既知のバグ（マザーによっては電源をシャットダウンできない、など）以外に目立ったバグもない。<br>
+　Beの普及率は低い。というか、出たばっかりのOSだから仕方もない。Beは実にユニークなOSである。操作感、見た目はUNIXのX Windowsにクリソツである（ただし、X Window自体が、見た目を大きく変更できてしまうGUIだが）。OPEN GLがOSレベルで走ってしまうあたりもかっこいい。なにより軽い。Mac版のBe R3はムチャ早だった。Intel版のBe R3はそれほどでもないが、これはコンパイラのせいで遅いらしい。それでも実はWindows95で同じ事をさせたときよりは「軽い」。メモリ管理が良いようだ。OS自体を軽く作る、というコンセプトがこの結果をもたらしている。<br>
+　BeOSはR4が発売される。僕はもう予約してしまった（今度は<a href="http://www.plathome.co.jp/">国内の代理店</a>から）。ハードウェアの利用できるものが一気に増える、Windowsのパーティション（FAT16）が読み書きできる、SCSIが動く、といった利点があるが、なんといってもコンパイラが変更になったせいで最大8倍の速度アップらしい。期待して待つ。この年末のサンタは、きっとこれだ。
+</p>
+</span>
+
+<div align="right">
+  <a href="/mnomura/old/dosv/dosv0015.html" onMouseOver="In('pic2')" onMouseOut="Out('pic2')"><img
+  src="/mnomura/old/image/right.gif" width="26" height="12" border="0" alt="次へ" name="pic2"></a>
+</div>
+
+<font size=-1>
+<p>
+(C)Copyright Nomura Masayuki all rights reserved.
+</p>
+</font></span>
+</div>
+
+ </td>
+</tr>
+</table>
+
+</body>
+</html>

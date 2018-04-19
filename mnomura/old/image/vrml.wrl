@@ -1,0 +1,241 @@
+#VRML V2.0 utf8
+
+WorldInfo {
+  title "Welcome-BOY"
+  info["Autor Nomura Masayuki","http://www.kyushu-id.ac.jp/~j97529/"]
+}
+
+Background {
+  skyColor 0 0 0.2
+}
+
+DEF ALLOBJ Transform {
+  translation 0 -0.5 2
+  children [
+
+Transform {
+  translation -3.5 -0.4 1
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 0
+          emissiveColor 0 0 1
+          specularColor 0.5 0.5 0.5
+          shininess 0.1
+          transparency 0.8
+        }
+      }
+      geometry Text {
+        string "Nomura Masayuki"
+      }
+    }
+  ]
+}
+
+DEF OBJ Transform {
+children [
+  PointLight {
+    location 10 12 15
+  }
+
+Transform {
+  translation 0 1.8 -0.3
+  rotation -1 0 0 0.5
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.2 0 0
+          emissiveColor 0.8 0 0
+          specularColor 1 0.2 0.2
+          shininess 0.3
+          transparency 0
+        }
+      }
+      geometry Cone {
+        bottomRadius 0.6
+        height 1
+      }
+    }
+  ]
+}
+
+Anchor {
+  children [
+    Transform{
+      translation 0 1.2 0
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 1 0
+              emissiveColor 0.2 0.2 0
+              specularColor 0.8 0.8 0
+              shininess 0.5
+              transparency 0
+            }
+          }
+          geometry Sphere {
+            radius 0.5
+          }
+        }
+      ]
+    }
+  ]
+  description "Profile"
+  url "profile.html"
+}
+
+Transform {
+  translation 0 0.2 0
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 1 1
+          emissiveColor 0 0 1
+          specularColor 1 0.8 0.5
+          shininess 0.3
+          transparency 0
+        }
+      }
+      geometry Cone {
+        bottomRadius 0.6
+        height 1.5
+      }
+    }
+  ]
+}
+
+Anchor {
+  children [
+    Transform {
+      translation 0.3 -0.6 0
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 1 0
+              emissiveColor 0.2 0.2 0
+              specularColor 0.8 0.8 0
+              shininess 0.5
+              transparency 0
+            }
+          }
+          geometry Sphere {
+            radius 0.2
+          }
+        }
+      ]
+    }
+    Transform {
+      translation -0.3 -0.6 0
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 1 0
+              emissiveColor 0.2 0.2 0
+              specularColor 0.8 0.8 0
+              shininess 0.5
+              transparency 0
+            }
+          }
+          geometry Sphere {
+            radius 0.2
+          }
+        }
+      ]
+    }
+  ]
+  description "Links"
+  url "link.html"
+}
+
+Anchor {
+  children [
+    Transform {
+      translation -0.5 0.3 0
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 1 0
+              emissiveColor 0.2 0.2 0
+              specularColor 0.8 0.8 0
+              shininess 0.5
+              transparency 0
+            }
+          }
+          geometry Sphere {
+            radius 0.2
+          }
+        }
+      ]
+    }
+  ]
+  description "Pictures"
+  url "water/index.html"
+}
+
+Anchor {
+  children [
+    Transform {
+      translation 0.5 0.3 0
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 1 0
+              emissiveColor 0.2 0.2 0
+              specularColor 0.8 0.8 0
+              shininess 0.5
+              transparency 0
+            }
+          }
+          geometry Sphere {
+            radius 0.2
+          }
+        }
+      ]
+    }
+  ]
+  description "Essay"
+  url "http://www.alles.or.jp/~mnomura/"
+}
+
+]
+}
+]
+}
+
+DEF TS TimeSensor{
+  cycleInterval 1
+  loop TRUE
+  stopTime -1
+}
+
+DEF OI OrientationInterpolator{
+  key [   0, 0.25, 0.5, 0.75, 1]
+  keyValue [ 0 1 0   0, 0 1 0 0.65, 0 1 0 0, 0 1 0 -0.65, 0 1 0 0]
+}
+
+ROUTE TS.fraction_changed TO OI.set_fraction
+ROUTE OI.value_changed TO OBJ.set_rotation
+
+DEF TS2 TimeSensor{
+  cycleInterval 20
+  loop TRUE
+  stopTime -1
+}
+
+DEF OI2 OrientationInterpolator{
+  key [   0, 0.25, 0.5, 0.75, 1]
+  keyValue [ 0 1 0   0, 0.05 1 0 1.65, 0.2 1 0 3.14, -0.05 1 0 -1.65, 0 1 0 0]
+}
+
+ROUTE TS2.fraction_changed TO OI2.set_fraction
+ROUTE OI2.value_changed TO ALLOBJ.set_rotation
+
+
