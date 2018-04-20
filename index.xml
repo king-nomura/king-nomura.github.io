@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> 野村政行の「堪忍袋の緒を締めろ！」</title>
-    <link>http://diary.a3size.com/</link>
+    <link>https://diary.a3size.com/</link>
     <description>Recent content on  野村政行の「堪忍袋の緒を締めろ！」</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
     <lastBuildDate>Tue, 13 Feb 2018 03:00:01 +0000</lastBuildDate>
     
-        <atom:link href="http://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     
     <item>
       <title>Macの音声入力で日記を書くテスト</title>
-      <link>http://diary.a3size.com/2018/02/13/</link>
+      <link>https://diary.a3size.com/2018/02/13/</link>
       <pubDate>Tue, 13 Feb 2018 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2018/02/13/</guid>
+      <guid>https://diary.a3size.com/2018/02/13/</guid>
       <description>&lt;p&gt;流行に乗っかって、この文章マックの音声入力で書いてみている。新しい行新しい行&lt;/p&gt;
 
 &lt;p&gt;この文章ハ3回目。久々に変なシャベリカタをしていてキモチ悪い。人間サマが、マックに合わせて、喋り方を変えてやっている。なんて親切だ。&lt;/p&gt;
@@ -39,10 +39,10 @@
     
     <item>
       <title>Intel ME FWを自己責任でアップデートした</title>
-      <link>http://diary.a3size.com/2018/02/09/</link>
+      <link>https://diary.a3size.com/2018/02/09/</link>
       <pubDate>Fri, 09 Feb 2018 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2018/02/09/</guid>
+      <guid>https://diary.a3size.com/2018/02/09/</guid>
       <description>&lt;p&gt;もう二か月以上も前の話題なのだが、&lt;a href=&#34;https://www.intel.co.jp/content/www/jp/ja/support/articles/000025619/software.html56&#34; target=&#34;_blank&#34;&gt;インテル® マネジメント・エンジンの重要なファームウェア・アップデート (Intel-SA-00086)&lt;/a&gt;という事案があって。今ググったら、初報は去年の11月だった、えらい前の話で恐縮でございます。要するに、IntelのCPUにセキュリティ上の問題がみつかったのでマザーボードの会社のサイトから配布されるIntel ME(Management Engine)のFW(ファームウェア)アップデートをやってくれ、ということだった。&lt;/p&gt;
 
 &lt;p&gt;というわけで、使用しているMSI社のH170 GAMING M3について、BIOSのアップデートがあるものだと思ってぼぉーっと二か月も待っていたのだが、新しい世代のマザーボードについてはアナウンスがあったがH170チップセット系のマザーボードについては一向に該当のアップデートが来る気配がない。もはやH170なんて過去のものだ、そんなものに貴重な開発リソースを割くことはできない、と。世間の風は冷たい。&lt;/p&gt;
@@ -63,10 +63,10 @@
     
     <item>
       <title>2017年に観た映画について</title>
-      <link>http://diary.a3size.com/2018/01/04/</link>
+      <link>https://diary.a3size.com/2018/01/04/</link>
       <pubDate>Thu, 04 Jan 2018 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2018/01/04/</guid>
+      <guid>https://diary.a3size.com/2018/01/04/</guid>
       <description>&lt;p&gt;この日記をWordPressに移行しようと思って、どうせやるならデザイン変えようと思って、そう思っていたらなんと年を越していた。壮大な「やるやる詐欺」に自分がハマっている。毎年春先には開店休業状態になるので、その頃にWordPressに引っ越すことにしよう。そうしよう。&lt;/p&gt;
 
 &lt;p&gt;というわけで、とりあえず今年も一年間で観た映画の記録をまとめた。例によってランキング風ではあるが厳密では無いし、そもそも今思い返してみて「ああ、もう一度観てみたいなぁ」と思ったかどうかのランキングなので。良かったかどうかとは微妙に違うかも知れない。&lt;/p&gt;
@@ -81,10 +81,10 @@
     
     <item>
       <title>そろそろ日記をリニューアルしたい（有言不実行）</title>
-      <link>http://diary.a3size.com/2017/08/30/</link>
+      <link>https://diary.a3size.com/2017/08/30/</link>
       <pubDate>Wed, 30 Aug 2017 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2017/08/30/</guid>
+      <guid>https://diary.a3size.com/2017/08/30/</guid>
       <description>&lt;p&gt;ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろうか、と何度も考えていた。&lt;/p&gt;
 
 &lt;p&gt;で、CMSの入れ替えとなると日記データの互換性が気になるわけだ。試しにネット上で見つけたコンバーターを利用させていただいてWordPressにぶっ込むテストをしてみたら、うーん。おおよそは上手くコンバートできているが、ちょくちょくおかしなところもあり。一つ一つの日記を丁寧に確認作業するとして、えーと投稿数は、……「932」ですか。うへぇ。一番古い日記(このCMSになってから)が2004年3月だもんなぁ。最近は全然日記書いていなかったけれども、チリも積もれば山となる。駄文も折り重ねれば月に届く。そうしてまた今日の分も書いているので、またコンバート対象の日記が増えるわけですよ。&lt;a href=&#34;http://www.ginei.jp/&#34; target=&#34;_blank&#34;&gt;銀河の歴史がまた一ページ&lt;/a&gt;ですよ。&lt;/p&gt;
@@ -120,10 +120,10 @@
     
     <item>
       <title>ハイラル城に入りたくない</title>
-      <link>http://diary.a3size.com/2017/05/31/</link>
+      <link>https://diary.a3size.com/2017/05/31/</link>
       <pubDate>Wed, 31 May 2017 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2017/05/31/</guid>
+      <guid>https://diary.a3size.com/2017/05/31/</guid>
       <description>&lt;p&gt;日記の更新がすっかり滞っている。本当はOculus Riftで遊んでみたゲームの考察とか3D酔いの話を書きたかったんだが、急に&lt;a href=&#34;https://www.nintendo.co.jp/zelda/&#34; target=&#34;_blank&#34;&gt;ハイラル平原を駆け巡りたくなって&lt;/a&gt;(更にいえば、「スプラトゥーン2」のための待機)、それのせいで色々なゲームを中断せざるを得ない状況になり。そのうちにいよいよハイラル城の中に入らねばならない状況に追い込まれた（＝ラスボスと戦え）のだが、ゴリ押しでなんとか生き延びてきたウデマエの英雄に何を期待しているのだ怖くてそんなん無理無理！と、ずっと崖を登って現実逃避している。ゲームの中でも現実逃避とは、そもそもゲームの中の現実とは一体。&lt;/p&gt;
 
 &lt;p&gt;そういえば最近、東京近郊の手軽に登れる山にいくつか行ってみたのだが、崖をみるたびに登れそうな錯覚や、尾根から尾根にパラセールで移動したくなる妄想が起こる。現実とは一体。&lt;/p&gt;
@@ -134,10 +134,10 @@
     
     <item>
       <title>今年観た映画の話</title>
-      <link>http://diary.a3size.com/2016/12/26/</link>
+      <link>https://diary.a3size.com/2016/12/26/</link>
       <pubDate>Mon, 26 Dec 2016 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2016/12/26/</guid>
+      <guid>https://diary.a3size.com/2016/12/26/</guid>
       <description>&lt;p&gt;今年は秋からものすごく忙しくなってしまって、あまり映画を観に行けなかった。もう今年は観に行けなさそうなので、今年も&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1mXWmPNwnH5qu4sd4G8VrnFbaUzctMnXxY6HetVUh5Xg/pubhtml?gid=1123529751&amp;#038;single=true&#34; target=&#34;_blank&#34;&gt;もう一度観たい映画ランキング&lt;/a&gt;にまとめてみた。&lt;/p&gt;
 
 &lt;p&gt;異論は認める。&lt;/p&gt;
@@ -148,10 +148,10 @@
     
     <item>
       <title>最近遊んだゲームの話</title>
-      <link>http://diary.a3size.com/2016/10/22/</link>
+      <link>https://diary.a3size.com/2016/10/22/</link>
       <pubDate>Sat, 22 Oct 2016 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2016/10/22/</guid>
+      <guid>https://diary.a3size.com/2016/10/22/</guid>
       <description>&lt;p&gt;本当に偶然なのだ。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://store.steampowered.com/?l=japa
@@ -181,10 +181,10 @@ nese&#34; target=&#34;_blank&#34;&gt;Steam&lt;/a&gt;のバーゲンのときに�
     
     <item>
       <title>VRに感動した</title>
-      <link>http://diary.a3size.com/2016/10/18/</link>
+      <link>https://diary.a3size.com/2016/10/18/</link>
       <pubDate>Tue, 18 Oct 2016 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2016/10/18/</guid>
+      <guid>https://diary.a3size.com/2016/10/18/</guid>
       <description>&lt;p&gt;ここまでの日記で、そこそこの金額と労力を費やしてOculus RiftによるVR環境を構築したことを書いた。そう、安くないんだ。なので、この買い物の結果、一体どんな知見や感動が手に入ったのかはとても重要なのだ。&lt;/p&gt;
 
 &lt;p&gt;Oculus Rift、というかVRのファーストインプレッションは「やべぇ時代が来ちまったぜ」だった。……みんなそういうよね、はい。&lt;/p&gt;
@@ -217,10 +217,10 @@ nese&#34; target=&#34;_blank&#34;&gt;Steam&lt;/a&gt;のバーゲンのときに�
     
     <item>
       <title>約7年以上ぶりにPCを組み立てた話・終「シミュレーション不足」</title>
-      <link>http://diary.a3size.com/2016/09/28/</link>
+      <link>https://diary.a3size.com/2016/09/28/</link>
       <pubDate>Wed, 28 Sep 2016 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2016/09/28/</guid>
+      <guid>https://diary.a3size.com/2016/09/28/</guid>
       <description>&lt;p&gt;前回までの&lt;a href=&#34;http://www.jp.square-enix.com/lis/&#34; target=&#34;_blank&#34;&gt;おっさん is Strange&lt;/a&gt;は：Windows 7のインストールは順調に進んだ。&lt;/p&gt;
 
 &lt;p&gt;起動したWindows 7にまずはドライバをぶち込んでいく。ぼやぼやしているとWindows Updateに先を越されるから、急がねば。昔のようにインストールにクセのあるドライバは無かったが、相変わらず各社とも色んな不思議なユーティリティをぶち込んでくる。DOSとかWindows 9xくらいまではMicrosoft標準ドライバでは機能やパフォーマンスが足りなかったので、各社のドライバや独自ユーティリティがどうしても必要だった。今ではその役割も薄れて、むしろ玄人ならうまいこと「インストールしないように」するものだ、というのが暗黙の了解になっている気がする。玄人しかPCを組み立てようと思わないはずなのに不思議だね。まぁ今回は、この数年Windows機を組み立てていなかったので最近は便利なものもあるのかも知れない、というころでユーティリティ類は一旦素直に入れてみることにした。動作が重くなるなら外すし、何ならWindowsから再インストールするさ。このマシンはメイン機じゃないからね。&lt;/p&gt;

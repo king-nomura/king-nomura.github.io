@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ⚡>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<meta name="generator" content="Hugo 0.38.2" />
+<meta name="author" content="野村政行">
+
+<title>JapaninoのPOV用エディタ（ちゃちゃっと版） -  野村政行の「堪忍袋の緒を締めろ！」</title>
+
+
+<link rel="canonical" type="text/html" href="https://diary.a3size.com/2010/06/01/">
+
+<meta property="og:site_name" content=" 野村政行の「堪忍袋の緒を締めろ！」">
+<meta property="og:title" content="JapaninoのPOV用エディタ（ちゃちゃっと版）">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:app_id" content="361503227564013">
+<meta property="og:url" content="https://diary.a3size.com/2010/06/01/">
+
+<meta property="og:image" content="https://diary.a3size.com/images/ogp.png">
+<meta property="twitter:image" content="https://diary.a3size.com/images/ogp.png">
+
+
+
+<meta name="description" content="「大人の科学」Vol.27はテクノ工作セットということで、Japaninoという名前のコンピュータ（Arduino互換）と、POVと呼ばれる...">
+<meta property="og:description" content="「大人の科学」Vol.27はテクノ工作セットということで、Japaninoという名前のコンピュータ（Arduino互換）と、POVと呼ばれる...">
+<meta name="twitter:description" content="「大人の科学」Vol.27はテクノ工作セットということで、Japaninoという名前のコンピュータ（Arduino互換）と、POVと呼ばれる...">
+
+
+
+
+
+
+<link rel="shortcut icon" href="https://diary.a3size.com/images/favicon.ico">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+</head>
+<body>
+
+<main class="content" role="main">
+<article class="article">
+<span class="article-date">2010-06-01</span>
+<h1 class="article-title">JapaninoのPOV用エディタ（ちゃちゃっと版）</h1>
+<div class="article-content">
+<p>「<a href="http://otonanokagaku.net/" target="_blank">大人の科学</a>」Vol.27はテクノ工作セットということで、Japaninoという名前のコンピュータ（Arduino互換）と、POVと呼ばれるLEDの残像で字や絵を表示する装置が付属する。これらがどういうものがご存じない方はぜひネットで検索するなり、書店で大人の科学Vol.27を手に取っていただきたい。老若男女問わずファンが急増しているジャンルであるから、すぐにでも面白さが判ってもらえると思う。</p>
+
+<p>で、野村が月一回のペースで参加させてもらっている「プチ合宿」と呼ばれる集まりがある。合宿といっても昼に集まって夜には終わるという集まりなのだが、そこでは参加者は電子工作やプログラムの勉強など、自分の勉強したいことや研究したいことをまとまった時間でやり込んでいる。</p>
+
+<p>普段は各自が自分のテーマを持ち込むのだが、5月のプチ合宿ではJapanino発売を勝手に記念してみんなでJapaninoとPOVを組み立ててみた。キットを説明通りに組み立て終わると、各々プログラムを書き換えて色んな文字や模様をPOVに表示させたり、音を鳴らしたりしてこのキットを堪能した。野村はPOVを光らせるための行列データを作ることができるエディタをFlashで作ってみた。</p>
+
+<p>→ <a href="/files/povEdit.swf">povEdit</a></p>
+
+<p>ソースコードはこちら。ご自由に利用してください。</p>
+
+<p>→ <a href="/files/povEdit.zip">Flash CS4用ソースコード</a></p>
+
+<p>画面を簡単に説明すると、LEDを模した横19 x 縦7列のグリッド部分をクリックして、点灯/消灯させて絵を描く。データを差し替えながらPOVを点灯させることでアニメーションを実現するのがこのエディタの目的で、ステップという単位のアニメーションフレームを作成することができる。下部の○が現在のステップを表していて、＋ボタンを押すとステップが増える。で、右下の三角ボタンでステップを左から右に連続再生（ループ）する（もう一度クリックで停止）。不要なステップは−ボタンで削除できる。</p>
+
+<p>合宿中にちゃちゃっと作ったものなので脇の甘いところがあるかも知れない。そもそも、作り終わってから調べてみたら既に同様のアプリがいくつもあった。まぁ、そこはそれ、何でも「作ってみる」というのがプチ合宿のスタンスであるから問題ない、ということで。</p>
+
+</div>
+</article>
+</main>
+<footer class="footer">
+<p><small class="footer-copyright">author: nomura masayuki</small></p>
+</footer>
+</body>
+</html>
+

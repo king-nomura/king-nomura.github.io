@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Close Your ANGRY BAG Tightly!</title>
-    <link>http://diary.a3size.com/en/</link>
+    <link>https://diary.a3size.com/en/</link>
     <description>Recent content on Close Your ANGRY BAG Tightly!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>nomura masayuki</copyright>
     
-        <atom:link href="http://diary.a3size.com/en/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://diary.a3size.com/en/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

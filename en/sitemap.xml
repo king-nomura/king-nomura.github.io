@@ -3,47 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://diary.a3size.com/en/categories/</loc>
+    <loc>https://diary.a3size.com/en/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://diary.a3size.com/categories/"
+                href="https://diary.a3size.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://diary.a3size.com/en/categories/"
+                href="https://diary.a3size.com/en/categories/"
                 />
   </url>
   
   <url>
-    <loc>http://diary.a3size.com/en/</loc>
+    <loc>https://diary.a3size.com/en/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://diary.a3size.com/"
+                href="https://diary.a3size.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://diary.a3size.com/en/"
+                href="https://diary.a3size.com/en/"
                 />
   </url>
   
   <url>
-    <loc>http://diary.a3size.com/en/tags/</loc>
+    <loc>https://diary.a3size.com/en/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://diary.a3size.com/tags/"
+                href="https://diary.a3size.com/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://diary.a3size.com/en/tags/"
+                href="https://diary.a3size.com/en/tags/"
                 />
   </url>
   

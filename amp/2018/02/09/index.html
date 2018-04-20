@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ⚡>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<meta name="generator" content="Hugo 0.38.2" />
+<meta name="author" content="野村政行">
+
+<title>Intel ME FWを自己責任でアップデートした -  野村政行の「堪忍袋の緒を締めろ！」</title>
+
+
+<link rel="canonical" type="text/html" href="https://diary.a3size.com/2018/02/09/">
+
+<meta property="og:site_name" content=" 野村政行の「堪忍袋の緒を締めろ！」">
+<meta property="og:title" content="Intel ME FWを自己責任でアップデートした">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:app_id" content="361503227564013">
+<meta property="og:url" content="https://diary.a3size.com/2018/02/09/">
+
+<meta property="og:image" content="https://diary.a3size.com/images/ogp.png">
+<meta property="twitter:image" content="https://diary.a3size.com/images/ogp.png">
+
+
+
+<meta name="description" content="もう二か月以上も前の話題なのだが、インテル® マネジメント・エンジンの重要なファームウェア・アップデート (Intel-SA-00086)という...">
+<meta property="og:description" content="もう二か月以上も前の話題なのだが、インテル® マネジメント・エンジンの重要なファームウェア・アップデート (Intel-SA-00086)という...">
+<meta name="twitter:description" content="もう二か月以上も前の話題なのだが、インテル® マネジメント・エンジンの重要なファームウェア・アップデート (Intel-SA-00086)という...">
+
+
+
+
+
+
+<link rel="shortcut icon" href="https://diary.a3size.com/images/favicon.ico">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+</head>
+<body>
+
+<main class="content" role="main">
+<article class="article">
+<span class="article-date">2018-02-09</span>
+<h1 class="article-title">Intel ME FWを自己責任でアップデートした</h1>
+<div class="article-content">
+<p>もう二か月以上も前の話題なのだが、<a href="https://www.intel.co.jp/content/www/jp/ja/support/articles/000025619/software.html56" target="_blank">インテル® マネジメント・エンジンの重要なファームウェア・アップデート (Intel-SA-00086)</a>という事案があって。今ググったら、初報は去年の11月だった、えらい前の話で恐縮でございます。要するに、IntelのCPUにセキュリティ上の問題がみつかったのでマザーボードの会社のサイトから配布されるIntel ME(Management Engine)のFW(ファームウェア)アップデートをやってくれ、ということだった。</p>
+
+<p>というわけで、使用しているMSI社のH170 GAMING M3について、BIOSのアップデートがあるものだと思ってぼぉーっと二か月も待っていたのだが、新しい世代のマザーボードについてはアナウンスがあったがH170チップセット系のマザーボードについては一向に該当のアップデートが来る気配がない。もはやH170なんて過去のものだ、そんなものに貴重な開発リソースを割くことはできない、と。世間の風は冷たい。</p>
+
+<p>メーカーがやってくれないなら、自己責任で対策すればいいじゃない。</p>
+
+<p>というわけで、自己責任でIntel ME FWを広大なネットの海のどこからか拾ってきて適用した。参考にさせていただいたのは、こちらです。(<a href="http://www.nozoana.work/article/455978527.html" target="_blank">i7 8700KのIntel ME FWを、MSI Z370 Tomahawkからアップデートしてみた～Intel H170/H270/Z170/Z270/Z370シリーズのIntel MEファームウェアを更新する方法～: ログヲーク ～仮想通貨や日々思ったことの日記～</a>)。</p>
+
+<p>自作PCブームの初期の頃は、ハードウェアのパッケージに付属しているドライバ類はバージョンが古いので、最新のドライバをネットで探してくるのは当たり前の作業だった。その際に、販売元(海外メーカーの日本代理店)のWebサイトは情報が古かったりメンテナンスされていないことが多かったので、製造元や場合によっては使用されているチップのメーカーのサイトからダウンロードしてきたりした。更には同じメーカーの別のチップのドライバを設定ファイルをちょっといじって強引に突っ込んだりした。ただし、結構な確率でOSが立ち上がらなくなる。それでも、壊れてもいいからやってみようと思えば、案外いろんなことができる。</p>
+
+<p>そんな感じで、要はIntel ME FWをどこから見つけてくるか、なのだが、上記の記事を参考にして、<a href="http://www.station-drivers.com/index.php?option=com_remository&amp;Itemid=352&amp;func=startdown&amp;id=3303&amp;lang=en" target="_blank">Intel Management Engine (ME / AMT) Firmware Version 11.8.50.3434 (S &amp; H) (5MB)</a>を適用することにした。このstation-drivers.comが安全なサイトかどうか確信は持てない、というあたりが自己責任な部分で、今回のケースではあとは「最新のマザーボードに買い直す」くらいしか選択肢がないからまあいいかな、と。</p>
+
+<p>無事ファームウェアをアップデートして、Intelのサイトにある「intel-sa-00086 検出ツール」で対策完了を確認。終わり。</p>
+
+</div>
+</article>
+</main>
+<footer class="footer">
+<p><small class="footer-copyright">author: nomura masayuki</small></p>
+</footer>
+</body>
+</html>
+

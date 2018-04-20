@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Close Your ANGRY BAG Tightly!</title>
-    <link>http://diary.a3size.com/en/categories/</link>
+    <link>https://diary.a3size.com/en/categories/</link>
     <description>Recent content in Categories on Close Your ANGRY BAG Tightly!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>nomura masayuki</copyright>
     
-	<atom:link href="http://diary.a3size.com/en/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://diary.a3size.com/en/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

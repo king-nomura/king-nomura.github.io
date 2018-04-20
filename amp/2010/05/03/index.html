@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ⚡>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<meta name="generator" content="Hugo 0.38.2" />
+<meta name="author" content="野村政行">
+
+<title>例のAppleの文章についての雑感 -  野村政行の「堪忍袋の緒を締めろ！」</title>
+
+
+<link rel="canonical" type="text/html" href="https://diary.a3size.com/2010/05/03/">
+
+<meta property="og:site_name" content=" 野村政行の「堪忍袋の緒を締めろ！」">
+<meta property="og:title" content="例のAppleの文章についての雑感">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:app_id" content="361503227564013">
+<meta property="og:url" content="https://diary.a3size.com/2010/05/03/">
+
+<meta property="og:image" content="https://diary.a3size.com/images/ogp.png">
+<meta property="twitter:image" content="https://diary.a3size.com/images/ogp.png">
+
+
+
+<meta name="description" content="この雑感は、Packager for iPhoneを潰すための規約変更が覆らない前提で書いている。規約変更の話は脇に置いて読んでもらいたい。 個人的に...">
+<meta property="og:description" content="この雑感は、Packager for iPhoneを潰すための規約変更が覆らない前提で書いている。規約変更の話は脇に置いて読んでもらいたい。 個人的に...">
+<meta name="twitter:description" content="この雑感は、Packager for iPhoneを潰すための規約変更が覆らない前提で書いている。規約変更の話は脇に置いて読んでもらいたい。 個人的に...">
+
+
+
+
+
+
+<link rel="shortcut icon" href="https://diary.a3size.com/images/favicon.ico">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+</head>
+<body>
+
+<main class="content" role="main">
+<article class="article">
+<span class="article-date">2010-05-03</span>
+<h1 class="article-title">例のAppleの文章についての雑感</h1>
+<div class="article-content">
+<p>この雑感は、Packager for iPhoneを潰すための規約変更が覆らない前提で書いている。規約変更の話は脇に置いて読んでもらいたい。</p>
+
+<p>個人的にはあのApple社(Steve Jobs氏)がFlashをiPhoneに搭載しない理由として掲載した、中途半端な<a href="http://www.apple.com/hotnews/thoughts-on-flash/" target="_blank">文章</a>は読み解くに値しないと思っていた。大体、アプリの話をしているのかWebブラウザ内のプラグインの話をしているのかすら定まっていない。従って反論も不要と思っていた。だがどうも話題が先行してしまっているため、このままではFlashについての誤解が広まってしまうかも知れない。</p>
+
+<p>論点がずれたままの言葉の応酬に、世論が振り回されないようにしなければならない。なので件の文書の、前半のだらだらぐだぐだをすっ飛ばして、後ろにようやく出てくる「もっとも重要な理由」として掲げたサードパーティ製のミドルウェアを使って開発されると品質が下がる、という話に絞って考えてみる。</p>
+
+<p>AppleがApple自身の価値（例えばAppのUIの品質など）を管理するのは当然だと思う。そしてその仕組みをAppleは持っている。App Storeがそれだ。アプリは全てAppleが独占的で恣意的な判断を下すことが可能なように、Appleの管理下でしか配布することが出来ないようになっている。</p>
+
+<p>現に様々なアプリが様々な事情によりリジェクトされたり公開を停止させられている。アプリを申請する際には、バイナリ（完成品）は提出するがソースコード（一般的にプログラムと云われているのはこれのこと、ソースコードから完成品が作られる）を提出しない。だが、Appleはバイナリから何らかの手法で、そのアプリがどういう作り方になっていて、それがレギュレーションを違反していないかどうか、品質をチェックしている。</p>
+
+<p>今回Adobeが発表したPackager for iPhoneという機能では、Flash Professionalで作られたものをアプリの形のバイナリに変換する。で、Appleは上記のように何らかの手法で「バイナリから品質をチェック」している。つまり、「アプリの品質の問題」はそれがFlashで作られたかどうかに関係なく、一律に判断することが可能ではなかろうか。</p>
+
+<p>あるいは、その何らかの手法でバイナリーから品質をチェックするための機能が、Packager for iPhoneによって酷く負荷が高まってしまうなどの問題があるというのか。それならば、Adobeには辛いことかも知れないが最初から「ソースコードの提出」を義務づければ良い。品質をチェックするならソースコードからチェックする方が断然早い。最初っからそう云われていれば、Adobeもぐぅの音も出なかっただろう。だがAppleは、実際にはソースコードを提出させるほうがコストが高いのかなんだか知らないが、現状ではバイナリのみしか提出させない。</p>
+
+<p>そもそも、現状のアプリのチェック機能それ自体が、本当に品質の管理を行えているのかも疑問だ。先日、あるサードパーティのライブラリを使ったアプリが一斉に公開を取り消される事態が発生した。理由はライブラリのソースコードの一部がレギュレーションに違反していたからだが、何故公開前の審査をくぐり抜けてしまったのかについてはAppleから何の情報開示もなされていない。</p>
+
+<p>或いはUIがFlashによってかき乱されると云われるが、それこそ出て来たアプリをチェックすればよいだけの話であって。そもそも、UIは現状でもいかようにでも改変可能だ。それをみんながやらないのは標準で提供されるUIが良く出来ているからと、単に変更するのが面倒だからだ。</p>
+
+<p>一方的にFlashを搭載しない理由はこれだ！と掲げているが、品質に問題があるのはFlashのほうではなくでAppleのほうなのではないか。それをFlashを槍玉に上げることでカウンターあてたような雰囲気を醸し出しているに過ぎないのではないか。</p>
+
+<p>しかし、今回のAppleの文章、読むにつけ内容の無い文章だ。この日記書くに至るまで延べで何時間も悩まされたこと自体が、Jobsマジックにかかったということなのだろうか。</p>
+
+</div>
+</article>
+</main>
+<footer class="footer">
+<p><small class="footer-copyright">author: nomura masayuki</small></p>
+</footer>
+</body>
+</html>
+
