@@ -7,9 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Tue, 13 Feb 2018 03:00:01 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Apr 2018 01:28:00 +0900</lastBuildDate>
     
         <atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>GitHub Pagesにお引っ越し</title>
+      <link>https://diary.a3size.com/2018/04/21/</link>
+      <pubDate>Sat, 21 Apr 2018 01:28:00 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2018/04/21/</guid>
+      <description>&lt;p&gt;WordPressでこの日記をリニューアルすると&lt;a href=&#34;https://diary.a3size.com/2017/08/30/&#34;&gt;以前書いた&lt;/a&gt;が、色々と考えてみた結果&lt;a href=&#34;https://pages.github.com/&#34; target=&#34;_blank&#34;&gt;GitHub Pages&lt;/a&gt;に引っ越した。&lt;/p&gt;
+
+&lt;p&gt;というのも、CPUパワーがどうのとか考えてみるに、この日記に動的な部分なんぞほとんどないので静的HTMLジェネレータで十分じゃないかと思い至り。&lt;/p&gt;
+
+&lt;p&gt;しかもどんなツールで日記を書くとしても、今どきはMarkdown方式で書きたいわけで。Markdownが使えて、静的なHTMLが書き出せるものということで、&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;を選択した。&lt;/p&gt;
+
+&lt;p&gt;現在、この日記のソースコードがある&lt;a href=&#34;https://bitbucket.org/&#34; target=&#34;_blank&#34;&gt;BitBucket&lt;/a&gt;から、自動生成されたものだけをGitHubにpushする。という実験中。&lt;/p&gt;
+
+&lt;p&gt;うまくいったら、もう少し細かく手順をまとめるかも知れないし、まあググれば分かるかもしれないから書かないかも知れないし。&lt;/p&gt;
+
+&lt;p&gt;引っ越した理由のもう一つはサイトのSSL化を実現するため。前のサイトでもできたのだが、GitHub PagesはSSLの発行も自動化されているという至れり尽くせり。&lt;a href=&#34;https://letsencrypt.org/&#34; target=&#34;_blank&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/a&gt;は素晴らしい。寄附しちゃった。&lt;/p&gt;
+</description>
+    </item>
     
     
     
@@ -210,44 +232,6 @@ nese&#34; target=&#34;_blank&#34;&gt;Steam&lt;/a&gt;のバーゲンのときに�
 &lt;p&gt;まぁともかく。VRでMinecraftの世界に入ったときの感動はとても大きく、VRってスゲーというとてもチープな感想でしか日記をまとめられない自分がちっぽけにみえるのですよ。&lt;/p&gt;
 
 &lt;p&gt;ところでVR専用のエッチなゲームが出るようなのですが、経費で落ちますかね。&lt;/p&gt;
-</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>約7年以上ぶりにPCを組み立てた話・終「シミュレーション不足」</title>
-      <link>https://diary.a3size.com/2016/09/28/</link>
-      <pubDate>Wed, 28 Sep 2016 03:00:01 +0000</pubDate>
-      
-      <guid>https://diary.a3size.com/2016/09/28/</guid>
-      <description>&lt;p&gt;前回までの&lt;a href=&#34;http://www.jp.square-enix.com/lis/&#34; target=&#34;_blank&#34;&gt;おっさん is Strange&lt;/a&gt;は：Windows 7のインストールは順調に進んだ。&lt;/p&gt;
-
-&lt;p&gt;起動したWindows 7にまずはドライバをぶち込んでいく。ぼやぼやしているとWindows Updateに先を越されるから、急がねば。昔のようにインストールにクセのあるドライバは無かったが、相変わらず各社とも色んな不思議なユーティリティをぶち込んでくる。DOSとかWindows 9xくらいまではMicrosoft標準ドライバでは機能やパフォーマンスが足りなかったので、各社のドライバや独自ユーティリティがどうしても必要だった。今ではその役割も薄れて、むしろ玄人ならうまいこと「インストールしないように」するものだ、というのが暗黙の了解になっている気がする。玄人しかPCを組み立てようと思わないはずなのに不思議だね。まぁ今回は、この数年Windows機を組み立てていなかったので最近は便利なものもあるのかも知れない、というころでユーティリティ類は一旦素直に入れてみることにした。動作が重くなるなら外すし、何ならWindowsから再インストールするさ。このマシンはメイン機じゃないからね。&lt;/p&gt;
-
-&lt;p&gt;そしてWindows 7をアップデートしていく。コレをやらないとWindows 10にアップグレードできないし、やれたとしても何らかの事情で7にダウングレードする必要に迫られたときが面倒だと思ったからだ。小一時間（もっとかかったかな？）が経過して、Windows 7が安定動作していることを確認したら、いよいよアップグレード用のおせっかいウィンドウをクリックする。&lt;/p&gt;
-
-&lt;p&gt;どれくらいの時間が過ぎただろうか。別の世界では存在していたWindows 9が一瞬画面を横切り(ウソです)、Windows 10がやってくる。成功だ。ではさっそくMicrosoftアカウントを紐付けして……。&lt;/p&gt;
-
-&lt;p&gt;「＠」が「”」になってしまう。もしかして、キーボードが日本語配列？まただよ。ま・た・だ・ヨ！どうしてLogitech diNovo Edgeはいつも英語配列と認識されてくれないんだヨ！Logitechのドライバやユーティリティは何をしているんだヨ！&lt;/p&gt;
-
-&lt;p&gt;大体、Windowsのインストール時には英語配列を選択しているのに、インストールが終わったら日本語配列になっているんだから、んもーぅ。そこから、レジストリやキーボードのドライバをあれやこれやして英語配列だと気づかせる作業にまた小一時間を費やす。毎回、どういう手順が正解なのか分からないままいつの間にか認識されてしまうから困ったもんだ。&lt;/p&gt;
-
-&lt;p&gt;さて、あらかた準備は終わった。最後に取り付けるのは、Oculus Riftだ。ようやく……、ようやく辿り着いたぞ。&lt;/p&gt;
-
-&lt;p&gt;Oculus Riftの箱を開ける。特徴的なヘッドセットと、マイクスタンドのようなセンサー、その他リモコンとXBox用コントローラーが付属している。ヘッドセットからHDMIとUSBケーブル、センサーからもUSBケーブルが出ているのでさっそく繋ごう。&lt;/p&gt;
-
-&lt;p&gt;……あれ？HDMI端子はディスプレイに繋いでいるぞ？ひょっとして、端子が足りない？……そうか、普段使用するディスプレイ用とは別に、Oculus Rift専用のHDMI端子が必要なのか！気づかなかったー！Oculus Riftのページで何度も必要スペック確認していたのに、全然気づいていなかったよ！&lt;/p&gt;
-
-&lt;p&gt;ビデオボードにはDVI-DやDisplay Portの端子もあるが、ディスプレイ側の端子が足りない。ディスプレイ側のDVI-DはMacBook Proに繋いでいるし、あとはD-Sub15……、アナログで繋ぐって……、さすがに嫌だなぁ。&lt;/p&gt;
-
-&lt;p&gt;とりあえずディスプレイをマザーボードのHDMI端子に繋ぎかえてみるも、ビデオボードがあるせいでオンボードのVGA機能は無効になっている。この日記を書くに当たって改めてマザーボードのBIOSを確認すると、初期値ではオンボードVGAのマルチモニター機能が無効化されていたが、これを有効化すればよかったようだ。だがこのときはBIOS設定にまで気が回らずに別のアイディアが浮かんだ。USBディスプレイを繋げばいいんじゃないか？と。&lt;/p&gt;
-
-&lt;p&gt;押し入れからUSB接続の小型ディスプレイを引っ張り出してくる。接続するとドライバのインストールが自動的に始まり、しばらくすると無事画面が映った。画面は小さいながらもこれでなんとかインストールが再開できるだろう、と思いきや。Oculus Riftのドライバインストールは何度試しても、途中で必ず失敗する。もしやと思い検索すると、どうやらUSBディスプレイのドライバはOculus Riftのドライバ競合してしまうらしい。んもーぅ。&lt;/p&gt;
-
-&lt;p&gt;今回のPC組み立ては万事この調子で、とにかく事前調査不足が祟って先に進まなくなってばかりだった。すっかり勘が鈍ったんだなぁ。&lt;/p&gt;
-
-&lt;p&gt;次の日(組み立てはじめてから3日目)、Display PortをHDMIに変換するアダプタを買ってきた。これによりビデオボードのDisplay PortをHDMIに変換してディスプレイに、本来のHDMIにはOculus Riftを繋ぐことができた。やっと完成だ。長かった……。&lt;/p&gt;
 </description>
     </item>
     

@@ -76,6 +76,64 @@
 
     <article class="article">
       
+      <p class="article-date"><a href="https://diary.a3size.com/2008/02/15/"><i class="fas fa-book"></i>  2008-02-15</a></p>
+      
+      <h1 class="article-title">UbuntuからXubuntuへ</a></h1>
+      
+
+      <div class="article-content">
+        <p>Mobile Pentium3 700Mhz、192MBメモリのノートPC(Compaq Evo N200）。かつての野村のメインPCだったのだが、今はご隠居マシンである。だが、昨今の定年後の老人らしくこのPCもまだまだ働かねばならぬときもある。</p>
+
+<p>例えば、彼女サマがメインで使っていたノートPCを落としてしまって液晶を割ってしまい、その代替機として野村が現在メインで使っているノートPCを出張させなくてはならないときだ。</p>
+
+<p>さて、このご隠居PC、Windows2000の他にUbuntuが入っている。UbuntuはLinuxの中でもグラフィカルなOSを目指して作られているディストリビューションだ。GUIバリバリなのでちょっと設定が特殊なWindowsだと言ってシロートを騙せそうなくらいだ。</p>
+
+<p>だが、その分重い。Windowsと変わらないときがあるくらい重い。Swap使いまくり。</p>
+
+<p>そんな中、Ubuntuを元にGUI部分をGNOMEからXfceに載せ替えて計量化した「Xubuntu」の存在を知った。これは試してみるしかあるまい。</p>
+
+<p>Ubuntuからは、おなじみのSynapticパッケージ・マネージャで「xubuntu-desktop」をインストールするだけ。簡単、簡単。これで再起動後はXubuntuのログインマネージャに変わる。Xubuntuのマークは、Ubuntuのマークにネズミが乗っかっている。なんというか、……あざとい。</p>
+
+<p>ここで問題発生。何度かログインしているうちに、何故か画面上下のパネル（Windowsのタスクバーやスタートボタンに相当）が表示されなくなった。これにはしばらく悩まされた、なんでこんなことになったのか。</p>
+
+<p>結論としては、「/usr/bin/xfce4-panel」が起動していなかったのが原因だった。</p>
+
+<ol>
+<li>何もないデスクトップを右クリックして「デスクトップ環境設定」を起動</li>
+<li>「振る舞い」から「右クリックでデスクトップメニューを表示する」を選択</li>
+</ol>
+
+<p>これでデスクトップメニューが表示できるようになるので、ターミナルを起動できるようになる。</p>
+
+<p>ターミナルが使えれば、</p>
+
+<p><code>$ ./xfce4-panel &amp;</code></p>
+
+<p>でパネルを起動できるし、「設定」→「自動開始アプリケーション」に「/usr/bin/xfce4-panel」を追加すれば次回から自動でパネルが起動できるようになる。</p>
+
+<p>よーし、これでようやく使えるXubuntuになってくれた。</p>
+
+<p>ところで軽くなったのかな。メモリ使用量は減ったような気も、しなくもなく、そうでもなく。</p>
+
+      </div>
+
+      <hr>
+      <ul class="article-taxonomy">
+        
+
+        
+        <li>
+          <i class="fas fa-tags"></i> <a href="/tags/pc">PC</a>
+        </li>
+        
+      </ul>
+      
+    </article>
+
+    
+
+    <article class="article">
+      
       <p class="article-date"><a href="https://diary.a3size.com/2008/02/11/"><i class="fas fa-book"></i>  2008-02-11</a></p>
       
       <h1 class="article-title">液晶TV買った</a></h1>
@@ -214,43 +272,6 @@
         
         <li>
           <i class="fas fa-tags"></i> <a href="/tags/pc">PC</a>
-        </li>
-        
-      </ul>
-      
-    </article>
-
-    
-
-    <article class="article">
-      
-      <p class="article-date"><a href="https://diary.a3size.com/2008/01/22/"><i class="fas fa-book"></i>  2008-01-22</a></p>
-      
-      <h1 class="article-title">今期のアニメは(2)</a></h1>
-      
-
-      <div class="article-content">
-        <p>「<a href="http://www.shigofumi.com/" target="_blank">シゴフミ</a>」は、……人間がもっと深いといいんだけどな。重いテーマ扱いたいんなら、もっと深く掘り込んでもらわないと、ただのホラーになってしまう。とりあえず、もう少し注目。</p>
-
-<p>「<a href="http://www.starchild.co.jp/special/zetsubou2/" target="_blank">俗・さよなら絶望先生</a>」は、さすがに続編なだけあって前回よりも濃くなっている。もはや一見さんお断り状態。人にはお勧めできない、が、好きな人にはたまらない。</p>
-
-<p>「<a href="http://www.spicy-wolf.com/" target="_blank">狼と香辛料</a>」のオープニングは小峰公子の詞に吉良知彦の曲。エンディングはchris mosdellの詞に編曲で保刈久明。Zabadak(Karak)ですな。オープニングを聴いた瞬間「？」と思ってテロップをじいっと観ていたらこの名前が出てきて、思わず声を上げてしまった。肝心の内容のほうは、……人間がもっと深いといいなあ。浅いなぁ。無駄にキャッチーに作られてもなぁ。</p>
-
-<p>上條くんに勧められた「<a href="http://www.ariacompany.net/" target="_blank">ARIA</a>」は、……うーん、ごめん、あのネコみたいなやつ（アリア社長）が生理的に受け付けない。世界観とか面白そうだね。妄想が膨らむというか、この世界ならこういう風景があるだろうな、みたいな夢が膨らむ。ファンがいるのがすごくよく分かる。アリア社長がなぁ……。</p>
-
-<p>今期観ているのはこんなあたりか。あとは「カイジ」。</p>
-
-<p>なんだ、全然観てないなぁ。野村は本当はオタクじゃないんじゃなかろうか。</p>
-
-      </div>
-
-      <hr>
-      <ul class="article-taxonomy">
-        
-
-        
-        <li>
-          <i class="fas fa-tags"></i> <a href="/tags/%E3%83%9E%E3%83%B3%E3%82%AC%E3%82%A2%E3%83%8B%E3%83%A1">マンガ・アニメ</a>
         </li>
         
       </ul>
@@ -1652,13 +1673,22 @@
   
   
   
+  
+    
+    
+  
+  
+  
+  
+  
+  
    
     
     
   
   
     <li
-      ><a href="/page/151/">151</a>
+      ><a href="/page/152/">152</a>
     </li>
     
   
