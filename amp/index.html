@@ -53,6 +53,57 @@
     
 
     <article class="article">
+      <h1 class="article-title"><a href="https://diary.a3size.com/2018/04/22/">2018-04-22</a> Hugoで日記を書くための自動化</a></h1>
+      
+
+      <div class="article-content">
+        <p><a href="/2018/04/21/">先日の日記</a>に書いたように、BitBucketに日記をPUSHするとゴニョゴニョしてGitHub Pagesで公開されるという仕組みが完成した。</p>
+
+<p>日記を一日分追加すると、その日の日記ページのHTMLができる。のみならず、トップページに直近5日分の日記が載っているのでそこも再生成。すると日記が一日分後ろに押し出されて、ページネーション（次のページ）があるのでその後ろのページ全部が再生成させる。また日記につけたタグから、そのタグのリストページも再生成される。結果、数百のファイルが再生成される。うわーお、無駄が多い。でもなぁ、日記を一日分ずつ読み込むのもちょっと馬鹿馬鹿しい。まあそれはともかく、自動的にhtmlは作れるようになった。</p>
+
+<p>では次は日記を新規作成するところだ。コマンドラインから <code>Hugo new ファイル名</code> でページのひな形が書き込まれたMarkdownファイルが完成する。これは楽チン……、と思いたいところだがもっと楽にしたい。</p>
+
+<p>Automatorを使って、例えば以下のような感じのシェルスクリプトをアプリ化（というかアイコン化）して、ボタン一発で今日の日記を作ってエディタを開く。</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#24909d">cd</span> <span style="color:#ed9d13">&#39;Hugoの作業ディレクトリ&#39;</span>
+
+<span style="color:#999;font-style:italic"># この例では年別にファイルを格納したいので、post/YYYYディレクトリを作成している
+</span><span style="color:#999;font-style:italic"></span><span style="color:#40ffff">targetYear</span>=<span style="color:#ed9d13">`</span>date +<span style="color:#ed9d13">&#34;%Y&#34;</span><span style="color:#ed9d13">`</span>
+mkdir -p <span style="color:#40ffff">$targetYear</span>
+
+<span style="color:#999;font-style:italic"># 日付からファイル名を生成する。この例では post/YYYY/YYYY-MM-DD.mfd
+</span><span style="color:#999;font-style:italic"></span><span style="color:#40ffff">targetDate</span>=<span style="color:#ed9d13">`</span>date +<span style="color:#ed9d13">&#34;%Y-%m-%d&#34;</span><span style="color:#ed9d13">`</span>
+<span style="color:#40ffff">targetFile</span>=<span style="color:#ed9d13">&#34;post/</span><span style="color:#40ffff">$targetYear</span><span style="color:#ed9d13">/</span><span style="color:#40ffff">$targetDate</span><span style="color:#ed9d13">.md&#34;</span>
+
+<span style="color:#999;font-style:italic"># 当該ファイルがなければ新規作成
+</span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">if</span> [ ! -e <span style="color:#ed9d13">&#34;content/</span><span style="color:#40ffff">$targetFile</span><span style="color:#ed9d13">&#34;</span> ]; <span style="color:#6ab825;font-weight:bold">then</span>
+  /usr/local/bin/hugo new <span style="color:#40ffff">$targetFile</span>
+<span style="color:#6ab825;font-weight:bold">fi</span>
+
+<span style="color:#999;font-style:italic"># この例ではアプリを指定せずにファイルを開く
+</span><span style="color:#999;font-style:italic"></span>open <span style="color:#ed9d13">&#34;content/</span><span style="color:#40ffff">$targetFile</span><span style="color:#ed9d13">&#34;</span></code></pre></div>
+<p>これで、日記を書くところまでアイコンクリック一回でだけで進められる。</p>
+
+<p>本当は、日記を書き終えたあともcommitとpushをアイコンクリック一回でやりたいが、エラー処理とか連打時の動作とか考えるとちょっと面倒そうなので、いったんここまでとして、今日記を書いているこのファイルをこのあと手動でcommitしてpushすることにする。</p>
+
+<p>……コミット時のメッセージが日本語だとうまく動かない？</p>
+
+      </div>
+
+      
+
+      
+      <p>
+      tags:
+        <a href="/tags/a3size">a3size</a> <a href="/tags/pc">PC</a> 
+      </p>
+      
+      
+    </article>
+    <hr>
+
+    
+
+    <article class="article">
       <h1 class="article-title"><a href="https://diary.a3size.com/2018/04/21/">2018-04-21</a> GitHub Pagesにお引っ越し</a></h1>
       
 
@@ -174,59 +225,6 @@
       <p>
       tags:
         <a href="/tags/%E3%83%9E%E3%83%B3%E3%82%AC%E3%82%A2%E3%83%8B%E3%83%A1">マンガ・アニメ</a> 
-      </p>
-      
-      
-    </article>
-    <hr>
-
-    
-    
-  <h2 class="list-title">2017</h2>
-    
-
-    <article class="article">
-      <h1 class="article-title"><a href="https://diary.a3size.com/2017/08/30/">2017-08-30</a> そろそろ日記をリニューアルしたい（有言不実行）</a></h1>
-      
-
-      <div class="article-content">
-        <p>ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろうか、と何度も考えていた。</p>
-
-<p>で、CMSの入れ替えとなると日記データの互換性が気になるわけだ。試しにネット上で見つけたコンバーターを利用させていただいてWordPressにぶっ込むテストをしてみたら、うーん。おおよそは上手くコンバートできているが、ちょくちょくおかしなところもあり。一つ一つの日記を丁寧に確認作業するとして、えーと投稿数は、……「932」ですか。うへぇ。一番古い日記(このCMSになってから)が2004年3月だもんなぁ。最近は全然日記書いていなかったけれども、チリも積もれば山となる。駄文も折り重ねれば月に届く。そうしてまた今日の分も書いているので、またコンバート対象の日記が増えるわけですよ。<a href="http://www.ginei.jp/" target="_blank">銀河の歴史がまた一ページ</a>ですよ。</p>
-
-<p>ところで、かなり今更ながら<a href="https://www.docker.com/" target="_blank">Docker</a>は便利だ、という話を、そういえばこの日記に記していなかったと思い唐突に書き留めておく。</p>
-
-<p>テスト用のdocker-compose.ymlなどいくつかのファイルを準備しておいて、今回みたいに「ちょっとWordPress立ち上げてみよう」と思ったらコピペしてちょいちょいっとすれば、作業用のWordPressがローカルPC内に立ち上がるという。これは便利すぎる。</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">version:<span style="color:#666"> </span><span style="color:#ed9d13">&#39;3&#39;</span><span style="color:#666">
-</span><span style="color:#666"></span>services:<span style="color:#666">
-</span><span style="color:#666">    </span>db:<span style="color:#666">
-</span><span style="color:#666">        </span>container_name:<span style="color:#666"> </span>a3size-db<span style="color:#666">
-</span><span style="color:#666">        </span>image:<span style="color:#666"> </span>mysql:latest<span style="color:#666">
-</span><span style="color:#666">        </span>volumes:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./db:/var/lib/mysql<span style="color:#666">
-</span><span style="color:#666">        </span>env_file:<span style="color:#666"> </span>.env<span style="color:#666">
-</span><span style="color:#666">    </span>wordpress:<span style="color:#666">
-</span><span style="color:#666">        </span>container_name:<span style="color:#666"> </span>a3size-web<span style="color:#666">
-</span><span style="color:#666">        </span>depends_on:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>db<span style="color:#666">
-</span><span style="color:#666">        </span>image:<span style="color:#666"> </span>wordpress:latest<span style="color:#666">
-</span><span style="color:#666">        </span>ports:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span><span style="color:#3677a9">8080</span>:<span style="color:#3677a9">80</span><span style="color:#666">
-</span><span style="color:#666">        </span>volumes:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./wp_html:/var/www/html<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./public/wp-content/plugins:/var/www/html/wp-content/plugins<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./public/wp-content/themes/a3size:/var/www/html/wp-content/themes/a3size<span style="color:#666">
-</span><span style="color:#666">        </span>env_file:<span style="color:#666"> </span>.env</code></pre></div>
-<p>詳しいことは気が向いたら書くことにする。そもそも今日はこんなことを書きたかったわけではなく、生存報告が目的なので。</p>
-
-      </div>
-
-      
-
-      
-      <p>
-      tags:
-        <a href="/tags/a3size">a3size</a> 
       </p>
       
       

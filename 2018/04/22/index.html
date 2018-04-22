@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.38.2" />
+<meta name="author" content="野村政行">
+
+<title>Hugoで日記を書くための自動化 -  野村政行の「堪忍袋の緒を締めろ！」</title>
+
+
+<link rel="amphtml" type="text/html" href="https://diary.a3size.com/amp/2018/04/22/">
+
+<meta property="og:site_name" content=" 野村政行の「堪忍袋の緒を締めろ！」">
+<meta property="og:title" content="Hugoで日記を書くための自動化">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:app_id" content="361503227564013">
+<meta property="og:url" content="https://diary.a3size.com/2018/04/22/">
+
+<meta property="og:image" content="https://diary.a3size.com/images/ogp.png">
+<meta property="twitter:image" content="https://diary.a3size.com/images/ogp.png">
+
+
+
+<meta name="description" content="先日の日記に書いたように、BitBucketに日記をPUSHするとゴニョゴニョしてGitHub Pagesで公開されるという仕組みが完成した。...">
+<meta property="og:description" content="先日の日記に書いたように、BitBucketに日記をPUSHするとゴニョゴニョしてGitHub Pagesで公開されるという仕組みが完成した。...">
+<meta name="twitter:description" content="先日の日記に書いたように、BitBucketに日記をPUSHするとゴニョゴニョしてGitHub Pagesで公開されるという仕組みが完成した。...">
+
+
+
+
+
+
+<link rel="shortcut icon" href="https://diary.a3size.com/images/favicon.ico">
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/solid.js" integrity="sha384-Q7KAHqDd5trmfsv85beYZBsUmw0lsreFBQZfsEhzUtUn5HhpjVzwY0Aq4z8DY9sA" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/brands.js" integrity="sha384-6jhVhr5a+Z1nLr9h+fd7ocMEo847wnGFelCHddaOOACUeZNoQwFXTxh4ysXVam8u" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/fontawesome.js" integrity="sha384-M2FSA4xMm1G9m4CNXM49UcDHeWcDZNucAlz1WVHxohug0Uw1K+IpUhp/Wjg0y6qG" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://diary.a3size.com/css/main.min.css" media="all">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://diary.a3size.com/" class="nav-logo">
+    <img src="https://diary.a3size.com/images/title.svg" alt="野村政行の「堪忍袋の緒を締めろ！」">
+  </a>
+
+  <ul class="nav-links">
+    
+      
+      <li><a href="/tags"><i class="fas fa-tags"></i> Tags</a></li>
+      
+    
+      
+      <li><a href="/about/"><i class="fas fa-info-circle"></i> About</a></li>
+      
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+  <article class="article">
+    
+    <span class="article-date"><i class="fas fa-book"></i> 2018-04-22</span>
+    
+    <h1 class="article-title">Hugoで日記を書くための自動化</h1>
+
+    <div class="article-content">
+      <p><a href="/2018/04/21/">先日の日記</a>に書いたように、BitBucketに日記をPUSHするとゴニョゴニョしてGitHub Pagesで公開されるという仕組みが完成した。</p>
+
+<p>日記を一日分追加すると、その日の日記ページのHTMLができる。のみならず、トップページに直近5日分の日記が載っているのでそこも再生成。すると日記が一日分後ろに押し出されて、ページネーション（次のページ）があるのでその後ろのページ全部が再生成させる。また日記につけたタグから、そのタグのリストページも再生成される。結果、数百のファイルが再生成される。うわーお、無駄が多い。でもなぁ、日記を一日分ずつ読み込むのもちょっと馬鹿馬鹿しい。まあそれはともかく、自動的にhtmlは作れるようになった。</p>
+
+<p>では次は日記を新規作成するところだ。コマンドラインから <code>Hugo new ファイル名</code> でページのひな形が書き込まれたMarkdownファイルが完成する。これは楽チン……、と思いたいところだがもっと楽にしたい。</p>
+
+<p>Automatorを使って、例えば以下のような感じのシェルスクリプトをアプリ化（というかアイコン化）して、ボタン一発で今日の日記を作ってエディタを開く。</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#24909d">cd</span> <span style="color:#ed9d13">&#39;Hugoの作業ディレクトリ&#39;</span>
+
+<span style="color:#999;font-style:italic"># この例では年別にファイルを格納したいので、post/YYYYディレクトリを作成している
+</span><span style="color:#999;font-style:italic"></span><span style="color:#40ffff">targetYear</span>=<span style="color:#ed9d13">`</span>date +<span style="color:#ed9d13">&#34;%Y&#34;</span><span style="color:#ed9d13">`</span>
+mkdir -p <span style="color:#40ffff">$targetYear</span>
+
+<span style="color:#999;font-style:italic"># 日付からファイル名を生成する。この例では post/YYYY/YYYY-MM-DD.mfd
+</span><span style="color:#999;font-style:italic"></span><span style="color:#40ffff">targetDate</span>=<span style="color:#ed9d13">`</span>date +<span style="color:#ed9d13">&#34;%Y-%m-%d&#34;</span><span style="color:#ed9d13">`</span>
+<span style="color:#40ffff">targetFile</span>=<span style="color:#ed9d13">&#34;post/</span><span style="color:#40ffff">$targetYear</span><span style="color:#ed9d13">/</span><span style="color:#40ffff">$targetDate</span><span style="color:#ed9d13">.md&#34;</span>
+
+<span style="color:#999;font-style:italic"># 当該ファイルがなければ新規作成
+</span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">if</span> [ ! -e <span style="color:#ed9d13">&#34;content/</span><span style="color:#40ffff">$targetFile</span><span style="color:#ed9d13">&#34;</span> ]; <span style="color:#6ab825;font-weight:bold">then</span>
+  /usr/local/bin/hugo new <span style="color:#40ffff">$targetFile</span>
+<span style="color:#6ab825;font-weight:bold">fi</span>
+
+<span style="color:#999;font-style:italic"># この例ではアプリを指定せずにファイルを開く
+</span><span style="color:#999;font-style:italic"></span>open <span style="color:#ed9d13">&#34;content/</span><span style="color:#40ffff">$targetFile</span><span style="color:#ed9d13">&#34;</span></code></pre></div>
+<p>これで、日記を書くところまでアイコンクリック一回でだけで進められる。</p>
+
+<p>本当は、日記を書き終えたあともcommitとpushをアイコンクリック一回でやりたいが、エラー処理とか連打時の動作とか考えるとちょっと面倒そうなので、いったんここまでとして、今日記を書いているこのファイルをこのあと手動でcommitしてpushすることにする。</p>
+
+<p>……コミット時のメッセージが日本語だとうまく動かない？</p>
+
+    </div>
+ 
+    <hr>
+    <ul class="article-taxonomy">
+      
+    
+      
+      <li>
+        <i class="fas fa-tags"></i> <a href="/tags/a3size">a3size</a><a href="/tags/pc">PC</a>
+      </li>
+      
+    </ul>
+  </article>
+
+</main>
+
+
+<ul class="page-links">
+  <li>
+    
+    <a href="https://diary.a3size.com/2018/04/21/" aria-label="Previous"><span aria-hidden="true"><i class="fas fa-angle-left"></i> 前へ</span></a>
+    
+  </li>
+  <li>
+    
+  </li>
+</ul>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          
+            
+            <li><a href="https://diary.a3size.com/index.xml" type="application/rss+xml" target="_blank"><i class="fas fa-rss"></i> RSSフィード</a></li>
+          
+          
+            
+            <li><a href="https://twitter.com/king_nomura" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            
+          
+            
+            <li><a href="https://www.facebook.com/nomura.masayuki" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            
+          
+            
+            <li><a href="https://github.com/king-nomura" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+            
+          
+        </ul>
+        <p><small class="footer-copyright">author: nomura masayuki</small></p>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
+
