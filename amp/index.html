@@ -40,7 +40,76 @@
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<style amp-custom>
+    .chroma { color: #d0d0d0; background-color: #202020 }
+    .chroma .err { color: #a61717; background-color: #e3d2d2 }
+    .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+    .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
+    .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
+    .chroma .lnt { margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
+    .chroma .ln { margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
+    .chroma .k { color: #6ab825; font-weight: bold }
+    .chroma .kc { color: #6ab825; font-weight: bold }
+    .chroma .kd { color: #6ab825; font-weight: bold }
+    .chroma .kn { color: #6ab825; font-weight: bold }
+    .chroma .kp { color: #6ab825 }
+    .chroma .kr { color: #6ab825; font-weight: bold }
+    .chroma .kt { color: #6ab825; font-weight: bold }
+    .chroma .na { color: #bbbbbb }
+    .chroma .nb { color: #24909d }
+    .chroma .nc { color: #447fcf }
+    .chroma .no { color: #40ffff }
+    .chroma .nd { color: #ffa500 }
+    .chroma .ne { color: #bbbbbb }
+    .chroma .nf { color: #447fcf }
+    .chroma .nn { color: #447fcf }
+    .chroma .nt { color: #6ab825; font-weight: bold }
+    .chroma .nv { color: #40ffff }
+    .chroma .s { color: #ed9d13 }
+    .chroma .sa { color: #ed9d13 }
+    .chroma .sb { color: #ed9d13 }
+    .chroma .sc { color: #ed9d13 }
+    .chroma .dl { color: #ed9d13 }
+    .chroma .sd { color: #ed9d13 }
+    .chroma .s2 { color: #ed9d13 }
+    .chroma .se { color: #ed9d13 }
+    .chroma .sh { color: #ed9d13 }
+    .chroma .si { color: #ed9d13 }
+    .chroma .sx { color: #ffa500 }
+    .chroma .sr { color: #ed9d13 }
+    .chroma .s1 { color: #ed9d13 }
+    .chroma .ss { color: #ed9d13 }
+    .chroma .m { color: #3677a9 }
+    .chroma .mb { color: #3677a9 }
+    .chroma .mf { color: #3677a9 }
+    .chroma .mh { color: #3677a9 }
+    .chroma .mi { color: #3677a9 }
+    .chroma .il { color: #3677a9 }
+    .chroma .mo { color: #3677a9 }
+    .chroma .ow { color: #6ab825; font-weight: bold }
+    .chroma .c { color: #999999; font-style: italic }
+    .chroma .ch { color: #999999; font-style: italic }
+    .chroma .cm { color: #999999; font-style: italic }
+    .chroma .c1 { color: #999999; font-style: italic }
+    .chroma .cs { color: #e50808; background-color: #520000; font-weight: bold }
+    .chroma .cp { color: #cd2828; font-weight: bold }
+    .chroma .cpf { color: #cd2828; font-weight: bold }
+    .chroma .gd { color: #d22323 }
+    .chroma .ge { font-style: italic }
+    .chroma .gr { color: #d22323 }
+    .chroma .gh { color: #ffffff; font-weight: bold }
+    .chroma .gi { color: #589819 }
+    .chroma .go { color: #cccccc }
+    .chroma .gp { color: #aaaaaa }
+    .chroma .gs { font-weight: bold }
+    .chroma .gu { color: #ffffff }
+    .chroma .gt { color: #d22323 }
+    .chroma .w { color: #666666 }
 
+  .page-links { margin: 30px 0; padding: 0; text-align: center; }
+  .page-links li { display: inline-block; }
+
+</style>
 </head>
 <body>
 
@@ -64,23 +133,23 @@
 <p>では次は日記を新規作成するところだ。コマンドラインから <code>Hugo new ファイル名</code> でページのひな形が書き込まれたMarkdownファイルが完成する。これは楽チン……、と思いたいところだがもっと楽にしたい。</p>
 
 <p>Automatorを使って、例えば以下のような感じのシェルスクリプトをアプリ化（というかアイコン化）して、ボタン一発で今日の日記を作ってエディタを開く。</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#24909d">cd</span> <span style="color:#ed9d13">&#39;Hugoの作業ディレクトリ&#39;</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="s1">&#39;Hugoの作業ディレクトリ&#39;</span>
 
-<span style="color:#999;font-style:italic"># この例では年別にファイルを格納したいので、post/YYYYディレクトリを作成している
-</span><span style="color:#999;font-style:italic"></span><span style="color:#40ffff">targetYear</span>=<span style="color:#ed9d13">`</span>date +<span style="color:#ed9d13">&#34;%Y&#34;</span><span style="color:#ed9d13">`</span>
-mkdir -p <span style="color:#40ffff">$targetYear</span>
+<span class="c1"># この例では年別にファイルを格納したいので、post/YYYYディレクトリを作成している
+</span><span class="c1"></span><span class="nv">targetYear</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y&#34;</span><span class="sb">`</span>
+mkdir -p <span class="nv">$targetYear</span>
 
-<span style="color:#999;font-style:italic"># 日付からファイル名を生成する。この例では post/YYYY/YYYY-MM-DD.mfd
-</span><span style="color:#999;font-style:italic"></span><span style="color:#40ffff">targetDate</span>=<span style="color:#ed9d13">`</span>date +<span style="color:#ed9d13">&#34;%Y-%m-%d&#34;</span><span style="color:#ed9d13">`</span>
-<span style="color:#40ffff">targetFile</span>=<span style="color:#ed9d13">&#34;post/</span><span style="color:#40ffff">$targetYear</span><span style="color:#ed9d13">/</span><span style="color:#40ffff">$targetDate</span><span style="color:#ed9d13">.md&#34;</span>
+<span class="c1"># 日付からファイル名を生成する。この例では post/YYYY/YYYY-MM-DD.mfd
+</span><span class="c1"></span><span class="nv">targetDate</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y-%m-%d&#34;</span><span class="sb">`</span>
+<span class="nv">targetFile</span><span class="o">=</span><span class="s2">&#34;post/</span><span class="nv">$targetYear</span><span class="s2">/</span><span class="nv">$targetDate</span><span class="s2">.md&#34;</span>
 
-<span style="color:#999;font-style:italic"># 当該ファイルがなければ新規作成
-</span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">if</span> [ ! -e <span style="color:#ed9d13">&#34;content/</span><span style="color:#40ffff">$targetFile</span><span style="color:#ed9d13">&#34;</span> ]; <span style="color:#6ab825;font-weight:bold">then</span>
-  /usr/local/bin/hugo new <span style="color:#40ffff">$targetFile</span>
-<span style="color:#6ab825;font-weight:bold">fi</span>
+<span class="c1"># 当該ファイルがなければ新規作成
+</span><span class="c1"></span><span class="k">if</span> <span class="o">[</span> ! -e <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  /usr/local/bin/hugo new <span class="nv">$targetFile</span>
+<span class="k">fi</span>
 
-<span style="color:#999;font-style:italic"># この例ではアプリを指定せずにファイルを開く
-</span><span style="color:#999;font-style:italic"></span>open <span style="color:#ed9d13">&#34;content/</span><span style="color:#40ffff">$targetFile</span><span style="color:#ed9d13">&#34;</span></code></pre></div>
+<span class="c1"># この例ではアプリを指定せずにファイルを開く
+</span><span class="c1"></span>open <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span></code></pre></div>
 <p>これで、日記を書くところまでアイコンクリック一回でだけで進められる。</p>
 
 <p>本当は、日記を書き終えたあともcommitとpushをアイコンクリック一回でやりたいが、エラー処理とか連打時の動作とか考えるとちょっと面倒そうなので、いったんここまでとして、今日記を書いているこのファイルをこのあと手動でcommitしてpushすることにする。</p>

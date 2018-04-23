@@ -36,7 +36,76 @@
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 <script async src="https://cdn.ampproject.org/v0.js"></script>
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<style amp-custom>
+    .chroma { color: #d0d0d0; background-color: #202020 }
+    .chroma .err { color: #a61717; background-color: #e3d2d2 }
+    .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+    .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; width: auto; overflow: auto; display: block; }
+    .chroma .hl { display: block; width: 100%;background-color: #ffffcc }
+    .chroma .lnt { margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
+    .chroma .ln { margin-right: 0.4em; padding: 0 0.4em 0 0.4em; }
+    .chroma .k { color: #6ab825; font-weight: bold }
+    .chroma .kc { color: #6ab825; font-weight: bold }
+    .chroma .kd { color: #6ab825; font-weight: bold }
+    .chroma .kn { color: #6ab825; font-weight: bold }
+    .chroma .kp { color: #6ab825 }
+    .chroma .kr { color: #6ab825; font-weight: bold }
+    .chroma .kt { color: #6ab825; font-weight: bold }
+    .chroma .na { color: #bbbbbb }
+    .chroma .nb { color: #24909d }
+    .chroma .nc { color: #447fcf }
+    .chroma .no { color: #40ffff }
+    .chroma .nd { color: #ffa500 }
+    .chroma .ne { color: #bbbbbb }
+    .chroma .nf { color: #447fcf }
+    .chroma .nn { color: #447fcf }
+    .chroma .nt { color: #6ab825; font-weight: bold }
+    .chroma .nv { color: #40ffff }
+    .chroma .s { color: #ed9d13 }
+    .chroma .sa { color: #ed9d13 }
+    .chroma .sb { color: #ed9d13 }
+    .chroma .sc { color: #ed9d13 }
+    .chroma .dl { color: #ed9d13 }
+    .chroma .sd { color: #ed9d13 }
+    .chroma .s2 { color: #ed9d13 }
+    .chroma .se { color: #ed9d13 }
+    .chroma .sh { color: #ed9d13 }
+    .chroma .si { color: #ed9d13 }
+    .chroma .sx { color: #ffa500 }
+    .chroma .sr { color: #ed9d13 }
+    .chroma .s1 { color: #ed9d13 }
+    .chroma .ss { color: #ed9d13 }
+    .chroma .m { color: #3677a9 }
+    .chroma .mb { color: #3677a9 }
+    .chroma .mf { color: #3677a9 }
+    .chroma .mh { color: #3677a9 }
+    .chroma .mi { color: #3677a9 }
+    .chroma .il { color: #3677a9 }
+    .chroma .mo { color: #3677a9 }
+    .chroma .ow { color: #6ab825; font-weight: bold }
+    .chroma .c { color: #999999; font-style: italic }
+    .chroma .ch { color: #999999; font-style: italic }
+    .chroma .cm { color: #999999; font-style: italic }
+    .chroma .c1 { color: #999999; font-style: italic }
+    .chroma .cs { color: #e50808; background-color: #520000; font-weight: bold }
+    .chroma .cp { color: #cd2828; font-weight: bold }
+    .chroma .cpf { color: #cd2828; font-weight: bold }
+    .chroma .gd { color: #d22323 }
+    .chroma .ge { font-style: italic }
+    .chroma .gr { color: #d22323 }
+    .chroma .gh { color: #ffffff; font-weight: bold }
+    .chroma .gi { color: #589819 }
+    .chroma .go { color: #cccccc }
+    .chroma .gp { color: #aaaaaa }
+    .chroma .gs { font-weight: bold }
+    .chroma .gu { color: #ffffff }
+    .chroma .gt { color: #d22323 }
+    .chroma .w { color: #666666 }
 
+  .page-links { margin: 30px 0; padding: 0; text-align: center; }
+  .page-links li { display: inline-block; }
+
+</style>
 </head>
 <body>
 
@@ -52,26 +121,26 @@
 <p>ところで、かなり今更ながら<a href="https://www.docker.com/" target="_blank">Docker</a>は便利だ、という話を、そういえばこの日記に記していなかったと思い唐突に書き留めておく。</p>
 
 <p>テスト用のdocker-compose.ymlなどいくつかのファイルを準備しておいて、今回みたいに「ちょっとWordPress立ち上げてみよう」と思ったらコピペしてちょいちょいっとすれば、作業用のWordPressがローカルPC内に立ち上がるという。これは便利すぎる。</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">version:<span style="color:#666"> </span><span style="color:#ed9d13">&#39;3&#39;</span><span style="color:#666">
-</span><span style="color:#666"></span>services:<span style="color:#666">
-</span><span style="color:#666">    </span>db:<span style="color:#666">
-</span><span style="color:#666">        </span>container_name:<span style="color:#666"> </span>a3size-db<span style="color:#666">
-</span><span style="color:#666">        </span>image:<span style="color:#666"> </span>mysql:latest<span style="color:#666">
-</span><span style="color:#666">        </span>volumes:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./db:/var/lib/mysql<span style="color:#666">
-</span><span style="color:#666">        </span>env_file:<span style="color:#666"> </span>.env<span style="color:#666">
-</span><span style="color:#666">    </span>wordpress:<span style="color:#666">
-</span><span style="color:#666">        </span>container_name:<span style="color:#666"> </span>a3size-web<span style="color:#666">
-</span><span style="color:#666">        </span>depends_on:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>db<span style="color:#666">
-</span><span style="color:#666">        </span>image:<span style="color:#666"> </span>wordpress:latest<span style="color:#666">
-</span><span style="color:#666">        </span>ports:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span><span style="color:#3677a9">8080</span>:<span style="color:#3677a9">80</span><span style="color:#666">
-</span><span style="color:#666">        </span>volumes:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./wp_html:/var/www/html<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./public/wp-content/plugins:/var/www/html/wp-content/plugins<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./public/wp-content/themes/a3size:/var/www/html/wp-content/themes/a3size<span style="color:#666">
-</span><span style="color:#666">        </span>env_file:<span style="color:#666"> </span>.env</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-YAML" data-lang="YAML">version<span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
+</span><span class="w"></span>services<span class="p">:</span><span class="w">
+</span><span class="w">    </span>db<span class="p">:</span><span class="w">
+</span><span class="w">        </span>container_name<span class="p">:</span><span class="w"> </span>a3size-db<span class="w">
+</span><span class="w">        </span>image<span class="p">:</span><span class="w"> </span>mysql<span class="p">:</span>latest<span class="w">
+</span><span class="w">        </span>volumes<span class="p">:</span><span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>./db<span class="p">:</span>/var/lib/mysql<span class="w">
+</span><span class="w">        </span>env_file<span class="p">:</span><span class="w"> </span>.env<span class="w">
+</span><span class="w">    </span>wordpress<span class="p">:</span><span class="w">
+</span><span class="w">        </span>container_name<span class="p">:</span><span class="w"> </span>a3size-web<span class="w">
+</span><span class="w">        </span>depends_on<span class="p">:</span><span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>db<span class="w">
+</span><span class="w">        </span>image<span class="p">:</span><span class="w"> </span>wordpress<span class="p">:</span>latest<span class="w">
+</span><span class="w">        </span>ports<span class="p">:</span><span class="w">
+</span><span class="w">            </span>-<span class="w"> </span><span class="m">8080</span><span class="p">:</span><span class="m">80</span><span class="w">
+</span><span class="w">        </span>volumes<span class="p">:</span><span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>./wp_html<span class="p">:</span>/var/www/html<span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>./public/wp-content/plugins<span class="p">:</span>/var/www/html/wp-content/plugins<span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>./public/wp-content/themes/a3size<span class="p">:</span>/var/www/html/wp-content/themes/a3size<span class="w">
+</span><span class="w">        </span>env_file<span class="p">:</span><span class="w"> </span>.env</code></pre></div>
 <p>詳しいことは気が向いたら書くことにする。そもそも今日はこんなことを書きたかったわけではなく、生存報告が目的なので。</p>
 
 </div>

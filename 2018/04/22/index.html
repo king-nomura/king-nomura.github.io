@@ -78,23 +78,23 @@
 <p>では次は日記を新規作成するところだ。コマンドラインから <code>Hugo new ファイル名</code> でページのひな形が書き込まれたMarkdownファイルが完成する。これは楽チン……、と思いたいところだがもっと楽にしたい。</p>
 
 <p>Automatorを使って、例えば以下のような感じのシェルスクリプトをアプリ化（というかアイコン化）して、ボタン一発で今日の日記を作ってエディタを開く。</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#24909d">cd</span> <span style="color:#ed9d13">&#39;Hugoの作業ディレクトリ&#39;</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="s1">&#39;Hugoの作業ディレクトリ&#39;</span>
 
-<span style="color:#999;font-style:italic"># この例では年別にファイルを格納したいので、post/YYYYディレクトリを作成している
-</span><span style="color:#999;font-style:italic"></span><span style="color:#40ffff">targetYear</span>=<span style="color:#ed9d13">`</span>date +<span style="color:#ed9d13">&#34;%Y&#34;</span><span style="color:#ed9d13">`</span>
-mkdir -p <span style="color:#40ffff">$targetYear</span>
+<span class="c1"># この例では年別にファイルを格納したいので、post/YYYYディレクトリを作成している
+</span><span class="c1"></span><span class="nv">targetYear</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y&#34;</span><span class="sb">`</span>
+mkdir -p <span class="nv">$targetYear</span>
 
-<span style="color:#999;font-style:italic"># 日付からファイル名を生成する。この例では post/YYYY/YYYY-MM-DD.mfd
-</span><span style="color:#999;font-style:italic"></span><span style="color:#40ffff">targetDate</span>=<span style="color:#ed9d13">`</span>date +<span style="color:#ed9d13">&#34;%Y-%m-%d&#34;</span><span style="color:#ed9d13">`</span>
-<span style="color:#40ffff">targetFile</span>=<span style="color:#ed9d13">&#34;post/</span><span style="color:#40ffff">$targetYear</span><span style="color:#ed9d13">/</span><span style="color:#40ffff">$targetDate</span><span style="color:#ed9d13">.md&#34;</span>
+<span class="c1"># 日付からファイル名を生成する。この例では post/YYYY/YYYY-MM-DD.mfd
+</span><span class="c1"></span><span class="nv">targetDate</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y-%m-%d&#34;</span><span class="sb">`</span>
+<span class="nv">targetFile</span><span class="o">=</span><span class="s2">&#34;post/</span><span class="nv">$targetYear</span><span class="s2">/</span><span class="nv">$targetDate</span><span class="s2">.md&#34;</span>
 
-<span style="color:#999;font-style:italic"># 当該ファイルがなければ新規作成
-</span><span style="color:#999;font-style:italic"></span><span style="color:#6ab825;font-weight:bold">if</span> [ ! -e <span style="color:#ed9d13">&#34;content/</span><span style="color:#40ffff">$targetFile</span><span style="color:#ed9d13">&#34;</span> ]; <span style="color:#6ab825;font-weight:bold">then</span>
-  /usr/local/bin/hugo new <span style="color:#40ffff">$targetFile</span>
-<span style="color:#6ab825;font-weight:bold">fi</span>
+<span class="c1"># 当該ファイルがなければ新規作成
+</span><span class="c1"></span><span class="k">if</span> <span class="o">[</span> ! -e <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  /usr/local/bin/hugo new <span class="nv">$targetFile</span>
+<span class="k">fi</span>
 
-<span style="color:#999;font-style:italic"># この例ではアプリを指定せずにファイルを開く
-</span><span style="color:#999;font-style:italic"></span>open <span style="color:#ed9d13">&#34;content/</span><span style="color:#40ffff">$targetFile</span><span style="color:#ed9d13">&#34;</span></code></pre></div>
+<span class="c1"># この例ではアプリを指定せずにファイルを開く
+</span><span class="c1"></span>open <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span></code></pre></div>
 <p>これで、日記を書くところまでアイコンクリック一回でだけで進められる。</p>
 
 <p>本当は、日記を書き終えたあともcommitとpushをアイコンクリック一回でやりたいが、エラー処理とか連打時の動作とか考えるとちょっと面倒そうなので、いったんここまでとして、今日記を書いているこのファイルをこのあと手動でcommitしてpushすることにする。</p>

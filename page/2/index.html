@@ -89,26 +89,26 @@
 <p>ところで、かなり今更ながら<a href="https://www.docker.com/" target="_blank">Docker</a>は便利だ、という話を、そういえばこの日記に記していなかったと思い唐突に書き留めておく。</p>
 
 <p>テスト用のdocker-compose.ymlなどいくつかのファイルを準備しておいて、今回みたいに「ちょっとWordPress立ち上げてみよう」と思ったらコピペしてちょいちょいっとすれば、作業用のWordPressがローカルPC内に立ち上がるという。これは便利すぎる。</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML">version:<span style="color:#666"> </span><span style="color:#ed9d13">&#39;3&#39;</span><span style="color:#666">
-</span><span style="color:#666"></span>services:<span style="color:#666">
-</span><span style="color:#666">    </span>db:<span style="color:#666">
-</span><span style="color:#666">        </span>container_name:<span style="color:#666"> </span>a3size-db<span style="color:#666">
-</span><span style="color:#666">        </span>image:<span style="color:#666"> </span>mysql:latest<span style="color:#666">
-</span><span style="color:#666">        </span>volumes:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./db:/var/lib/mysql<span style="color:#666">
-</span><span style="color:#666">        </span>env_file:<span style="color:#666"> </span>.env<span style="color:#666">
-</span><span style="color:#666">    </span>wordpress:<span style="color:#666">
-</span><span style="color:#666">        </span>container_name:<span style="color:#666"> </span>a3size-web<span style="color:#666">
-</span><span style="color:#666">        </span>depends_on:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>db<span style="color:#666">
-</span><span style="color:#666">        </span>image:<span style="color:#666"> </span>wordpress:latest<span style="color:#666">
-</span><span style="color:#666">        </span>ports:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span><span style="color:#3677a9">8080</span>:<span style="color:#3677a9">80</span><span style="color:#666">
-</span><span style="color:#666">        </span>volumes:<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./wp_html:/var/www/html<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./public/wp-content/plugins:/var/www/html/wp-content/plugins<span style="color:#666">
-</span><span style="color:#666">            </span>-<span style="color:#666"> </span>./public/wp-content/themes/a3size:/var/www/html/wp-content/themes/a3size<span style="color:#666">
-</span><span style="color:#666">        </span>env_file:<span style="color:#666"> </span>.env</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-YAML" data-lang="YAML">version<span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
+</span><span class="w"></span>services<span class="p">:</span><span class="w">
+</span><span class="w">    </span>db<span class="p">:</span><span class="w">
+</span><span class="w">        </span>container_name<span class="p">:</span><span class="w"> </span>a3size-db<span class="w">
+</span><span class="w">        </span>image<span class="p">:</span><span class="w"> </span>mysql<span class="p">:</span>latest<span class="w">
+</span><span class="w">        </span>volumes<span class="p">:</span><span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>./db<span class="p">:</span>/var/lib/mysql<span class="w">
+</span><span class="w">        </span>env_file<span class="p">:</span><span class="w"> </span>.env<span class="w">
+</span><span class="w">    </span>wordpress<span class="p">:</span><span class="w">
+</span><span class="w">        </span>container_name<span class="p">:</span><span class="w"> </span>a3size-web<span class="w">
+</span><span class="w">        </span>depends_on<span class="p">:</span><span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>db<span class="w">
+</span><span class="w">        </span>image<span class="p">:</span><span class="w"> </span>wordpress<span class="p">:</span>latest<span class="w">
+</span><span class="w">        </span>ports<span class="p">:</span><span class="w">
+</span><span class="w">            </span>-<span class="w"> </span><span class="m">8080</span><span class="p">:</span><span class="m">80</span><span class="w">
+</span><span class="w">        </span>volumes<span class="p">:</span><span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>./wp_html<span class="p">:</span>/var/www/html<span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>./public/wp-content/plugins<span class="p">:</span>/var/www/html/wp-content/plugins<span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>./public/wp-content/themes/a3size<span class="p">:</span>/var/www/html/wp-content/themes/a3size<span class="w">
+</span><span class="w">        </span>env_file<span class="p">:</span><span class="w"> </span>.env</code></pre></div>
 <p>詳しいことは気が向いたら書くことにする。そもそも今日はこんなことを書きたかったわけではなく、生存報告が目的なので。</p>
 
       </div>
