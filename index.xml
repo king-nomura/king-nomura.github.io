@@ -7,9 +7,74 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Sun, 22 Apr 2018 13:52:29 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 24 Apr 2018 01:37:00 +0900</lastBuildDate>
     
         <atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>flickrはイケているか</title>
+      <link>https://diary.a3size.com/2018/04/24/</link>
+      <pubDate>Tue, 24 Apr 2018 01:37:00 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2018/04/24/</guid>
+      <description>
+
+&lt;a data-flickr-embed=&#34;true&#34; href=&#34;https://www.flickr.com/photos/king_nomura/39833015115/in/dateposted-public/&#34; title=&#34;img395&#34;&gt;&lt;img src=&#34;https://farm5.staticflickr.com/4790/39833015115_9f394d855e_k.jpg&#34; alt=&#34;このボタンを押してください&#34; width=&#34;2048&#34; height=&#34;1375&#34; /&gt;&lt;/a&gt;&lt;script async src=&#34;//embedr.flickr.com/assets/client-code.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;日記のサムネイルにflickrの画像は使えないだろうか。という実験。&lt;/p&gt;
+
+&lt;p&gt;肝心の写真がイケていないというオチ、ではなくて。&lt;/p&gt;
+
+&lt;p&gt;試しにflickrのEmbedスクリプトを出力して埋め込んでみたのだが。読み込み時の画面幅に合わせてスタイルをゴニョゴニョしちゃうタイプのスクリプトになっているので、表示後の画面幅変更に対応できていない。この微妙にレスポンシブじゃない考え方はどこかではメジャーなのかな、海外のテンプレで他にもみた気がする。……良くない。&lt;/p&gt;
+
+&lt;p&gt;というか、flickrはきっと思想的には埋め込まれる前提じゃないんだな。狙ってやっているなら潔いようにも思うが、なんとなくだが単に周回遅れ（それも2周くらい）な気がする。この間も買収云々があったりと、flickrはちっとも「イケてる」感じのするサービスではなくなった。とはいえInstagramだって親会社はFacebookになってしまったし、APIの締め付けがキツいしで、操作性云々とは違うところで微妙。&lt;/p&gt;
+
+&lt;p&gt;写真共有サービスなんて、儲からないからこんな感じなのかな。使えているうちはいいけれども、どんなサービスであっても、10年後も今とおんなじサービス形態で生き残ってくれる保証はないという201x年。未来はまだか。&lt;/p&gt;
+
+&lt;h2 id=&#34;hugoのshortcodesをちまちま増やす&#34;&gt;Hugoのshortcodesをちまちま増やす&lt;/h2&gt;
+
+&lt;p&gt;今日もHugoの話をちょっとメモしておくと、上記のflickrもそうだが、shortcodeをいくつか自作している。といっても、PCで埋め込みたいタグを書いたものと、AMP対応のためにそのタグを書き直したもの、という簡単な出し分けをしているだけであるが。&lt;/p&gt;
+
+&lt;p&gt;現時点では&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;flickr&lt;/li&gt;
+&lt;li&gt;amazon&lt;/li&gt;
+&lt;li&gt;img&lt;/li&gt;
+&lt;li&gt;iframe&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;の4つができた。
+たとえば &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; タグをそのまま書くのではなく、&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;***&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;160&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;120&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;alt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;テスト&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+↓
+{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;***&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;160&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;120&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;alt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;テスト&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;としておく。&lt;/p&gt;
+
+&lt;p&gt;これをPCでは、&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&amp;lt;img
+src=&amp;#34;{{ .Get &amp;#34;src&amp;#34; }}&amp;#34;
+alt=&amp;#34;{{ .Get &amp;#34;alt&amp;#34; }}&amp;#34;
+{{ with (.Get &amp;#34;width&amp;#34;) }} width=&amp;#34;{{ . }}&amp;#34;{{ end }}
+{{ with (.Get &amp;#34;height&amp;#34;) }} height=&amp;#34;{{ . }}&amp;#34;{{ end }}
+/&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;AMPでは、&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&amp;lt;p&amp;gt;
+&amp;lt;amp-img
+src=&amp;#34;{{ .Get &amp;#34;src&amp;#34; }}&amp;#34;
+alt=&amp;#34;{{ .Get &amp;#34;alt&amp;#34; }}&amp;#34;
+{{ with (.Get &amp;#34;width&amp;#34;) }} width=&amp;#34;{{ . }}&amp;#34;{{ end }}
+{{ with (.Get &amp;#34;height&amp;#34;) }} height=&amp;#34;{{ . }}&amp;#34;{{ end }}
+layout=&amp;#34;responsive&amp;#34;&amp;gt;&amp;lt;/amp-img&amp;gt;
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;てな感じに。至極簡単な置きかえを行うことで、なんとなくAMP対応ができる。&lt;/p&gt;
+
+&lt;p&gt;車輪を再発明している感は否めない。&lt;/p&gt;
+</description>
+    </item>
     
     
     
@@ -203,39 +268,6 @@ mkdir -p &lt;span class=&#34;nv&#34;&gt;$targetYear&lt;/span&gt;
       <description>&lt;p&gt;今年は秋からものすごく忙しくなってしまって、あまり映画を観に行けなかった。もう今年は観に行けなさそうなので、今年も&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1mXWmPNwnH5qu4sd4G8VrnFbaUzctMnXxY6HetVUh5Xg/pubhtml?gid=1123529751&amp;#038;single=true&#34; target=&#34;_blank&#34;&gt;もう一度観たい映画ランキング&lt;/a&gt;にまとめてみた。&lt;/p&gt;
 
 &lt;p&gt;異論は認める。&lt;/p&gt;
-</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>最近遊んだゲームの話</title>
-      <link>https://diary.a3size.com/2016/10/22/</link>
-      <pubDate>Sat, 22 Oct 2016 03:00:01 +0000</pubDate>
-      
-      <guid>https://diary.a3size.com/2016/10/22/</guid>
-      <description>&lt;p&gt;本当に偶然なのだ。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://store.steampowered.com/?l=japa
-nese&#34; target=&#34;_blank&#34;&gt;Steam&lt;/a&gt;のバーゲンのときについ勢いで買ったまま、インストールもせずに放っておかれていたゲームを遊ぼうと思ったのだ。Windows機も組み上がったことだしね。&lt;/p&gt;
-
-&lt;p&gt;で、以前から気になっていた「&lt;a href=&#34;http://www.jp.square-enix.com/lis/&#34; target=&#34;_blank&#34;&gt;Life is Strange&lt;/a&gt;」をプレイした。同ジャンルだと「&lt;a href=&#34;http://www.jp.playstation.com/software/title/bcjs30040.html&#34; target=&#34;_blank&#34;&gt;Heavy Rain&lt;/a&gt;」などの&lt;a href=&#34;http://www.quanticdream.com/fr/&#34; target=&#34;_blank&#34;&gt;quantic dream&lt;/a&gt;が有名だが、これはパブリッシャーはSquare Enix、開発はフランスのDONTNODというスタジオらしい。&lt;/p&gt;
-
-&lt;p&gt;いやぁ、泣いたわぁ。ベタな展開なのに。&lt;/p&gt;
-
-&lt;p&gt;ストーリーをなぞっていくゲームなのでネタバレしないが、ともかく主人公の時間を巻き戻せるという能力に絡んだ話で。&lt;/p&gt;
-
-&lt;p&gt;で、偶然このゲームをプレイし終えた頃に、国産ADVで非常に評判の高かった「&lt;a href=&#34;https://ja.m.wikipedia.org/wiki/STEINS;GATE&#34; target=&#34;_blank&#34;&gt;STEINS;GATE&lt;/a&gt;」がSteamでDL販売を開始して。昔の作品でアニメ化もされたのでストーリーをご存知の方も多いと思うが、これも主人公が時間を巻き戻せる能力を手に入れる話なのだ。&lt;/p&gt;
-
-&lt;p&gt;いやぁ、泣いたわぁ。アニメみてストーリー知っていたのに、それが目の前で再現されているのがもう。ゲームが先とかアニメが先とかどうでもいいのよ。面白ければ！&lt;/p&gt;
-
-&lt;p&gt;つまり、だ。もしもやり直せるのならああしたかった、というifの感情というか。人生百点満点を取りたいのでリセットマラソンをするというか。「STEINS;GATE」のようにエロゲーのフォーマットを踏襲しているタイプのゲームの場合は特にわかりやすいが、全ての可能性の先（エンディング）を確認したいという欲求があってだな。その欲求に素直な作品っていうだけで、分かりやすくて面白い。&lt;/p&gt;
-
-&lt;p&gt;ひょっとするとライトノベルで定番の「ある日突然異世界に行っちゃったら英雄になった」的なifも、根幹で同じような感情を揺さぶられるから面白いのだろうか。&lt;/p&gt;
-
-&lt;p&gt;で。&lt;/p&gt;
-
-&lt;p&gt;今話題の映画「&lt;a href=&#34;http://www.kiminona.com/index.html&#34; target=&#34;_blank&#34;&gt;君の名は&lt;/a&gt;」も観たわけですよ。お分かりいただけるだろうか。未見の方には分からないオチで申し訳ない。&lt;/p&gt;
 </description>
     </item>
     

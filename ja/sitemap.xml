@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://diary.a3size.com/2018/04/24/</loc>
+    <lastmod>2018-04-24T01:37:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://diary.a3size.com/2018/04/22/</loc>
     <lastmod>2018-04-22T13:52:29+09:00</lastmod>
   </url>
@@ -3794,7 +3799,7 @@
   
   <url>
     <loc>https://diary.a3size.com/</loc>
-    <lastmod>2018-04-22T13:52:29+09:00</lastmod>
+    <lastmod>2018-04-24T01:37:00+09:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -3837,7 +3842,7 @@
   
   <url>
     <loc>https://diary.a3size.com/tags/pc/</loc>
-    <lastmod>2018-04-22T13:52:29+09:00</lastmod>
+    <lastmod>2018-04-24T01:37:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -3849,7 +3854,7 @@
   
   <url>
     <loc>https://diary.a3size.com/post/</loc>
-    <lastmod>2018-04-22T13:52:29+09:00</lastmod>
+    <lastmod>2018-04-24T01:37:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -3877,7 +3882,7 @@
   
   <url>
     <loc>https://diary.a3size.com/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88/</loc>
-    <lastmod>2018-04-21T01:28:00+09:00</lastmod>
+    <lastmod>2018-04-24T01:37:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -3896,6 +3901,12 @@
   <url>
     <loc>https://diary.a3size.com/tags/%E4%B8%96%E3%81%AE%E4%B8%AD%E3%81%AE%E8%A9%B1/</loc>
     <lastmod>2012-04-13T03:00:01+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://diary.a3size.com/tags/%E5%86%99%E7%9C%9F/</loc>
+    <lastmod>2018-04-24T01:37:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
