@@ -21,13 +21,13 @@
 <meta property="og:url" content="https://diary.a3size.com/">
 
 <meta property="og:image" content="https://diary.a3size.com/images/ogp.png">
-<meta property="twitter:image" content="https://diary.a3size.com/images/ogp.png">
+<meta name="twitter:image" content="https://diary.a3size.com/images/ogp.png">
 
 
 
-<meta property="description" content="このサイトは、野村政行が日々のよしなしごとを、そこはかとなく書き連ねたサイトです。">
+<meta name="description" content="このサイトは、野村政行が日々のよしなしごとを、そこはかとなく書き連ねたサイトです。">
 <meta property="og:description" content="このサイトは、野村政行が日々のよしなしごとを、そこはかとなく書き連ねたサイトです。">
-<meta property="twitter:description" content="このサイトは、野村政行が日々のよしなしごとを、そこはかとなく書き連ねたサイトです。">
+<meta name="twitter:description" content="このサイトは、野村政行が日々のよしなしごとを、そこはかとなく書き連ねたサイトです。">
 
 
 
@@ -72,6 +72,45 @@
   <div class="list">
      
   <h2 class="list-title">2007</h2>
+    
+
+    <article class="article">
+      
+      <p class="article-date"><a href="https://diary.a3size.com/2007/09/24/"><i class="fas fa-book"></i>  2007-09-24</a></p>
+      
+      <h1 class="article-title">マザーを入れ替えるとWindowsが大変なことに</a></h1>
+      
+
+      <div class="article-content">
+        <p>マザーボードを入れ替えておきながらOSの再インストールはしたくないという、甚だ自己中心的な行動に対してかのMicro$oftが真摯な態度をとる訳が無く。</p>
+
+<p>まずOSの上書きインストールだが、インストールが「残り34分」でストップ。デバイスの認識で引っかかっているっぽい。なんと<a href="http://excelcafe.net/wintips/win_stp.htm#5" target="_blank">インストール途中でShift+F10キーを押すとコマンドプロンプトが立ち上げ、ここから「compmgmt.msc /s」を実行するとデバイスマネージャが使えるようになる</a>そうだ。すごいなぁ、この技。で、どうやらBHAの仮想ドライブユーティリティが邪魔をしていたようだ。そりゃそうだ、そんなドライブは物理的には存在しないのだから。その他にも古いマザーボードに関連したデバイスがあったので「無効」にしてからインストールやり直し。無事、OSの再インストール完了。</p>
+
+<p>次にOSの認証……、ってネットワークに繋がっていないのにどうやってやるんだよ、バカじゃねーの？というわけでドライバ類のインストールやネットワーク周りの設定をやるわけだが、このマザーボードにオンボードなNICがうまく動いてくれない。固定IP振って、ゲートウェイにPINGするも返答なし。ループバック(127.0.0.1)も自分自身(割り振った固定IP)もPINGが帰ってくるのに……。</p>
+
+<p>いや、ハマッタハマッタ。ドライバを入れ直したりしてみたが繋がったり繋がらなかったりする。動くときはサクサク動く、で再起動するとダメだったり。</p>
+
+<p>で、ネットで調べたところどうもRealtek RTL8169/8110 Family Gigabit Ethernet NICのLAN速度の判定(Link SpeedをAutoにする)は良くないということが分かった。で、試しにLink Speedを10Mbps/Full Duplexにしてみたら、あらま、サクっとゲートウェイまでPINGが通った。なんですかこれは、酷いなぁ。</p>
+
+<p>気を取り直してGIGABYTEのドライバCDに入っていたユーティリティの類を試しに入れてみる。が、ATIのユーティリティの1つにトロイの木馬が仕込まれている疑いがある、とウチのアンチウィルスソフト(Avast)が警告してきた。うーむ、GIGABYTEさん、これマジですか？誤判定であったとしても情報提供してくれないと問題アリですぜ。</p>
+
+<p>まぁ、なんだかんだで、マザーボード入れ替え前と同じWindowsが使えるようになったのは便利。アプリケーションの入れ替えが要らなかったので見た目が全く一緒、というのは切なくもあり。CPUが速くなったり、メモリがほぼ倍増したりしているはずなのだが、……とりあえず実感なし……。</p>
+
+      </div>
+
+      <hr>
+      <ul class="article-taxonomy">
+        
+
+        
+        <li>
+          <i class="fas fa-tags"></i> <a href="/tags/pc">PC</a>
+        </li>
+        
+      </ul>
+      
+    </article>
+
     
 
     <article class="article">
@@ -214,35 +253,6 @@
         
         <li>
           <i class="fas fa-tags"></i> <a href="/tags/%E3%83%9E%E3%83%B3%E3%82%AC%E3%82%A2%E3%83%8B%E3%83%A1">マンガ・アニメ</a><a href="/tags/%E4%B8%96%E3%81%AE%E4%B8%AD%E3%81%AE%E8%A9%B1">世の中の話</a>
-        </li>
-        
-      </ul>
-      
-    </article>
-
-    
-
-    <article class="article">
-      
-      <p class="article-date"><a href="https://diary.a3size.com/2007/09/07/"><i class="fas fa-book"></i>  2007-09-07</a></p>
-      
-      <h1 class="article-title">風がすごい</a></h1>
-      
-
-      <div class="article-content">
-        <p>ただいまAM0:30。玄関先のプランターたちは2時間前に玄関内に避難させた。この風はすごい怖い。</p>
-
-<p>明日、会社に行けるんだろうか……。午前中をお休みするところもあるらしい。</p>
-
-      </div>
-
-      <hr>
-      <ul class="article-taxonomy">
-        
-
-        
-        <li>
-          <i class="fas fa-tags"></i> <a href="/tags/%E7%94%9F%E6%B4%BB">生活</a>
         </li>
         
       </ul>
@@ -1681,15 +1691,15 @@
           
           
             
-            <li><a href="https://twitter.com/king_nomura" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="https://twitter.com/king_nomura" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Twitter</a></li>
             
           
             
-            <li><a href="https://www.facebook.com/nomura.masayuki" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            <li><a href="https://www.facebook.com/nomura.masayuki" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i> Facebook</a></li>
             
           
             
-            <li><a href="https://github.com/king-nomura" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+            <li><a href="https://github.com/king-nomura" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
             
           
         </ul>

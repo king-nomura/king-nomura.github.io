@@ -21,13 +21,13 @@
 <meta property="og:url" content="https://diary.a3size.com/">
 
 <meta property="og:image" content="https://diary.a3size.com/images/ogp.png">
-<meta property="twitter:image" content="https://diary.a3size.com/images/ogp.png">
+<meta name="twitter:image" content="https://diary.a3size.com/images/ogp.png">
 
 
 
-<meta property="description" content="このサイトは、野村政行が日々のよしなしごとを、そこはかとなく書き連ねたサイトです。">
+<meta name="description" content="このサイトは、野村政行が日々のよしなしごとを、そこはかとなく書き連ねたサイトです。">
 <meta property="og:description" content="このサイトは、野村政行が日々のよしなしごとを、そこはかとなく書き連ねたサイトです。">
-<meta property="twitter:description" content="このサイトは、野村政行が日々のよしなしごとを、そこはかとなく書き連ねたサイトです。">
+<meta name="twitter:description" content="このサイトは、野村政行が日々のよしなしごとを、そこはかとなく書き連ねたサイトです。">
 
 
 
@@ -76,13 +76,60 @@
 
     <article class="article">
       
+      <p class="article-date"><a href="https://diary.a3size.com/2010/05/03/"><i class="fas fa-book"></i>  2010-05-03</a></p>
+      
+      <h1 class="article-title">例のAppleの文章についての雑感</a></h1>
+      
+
+      <div class="article-content">
+        <p>この雑感は、Packager for iPhoneを潰すための規約変更が覆らない前提で書いている。規約変更の話は脇に置いて読んでもらいたい。</p>
+
+<p>個人的にはあのApple社(Steve Jobs氏)がFlashをiPhoneに搭載しない理由として掲載した、中途半端な<a href="http://www.apple.com/hotnews/thoughts-on-flash/" target="_blank">文章</a>は読み解くに値しないと思っていた。大体、アプリの話をしているのかWebブラウザ内のプラグインの話をしているのかすら定まっていない。従って反論も不要と思っていた。だがどうも話題が先行してしまっているため、このままではFlashについての誤解が広まってしまうかも知れない。</p>
+
+<p>論点がずれたままの言葉の応酬に、世論が振り回されないようにしなければならない。なので件の文書の、前半のだらだらぐだぐだをすっ飛ばして、後ろにようやく出てくる「もっとも重要な理由」として掲げたサードパーティ製のミドルウェアを使って開発されると品質が下がる、という話に絞って考えてみる。</p>
+
+<p>AppleがApple自身の価値（例えばAppのUIの品質など）を管理するのは当然だと思う。そしてその仕組みをAppleは持っている。App Storeがそれだ。アプリは全てAppleが独占的で恣意的な判断を下すことが可能なように、Appleの管理下でしか配布することが出来ないようになっている。</p>
+
+<p>現に様々なアプリが様々な事情によりリジェクトされたり公開を停止させられている。アプリを申請する際には、バイナリ（完成品）は提出するがソースコード（一般的にプログラムと云われているのはこれのこと、ソースコードから完成品が作られる）を提出しない。だが、Appleはバイナリから何らかの手法で、そのアプリがどういう作り方になっていて、それがレギュレーションを違反していないかどうか、品質をチェックしている。</p>
+
+<p>今回Adobeが発表したPackager for iPhoneという機能では、Flash Professionalで作られたものをアプリの形のバイナリに変換する。で、Appleは上記のように何らかの手法で「バイナリから品質をチェック」している。つまり、「アプリの品質の問題」はそれがFlashで作られたかどうかに関係なく、一律に判断することが可能ではなかろうか。</p>
+
+<p>あるいは、その何らかの手法でバイナリーから品質をチェックするための機能が、Packager for iPhoneによって酷く負荷が高まってしまうなどの問題があるというのか。それならば、Adobeには辛いことかも知れないが最初から「ソースコードの提出」を義務づければ良い。品質をチェックするならソースコードからチェックする方が断然早い。最初っからそう云われていれば、Adobeもぐぅの音も出なかっただろう。だがAppleは、実際にはソースコードを提出させるほうがコストが高いのかなんだか知らないが、現状ではバイナリのみしか提出させない。</p>
+
+<p>そもそも、現状のアプリのチェック機能それ自体が、本当に品質の管理を行えているのかも疑問だ。先日、あるサードパーティのライブラリを使ったアプリが一斉に公開を取り消される事態が発生した。理由はライブラリのソースコードの一部がレギュレーションに違反していたからだが、何故公開前の審査をくぐり抜けてしまったのかについてはAppleから何の情報開示もなされていない。</p>
+
+<p>或いはUIがFlashによってかき乱されると云われるが、それこそ出て来たアプリをチェックすればよいだけの話であって。そもそも、UIは現状でもいかようにでも改変可能だ。それをみんながやらないのは標準で提供されるUIが良く出来ているからと、単に変更するのが面倒だからだ。</p>
+
+<p>一方的にFlashを搭載しない理由はこれだ！と掲げているが、品質に問題があるのはFlashのほうではなくでAppleのほうなのではないか。それをFlashを槍玉に上げることでカウンターあてたような雰囲気を醸し出しているに過ぎないのではないか。</p>
+
+<p>しかし、今回のAppleの文章、読むにつけ内容の無い文章だ。この日記書くに至るまで延べで何時間も悩まされたこと自体が、Jobsマジックにかかったということなのだろうか。</p>
+
+      </div>
+
+      <hr>
+      <ul class="article-taxonomy">
+        
+
+        
+        <li>
+          <i class="fas fa-tags"></i> <a href="/tags/pc">PC</a>
+        </li>
+        
+      </ul>
+      
+    </article>
+
+    
+
+    <article class="article">
+      
       <p class="article-date"><a href="https://diary.a3size.com/2010/04/22/"><i class="fas fa-book"></i>  2010-04-22</a></p>
       
       <h1 class="article-title">「電子書籍の衝撃」の衝撃</a></h1>
       
 
       <div class="article-content">
-        <p><a href="https://www.amazon.co.jp/gp/product/4887598084/ref=as_li_ss_il?ie=UTF8&linkCode=li3&tag=diarya3sizeco-22&linkId=bb90b507eec3250e98cca57cb29ea131" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4887598084&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=diarya3sizeco-22" /></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=diarya3sizeco-22&l=li3&o=9&a=4887598084" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+        <p><a href="https://www.amazon.co.jp/gp/product/4887598084/ref=as_li_ss_il?ie=UTF8&linkCode=li3&tag=diarya3sizeco-22&linkId=bb90b507eec3250e98cca57cb29ea131" target="_blank" rel="noopener"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4887598084&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=diarya3sizeco-22" /></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=diarya3sizeco-22&l=li3&o=9&a=4887598084" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
 
 <p>というわけで日記のタイトルは完全にダジャレなわけだが、佐々木俊尚「電子書籍の衝撃」は面白かった。この本、もちろん電子書籍として<a href="http://www.d21.co.jp/" target="_blank">ディスカヴァー</a>から発売されていて、野村はiPod Touchで読破した。皆様にもオススメしようと思ったら、110円キャンペーンが終わってしまっていた。がびーん。</p>
 
@@ -96,7 +143,7 @@
 
 <p>あるいは作家や作品に対する敬愛を示すためかもしれない。好きな作家、好きな作品だから金額以上に支払いたいと思う気持ちだ。ガンダムオタクがガンダムと聞くとなんでも買い揃えてしまう行為、自虐的に「寄付」とか「お布施」とか呼んでいるその行為は、既に作品に対してではなく付加価値に対して値段を支払っていると考えられないだろうか。</p>
 
-<p><a href="https://www.amazon.co.jp/gp/product/4152084294/ref=as_li_ss_il?ie=UTF8&linkCode=li3&tag=diarya3sizeco-22&linkId=d5c5e8096211bc5523c7dcdda52c4f2f" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4152084294&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=diarya3sizeco-22" /></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=diarya3sizeco-22&l=li3&o=9&a=4152084294" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+<p><a href="https://www.amazon.co.jp/gp/product/4152084294/ref=as_li_ss_il?ie=UTF8&linkCode=li3&tag=diarya3sizeco-22&linkId=d5c5e8096211bc5523c7dcdda52c4f2f" target="_blank" rel="noopener"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4152084294&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=diarya3sizeco-22" /></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=diarya3sizeco-22&l=li3&o=9&a=4152084294" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
 
 <p>「作品の値段」＋「付加価値の値段」＝「本の値段」とした場合に、「付加価値の値段」をディスカウントした状態が新書→文庫、そして電子書籍となると考えれば、既存の紙を使った出版形態と電子書籍という出版形態は共存できるのではないか。作品そのものの値段で入手できる電子書籍が書籍のベーシックな配布スタイルになって、ハードカバーは所有者にプレミア感を与えてくれる嗜好品として存在する。とりみき＆田北鑑生の名作SFギャグマンガ「ダイホンヤ」のような世界もあながち冗談ではない。</p>
 
@@ -203,7 +250,7 @@
       
 
       <div class="article-content">
-        <p><a href="https://www.amazon.co.jp/gp/product/B002M76PG2/ref=as_li_ss_il?ie=UTF8&linkCode=li3&tag=diarya3sizeco-22&linkId=0dc58daca25fdd4157ad6479e1e25f63" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B002M76PG2&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=diarya3sizeco-22" /></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=diarya3sizeco-22&l=li3&o=9&a=B002M76PG2" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+        <p><a href="https://www.amazon.co.jp/gp/product/B002M76PG2/ref=as_li_ss_il?ie=UTF8&linkCode=li3&tag=diarya3sizeco-22&linkId=0dc58daca25fdd4157ad6479e1e25f63" target="_blank" rel="noopener"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B002M76PG2&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=diarya3sizeco-22" /></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=diarya3sizeco-22&l=li3&o=9&a=B002M76PG2" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
 
 <p>野村は普段はゲーム雑誌などを読まないので、ゲームの情報は友人経由かTwitterやブログ経由でしか分からない。このゲームが発売される直前、偶然店頭でデモ映像を観て、気になって情報を後から集めた。重い内容のアドベンチャーゲームだと分かり、昨今のゲーマーには全く響かないだろうが、個人的にはこれは買いだと思った。</p>
 
@@ -230,37 +277,6 @@
         
         <li>
           <i class="fas fa-tags"></i> <a href="/tags/%E3%82%B2%E3%83%BC%E3%83%A0">ゲーム</a>
-        </li>
-        
-      </ul>
-      
-    </article>
-
-    
-
-    <article class="article">
-      
-      <p class="article-date"><a href="https://diary.a3size.com/2010/03/12/"><i class="fas fa-book"></i>  2010-03-12</a></p>
-      
-      <h1 class="article-title">花粉症</a></h1>
-      
-
-      <div class="article-content">
-        <p>花粉症を発症して、もう3年くらい経つんだろうか。昨日あたりから、鼻と目がきつくて集中できない。これは問題ですよ。</p>
-
-<p>花粉症の対策として抗アレルギー剤の服用とマスク着用を毎日欠かさず行っていたのだが、昨晩からは更に小青竜湯（漢方薬ね）と、コートのファブリーズ（花粉を固めて落とす）の義務化を嫁サマから強制されそうな予感。</p>
-
-<p>諸説あるらしいが、どうして近年になって急に花粉症という病がこんなにメジャーになったんだろうか。もしも金持ちになったら、杉を全部買い取って伐採したい、その結果土砂崩れや地下水の枯渇が起こっても耳を貸さない、などと乱暴なことを考えてしまう今日この頃であった。かふーん（くしゃみの音）。</p>
-
-      </div>
-
-      <hr>
-      <ul class="article-taxonomy">
-        
-
-        
-        <li>
-          <i class="fas fa-tags"></i> <a href="/tags/%E7%94%9F%E6%B4%BB">生活</a>
         </li>
         
       </ul>
@@ -1699,15 +1715,15 @@
           
           
             
-            <li><a href="https://twitter.com/king_nomura" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="https://twitter.com/king_nomura" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Twitter</a></li>
             
           
             
-            <li><a href="https://www.facebook.com/nomura.masayuki" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            <li><a href="https://www.facebook.com/nomura.masayuki" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i> Facebook</a></li>
             
           
             
-            <li><a href="https://github.com/king-nomura" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+            <li><a href="https://github.com/king-nomura" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
             
           
         </ul>

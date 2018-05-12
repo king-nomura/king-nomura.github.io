@@ -7,9 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Tue, 24 Apr 2018 01:37:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 12 May 2018 10:47:26 +0900</lastBuildDate>
     
         <atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>日記の自動化の続きとかいろいろ</title>
+      <link>https://diary.a3size.com/2018/05/12/</link>
+      <pubDate>Sat, 12 May 2018 10:47:26 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2018/05/12/</guid>
+      <description>
+
+&lt;p&gt;しばらくは日記を書きながら、ついでにアップロードの実験をしているので謎のエントリーが増えると思う。&lt;/p&gt;
+
+&lt;h2 id=&#34;日記に書きたいことメモ-順不同&#34;&gt;日記に書きたいことメモ(順不同)：&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;日記の設定を日記にメモする、更なる自動化の模索&lt;/li&gt;
+&lt;li&gt;Instagramに対していいたいこと、または収益化について思うこと&lt;/li&gt;
+&lt;li&gt;ニコニコはどうなるのかの妄想&lt;/li&gt;
+&lt;li&gt;最近の国会と、政治ってそもそもそういうことだったっけみたいな浅い話&lt;/li&gt;
+&lt;li&gt;フロントエンド周りの技術について（これは定期的に書こうと思わないとダメなやつだ）&lt;/li&gt;
+&lt;li&gt;甥っ子が可愛い、または甥っ子を用いたスクワットについて&lt;/li&gt;
+&lt;li&gt;夜のご飯が最適化されないって文明としてどうよ&lt;/li&gt;
+&lt;li&gt;アニメ&lt;/li&gt;
+&lt;li&gt;ゲーム&lt;/li&gt;
+&lt;li&gt;どうぶつの森奴隷&lt;/li&gt;
+&lt;li&gt;公共空間のトイレの話とジンクスについて&lt;/li&gt;
+&lt;li&gt;ラジオのある文化的な暮らし&lt;/li&gt;
+&lt;li&gt;Franzに色々させてみたい、させてみる、なんならばFranzじゃなくてもいい&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     
     
@@ -254,20 +286,6 @@ mkdir -p &lt;span class=&#34;nv&#34;&gt;$targetYear&lt;/span&gt;
       <description>&lt;p&gt;日記の更新がすっかり滞っている。本当はOculus Riftで遊んでみたゲームの考察とか3D酔いの話を書きたかったんだが、急に&lt;a href=&#34;https://www.nintendo.co.jp/zelda/&#34; target=&#34;_blank&#34;&gt;ハイラル平原を駆け巡りたくなって&lt;/a&gt;(更にいえば、「スプラトゥーン2」のための待機)、それのせいで色々なゲームを中断せざるを得ない状況になり。そのうちにいよいよハイラル城の中に入らねばならない状況に追い込まれた（＝ラスボスと戦え）のだが、ゴリ押しでなんとか生き延びてきたウデマエの英雄に何を期待しているのだ怖くてそんなん無理無理！と、ずっと崖を登って現実逃避している。ゲームの中でも現実逃避とは、そもそもゲームの中の現実とは一体。&lt;/p&gt;
 
 &lt;p&gt;そういえば最近、東京近郊の手軽に登れる山にいくつか行ってみたのだが、崖をみるたびに登れそうな錯覚や、尾根から尾根にパラセールで移動したくなる妄想が起こる。現実とは一体。&lt;/p&gt;
-</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>今年観た映画の話</title>
-      <link>https://diary.a3size.com/2016/12/26/</link>
-      <pubDate>Mon, 26 Dec 2016 03:00:01 +0000</pubDate>
-      
-      <guid>https://diary.a3size.com/2016/12/26/</guid>
-      <description>&lt;p&gt;今年は秋からものすごく忙しくなってしまって、あまり映画を観に行けなかった。もう今年は観に行けなさそうなので、今年も&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1mXWmPNwnH5qu4sd4G8VrnFbaUzctMnXxY6HetVUh5Xg/pubhtml?gid=1123529751&amp;#038;single=true&#34; target=&#34;_blank&#34;&gt;もう一度観たい映画ランキング&lt;/a&gt;にまとめてみた。&lt;/p&gt;
-
-&lt;p&gt;異論は認める。&lt;/p&gt;
 </description>
     </item>
     
