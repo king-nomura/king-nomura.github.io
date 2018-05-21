@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://diary.a3size.com/%E3%81%93%E3%81%AE%E6%97%A5%E8%A8%98%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</loc>
+    <lastmod>2018-05-14T10:25:09+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://diary.a3size.com/2018/05/12/</loc>
     <lastmod>2018-05-12T10:47:26+09:00</lastmod>
   </url>
@@ -35,11 +40,6 @@
   <url>
     <loc>https://diary.a3size.com/2018/01/04/</loc>
     <lastmod>2018-01-04T03:00:01+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/about/</loc>
-    <lastmod>2017-08-30T13:42:09+00:00</lastmod>
   </url>
   
   <url>
@@ -3804,7 +3804,7 @@
   
   <url>
     <loc>https://diary.a3size.com/</loc>
-    <lastmod>2018-05-12T10:47:26+09:00</lastmod>
+    <lastmod>2018-05-14T10:25:09+09:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -3853,7 +3853,7 @@
   
   <url>
     <loc>https://diary.a3size.com/page/</loc>
-    <lastmod>2017-08-30T13:42:09+00:00</lastmod>
+    <lastmod>2018-05-14T10:25:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -3883,6 +3883,10 @@
     <loc>https://diary.a3size.com/tags/%E3%81%8A%E5%87%BA%E3%81%8B%E3%81%91/</loc>
     <lastmod>2013-04-25T03:00:01+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://diary.a3size.com/2018/05/22/</loc>
   </url>
   
   <url>

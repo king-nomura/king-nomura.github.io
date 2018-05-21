@@ -6,26 +6,26 @@
 <meta name="generator" content="Hugo 0.38.2" />
 <meta name="author" content="野村政行">
 
-<title>tDiaryの導入 -  野村政行の「堪忍袋の緒を締めろ！」</title>
+<title>しつこいけれど、また自動化の話 -  野村政行の「堪忍袋の緒を締めろ！」</title>
 
 
-<link rel="amphtml" type="text/html" href="https://diary.a3size.com/amp/2004/03/13/">
+<link rel="amphtml" type="text/html" href="https://diary.a3size.com/amp/2018/05/22/">
 
 <meta property="og:site_name" content=" 野村政行の「堪忍袋の緒を締めろ！」">
-<meta property="og:title" content="tDiaryの導入">
+<meta property="og:title" content="しつこいけれど、また自動化の話">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:app_id" content="361503227564013">
-<meta property="og:url" content="https://diary.a3size.com/2004/03/13/">
+<meta property="og:url" content="https://diary.a3size.com/2018/05/22/">
 
 <meta property="og:image" content="https://diary.a3size.com/images/ogp.png">
 <meta name="twitter:image" content="https://diary.a3size.com/images/ogp.png">
 
 
 
-<meta name="description" content="思いつきでtDiaryを導入する。Rubyか。初体験だ。 最新開発版の1.5.6を入れたらば uninitialized constant Config at TDiary (NameError) なるエラーが出る。困ったぞ。 初めての言...">
-<meta property="og:description" content="思いつきでtDiaryを導入する。Rubyか。初体験だ。 最新開発版の1.5.6を入れたらば uninitialized constant Config at TDiary (NameError) なるエラーが出る。困ったぞ。 初めての言...">
-<meta name="twitter:description" content="思いつきでtDiaryを導入する。Rubyか。初体験だ。 最新開発版の1.5.6を入れたらば uninitialized constant Config at TDiary (NameError) なるエラーが出る。困ったぞ。 初めての言...">
+<meta name="description" content="以前書いたように、この日記はMarkdown形式のテキストファイルをBitBucketのレポジトリにPUSHすると、CIサービスであるWer...">
+<meta property="og:description" content="以前書いたように、この日記はMarkdown形式のテキストファイルをBitBucketのレポジトリにPUSHすると、CIサービスであるWer...">
+<meta name="twitter:description" content="以前書いたように、この日記はMarkdown形式のテキストファイルをBitBucketのレポジトリにPUSHすると、CIサービスであるWer...">
 
 
 
@@ -66,29 +66,33 @@
 <main class="content" role="main">
   <article class="article">
     
-    <span class="article-date"><i class="fas fa-book"></i> 2004-03-13</span>
+    <span class="article-date"><i class="fas fa-book"></i> 0001-01-01</span>
     
-    <h1 class="article-title">tDiaryの導入</h1>
+    <h1 class="article-title">しつこいけれど、また自動化の話</h1>
 
     <div class="article-content">
-      <p>思いつきでtDiaryを導入する。Rubyか。初体験だ。</p>
+      <p><a href="/2018/04/21/">以前書いた</a>ように、この日記はMarkdown形式のテキストファイルを<a href="https://bitbucket.org/" target="_blank">BitBucket</a>のレポジトリにPUSHすると、CIサービスである<a href="http://www.wercker.com" target="_blank">Wercker</a>がWebhookされ、<a href="https://gohugo.io" target="_blank">Hugo</a>によってhtmlファイルを生成して、そのhtmlファイルを<a href="https://pages.github.com" target="_blank">GitHub Pages</a>にPUSHしている。</p>
 
-<p>最新開発版の1.5.6を入れたらば</p>
+<p>その、日記用Markdownファイルを生成するスクリプトはAutomatorで書いた。これから、そのMarkdownファイル(拡張子は.md)を右クリックして「サービス」メニューからgitコミットするスクリプトのテストを行う。</p>
 
-<blockquote>
-<p>uninitialized constant Config at TDiary (NameError)</p>
-</blockquote>
+<p>まずファイルをaddして、それからcommit。gitコマンド的には、いちどaddされているファイルをもう一回addしても問題ないようなので、何度でも実行可能。</p>
 
-<p>なるエラーが出る。困ったぞ。</p>
+<pre><code>cd {日記gitのルートディレクトリ}
 
-<img src="/files/2004/03/20040313_0.jpg" alt="とりあえず、職場の写真でも上げてみる" width="240" height="180" />
+currentDate=`date +%FT%T%z`
+for f in &quot;$@&quot;
+do
+	ext=`echo ${f##*.} | sed &quot;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&quot;`
+	if [ $ext = &quot;md&quot; -a ! -d $f ]; then
+		/usr/bin/git add $f
+		sed -i '' -e 's/^date: &quot;[^&quot;]*&quot;$/date: &quot;'$currentDate'&quot;/g' $f
+	fi
+done
 
+/usr/bin/git commit -m '[add|mod] dayly post'
+</code></pre>
 
-<p>初めての言語で、初めてのエラーメッセージ。全く勘所が分からない。クラスの初期化に失敗しているのかな？とか邪推してみるが、とりあえず開発版のさらにスナップショットを取ってきてみる。</p>
-
-<p>1.5.6.20040304版。全くエラー出ず。OKである。</p>
-
-<p>思いつきで2,3プラグインを試してみようとするが、流石に開発版、できることと出来ないことがあるようだ。とりあえず、職場の写真でも上げて、お茶を濁してみることにした。</p>
+<p>日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。</p>
 
     </div>
  
@@ -98,7 +102,7 @@
     
       
       <li>
-        <i class="fas fa-tags"></i> <a href="/tags/a3size">a3size</a>
+        <i class="fas fa-tags"></i> <a href="/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88">インターネット</a><a href="/tags/a3size">a3size</a>
       </li>
       
     </ul>
@@ -110,12 +114,10 @@
 <ul class="page-links">
   <li>
     
-    <a href="https://diary.a3size.com/2018/05/22/" aria-label="Previous"><span aria-hidden="true"><i class="fas fa-angle-left"></i> 前へ</span></a>
-    
   </li>
   <li>
     
-    <a href="https://diary.a3size.com/2004/03/17/" aria-label="Next"><span aria-hidden="true">次へ <i class="fas fa-angle-right"></i></span></a>
+    <a href="https://diary.a3size.com/2004/03/13/" aria-label="Next"><span aria-hidden="true">次へ <i class="fas fa-angle-right"></i></span></a>
     
   </li>
 </ul>
