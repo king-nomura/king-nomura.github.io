@@ -119,23 +119,20 @@
 <p>その、日記用Markdownファイルを生成するスクリプトはAutomatorで書いた。これから、そのMarkdownファイル(拡張子は.md)を右クリックして「サービス」メニューからgitコミットするスクリプトのテストを行う。</p>
 
 <p>まずファイルをaddして、それからcommit。gitコマンド的には、いちどaddされているファイルをもう一回addしても問題ないようなので、何度でも実行可能。</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="o">{</span>日記gitのルートディレクトリ<span class="o">}</span>
 
-<pre><code>cd {日記gitのルートディレクトリ}
+<span class="nv">currentDate</span><span class="o">=</span><span class="sb">`</span>date +%FT%T%z <span class="p">|</span> sed -e <span class="s1">&#39;s/\(.\{22\}\)/\1:/&#39;</span><span class="sb">`</span>
+<span class="k">for</span> f in <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+<span class="k">do</span>
+	<span class="nv">ext</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">f</span><span class="p">##*.</span><span class="si">}</span> <span class="p">|</span> sed <span class="s2">&#34;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&#34;</span><span class="sb">`</span>
+	<span class="k">if</span> <span class="o">[</span> <span class="nv">$ext</span> <span class="o">=</span> <span class="s2">&#34;md&#34;</span> -a ! -d <span class="nv">$f</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+		sed -i <span class="s1">&#39;&#39;</span> -e <span class="s1">&#39;s/^date: &#34;[^&#34;]*&#34;$/date: &#34;&#39;</span><span class="nv">$currentDate</span><span class="s1">&#39;&#34;/g&#39;</span> <span class="nv">$f</span>
+    /usr/bin/git add <span class="nv">$f</span>
+	<span class="k">fi</span>
+<span class="k">done</span>
 
-currentDate=`date +%FT%T%z`
-for f in &quot;$@&quot;
-do
-	ext=`echo ${f##*.} | sed &quot;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&quot;`
-	if [ $ext = &quot;md&quot; -a ! -d $f ]; then
-		/usr/bin/git add $f
-		sed -i '' -e 's/^date: &quot;[^&quot;]*&quot;$/date: &quot;'$currentDate'&quot;/g' $f
-	fi
-done
-
-/usr/bin/git commit -m '[add|mod] dayly post'
-</code></pre>
-
-<p>日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。</p>
+/usr/bin/git commit -m <span class="s1">&#39;[add|mod] dayly post&#39;</span></code></pre></div>
+<p>日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。日付フォーマットが<code>date</code>コマンドのままだとおかしくなる（タイムゾーン「+0900」ではダメで、「+09:00」だとOK）ので強引に変更している、など。強引でよろしくない感じのスクリプトだが、まあとりあえず動く。</p>
 
 </div>
 </article>

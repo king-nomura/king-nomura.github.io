@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Tue, 22 May 2018 01:24:06 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 22 May 2018 01:32:13 +0900</lastBuildDate>
     
         <atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -16,7 +16,7 @@
     <item>
       <title>しつこいけれど、また自動化の話</title>
       <link>https://diary.a3size.com/2018/05/22/</link>
-      <pubDate>Tue, 22 May 2018 01:24:06 +0900</pubDate>
+      <pubDate>Tue, 22 May 2018 01:32:13 +0900</pubDate>
       
       <guid>https://diary.a3size.com/2018/05/22/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://diary.a3size.com/2018/04/21/&#34;&gt;以前書いた&lt;/a&gt;ように、この日記はMarkdown形式のテキストファイルを&lt;a href=&#34;https://bitbucket.org/&#34; target=&#34;_blank&#34;&gt;BitBucket&lt;/a&gt;のレポジトリにPUSHすると、CIサービスである&lt;a href=&#34;http://www.wercker.com&#34; target=&#34;_blank&#34;&gt;Wercker&lt;/a&gt;がWebhookされ、&lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;によってhtmlファイルを生成して、そのhtmlファイルを&lt;a href=&#34;https://pages.github.com&#34; target=&#34;_blank&#34;&gt;GitHub Pages&lt;/a&gt;にPUSHしている。&lt;/p&gt;
@@ -24,23 +24,20 @@
 &lt;p&gt;その、日記用Markdownファイルを生成するスクリプトはAutomatorで書いた。これから、そのMarkdownファイル(拡張子は.md)を右クリックして「サービス」メニューからgitコミットするスクリプトのテストを行う。&lt;/p&gt;
 
 &lt;p&gt;まずファイルをaddして、それからcommit。gitコマンド的には、いちどaddされているファイルをもう一回addしても問題ないようなので、何度でも実行可能。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;日記gitのルートディレクトリ&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
-&lt;pre&gt;&lt;code&gt;cd {日記gitのルートディレクトリ}
+&lt;span class=&#34;nv&#34;&gt;currentDate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;date +%FT%T%z &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/\(.\{22\}\)/\1:/&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; f in &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+	&lt;span class=&#34;nv&#34;&gt;ext&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;##*.&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&amp;#34;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$ext&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;md&amp;#34;&lt;/span&gt; -a ! -d &lt;span class=&#34;nv&#34;&gt;$f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+		sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt; -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/^date: &amp;#34;[^&amp;#34;]*&amp;#34;$/date: &amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$currentDate&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;/g&amp;#39;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$f&lt;/span&gt;
+    /usr/bin/git add &lt;span class=&#34;nv&#34;&gt;$f&lt;/span&gt;
+	&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
 
-currentDate=`date +%FT%T%z`
-for f in &amp;quot;$@&amp;quot;
-do
-	ext=`echo ${f##*.} | sed &amp;quot;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&amp;quot;`
-	if [ $ext = &amp;quot;md&amp;quot; -a ! -d $f ]; then
-		/usr/bin/git add $f
-		sed -i &#39;&#39; -e &#39;s/^date: &amp;quot;[^&amp;quot;]*&amp;quot;$/date: &amp;quot;&#39;$currentDate&#39;&amp;quot;/g&#39; $f
-	fi
-done
-
-/usr/bin/git commit -m &#39;[add|mod] dayly post&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。&lt;/p&gt;
+/usr/bin/git commit -m &lt;span class=&#34;s1&#34;&gt;&amp;#39;[add|mod] dayly post&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。日付フォーマットが&lt;code&gt;date&lt;/code&gt;コマンドのままだとおかしくなる（タイムゾーン「+0900」ではダメで、「+09:00」だとOK）ので強引に変更している、など。強引でよろしくない感じのスクリプトだが、まあとりあえず動く。&lt;/p&gt;
 </description>
     </item>
     
