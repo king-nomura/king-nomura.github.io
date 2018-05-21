@@ -7,9 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Mon, 14 May 2018 10:25:09 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 22 May 2018 01:24:06 +0900</lastBuildDate>
     
         <atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>しつこいけれど、また自動化の話</title>
+      <link>https://diary.a3size.com/2018/05/22/</link>
+      <pubDate>Tue, 22 May 2018 01:24:06 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2018/05/22/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://diary.a3size.com/2018/04/21/&#34;&gt;以前書いた&lt;/a&gt;ように、この日記はMarkdown形式のテキストファイルを&lt;a href=&#34;https://bitbucket.org/&#34; target=&#34;_blank&#34;&gt;BitBucket&lt;/a&gt;のレポジトリにPUSHすると、CIサービスである&lt;a href=&#34;http://www.wercker.com&#34; target=&#34;_blank&#34;&gt;Wercker&lt;/a&gt;がWebhookされ、&lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;によってhtmlファイルを生成して、そのhtmlファイルを&lt;a href=&#34;https://pages.github.com&#34; target=&#34;_blank&#34;&gt;GitHub Pages&lt;/a&gt;にPUSHしている。&lt;/p&gt;
+
+&lt;p&gt;その、日記用Markdownファイルを生成するスクリプトはAutomatorで書いた。これから、そのMarkdownファイル(拡張子は.md)を右クリックして「サービス」メニューからgitコミットするスクリプトのテストを行う。&lt;/p&gt;
+
+&lt;p&gt;まずファイルをaddして、それからcommit。gitコマンド的には、いちどaddされているファイルをもう一回addしても問題ないようなので、何度でも実行可能。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd {日記gitのルートディレクトリ}
+
+currentDate=`date +%FT%T%z`
+for f in &amp;quot;$@&amp;quot;
+do
+	ext=`echo ${f##*.} | sed &amp;quot;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&amp;quot;`
+	if [ $ext = &amp;quot;md&amp;quot; -a ! -d $f ]; then
+		/usr/bin/git add $f
+		sed -i &#39;&#39; -e &#39;s/^date: &amp;quot;[^&amp;quot;]*&amp;quot;$/date: &amp;quot;&#39;$currentDate&#39;&amp;quot;/g&#39; $f
+	fi
+done
+
+/usr/bin/git commit -m &#39;[add|mod] dayly post&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。&lt;/p&gt;
+</description>
+    </item>
     
     
     
@@ -272,20 +305,6 @@ mkdir -p &lt;span class=&#34;nv&#34;&gt;$targetYear&lt;/span&gt;
 &lt;/span&gt;&lt;span class=&#34;w&#34;&gt;            &lt;/span&gt;-&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;./public/wp-content/themes/a3size&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;/var/www/html/wp-content/themes/a3size&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;env_file&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;.env&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;詳しいことは気が向いたら書くことにする。そもそも今日はこんなことを書きたかったわけではなく、生存報告が目的なので。&lt;/p&gt;
-</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>ハイラル城に入りたくない</title>
-      <link>https://diary.a3size.com/2017/05/31/</link>
-      <pubDate>Wed, 31 May 2017 03:00:01 +0000</pubDate>
-      
-      <guid>https://diary.a3size.com/2017/05/31/</guid>
-      <description>&lt;p&gt;日記の更新がすっかり滞っている。本当はOculus Riftで遊んでみたゲームの考察とか3D酔いの話を書きたかったんだが、急に&lt;a href=&#34;https://www.nintendo.co.jp/zelda/&#34; target=&#34;_blank&#34;&gt;ハイラル平原を駆け巡りたくなって&lt;/a&gt;(更にいえば、「スプラトゥーン2」のための待機)、それのせいで色々なゲームを中断せざるを得ない状況になり。そのうちにいよいよハイラル城の中に入らねばならない状況に追い込まれた（＝ラスボスと戦え）のだが、ゴリ押しでなんとか生き延びてきたウデマエの英雄に何を期待しているのだ怖くてそんなん無理無理！と、ずっと崖を登って現実逃避している。ゲームの中でも現実逃避とは、そもそもゲームの中の現実とは一体。&lt;/p&gt;
-
-&lt;p&gt;そういえば最近、東京近郊の手軽に登れる山にいくつか行ってみたのだが、崖をみるたびに登れそうな錯覚や、尾根から尾根にパラセールで移動したくなる妄想が起こる。現実とは一体。&lt;/p&gt;
 </description>
     </item>
     

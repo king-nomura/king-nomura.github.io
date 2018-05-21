@@ -76,6 +76,44 @@
 
     <article class="article">
       
+      <p class="article-date"><a href="https://diary.a3size.com/2004/03/24/"><i class="fas fa-book"></i>  2004-03-24</a></p>
+      
+      <h1 class="article-title">なんとなく、口が寂しく</a></h1>
+      
+
+      <div class="article-content">
+        <img src="/files/2004/03/20040324_0.jpg" alt="VC-3000" width="160" height="120" />
+
+
+<p>延々と仕事をしているとぼうっとしてくるので、口の中に何か入れてそれを咀嚼したり転がしたりすることで気分を紛らわせている。別に、ゴムでも石でもいいのだろうが、どうせなら食べ物の方がいいわけで、ガムだったりアメだったりタブレットだったりする。</p>
+
+<p>で、いつもはLOTTEの<a href="http://www.lotte.co.jp/products/gm15.html" target="_blank">XYLITOL</a>なのだが、今はたまたまNOBELの<a href="http://vc3000.com/" target="_blank">VC-3000</a>を常備している。このボトルタイプのがいい。</p>
+
+<p>さっき、ふとフタの裏側を見てみたら「<strong>HANDY CAP</strong>」と書かれてあった。なるほどハンディキャップか。で、WEB翻訳にかましてみると「<strong>手軽なキャップ</strong>」と返ってきた。</p>
+
+<p>はて？と思って「<strong>ハンディキャップ</strong>」を翻訳すると「<strong>handicap</strong>」。</p>
+
+<p>また一つ賢くなったよ。もうすぐ29歳。</p>
+
+      </div>
+
+      <hr>
+      <ul class="article-taxonomy">
+        
+
+        
+        <li>
+          <i class="fas fa-tags"></i> <a href="/tags/%E9%A3%9F%E7%94%9F%E6%B4%BB">食生活</a>
+        </li>
+        
+      </ul>
+      
+    </article>
+
+    
+
+    <article class="article">
+      
       <p class="article-date"><a href="https://diary.a3size.com/2004/03/21/"><i class="fas fa-book"></i>  2004-03-21</a></p>
       
       <h1 class="article-title">気になっていたCDたち</a></h1>
@@ -240,57 +278,6 @@
         
         <li>
           <i class="fas fa-tags"></i> <a href="/tags/a3size">a3size</a>
-        </li>
-        
-      </ul>
-      
-    </article>
-
-    
-    
-  <h2 class="list-title">0001</h2>
-    
-
-    <article class="article">
-      
-      <p class="article-date"><a href="https://diary.a3size.com/2018/05/22/"><i class="fas fa-book"></i>  0001-01-01</a></p>
-      
-      <h1 class="article-title">しつこいけれど、また自動化の話</a></h1>
-      
-
-      <div class="article-content">
-        <p><a href="/2018/04/21/">以前書いた</a>ように、この日記はMarkdown形式のテキストファイルを<a href="https://bitbucket.org/" target="_blank">BitBucket</a>のレポジトリにPUSHすると、CIサービスである<a href="http://www.wercker.com" target="_blank">Wercker</a>がWebhookされ、<a href="https://gohugo.io" target="_blank">Hugo</a>によってhtmlファイルを生成して、そのhtmlファイルを<a href="https://pages.github.com" target="_blank">GitHub Pages</a>にPUSHしている。</p>
-
-<p>その、日記用Markdownファイルを生成するスクリプトはAutomatorで書いた。これから、そのMarkdownファイル(拡張子は.md)を右クリックして「サービス」メニューからgitコミットするスクリプトのテストを行う。</p>
-
-<p>まずファイルをaddして、それからcommit。gitコマンド的には、いちどaddされているファイルをもう一回addしても問題ないようなので、何度でも実行可能。</p>
-
-<pre><code>cd {日記gitのルートディレクトリ}
-
-currentDate=`date +%FT%T%z`
-for f in &quot;$@&quot;
-do
-	ext=`echo ${f##*.} | sed &quot;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&quot;`
-	if [ $ext = &quot;md&quot; -a ! -d $f ]; then
-		/usr/bin/git add $f
-		sed -i '' -e 's/^date: &quot;[^&quot;]*&quot;$/date: &quot;'$currentDate'&quot;/g' $f
-	fi
-done
-
-/usr/bin/git commit -m '[add|mod] dayly post'
-</code></pre>
-
-<p>日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。</p>
-
-      </div>
-
-      <hr>
-      <ul class="article-taxonomy">
-        
-
-        
-        <li>
-          <i class="fas fa-tags"></i> <a href="/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88">インターネット</a><a href="/tags/a3size">a3size</a>
         </li>
         
       </ul>

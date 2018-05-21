@@ -76,6 +76,54 @@
 
     <article class="article">
       
+      <p class="article-date"><a href="https://diary.a3size.com/2018/05/22/"><i class="fas fa-book"></i>  2018-05-22</a></p>
+      
+      <h1 class="article-title">しつこいけれど、また自動化の話</a></h1>
+      
+
+      <div class="article-content">
+        <p><a href="/2018/04/21/">以前書いた</a>ように、この日記はMarkdown形式のテキストファイルを<a href="https://bitbucket.org/" target="_blank">BitBucket</a>のレポジトリにPUSHすると、CIサービスである<a href="http://www.wercker.com" target="_blank">Wercker</a>がWebhookされ、<a href="https://gohugo.io" target="_blank">Hugo</a>によってhtmlファイルを生成して、そのhtmlファイルを<a href="https://pages.github.com" target="_blank">GitHub Pages</a>にPUSHしている。</p>
+
+<p>その、日記用Markdownファイルを生成するスクリプトはAutomatorで書いた。これから、そのMarkdownファイル(拡張子は.md)を右クリックして「サービス」メニューからgitコミットするスクリプトのテストを行う。</p>
+
+<p>まずファイルをaddして、それからcommit。gitコマンド的には、いちどaddされているファイルをもう一回addしても問題ないようなので、何度でも実行可能。</p>
+
+<pre><code>cd {日記gitのルートディレクトリ}
+
+currentDate=`date +%FT%T%z`
+for f in &quot;$@&quot;
+do
+	ext=`echo ${f##*.} | sed &quot;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&quot;`
+	if [ $ext = &quot;md&quot; -a ! -d $f ]; then
+		/usr/bin/git add $f
+		sed -i '' -e 's/^date: &quot;[^&quot;]*&quot;$/date: &quot;'$currentDate'&quot;/g' $f
+	fi
+done
+
+/usr/bin/git commit -m '[add|mod] dayly post'
+</code></pre>
+
+<p>日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。</p>
+
+      </div>
+
+      <hr>
+      <ul class="article-taxonomy">
+        
+
+        
+        <li>
+          <i class="fas fa-tags"></i> <a href="/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88">インターネット</a><a href="/tags/a3size">a3size</a>
+        </li>
+        
+      </ul>
+      
+    </article>
+
+    
+
+    <article class="article">
+      
       <p class="article-date"><a href="https://diary.a3size.com/2018/05/12/"><i class="fas fa-book"></i>  2018-05-12</a></p>
       
       <h1 class="article-title">日記の自動化の続きとかいろいろ</a></h1>
@@ -285,45 +333,6 @@ mkdir -p <span class="nv">$targetYear</span>
         
         <li>
           <i class="fas fa-tags"></i> <a href="/tags/a3size">a3size</a><a href="/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88">インターネット</a>
-        </li>
-        
-      </ul>
-      
-    </article>
-
-    
-
-    <article class="article">
-      
-      <p class="article-date"><a href="https://diary.a3size.com/2018/02/13/"><i class="fas fa-book"></i>  2018-02-13</a></p>
-      
-      <h1 class="article-title">Macの音声入力で日記を書くテスト</a></h1>
-      
-
-      <div class="article-content">
-        <p>流行に乗っかって、この文章マックの音声入力で書いてみている。新しい行新しい行</p>
-
-<p>この文章ハ3回目。久々に変なシャベリカタをしていてキモチ悪い。人間サマが、マックに合わせて、喋り方を変えてやっている。なんて親切だ。</p>
-
-<p>音声入力でプログラムを書くには、それなりの設定とそれなりの訓練が必要そう。ダイタイにして、日本語と英語をごちゃまぜにしゃべっているのはよくない。いふへ留守番。ほらね、まくいかない。</p>
-
-<p>あと、自分の妄想お口に出してイルのが、かなり恥ずかしい。うまく変換されないので、さらに文章が恥ずかしい。</p>
-
-<p>シャベルのが疲れてきた。うん、照れるったほうが早いような気がする。そんなに発音悪いのかなあ。それともマイクが遠いのかな。それともしゃべる速度がマックに会っていないのかな。マックがカタカナになるの気持ち悪い。マクドと区別がつかない。</p>
-
-<p>文章を書きながら、書き直したいなと何度も思うのに、音声入力を止めたくないからどんどんおかしな文章が出来上がっていく。Backspaceがほしい。あるのかな。なんでバックスペースちゃんと英語になるのはてな?新しい行</p>
-
-<p>酸素が足りない。喋るの飽きた。おしまい。おしマイケル。</p>
-
-      </div>
-
-      <hr>
-      <ul class="article-taxonomy">
-        
-
-        
-        <li>
-          <i class="fas fa-tags"></i> <a href="/tags/pc">PC</a>
         </li>
         
       </ul>
