@@ -7,9 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Sun, 24 Jun 2018 14:04:46 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 02 Jan 2019 22:33:45 +0900</lastBuildDate>
     
         <atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>2018年は映画を観ていない</title>
+      <link>https://diary.a3size.com/2019/01/02/</link>
+      <pubDate>Wed, 02 Jan 2019 22:33:45 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2019/01/02/</guid>
+      <description>&lt;p&gt;気づいたらまたしても日記書いていなかったじゃないか。しかも去年の映画視聴記録もまとめていないじゃないか。&lt;/p&gt;
+
+&lt;p&gt;というわけで、急いで作った：&lt;a href=&#34;https://docs.google.com/spreadsheets/d/e/2PACX-1vRpc5DX-Aw_6eeZjT3SFNZBCz7tVNKTpFox77lW_kG6-2KQHiQY0erbuITxNp0_DopC3KJ00qJuo1xz/pubhtml?gid=2109559652&amp;single=true&#34; target=&#34;_blank&#34;&gt;もう一度観たい映画2018&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;いつものように、もう一度観たいかどうかという観点で順番をつけているが、大まかな雰囲気で並べているんだなぁと思ってもらいたい。&lt;/p&gt;
+
+&lt;p&gt;そんなことより、圧倒的に2018年は観ている本数が少ない。Amazonプライムでもっぱらドラマシリーズものに手を出してしまっているせいで、自宅でもあまり映画は観ていない。
+観たかった映画とうまくタイミングが合わなかっただけではなく、観たい映画自体がちょっと少なかった印象がある。ここ数年見逃していた作品や、ルーツ的なものや関連作品として古い作品への興味が高まっているので、本当はレンタルなどでもっとそういう作品を見るべきなのだろう。&lt;/p&gt;
+
+&lt;p&gt;例えば、今更ながら「ロッキー」を観た。さすが、面白いよね、「ロッキー」。さすがに古い作品だし低予算ならではの淡白さもありながら、これが若者たちに受け入れられた時代背景なども含めて興味深い作品だと思う。&lt;/p&gt;
+
+&lt;p&gt;というわけで2019年はひょっとすると古い作品をたくさん観るかもしれない。&lt;/p&gt;
+
+&lt;p&gt;……いやまてよ、やっぱりたくさんは観ないかもしれない。今、Amazonプライムでずっと「ゲーム・オブ・スローンズ」を観ているので、それが観終わるまではちょっと……。&lt;/p&gt;
+</description>
+    </item>
     
     
     
@@ -301,22 +326,6 @@ mkdir -p &lt;span class=&#34;nv&#34;&gt;$targetYear&lt;/span&gt;
 &lt;p&gt;そんな感じで、要はIntel ME FWをどこから見つけてくるか、なのだが、上記の記事を参考にして、&lt;a href=&#34;http://www.station-drivers.com/index.php?option=com_remository&amp;amp;Itemid=352&amp;amp;func=startdown&amp;amp;id=3303&amp;amp;lang=en&#34; target=&#34;_blank&#34;&gt;Intel Management Engine (ME / AMT) Firmware Version 11.8.50.3434 (S &amp;amp; H) (5MB)&lt;/a&gt;を適用することにした。このstation-drivers.comが安全なサイトかどうか確信は持てない、というあたりが自己責任な部分で、今回のケースではあとは「最新のマザーボードに買い直す」くらいしか選択肢がないからまあいいかな、と。&lt;/p&gt;
 
 &lt;p&gt;無事ファームウェアをアップデートして、Intelのサイトにある「intel-sa-00086 検出ツール」で対策完了を確認。終わり。&lt;/p&gt;
-</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>2017年に観た映画について</title>
-      <link>https://diary.a3size.com/2018/01/04/</link>
-      <pubDate>Thu, 04 Jan 2018 03:00:01 +0000</pubDate>
-      
-      <guid>https://diary.a3size.com/2018/01/04/</guid>
-      <description>&lt;p&gt;この日記をWordPressに移行しようと思って、どうせやるならデザイン変えようと思って、そう思っていたらなんと年を越していた。壮大な「やるやる詐欺」に自分がハマっている。毎年春先には開店休業状態になるので、その頃にWordPressに引っ越すことにしよう。そうしよう。&lt;/p&gt;
-
-&lt;p&gt;というわけで、とりあえず今年も一年間で観た映画の記録をまとめた。例によってランキング風ではあるが厳密では無いし、そもそも今思い返してみて「ああ、もう一度観てみたいなぁ」と思ったかどうかのランキングなので。良かったかどうかとは微妙に違うかも知れない。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/e/2PACX-1vRpc5DX-Aw_6eeZjT3SFNZBCz7tVNKTpFox77lW_kG6-2KQHiQY0erbuITxNp0_DopC3KJ00qJuo1xz/pubhtml?gid=432144618&amp;amp;single=true&#34; target=&#34;_blank&#34;&gt;もう一度観たい映画2017&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

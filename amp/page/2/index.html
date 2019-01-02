@@ -122,6 +122,57 @@
     
 
     <article class="article">
+      <h1 class="article-title"><a href="https://diary.a3size.com/2018/04/22/">2018-04-22</a> Hugoで日記を書くための自動化</a></h1>
+      
+
+      <div class="article-content">
+        <p><a href="/2018/04/21/">先日の日記</a>に書いたように、BitBucketに日記をPUSHするとゴニョゴニョしてGitHub Pagesで公開されるという仕組みが完成した。</p>
+
+<p>日記を一日分追加すると、その日の日記ページのHTMLができる。のみならず、トップページに直近5日分の日記が載っているのでそこも再生成。すると日記が一日分後ろに押し出されて、ページネーション（次のページ）があるのでその後ろのページ全部が再生成させる。また日記につけたタグから、そのタグのリストページも再生成される。結果、数百のファイルが再生成される。うわーお、無駄が多い。でもなぁ、日記を一日分ずつ読み込むのもちょっと馬鹿馬鹿しい。まあそれはともかく、自動的にhtmlは作れるようになった。</p>
+
+<p>では次は日記を新規作成するところだ。コマンドラインから <code>Hugo new ファイル名</code> でページのひな形が書き込まれたMarkdownファイルが完成する。これは楽チン……、と思いたいところだがもっと楽にしたい。</p>
+
+<p>Automatorを使って、例えば以下のような感じのシェルスクリプトをアプリ化（というかアイコン化）して、ボタン一発で今日の日記を作ってエディタを開く。</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="s1">&#39;Hugoの作業ディレクトリ&#39;</span>
+
+<span class="c1"># この例では年別にファイルを格納したいので、post/YYYYディレクトリを作成している
+</span><span class="c1"></span><span class="nv">targetYear</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y&#34;</span><span class="sb">`</span>
+mkdir -p <span class="nv">$targetYear</span>
+
+<span class="c1"># 日付からファイル名を生成する。この例では post/YYYY/YYYY-MM-DD.mfd
+</span><span class="c1"></span><span class="nv">targetDate</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y-%m-%d&#34;</span><span class="sb">`</span>
+<span class="nv">targetFile</span><span class="o">=</span><span class="s2">&#34;post/</span><span class="nv">$targetYear</span><span class="s2">/</span><span class="nv">$targetDate</span><span class="s2">.md&#34;</span>
+
+<span class="c1"># 当該ファイルがなければ新規作成
+</span><span class="c1"></span><span class="k">if</span> <span class="o">[</span> ! -e <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  /usr/local/bin/hugo new <span class="nv">$targetFile</span>
+<span class="k">fi</span>
+
+<span class="c1"># この例ではアプリを指定せずにファイルを開く
+</span><span class="c1"></span>open <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span></code></pre></div>
+<p>これで、日記を書くところまでアイコンクリック一回でだけで進められる。</p>
+
+<p>本当は、日記を書き終えたあともcommitとpushをアイコンクリック一回でやりたいが、エラー処理とか連打時の動作とか考えるとちょっと面倒そうなので、いったんここまでとして、今日記を書いているこのファイルをこのあと手動でcommitしてpushすることにする。</p>
+
+<p>……コミット時のメッセージが日本語だとうまく動かない？</p>
+
+      </div>
+
+      
+
+      
+      <p>
+      tags:
+        <a href="/tags/a3size">a3size</a> <a href="/tags/pc">PC</a> 
+      </p>
+      
+      
+    </article>
+    <hr>
+
+    
+
+    <article class="article">
       <h1 class="article-title"><a href="https://diary.a3size.com/2018/04/21/">2018-04-21</a> GitHub Pagesにお引っ越し</a></h1>
       
 
@@ -243,59 +294,6 @@
       <p>
       tags:
         <a href="/tags/%E3%83%9E%E3%83%B3%E3%82%AC%E3%82%A2%E3%83%8B%E3%83%A1">マンガ・アニメ</a> 
-      </p>
-      
-      
-    </article>
-    <hr>
-
-    
-    
-  <h2 class="list-title">2017</h2>
-    
-
-    <article class="article">
-      <h1 class="article-title"><a href="https://diary.a3size.com/2017/08/30/">2017-08-30</a> そろそろ日記をリニューアルしたい（有言不実行）</a></h1>
-      
-
-      <div class="article-content">
-        <p>ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろうか、と何度も考えていた。</p>
-
-<p>で、CMSの入れ替えとなると日記データの互換性が気になるわけだ。試しにネット上で見つけたコンバーターを利用させていただいてWordPressにぶっ込むテストをしてみたら、うーん。おおよそは上手くコンバートできているが、ちょくちょくおかしなところもあり。一つ一つの日記を丁寧に確認作業するとして、えーと投稿数は、……「932」ですか。うへぇ。一番古い日記(このCMSになってから)が2004年3月だもんなぁ。最近は全然日記書いていなかったけれども、チリも積もれば山となる。駄文も折り重ねれば月に届く。そうしてまた今日の分も書いているので、またコンバート対象の日記が増えるわけですよ。<a href="http://www.ginei.jp/" target="_blank">銀河の歴史がまた一ページ</a>ですよ。</p>
-
-<p>ところで、かなり今更ながら<a href="https://www.docker.com/" target="_blank">Docker</a>は便利だ、という話を、そういえばこの日記に記していなかったと思い唐突に書き留めておく。</p>
-
-<p>テスト用のdocker-compose.ymlなどいくつかのファイルを準備しておいて、今回みたいに「ちょっとWordPress立ち上げてみよう」と思ったらコピペしてちょいちょいっとすれば、作業用のWordPressがローカルPC内に立ち上がるという。これは便利すぎる。</p>
-<div class="highlight"><pre class="chroma"><code class="language-YAML" data-lang="YAML">version<span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
-</span><span class="w"></span>services<span class="p">:</span><span class="w">
-</span><span class="w">    </span>db<span class="p">:</span><span class="w">
-</span><span class="w">        </span>container_name<span class="p">:</span><span class="w"> </span>a3size-db<span class="w">
-</span><span class="w">        </span>image<span class="p">:</span><span class="w"> </span>mysql<span class="p">:</span>latest<span class="w">
-</span><span class="w">        </span>volumes<span class="p">:</span><span class="w">
-</span><span class="w">            </span>-<span class="w"> </span>./db<span class="p">:</span>/var/lib/mysql<span class="w">
-</span><span class="w">        </span>env_file<span class="p">:</span><span class="w"> </span>.env<span class="w">
-</span><span class="w">    </span>wordpress<span class="p">:</span><span class="w">
-</span><span class="w">        </span>container_name<span class="p">:</span><span class="w"> </span>a3size-web<span class="w">
-</span><span class="w">        </span>depends_on<span class="p">:</span><span class="w">
-</span><span class="w">            </span>-<span class="w"> </span>db<span class="w">
-</span><span class="w">        </span>image<span class="p">:</span><span class="w"> </span>wordpress<span class="p">:</span>latest<span class="w">
-</span><span class="w">        </span>ports<span class="p">:</span><span class="w">
-</span><span class="w">            </span>-<span class="w"> </span><span class="m">8080</span><span class="p">:</span><span class="m">80</span><span class="w">
-</span><span class="w">        </span>volumes<span class="p">:</span><span class="w">
-</span><span class="w">            </span>-<span class="w"> </span>./wp_html<span class="p">:</span>/var/www/html<span class="w">
-</span><span class="w">            </span>-<span class="w"> </span>./public/wp-content/plugins<span class="p">:</span>/var/www/html/wp-content/plugins<span class="w">
-</span><span class="w">            </span>-<span class="w"> </span>./public/wp-content/themes/a3size<span class="p">:</span>/var/www/html/wp-content/themes/a3size<span class="w">
-</span><span class="w">        </span>env_file<span class="p">:</span><span class="w"> </span>.env</code></pre></div>
-<p>詳しいことは気が向いたら書くことにする。そもそも今日はこんなことを書きたかったわけではなく、生存報告が目的なので。</p>
-
-      </div>
-
-      
-
-      
-      <p>
-      tags:
-        <a href="/tags/a3size">a3size</a> 
       </p>
       
       
