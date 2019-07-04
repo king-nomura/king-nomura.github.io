@@ -44,6 +44,25 @@
     
     
     <item>
+      <title>GlideというPWAを作るサービスで遊んでみる</title>
+      <link>https://diary.a3size.com/2019/04/11/</link>
+      <pubDate>Thu, 11 Apr 2019 09:06:24 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2019/04/11/</guid>
+      <description>&lt;p&gt;生きています（定型文）。&lt;/p&gt;
+
+&lt;p&gt;ネットサーフィンしていたら「&lt;a href=&#34;https://www.glideapps.com&#34; target=&#34;_blank&#34;&gt;Glide&lt;/a&gt; 」というサービスを見つけた。GoogleスプレッドシートからPWA(Progressive Web Apps)を生成できるというので、試しに4年前から書いている&lt;a href=&#34;https://docs.google.com/spreadsheets/d/e/2PACX-1vRpc5DX-Aw_6eeZjT3SFNZBCz7tVNKTpFox77lW_kG6-2KQHiQY0erbuITxNp0_DopC3KJ00qJuo1xz/pubhtml?gid=2109559652&amp;amp;single=true&#34; target=&#34;_blank&#34;&gt;「もう一度観たい映画」のスプレッドシート&lt;/a&gt;をPWA化してみた。
+それがこちら：&lt;a href=&#34;https://go.glideapps.com/play/QCfXmev81rT0GeuwHc2C&#34; target=&#34;_blank&#34;&gt;もう一度観たい映画&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;正味10分くらいでこれくらいの出来。すごいなぁ。デザインとかは全然作り込めないんだが、とにかく楽チンすぎる。
+Webページをテンプレートから自動生成するサービスとかも最近は良い出来なので、趣味的、同人的なものなら一からアプリ作らずにこういうサービスを使ってしまった方がいいんだろうな。
+例えば地元のグルメマップ、商店街アプリとかに使う。スプレッドシートのほうの工夫次第で（Googleフォームを組み合わせるなど）、更新作業も楽にしたりクーポン発行とかもできるんじゃないかな。&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
       <title>2018年は映画を観ていない</title>
       <link>https://diary.a3size.com/2019/01/02/</link>
       <pubDate>Wed, 02 Jan 2019 22:33:45 +0900</pubDate>
@@ -308,30 +327,6 @@ mkdir -p &lt;span class=&#34;nv&#34;&gt;$targetYear&lt;/span&gt;
 &lt;p&gt;うまくいったら、もう少し細かく手順をまとめるかも知れないし、まあググれば分かるかもしれないから書かないかも知れないし。&lt;/p&gt;
 
 &lt;p&gt;引っ越した理由のもう一つはサイトのSSL化を実現するため。前のサイトでもできたのだが、GitHub PagesはSSLの発行も自動化されているという至れり尽くせり。&lt;a href=&#34;https://letsencrypt.org/&#34; target=&#34;_blank&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/a&gt;は素晴らしい。寄附しちゃった。&lt;/p&gt;
-</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>Macの音声入力で日記を書くテスト</title>
-      <link>https://diary.a3size.com/2018/02/13/</link>
-      <pubDate>Tue, 13 Feb 2018 03:00:01 +0000</pubDate>
-      
-      <guid>https://diary.a3size.com/2018/02/13/</guid>
-      <description>&lt;p&gt;流行に乗っかって、この文章マックの音声入力で書いてみている。新しい行新しい行&lt;/p&gt;
-
-&lt;p&gt;この文章ハ3回目。久々に変なシャベリカタをしていてキモチ悪い。人間サマが、マックに合わせて、喋り方を変えてやっている。なんて親切だ。&lt;/p&gt;
-
-&lt;p&gt;音声入力でプログラムを書くには、それなりの設定とそれなりの訓練が必要そう。ダイタイにして、日本語と英語をごちゃまぜにしゃべっているのはよくない。いふへ留守番。ほらね、まくいかない。&lt;/p&gt;
-
-&lt;p&gt;あと、自分の妄想お口に出してイルのが、かなり恥ずかしい。うまく変換されないので、さらに文章が恥ずかしい。&lt;/p&gt;
-
-&lt;p&gt;シャベルのが疲れてきた。うん、照れるったほうが早いような気がする。そんなに発音悪いのかなあ。それともマイクが遠いのかな。それともしゃべる速度がマックに会っていないのかな。マックがカタカナになるの気持ち悪い。マクドと区別がつかない。&lt;/p&gt;
-
-&lt;p&gt;文章を書きながら、書き直したいなと何度も思うのに、音声入力を止めたくないからどんどんおかしな文章が出来上がっていく。Backspaceがほしい。あるのかな。なんでバックスペースちゃんと英語になるのはてな?新しい行&lt;/p&gt;
-
-&lt;p&gt;酸素が足りない。喋るの飽きた。おしまい。おしマイケル。&lt;/p&gt;
 </description>
     </item>
     
