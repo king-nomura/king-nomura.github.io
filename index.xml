@@ -7,26 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Thu, 11 Apr 2019 09:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2019 00:09:32 +0900</lastBuildDate>
     
         <atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     
     <item>
-      <title>GlideというPWAを作るサービスで遊んでみる</title>
-      <link>https://diary.a3size.com/2019/04/11/</link>
-      <pubDate>Thu, 11 Apr 2019 09:00:00 +0900</pubDate>
+      <title>ハードウェアとサブスクリプション</title>
+      <link>https://diary.a3size.com/2019/07/05/</link>
+      <pubDate>Fri, 05 Jul 2019 00:09:32 +0900</pubDate>
       
-      <guid>https://diary.a3size.com/2019/04/11/</guid>
-      <description>&lt;p&gt;生きています（定型文）。&lt;/p&gt;
+      <guid>https://diary.a3size.com/2019/07/05/</guid>
+      <description>&lt;p&gt;梅雨が梅雨らしいジメジメ具合で、たまに外に出ようと思うと雨が降っている、とさえ思えてしまう。ちょっと大きめの荷物を運びたいのに、運べない。&lt;/p&gt;
 
-&lt;p&gt;ネットサーフィンしていたら「&lt;a href=&#34;https://www.glideapps.com&#34; target=&#34;_blank&#34;&gt;Glide&lt;/a&gt; 」というサービスを見つけた。GoogleスプレッドシートからPWA(Progressive Web Apps)を生成できるというので、試しに4年前から書いている&lt;a href=&#34;https://docs.google.com/spreadsheets/d/e/2PACX-1vRpc5DX-Aw_6eeZjT3SFNZBCz7tVNKTpFox77lW_kG6-2KQHiQY0erbuITxNp0_DopC3KJ00qJuo1xz/pubhtml?gid=2109559652&amp;amp;single=true&#34; target=&#34;_blank&#34;&gt;「もう一度観たい映画」のスプレッドシート&lt;/a&gt;をPWA化してみた。
-それがこちら：&lt;a href=&#34;https://go.glideapps.com/play/QCfXmev81rT0GeuwHc2C&#34; target=&#34;_blank&#34;&gt;もう一度観たい映画&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ちなみに荷物とは「Oculus Rift」と書いてある大きな箱2つのことで、つまりOculus Rift Sを買ったことで、初代のOculus Riftのほうはこのまま置いておいても仕舞っておいても場所を取って邪魔になるので、人に譲ることにしたのだ。&lt;/p&gt;
 
-&lt;p&gt;正味10分くらいでこれくらいの出来。すごいなぁ。デザインとかは全然作り込めないんだが、とにかく楽チンすぎる。
-Webページをテンプレートから自動生成するサービスとかも最近は良い出来なので、趣味的、同人的なものなら一からアプリ作らずにこういうサービスを使ってしまった方がいいんだろうな。
-例えば地元のグルメマップ、商店街アプリとかに使う。スプレッドシートのほうの工夫次第で（Googleフォームを組み合わせるなど）、更新作業も楽にしたりクーポン発行とかもできるんじゃないかな。&lt;/p&gt;
+&lt;p&gt;ハードウェアが場所を取ってしまうのは仕方がない。所有権の移動自体は手続きの問題だが、このハードウェアを渡すには、この物質を運ぶしかない。&lt;/p&gt;
+
+&lt;p&gt;いかんなぁ。このままでは家の中がモノで埋まってしまう。空間を確保せねば。圧縮せねば。&lt;/p&gt;
+
+&lt;p&gt;で、やはり一番圧縮しやすいのは「情報」だ。まずは書籍だ。とくに雑誌は、定期的に本屋から我が家に移動し、定期的に廃品回収に回される。中に書かれている情報は変化しないのに、紙だけが移動している。&lt;/p&gt;
+
+&lt;p&gt;そこでサブスクリプションである。野村が最近読んでいる雑誌は2冊だった。ちょっとした米袋のような質量の月刊アフタヌーンについては、 &lt;a href=&#34;https://comic-days.com/&#34; target=&#34;_blank&#34;&gt;コミックDAYS&lt;/a&gt; を契約することで我が家に運ぶ必要が無くなってとても嬉しかった。もう一冊、ヤングキングアワーズを購読していたのだが、これはそもそも売っている書店が少ないのに加えて電子版もなかなか見当たらない。唯一、発売日から10日遅れて &lt;a href=&#34;https://magazinewalker.jp/&#34; target=&#34;_blank&#34;&gt;マガジン WALKER&lt;/a&gt; で読めることを知ったので、これも先月より契約することにした。&lt;/p&gt;
+
+&lt;p&gt;どちらのサブスクリプションも、実は月額がそれぞれ目的の雑誌一冊分の代金に近い。つまり、金額だけを見ればすでにお得。マガジンWALKERはアップ日が遅いし、他に読みたい雑誌がないし、インターフェースも悪いのだが、若干金額がお得なので我慢できそうだ。コミックDAYSのほうは発売日＝アップ日（しかも午前0時）だし、うっかり他誌もファンになってしまったし、なによりあの凶器のような質量を持ち上げずに読めるので十分にお得だ。&lt;/p&gt;
+
+&lt;p&gt;雑誌が電子になることで、物理的な紙の移動がなくなり、もろもろ単純に楽チンになった。発売日に天気やカバンの大きさを気にして外出する必要が無くなった。読んだ後に雑誌を積んでおく場所を少し空けることができた（まだ嫁サマが読んでいる女性向けマンガ雑誌がデジタルに移行していない）。そして、読んだ紙を捨てる（廃品回収に出す）という環境に対してやや後ろめたい行為をしなくてよくなった。捨てるためにビニール紐で縛ったりするのも面倒な上に「この紐はなんのために？」とか考えだすと色々とモヤモヤしてしまうものだが、それが無くなった。紙には紙の良さがあるし読みやすさもあると理解しているつもりだが、それを上回る心の楽さを感じている。&lt;/p&gt;
+
+&lt;p&gt;本当は単行本や書籍もなるべく電子で買いたいのだが、それでも「これは紙で持っておきたい」と思う書籍もままあって、まだまだ書店という業態には潰れないでいてほしいなぁと願っている。もっともっと店舗数は少なくなってしまうんだろうが。&lt;/p&gt;
+
+&lt;p&gt;さて、この他にも音楽などのサブスクリプションの話やら、そこからさらにキャッシュレスの話を書こうかと思ったんだが、今日はなんだか「7payの話」でもちきりなので、もうお腹いっぱい。&lt;/p&gt;
 </description>
     </item>
     
