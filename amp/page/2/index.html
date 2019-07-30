@@ -122,6 +122,47 @@
     
 
     <article class="article">
+      <h1 class="article-title"><a href="https://diary.a3size.com/2018/05/22/">2018-05-22</a> しつこいけれど、また自動化の話</a></h1>
+      
+
+      <div class="article-content">
+        <p><a href="/2018/04/21/">以前書いた</a>ように、この日記はMarkdown形式のテキストファイルを<a href="https://bitbucket.org/" target="_blank">BitBucket</a>のレポジトリにPUSHすると、CIサービスである<a href="http://www.wercker.com" target="_blank">Wercker</a>がWebhookされ、<a href="https://gohugo.io" target="_blank">Hugo</a>によってhtmlファイルを生成して、そのhtmlファイルを<a href="https://pages.github.com" target="_blank">GitHub Pages</a>にPUSHしている。</p>
+
+<p>その、日記用Markdownファイルを生成するスクリプトはAutomatorで書いた。これから、そのMarkdownファイル(拡張子は.md)を右クリックして「サービス」メニューからgitコミットするスクリプトのテストを行う。</p>
+
+<p>まずファイルをaddして、それからcommit。gitコマンド的には、いちどaddされているファイルをもう一回addしても問題ないようなので、何度でも実行可能。</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="o">{</span>日記gitのルートディレクトリ<span class="o">}</span>
+
+<span class="nv">currentDate</span><span class="o">=</span><span class="sb">`</span>date +%FT%T%z <span class="p">|</span> sed -e <span class="s1">&#39;s/\(.\{22\}\)/\1:/&#39;</span><span class="sb">`</span>
+<span class="k">for</span> f in <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+<span class="k">do</span>
+	<span class="nv">ext</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">f</span><span class="p">##*.</span><span class="si">}</span> <span class="p">|</span> sed <span class="s2">&#34;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&#34;</span><span class="sb">`</span>
+	<span class="k">if</span> <span class="o">[</span> <span class="nv">$ext</span> <span class="o">=</span> <span class="s2">&#34;md&#34;</span> -a ! -d <span class="nv">$f</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+		sed -i <span class="s1">&#39;&#39;</span> -e <span class="s1">&#39;s/^date: &#34;[^&#34;]*&#34;$/date: &#34;&#39;</span><span class="nv">$currentDate</span><span class="s1">&#39;&#34;/g&#39;</span> <span class="nv">$f</span>
+    /usr/bin/git add <span class="nv">$f</span>
+	<span class="k">fi</span>
+<span class="k">done</span>
+
+/usr/bin/git commit -m <span class="s1">&#39;[add|mod] dayly post&#39;</span></code></pre></div>
+<p>日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。日付フォーマットが<code>date</code>コマンドのままだとおかしくなる（タイムゾーン「+0900」ではダメで、「+09:00」だとOK）ので強引に変更している、など。強引でよろしくない感じのスクリプトだが、まあとりあえず動く。</p>
+
+      </div>
+
+      
+
+      
+      <p>
+      tags:
+        <a href="/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88">インターネット</a> <a href="/tags/a3size">a3size</a> 
+      </p>
+      
+      
+    </article>
+    <hr>
+
+    
+
+    <article class="article">
       <h1 class="article-title"><a href="https://diary.a3size.com/2018/05/12/">2018-05-12</a> 日記の自動化の続きとかいろいろ</a></h1>
       
 
@@ -316,41 +357,6 @@ mkdir -p <span class="nv">$targetYear</span>
       <p>
       tags:
         <a href="/tags/a3size">a3size</a> <a href="/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88">インターネット</a> 
-      </p>
-      
-      
-    </article>
-    <hr>
-
-    
-
-    <article class="article">
-      <h1 class="article-title"><a href="https://diary.a3size.com/2018/02/13/">2018-02-13</a> Macの音声入力で日記を書くテスト</a></h1>
-      
-
-      <div class="article-content">
-        <p>流行に乗っかって、この文章マックの音声入力で書いてみている。新しい行新しい行</p>
-
-<p>この文章ハ3回目。久々に変なシャベリカタをしていてキモチ悪い。人間サマが、マックに合わせて、喋り方を変えてやっている。なんて親切だ。</p>
-
-<p>音声入力でプログラムを書くには、それなりの設定とそれなりの訓練が必要そう。ダイタイにして、日本語と英語をごちゃまぜにしゃべっているのはよくない。いふへ留守番。ほらね、まくいかない。</p>
-
-<p>あと、自分の妄想お口に出してイルのが、かなり恥ずかしい。うまく変換されないので、さらに文章が恥ずかしい。</p>
-
-<p>シャベルのが疲れてきた。うん、照れるったほうが早いような気がする。そんなに発音悪いのかなあ。それともマイクが遠いのかな。それともしゃべる速度がマックに会っていないのかな。マックがカタカナになるの気持ち悪い。マクドと区別がつかない。</p>
-
-<p>文章を書きながら、書き直したいなと何度も思うのに、音声入力を止めたくないからどんどんおかしな文章が出来上がっていく。Backspaceがほしい。あるのかな。なんでバックスペースちゃんと英語になるのはてな?新しい行</p>
-
-<p>酸素が足りない。喋るの飽きた。おしまい。おしマイケル。</p>
-
-      </div>
-
-      
-
-      
-      <p>
-      tags:
-        <a href="/tags/pc">PC</a> 
       </p>
       
       
