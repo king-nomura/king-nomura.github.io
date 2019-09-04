@@ -4,7 +4,6 @@
   
   <url>
     <loc>https://diary.a3size.com/en/categories/</loc>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -19,7 +18,6 @@
   
   <url>
     <loc>https://diary.a3size.com/en/</loc>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -34,7 +32,6 @@
   
   <url>
     <loc>https://diary.a3size.com/en/tags/</loc>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.38.2" />
+<meta name="generator" content="Hugo 0.57.2" />
 <meta name="author" content="野村政行">
 
 <title>Hugoで日記を書くための自動化 -  野村政行の「堪忍袋の緒を締めろ！」</title>
@@ -30,6 +30,8 @@
 
 
 
+
+<link rel="alternate" type="application/rss+xml" title=" 野村政行の「堪忍袋の緒を締めろ！」" href="https://diary.a3size.com/index.xml" />
 
 
 <link rel="shortcut icon" href="https://diary.a3size.com/images/favicon.ico">
@@ -80,21 +82,21 @@
 <p>Automatorを使って、例えば以下のような感じのシェルスクリプトをアプリ化（というかアイコン化）して、ボタン一発で今日の日記を作ってエディタを開く。</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="s1">&#39;Hugoの作業ディレクトリ&#39;</span>
 
-<span class="c1"># この例では年別にファイルを格納したいので、post/YYYYディレクトリを作成している
-</span><span class="c1"></span><span class="nv">targetYear</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y&#34;</span><span class="sb">`</span>
+<span class="c1"># この例では年別にファイルを格納したいので、post/YYYYディレクトリを作成している</span>
+<span class="nv">targetYear</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y&#34;</span><span class="sb">`</span>
 mkdir -p <span class="nv">$targetYear</span>
 
-<span class="c1"># 日付からファイル名を生成する。この例では post/YYYY/YYYY-MM-DD.mfd
-</span><span class="c1"></span><span class="nv">targetDate</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y-%m-%d&#34;</span><span class="sb">`</span>
+<span class="c1"># 日付からファイル名を生成する。この例では post/YYYY/YYYY-MM-DD.mfd</span>
+<span class="nv">targetDate</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y-%m-%d&#34;</span><span class="sb">`</span>
 <span class="nv">targetFile</span><span class="o">=</span><span class="s2">&#34;post/</span><span class="nv">$targetYear</span><span class="s2">/</span><span class="nv">$targetDate</span><span class="s2">.md&#34;</span>
 
-<span class="c1"># 当該ファイルがなければ新規作成
-</span><span class="c1"></span><span class="k">if</span> <span class="o">[</span> ! -e <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="c1"># 当該ファイルがなければ新規作成</span>
+<span class="k">if</span> <span class="o">[</span> ! -e <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
   /usr/local/bin/hugo new <span class="nv">$targetFile</span>
 <span class="k">fi</span>
 
-<span class="c1"># この例ではアプリを指定せずにファイルを開く
-</span><span class="c1"></span>open <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span></code></pre></div>
+<span class="c1"># この例ではアプリを指定せずにファイルを開く</span>
+open <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span></code></pre></div>
 <p>これで、日記を書くところまでアイコンクリック一回でだけで進められる。</p>
 
 <p>本当は、日記を書き終えたあともcommitとpushをアイコンクリック一回でやりたいが、エラー処理とか連打時の動作とか考えるとちょっと面倒そうなので、いったんここまでとして、今日記を書いているこのファイルをこのあと手動でcommitしてpushすることにする。</p>

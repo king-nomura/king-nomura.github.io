@@ -3,12 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://diary.a3size.com/</loc>
+    <lastmod>2019-07-31T00:17:50+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://diary.a3size.com/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://diary.a3size.com/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://diary.a3size.com/tags/pc/</loc>
+    <lastmod>2019-07-31T00:17:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diary.a3size.com/post/</loc>
+    <lastmod>2019-07-31T00:17:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diary.a3size.com/tags/</loc>
+    <lastmod>2019-07-31T00:17:50+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://diary.a3size.com/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://diary.a3size.com/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://diary.a3size.com/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88/</loc>
+    <lastmod>2019-07-31T00:17:50+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://diary.a3size.com/2019/07/31/</loc>
     <lastmod>2019-07-31T00:17:50+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://diary.a3size.com/2019/07/05/</loc>
+    <lastmod>2019-07-05T00:09:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diary.a3size.com/tags/%E3%83%9E%E3%83%B3%E3%82%AC%E3%82%A2%E3%83%8B%E3%83%A1/</loc>
+    <lastmod>2019-07-05T00:09:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diary.a3size.com/tags/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2019-07-05T00:09:32+09:00</lastmod>
   </url>
   
@@ -23,13 +78,28 @@
   </url>
   
   <url>
+    <loc>https://diary.a3size.com/tags/%E3%82%B2%E3%83%BC%E3%83%A0/</loc>
+    <lastmod>2018-06-24T14:04:46+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://diary.a3size.com/2018/06/24/</loc>
     <lastmod>2018-06-24T14:04:46+09:00</lastmod>
   </url>
   
   <url>
+    <loc>https://diary.a3size.com/tags/a3size/</loc>
+    <lastmod>2018-05-22T01:32:13+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://diary.a3size.com/2018/05/22/</loc>
     <lastmod>2018-05-22T01:32:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diary.a3size.com/page/</loc>
+    <lastmod>2018-05-14T10:25:09+09:00</lastmod>
   </url>
   
   <url>
@@ -44,6 +114,11 @@
   
   <url>
     <loc>https://diary.a3size.com/2018/04/24/</loc>
+    <lastmod>2018-04-24T01:37:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diary.a3size.com/tags/%E5%86%99%E7%9C%9F/</loc>
     <lastmod>2018-04-24T01:37:00+09:00</lastmod>
   </url>
   
@@ -153,6 +228,11 @@
   </url>
   
   <url>
+    <loc>https://diary.a3size.com/tags/%E9%9F%B3%E6%A5%BD/</loc>
+    <lastmod>2014-12-01T03:00:01+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://diary.a3size.com/2014/11/04/</loc>
     <lastmod>2014-11-04T03:00:01+00:00</lastmod>
   </url>
@@ -218,6 +298,11 @@
   </url>
   
   <url>
+    <loc>https://diary.a3size.com/tags/%E3%81%8A%E5%87%BA%E3%81%8B%E3%81%91/</loc>
+    <lastmod>2013-04-25T03:00:01+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://diary.a3size.com/2013/04/25/</loc>
     <lastmod>2013-04-25T03:00:01+00:00</lastmod>
   </url>
@@ -259,6 +344,11 @@
   
   <url>
     <loc>https://diary.a3size.com/2013/04/03/</loc>
+    <lastmod>2013-04-03T03:00:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diary.a3size.com/tags/%E9%A3%9F%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2013-04-03T03:00:01+00:00</lastmod>
   </url>
   
@@ -339,6 +429,11 @@
   
   <url>
     <loc>https://diary.a3size.com/2012/04/13/</loc>
+    <lastmod>2012-04-13T03:00:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diary.a3size.com/tags/%E4%B8%96%E3%81%AE%E4%B8%AD%E3%81%AE%E8%A9%B1/</loc>
     <lastmod>2012-04-13T03:00:01+00:00</lastmod>
   </url>
   
@@ -790,6 +885,11 @@
   <url>
     <loc>https://diary.a3size.com/2009/08/02/</loc>
     <lastmod>2009-08-02T03:00:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diary.a3size.com/tags/f1/</loc>
+    <lastmod>2009-07-26T03:00:01+00:00</lastmod>
   </url>
   
   <url>
@@ -3833,30 +3933,7 @@
   </url>
   
   <url>
-    <loc>https://diary.a3size.com/</loc>
-    <lastmod>2019-07-31T00:17:50+09:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://diary.a3size.com/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://diary.a3size.com/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/tags/a3size/</loc>
-    <lastmod>2018-05-22T01:32:13+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://diary.a3size.com/categories/</loc>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -3867,100 +3944,6 @@
                 hreflang="ja"
                 href="https://diary.a3size.com/categories/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/tags/f1/</loc>
-    <lastmod>2009-07-26T03:00:01+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/tags/pc/</loc>
-    <lastmod>2019-07-31T00:17:50+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/page/</loc>
-    <lastmod>2018-05-14T10:25:09+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/post/</loc>
-    <lastmod>2019-07-31T00:17:50+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/tags/</loc>
-    <lastmod>2018-05-22T01:32:13+09:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://diary.a3size.com/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://diary.a3size.com/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/tags/%E3%81%8A%E5%87%BA%E3%81%8B%E3%81%91/</loc>
-    <lastmod>2013-04-25T03:00:01+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88/</loc>
-    <lastmod>2019-07-31T00:17:50+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/tags/%E3%82%B2%E3%83%BC%E3%83%A0/</loc>
-    <lastmod>2018-06-24T14:04:46+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/tags/%E3%83%9E%E3%83%B3%E3%82%AC%E3%82%A2%E3%83%8B%E3%83%A1/</loc>
-    <lastmod>2019-07-05T00:09:32+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/tags/%E4%B8%96%E3%81%AE%E4%B8%AD%E3%81%AE%E8%A9%B1/</loc>
-    <lastmod>2012-04-13T03:00:01+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/tags/%E5%86%99%E7%9C%9F/</loc>
-    <lastmod>2018-04-24T01:37:00+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/tags/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2019-07-05T00:09:32+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/tags/%E9%9F%B3%E6%A5%BD/</loc>
-    <lastmod>2014-12-01T03:00:01+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diary.a3size.com/tags/%E9%A3%9F%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2013-04-03T03:00:01+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>
