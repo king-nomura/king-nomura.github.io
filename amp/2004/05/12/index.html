@@ -120,10 +120,15 @@
 <p>なんだか、今週はバテ気味だ。エネルギー切れかな？</p>
 <p>政治やネットでは興味深いごたごたが続いているが、野村は今日も変わらずJavaプログラミング。</p>
 <h1 id="mxレコードを引いてきた">MXレコードを引いてきた</h1>
-<p>Javaでメール配信というと、<!-- raw HTML omitted -->JavaMail<!-- raw HTML omitted -->を使うのが普通なのだが、今回は配信制限を設けたり色々するので、自分でSMTPをしゃべるプログラムを書かねばならない。</p>
-<p>そこで問題となるのがMXレコードの調査。ところがこれまた<!-- raw HTML omitted -->dnsjava<!-- raw HTML omitted -->という便利なクラスが存在していて、こいつを使えば一発で引いてくれる。</p>
+<p>Javaでメール配信というと、<a href="http://java.sun.com/products/javamail/" target="_blank">JavaMail</a>を使うのが普通なのだが、今回は配信制限を設けたり色々するので、自分でSMTPをしゃべるプログラムを書かねばならない。</p>
+<p>そこで問題となるのがMXレコードの調査。ところがこれまた<a href="http://www.dnsjava.org/" target="_blank">dnsjava</a>という便利なクラスが存在していて、こいつを使えば一発で引いてくれる。</p>
 <p>日本語の解説文が少ないのが難点なのだが、使い方もサンプルも非常にシンプルなので問題ない。</p>
-<!-- raw HTML omitted -->
+<pre>String mail = "test@example.com";<br />
+String[] mailArray = mail.split("@"); // 「@」より後ろ（ホスト名）を取り出す<br />
+try {<br />
+Record[] mxRecord = new Lookup(mailArray[1], Type.MX).run();<br />
+} catch (TextParseException e) {<br />
+e.printStackTrace();</p>
 
 </div>
 </article>
