@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.57.2" />
+<meta name="generator" content="Hugo 0.80.0-DEV" />
 <meta name="author" content="野村政行">
 
 <title>しつこいけれど、また自動化の話 -  野村政行の「堪忍袋の緒を締めろ！」</title>
@@ -73,10 +73,8 @@
     <h1 class="article-title">しつこいけれど、また自動化の話</h1>
 
     <div class="article-content">
-      <p><a href="/2018/04/21/">以前書いた</a>ように、この日記はMarkdown形式のテキストファイルを<a href="https://bitbucket.org/" target="_blank">BitBucket</a>のレポジトリにPUSHすると、CIサービスである<a href="http://www.wercker.com" target="_blank">Wercker</a>がWebhookされ、<a href="https://gohugo.io" target="_blank">Hugo</a>によってhtmlファイルを生成して、そのhtmlファイルを<a href="https://pages.github.com" target="_blank">GitHub Pages</a>にPUSHしている。</p>
-
+      <p><a href="/2018/04/21/">以前書いた</a>ように、この日記はMarkdown形式のテキストファイルを<a href="https://bitbucket.org/">BitBucket</a>のレポジトリにPUSHすると、CIサービスである<a href="http://www.wercker.com">Wercker</a>がWebhookされ、<a href="https://gohugo.io">Hugo</a>によってhtmlファイルを生成して、そのhtmlファイルを<a href="https://pages.github.com">GitHub Pages</a>にPUSHしている。</p>
 <p>その、日記用Markdownファイルを生成するスクリプトはAutomatorで書いた。これから、そのMarkdownファイル(拡張子は.md)を右クリックして「サービス」メニューからgitコミットするスクリプトのテストを行う。</p>
-
 <p>まずファイルをaddして、それからcommit。gitコマンド的には、いちどaddされているファイルをもう一回addしても問題ないようなので、何度でも実行可能。</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="o">{</span>日記gitのルートディレクトリ<span class="o">}</span>
 
@@ -90,8 +88,8 @@
 	<span class="k">fi</span>
 <span class="k">done</span>
 
-/usr/bin/git commit -m <span class="s1">&#39;[add|mod] dayly post&#39;</span></code></pre></div>
-<p>日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。日付フォーマットが<code>date</code>コマンドのままだとおかしくなる（タイムゾーン「+0900」ではダメで、「+09:00」だとOK）ので強引に変更している、など。強引でよろしくない感じのスクリプトだが、まあとりあえず動く。</p>
+/usr/bin/git commit -m <span class="s1">&#39;[add|mod] dayly post&#39;</span>
+</code></pre></div><p>日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。日付フォーマットが<code>date</code>コマンドのままだとおかしくなる（タイムゾーン「+0900」ではダメで、「+09:00」だとOK）ので強引に変更している、など。強引でよろしくない感じのスクリプトだが、まあとりあえず動く。</p>
 
     </div>
  
