@@ -77,6 +77,57 @@
 
     <article class="article">
       
+      <p class="article-date"><a href="https://diary.a3size.com/2017/08/30/"><i class="fas fa-book"></i>  2017-08-30</a></p>
+      
+      <h1 class="article-title">そろそろ日記をリニューアルしたい（有言不実行）</a></h1>
+      
+
+      <div class="article-content">
+        <p>ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろうか、と何度も考えていた。</p>
+<p>で、CMSの入れ替えとなると日記データの互換性が気になるわけだ。試しにネット上で見つけたコンバーターを利用させていただいてWordPressにぶっ込むテストをしてみたら、うーん。おおよそは上手くコンバートできているが、ちょくちょくおかしなところもあり。一つ一つの日記を丁寧に確認作業するとして、えーと投稿数は、……「932」ですか。うへぇ。一番古い日記(このCMSになってから)が2004年3月だもんなぁ。最近は全然日記書いていなかったけれども、チリも積もれば山となる。駄文も折り重ねれば月に届く。そうしてまた今日の分も書いているので、またコンバート対象の日記が増えるわけですよ。<a href="http://www.ginei.jp/">銀河の歴史がまた一ページ</a>ですよ。</p>
+<p>ところで、かなり今更ながら<a href="https://www.docker.com/">Docker</a>は便利だ、という話を、そういえばこの日記に記していなかったと思い唐突に書き留めておく。</p>
+<p>テスト用のdocker-compose.ymlなどいくつかのファイルを準備しておいて、今回みたいに「ちょっとWordPress立ち上げてみよう」と思ったらコピペしてちょいちょいっとすれば、作業用のWordPressがローカルPC内に立ち上がるという。これは便利すぎる。</p>
+<div class="highlight"><pre class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
+</span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">db</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">a3size-db</span><span class="w">
+</span><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mysql:latest</span><span class="w">
+</span><span class="w">        </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span>- <span class="l">./db:/var/lib/mysql</span><span class="w">
+</span><span class="w">        </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l">.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">wordpress</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">a3size-web</span><span class="w">
+</span><span class="w">        </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span>- <span class="l">db</span><span class="w">
+</span><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">wordpress:latest</span><span class="w">
+</span><span class="w">        </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span>- <span class="m">8080</span><span class="p">:</span><span class="m">80</span><span class="w">
+</span><span class="w">        </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span>- <span class="l">./wp_html:/var/www/html</span><span class="w">
+</span><span class="w">            </span>- <span class="l">./public/wp-content/plugins:/var/www/html/wp-content/plugins</span><span class="w">
+</span><span class="w">            </span>- <span class="l">./public/wp-content/themes/a3size:/var/www/html/wp-content/themes/a3size</span><span class="w">
+</span><span class="w">        </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l">.env</span><span class="w">
+</span></code></pre></div><p>詳しいことは気が向いたら書くことにする。そもそも今日はこんなことを書きたかったわけではなく、生存報告が目的なので。</p>
+
+      </div>
+
+      <hr>
+      <ul class="article-taxonomy">
+        
+
+        
+        <li>
+          <i class="fas fa-tags"></i> <a href="/tags/a3size">a3size</a>
+        </li>
+        
+      </ul>
+      
+    </article>
+
+    
+
+    <article class="article">
+      
       <p class="article-date"><a href="https://diary.a3size.com/2017/05/31/"><i class="fas fa-book"></i>  2017-05-31</a></p>
       
       <h1 class="article-title">ハイラル城に入りたくない</a></h1>
@@ -193,46 +244,6 @@ nese" target="_blank">Steam</a>のバーゲンのときについ勢いで買っ�
 <p>VR酔いについては様々な研究がされているようだが、まだ確実な原因や対策の発見には至っていないようなので、これからの研究に期待したい。</p>
 <p>まぁともかく。VRでMinecraftの世界に入ったときの感動はとても大きく、VRってスゲーというとてもチープな感想でしか日記をまとめられない自分がちっぽけにみえるのですよ。</p>
 <p>ところでVR専用のエッチなゲームが出るようなのですが、経費で落ちますかね。</p>
-
-      </div>
-
-      <hr>
-      <ul class="article-taxonomy">
-        
-
-        
-        <li>
-          <i class="fas fa-tags"></i> <a href="/tags/pc">PC</a>
-        </li>
-        
-      </ul>
-      
-    </article>
-
-    
-
-    <article class="article">
-      
-      <p class="article-date"><a href="https://diary.a3size.com/2016/09/28/"><i class="fas fa-book"></i>  2016-09-28</a></p>
-      
-      <h1 class="article-title">約7年以上ぶりにPCを組み立てた話・終「シミュレーション不足」</a></h1>
-      
-
-      <div class="article-content">
-        <p>前回までの<a href="http://www.jp.square-enix.com/lis/" target="_blank">おっさん is Strange</a>は：Windows 7のインストールは順調に進んだ。</p>
-<p>起動したWindows 7にまずはドライバをぶち込んでいく。ぼやぼやしているとWindows Updateに先を越されるから、急がねば。昔のようにインストールにクセのあるドライバは無かったが、相変わらず各社とも色んな不思議なユーティリティをぶち込んでくる。DOSとかWindows 9xくらいまではMicrosoft標準ドライバでは機能やパフォーマンスが足りなかったので、各社のドライバや独自ユーティリティがどうしても必要だった。今ではその役割も薄れて、むしろ玄人ならうまいこと「インストールしないように」するものだ、というのが暗黙の了解になっている気がする。玄人しかPCを組み立てようと思わないはずなのに不思議だね。まぁ今回は、この数年Windows機を組み立てていなかったので最近は便利なものもあるのかも知れない、というころでユーティリティ類は一旦素直に入れてみることにした。動作が重くなるなら外すし、何ならWindowsから再インストールするさ。このマシンはメイン機じゃないからね。</p>
-<p>そしてWindows 7をアップデートしていく。コレをやらないとWindows 10にアップグレードできないし、やれたとしても何らかの事情で7にダウングレードする必要に迫られたときが面倒だと思ったからだ。小一時間（もっとかかったかな？）が経過して、Windows 7が安定動作していることを確認したら、いよいよアップグレード用のおせっかいウィンドウをクリックする。</p>
-<p>どれくらいの時間が過ぎただろうか。別の世界では存在していたWindows 9が一瞬画面を横切り(ウソです)、Windows 10がやってくる。成功だ。ではさっそくMicrosoftアカウントを紐付けして……。</p>
-<p>「＠」が「”」になってしまう。もしかして、キーボードが日本語配列？まただよ。ま・た・だ・ヨ！どうしてLogitech diNovo Edgeはいつも英語配列と認識されてくれないんだヨ！Logitechのドライバやユーティリティは何をしているんだヨ！</p>
-<p>大体、Windowsのインストール時には英語配列を選択しているのに、インストールが終わったら日本語配列になっているんだから、んもーぅ。そこから、レジストリやキーボードのドライバをあれやこれやして英語配列だと気づかせる作業にまた小一時間を費やす。毎回、どういう手順が正解なのか分からないままいつの間にか認識されてしまうから困ったもんだ。</p>
-<p>さて、あらかた準備は終わった。最後に取り付けるのは、Oculus Riftだ。ようやく……、ようやく辿り着いたぞ。</p>
-<p>Oculus Riftの箱を開ける。特徴的なヘッドセットと、マイクスタンドのようなセンサー、その他リモコンとXBox用コントローラーが付属している。ヘッドセットからHDMIとUSBケーブル、センサーからもUSBケーブルが出ているのでさっそく繋ごう。</p>
-<p>……あれ？HDMI端子はディスプレイに繋いでいるぞ？ひょっとして、端子が足りない？……そうか、普段使用するディスプレイ用とは別に、Oculus Rift専用のHDMI端子が必要なのか！気づかなかったー！Oculus Riftのページで何度も必要スペック確認していたのに、全然気づいていなかったよ！</p>
-<p>ビデオボードにはDVI-DやDisplay Portの端子もあるが、ディスプレイ側の端子が足りない。ディスプレイ側のDVI-DはMacBook Proに繋いでいるし、あとはD-Sub15……、アナログで繋ぐって……、さすがに嫌だなぁ。</p>
-<p>とりあえずディスプレイをマザーボードのHDMI端子に繋ぎかえてみるも、ビデオボードがあるせいでオンボードのVGA機能は無効になっている。この日記を書くに当たって改めてマザーボードのBIOSを確認すると、初期値ではオンボードVGAのマルチモニター機能が無効化されていたが、これを有効化すればよかったようだ。だがこのときはBIOS設定にまで気が回らずに別のアイディアが浮かんだ。USBディスプレイを繋げばいいんじゃないか？と。</p>
-<p>押し入れからUSB接続の小型ディスプレイを引っ張り出してくる。接続するとドライバのインストールが自動的に始まり、しばらくすると無事画面が映った。画面は小さいながらもこれでなんとかインストールが再開できるだろう、と思いきや。Oculus Riftのドライバインストールは何度試しても、途中で必ず失敗する。もしやと思い検索すると、どうやらUSBディスプレイのドライバはOculus Riftのドライバ競合してしまうらしい。んもーぅ。</p>
-<p>今回のPC組み立ては万事この調子で、とにかく事前調査不足が祟って先に進まなくなってばかりだった。すっかり勘が鈍ったんだなぁ。</p>
-<p>次の日(組み立てはじめてから3日目)、Display PortをHDMIに変換するアダプタを買ってきた。これによりビデオボードのDisplay PortをHDMIに変換してディスプレイに、本来のHDMIにはOculus Riftを繋ぐことができた。やっと完成だ。長かった……。</p>
 
       </div>
 
