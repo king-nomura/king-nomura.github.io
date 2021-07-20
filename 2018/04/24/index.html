@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.80.0-DEV" />
+<meta name="generator" content="Hugo 0.86.0-DEV" />
 <meta name="author" content="野村政行">
 
 <title>flickrはイケているか -  野村政行の「堪忍袋の緒を締めろ！」</title>
@@ -91,19 +91,19 @@
 </ul>
 <p>の4つができた。
 たとえば <code>&lt;img&gt;</code> タグをそのまま書くのではなく、</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;***&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;160&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;120&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;テスト&#34;</span> <span class="p">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;***&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;160&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;120&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;テスト&#34;</span> <span class="p">&gt;</span>
 ↓
 {{<span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;***&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;160&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;120&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;テスト&#34;</span> <span class="p">&gt;</span>}}
 </code></pre></div><p>としておく。</p>
 <p>これをPCでは、</p>
-<div class="highlight"><pre class="chroma"><code class="language-plaintext" data-lang="plaintext">&lt;img
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext">&lt;img
 src=&#34;{{ .Get &#34;src&#34; }}&#34;
 alt=&#34;{{ .Get &#34;alt&#34; }}&#34;
 {{ with (.Get &#34;width&#34;) }} width=&#34;{{ . }}&#34;{{ end }}
 {{ with (.Get &#34;height&#34;) }} height=&#34;{{ . }}&#34;{{ end }}
 /&gt;
 </code></pre></div><p>AMPでは、</p>
-<div class="highlight"><pre class="chroma"><code class="language-plaintext" data-lang="plaintext">&lt;p&gt;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext">&lt;p&gt;
 &lt;amp-img
 src=&#34;{{ .Get &#34;src&#34; }}&#34;
 alt=&#34;{{ .Get &#34;alt&#34; }}&#34;

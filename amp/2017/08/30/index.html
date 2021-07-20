@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<meta name="generator" content="Hugo 0.80.0-DEV" />
+<meta name="generator" content="Hugo 0.86.0-DEV" />
 <meta name="author" content="野村政行">
 
 <title>そろそろ日記をリニューアルしたい（有言不実行） -  野村政行の「堪忍袋の緒を締めろ！」</title>
@@ -120,7 +120,7 @@
 <p>で、CMSの入れ替えとなると日記データの互換性が気になるわけだ。試しにネット上で見つけたコンバーターを利用させていただいてWordPressにぶっ込むテストをしてみたら、うーん。おおよそは上手くコンバートできているが、ちょくちょくおかしなところもあり。一つ一つの日記を丁寧に確認作業するとして、えーと投稿数は、……「932」ですか。うへぇ。一番古い日記(このCMSになってから)が2004年3月だもんなぁ。最近は全然日記書いていなかったけれども、チリも積もれば山となる。駄文も折り重ねれば月に届く。そうしてまた今日の分も書いているので、またコンバート対象の日記が増えるわけですよ。<a href="http://www.ginei.jp/">銀河の歴史がまた一ページ</a>ですよ。</p>
 <p>ところで、かなり今更ながら<a href="https://www.docker.com/">Docker</a>は便利だ、という話を、そういえばこの日記に記していなかったと思い唐突に書き留めておく。</p>
 <p>テスト用のdocker-compose.ymlなどいくつかのファイルを準備しておいて、今回みたいに「ちょっとWordPress立ち上げてみよう」と思ったらコピペしてちょいちょいっとすれば、作業用のWordPressがローカルPC内に立ち上がるという。これは便利すぎる。</p>
-<div class="highlight"><pre class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
 </span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">db</span><span class="p">:</span><span class="w">
 </span><span class="w">        </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">a3size-db</span><span class="w">

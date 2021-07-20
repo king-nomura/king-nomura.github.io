@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<meta name="generator" content="Hugo 0.80.0-DEV" />
+<meta name="generator" content="Hugo 0.86.0-DEV" />
 <meta name="author" content="野村政行">
 
 <title>しつこいけれど、また自動化の話 -  野村政行の「堪忍袋の緒を締めろ！」</title>
@@ -119,7 +119,7 @@
 <p><a href="/2018/04/21/">以前書いた</a>ように、この日記はMarkdown形式のテキストファイルを<a href="https://bitbucket.org/">BitBucket</a>のレポジトリにPUSHすると、CIサービスである<a href="http://www.wercker.com">Wercker</a>がWebhookされ、<a href="https://gohugo.io">Hugo</a>によってhtmlファイルを生成して、そのhtmlファイルを<a href="https://pages.github.com">GitHub Pages</a>にPUSHしている。</p>
 <p>その、日記用Markdownファイルを生成するスクリプトはAutomatorで書いた。これから、そのMarkdownファイル(拡張子は.md)を右クリックして「サービス」メニューからgitコミットするスクリプトのテストを行う。</p>
 <p>まずファイルをaddして、それからcommit。gitコマンド的には、いちどaddされているファイルをもう一回addしても問題ないようなので、何度でも実行可能。</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="o">{</span>日記gitのルートディレクトリ<span class="o">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="o">{</span>日記gitのルートディレクトリ<span class="o">}</span>
 
 <span class="nv">currentDate</span><span class="o">=</span><span class="sb">`</span>date +%FT%T%z <span class="p">|</span> sed -e <span class="s1">&#39;s/\(.\{22\}\)/\1:/&#39;</span><span class="sb">`</span>
 <span class="k">for</span> f in <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>

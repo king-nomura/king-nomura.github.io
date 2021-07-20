@@ -7,7 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Sat, 26 Dec 2020 04:08:08 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jul 2021 01:20:14 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2006年に買ったマウスを静音マウスにする</title>
+      <link>https://diary.a3size.com/2021/07/21/</link>
+      <pubDate>Wed, 21 Jul 2021 01:20:14 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2021/07/21/</guid>
+      <description>&lt;p&gt;普段、Macではトラックパッド（Magic Trackpad 2）を、主にゲーム（とかブラウザ確認とか）に使っているWindowsマシンではマウスを使っている。このWindowsのマウスは、LogitechのMX Revolutionで、2006年に買ったものだ&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;。しばらくWindows機を立ち上げていなかったのでブランクはありつつも、もう15年も使ってきたマウスだ。
+Magic Trackpad 2のクリック音は「コツッ」という少しくぐもった音色で（わざとそういう音を鳴らしているところが凄い）、MX Revolutionのクリック音は「カチッ」といういかにもなマイクロスイッチの音色だ。この、「カチッ」という音は、いろんな音がなっている中でなら気にならないが、比較的高い音でキンキン鳴るように聞こえて、ちょっと「カチカチカチカチ」と連打するとあまり気分が良い音とは思えなくなってきた。そこで、思い切ってスイッチを換装することにした。
+こちらがスイッチ換装作業の様子。元々ついていたスイッチを外して、新しいスイッチをつけたところだ。&lt;/p&gt;
+&lt;p&gt;&lt;amp-img src=&#34;https://diary.a3size.com/files/2021/07/mx-revolution-mod.jpg&#34; alt=&#34;MX Revolutionのスイッチを換装した&#34; width=&#34;756&#34; height=&#34;876&#34; layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
+&lt;p&gt;静音マウス改造は実に様々な方がチャレンジされていて、その多くの方が静音スイッチの部品として「Kailh ミュートマイクロスイッチ」などの名前で検索すると出てくる6mm × 6mm × 7.3mmのマイクロスイッチを使用している。なるほど、これをMX Revolutionに乗せてしまえばいいのだな？とやや乱暴に思いついて、それを実行した。写真を見て貰えばわかるが、左下側に転がっているのがもともとついていた3本足の長方形スイッチで、付け替えた静音タイプのスイッチは正方形。うっかりするとクリックする部分がうまく噛み合わなくて押せなくなってしまうのだが、あまり深く考えずに実行してしまった。
+ちなみに、このKailhのマイクロスイッチ、Amazonなどでも買えるのだがmercariで出品されているものを購入すると1個あたり100円未満で買えるというので、初めてmercariを使った。次に使うのは何年後になるだろうか。
+実際の換装作業だが、知識のある方なら写真から想像つくと思うが、元々あったスイッチを取るためにハンダを吸い取るのに大変手間取ってしまった。吸い取り器じゃなくて吸い取り線で頑張ったんだぜ、これ。その結果、基盤パターンがもげてしまったので仕方なくリード線で配線を繋ぎ直した（マウス左ボタンの付近の黄色いリード線がそれ）。この場所以外にも、写真には写っていないが「マウスを持ったとき手前にくる側」にも基盤と部品がハンダ付けされている部分があり、そもそも先にそこを外さないとこのスイッチ換装の作業自体ができない構造になっているが、これもなかなか取れなかった。体感では、全体の作業の合わせておよそ2/3くらいをハンダを取るのに費やした気がする。
+スイッチ換装のついでに、バッテリーも交換した。写真からわかるだろうか、すでにこのバッテリー、真ん中が大きく膨らんでしまっていたのだ。15年前のマウスなので純正パーツはもう手に入らないだろう、ということで互換バッテリー台湾から送ってもらい、つい先ほど載せ替えた。
+作業終了後、まだ長時間使ってみてはいないが、今のところ順調に動いている模様。クリック音は「トン」というか「ト」というくらいの本当に静かな音に変わってくれたので、このまましばらく使ってみて動作に支障が出ないようならば、この換装は成功だったといえるだろう。&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://diary.a3size.com/2006/09/28/&#34;&gt;https://diary.a3size.com/2006/09/28/&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
     <item>
       <title>Bluetoothヘッドセットとの戦い</title>
       <link>https://diary.a3size.com/2020/12/26/</link>
@@ -24,8 +50,7 @@
 &lt;p&gt;&lt;a href=&#34;https://www.amazon.co.jp/gp/product/B07R7B3GRC/ref=as_li_ss_il?ie=UTF8&amp;linkCode=li3&amp;tag=diarya3sizeco-22&amp;linkId=64cb81d6c983fe663c83b4ca68a84466&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;amp-img src=&#34;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B07R7B3GRC&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=diarya3sizeco-22&#34; width=&#34;198&#34; height=&#34;250&#34; layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;amp-img src=&#34;https://ir-jp.amazon-adsystem.com/e/ir?t=diarya3sizeco-22&amp;l=li3&amp;o=9&amp;a=B07R7B3GRC&#34; width=&#34;1&#34; height=&#34;1&#34; alt=&#34;&#34; layout=&#34;fixed&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 &lt;p&gt;で、早速使ってみたところ、確かに無線のヘッドセットとして機能した。音はちゃんと聞こえるし、マイクの一は肩甲骨あたりに来ることになって話しやすい。だが、嬉々としてオンライン会議の本番に投入しようとすると、そのタイミングに限ってイヤホンのBluetoothが切断されるという現象が発生した。何度か試すうち、このBluetooth接続が切れてしまう現象はイヤホンとマイクを同時に使用すると発生することがわかった。PCの音楽を聴いたりYouTubeを見たりしているときには全然切断されないが、オンライン会議のようにマイク機能を併用するときに非常に切れやすくなるのだ。&lt;/p&gt;
-&lt;figure class=&#34;center&#34;&gt;
-    &lt;img src=&#34;https://diary.a3size.com/files/2020/12/menu_audio.png&#34; width=&#34;231&#34; height=&#34;360&#34;/&gt; &lt;figcaption&gt;
+&lt;figure class=&#34;center&#34;&gt;&lt;img src=&#34;https://diary.a3size.com/files/2020/12/menu_audio.png&#34; width=&#34;231&#34; height=&#34;360&#34;/&gt;&lt;figcaption&gt;
             &lt;h4&gt;出力にSBH82D、入力にUSB MICROPHONE(MPM2000U)を指定&lt;/h4&gt;
         &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -36,8 +61,7 @@
 &lt;p&gt;&lt;amp-img src=&#34;https://ir-jp.amazon-adsystem.com/e/ir?t=diarya3sizeco-22&amp;l=li3&amp;o=9&amp;a=B07PRWYVN4&#34; width=&#34;1&#34; height=&#34;1&#34; alt=&#34;&#34; layout=&#34;fixed&#34;&gt;&lt;/amp-img&gt;&lt;/p&gt;
 &lt;p&gt;さすがはApple、接続トラブルもなくすんなりと音が出た。ではマイクはどうか。……繋がる！ちゃんと繋がる！……だが、どういうわけか、圧倒的に音質が悪くなる。なぜだろう、と思いネットで調べてみると、「コーデックが切り替わる」という記述を発見する。&lt;/p&gt;
 &lt;p&gt;これ、AirPodsだけではなくSBH82Dのほうでも再現できるのだが、Bluetoothデバイス1つでイヤホンとマイクを同時に使うと、SCOコーデックになることが原因であった。&lt;/p&gt;
-&lt;figure class=&#34;center&#34;&gt;
-    &lt;img src=&#34;https://diary.a3size.com/files/2020/12/menu_bt_sco.png&#34; width=&#34;668&#34; height=&#34;482&#34;/&gt; &lt;figcaption&gt;
+&lt;figure class=&#34;center&#34;&gt;&lt;img src=&#34;https://diary.a3size.com/files/2020/12/menu_bt_sco.png&#34; width=&#34;668&#34; height=&#34;482&#34;/&gt;&lt;figcaption&gt;
             &lt;h4&gt;イヤホンとマイクを使用するときはSCOコーデックになっている&lt;/h4&gt;
         &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -49,14 +73,12 @@
 &lt;p&gt;ところで、SBH82Dは音声コーデックAACが使えるのだが、これはiOSのみ対応とのこと。試してみるとやはりMacOSからはAACでは繋がらない。この間発表されたM1チップのMacならどうにかすると繋がるのだろうか、テストできる環境がないのでそれはわからない。&lt;/p&gt;
 &lt;p&gt;なので、せめて、A2DPの中でも最強セッティングで動作するようにチューニングはしておきたい。&lt;/p&gt;
 &lt;p&gt;具体的には、&lt;a href=&#34;https://developer.apple.com/bluetooth/&#34;&gt;Apple Developerという公式の開発者サイトからBluetooth Explorerをダウンロード&lt;/a&gt;して設定をごにょるわけだが、上記のBluetooth仕様を読んで理解して……というのがとても大変なので、ググってみる。すると結論としてみんな「bitpool=53」にしていた、という事実だけはここに残しておく。bitpoolが53だとサンプルレート44.1KHzでビットレート328kb/s、51だとサンプルレート48kHzでビットレート345kb/sなので、48kHzで環境を揃えられるなら51の方が良いように思うんだが。&lt;/p&gt;
-&lt;figure class=&#34;center&#34;&gt;
-    &lt;img src=&#34;https://diary.a3size.com/files/2020/12/bt_sbc_53.png&#34; width=&#34;668&#34; height=&#34;482&#34;/&gt; &lt;figcaption&gt;
+&lt;figure class=&#34;center&#34;&gt;&lt;img src=&#34;https://diary.a3size.com/files/2020/12/bt_sbc_53.png&#34; width=&#34;668&#34; height=&#34;482&#34;/&gt;&lt;figcaption&gt;
             &lt;h4&gt;bitpoolを53にした場合&lt;/h4&gt;
         &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;figure class=&#34;center&#34;&gt;
-    &lt;img src=&#34;https://diary.a3size.com/files/2020/12/bt_sbc_51.png&#34; width=&#34;671&#34; height=&#34;487&#34;/&gt; &lt;figcaption&gt;
+&lt;figure class=&#34;center&#34;&gt;&lt;img src=&#34;https://diary.a3size.com/files/2020/12/bt_sbc_51.png&#34; width=&#34;671&#34; height=&#34;487&#34;/&gt;&lt;figcaption&gt;
             &lt;h4&gt;bitpoolを51にした場合&lt;/h4&gt;
         &lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -220,7 +242,7 @@ Webページをテンプレートから自動生成するサービスとかも�
       <description>&lt;p&gt;&lt;a href=&#34;https://diary.a3size.com/2018/04/21/&#34;&gt;以前書いた&lt;/a&gt;ように、この日記はMarkdown形式のテキストファイルを&lt;a href=&#34;https://bitbucket.org/&#34;&gt;BitBucket&lt;/a&gt;のレポジトリにPUSHすると、CIサービスである&lt;a href=&#34;http://www.wercker.com&#34;&gt;Wercker&lt;/a&gt;がWebhookされ、&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;によってhtmlファイルを生成して、そのhtmlファイルを&lt;a href=&#34;https://pages.github.com&#34;&gt;GitHub Pages&lt;/a&gt;にPUSHしている。&lt;/p&gt;
 &lt;p&gt;その、日記用Markdownファイルを生成するスクリプトはAutomatorで書いた。これから、そのMarkdownファイル(拡張子は.md)を右クリックして「サービス」メニューからgitコミットするスクリプトのテストを行う。&lt;/p&gt;
 &lt;p&gt;まずファイルをaddして、それからcommit。gitコマンド的には、いちどaddされているファイルをもう一回addしても問題ないようなので、何度でも実行可能。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;日記gitのルートディレクトリ&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;日記gitのルートディレクトリ&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
 &lt;span class=&#34;nv&#34;&gt;currentDate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;date +%FT%T%z &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/\(.\{22\}\)/\1:/&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; f in &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
@@ -234,62 +256,6 @@ Webページをテンプレートから自動生成するサービスとかも�
 
 /usr/bin/git commit -m &lt;span class=&#34;s1&#34;&gt;&amp;#39;[add|mod] dayly post&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。日付フォーマットが&lt;code&gt;date&lt;/code&gt;コマンドのままだとおかしくなる（タイムゾーン「+0900」ではダメで、「+09:00」だとOK）ので強引に変更している、など。強引でよろしくない感じのスクリプトだが、まあとりあえず動く。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>この日記について</title>
-      <link>https://diary.a3size.com/about/</link>
-      <pubDate>Mon, 14 May 2018 10:25:09 +0900</pubDate>
-      
-      <guid>https://diary.a3size.com/about/</guid>
-      <description>&lt;p&gt;このサイトは、野村政行が日々のよしなしごとを、そこはかとなく書き連ねたサイトです。&lt;/p&gt;
-&lt;p&gt;主にサイトを更新することで「あ、まだ生きているな」と色んな人に確認してもらうのが目的です。&lt;/p&gt;
-&lt;h2 id=&#34;作者について&#34;&gt;作者について&lt;/h2&gt;
-&lt;h3 id=&#34;名前&#34;&gt;名前&lt;/h3&gt;
-&lt;p&gt;野村政行&lt;/p&gt;
-&lt;h3 id=&#34;年齢&#34;&gt;年齢&lt;/h3&gt;
-&lt;p&gt;1975年生。10ccの名曲「I&amp;rsquo;m not in love」が発表された。WEATHER REPORTでいうと「Black Market」くらいらしい。&lt;/p&gt;
-&lt;h3 id=&#34;住所&#34;&gt;住所&lt;/h3&gt;
-&lt;p&gt;出身は札幌。大学時代は福岡。現在は東京都荒川区。&lt;/p&gt;
-&lt;h3 id=&#34;職業&#34;&gt;職業&lt;/h3&gt;
-&lt;p&gt;現在は個人で活動中。&lt;br&gt;
-フロントエンドエンジニア。Webシステム設計および開発。&lt;/p&gt;
-&lt;h3 id=&#34;趣味&#34;&gt;趣味&lt;/h3&gt;
-&lt;p&gt;パソコンいじり。音楽。&lt;/p&gt;
-&lt;h3 id=&#34;人生の目標&#34;&gt;人生の目標&lt;/h3&gt;
-&lt;p&gt;島崎譲の出世作「ザ・スター」のラストシーンのように世界を救う仕事をする。そんでもって後世まで偉人と称えられる。……とか書いておいて、もしも犯罪の被害者（または加害者）になったらワイドショーにこの部分が引用されてしまったりするのかと思うと、ちょっとドキドキ。&lt;/p&gt;
-&lt;p&gt;連絡はメールにてお願いします。 &lt;a href=&#34;mailto:nomura@a3size.com&#34;&gt;nomura@a3size.com&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;これまでの変遷&#34;&gt;これまでの変遷&lt;/h2&gt;
-&lt;h3 id=&#34;野村政行のこだわり日記&#34;&gt;野村政行のこだわり日記&lt;/h3&gt;
-&lt;p&gt;主に就職、失職、上京→再就職の黒歴史を綴った2004年3月までの古い日記「野村政行のこだわり日記」はこちら。&lt;br&gt;
-→&lt;a href=&#34;https://diary.a3size.com/mnomura/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;a href=&#34;https://diary.a3size.com/mnomura/&#34;&gt;https://diary.a3size.com/mnomura/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;一人称に「野村」を使い出したのはこの日記からでした。それより前は「僕」「オレ」あたりが使われています。気恥ずかしい。&lt;/p&gt;
-&lt;p&gt;で、その更に古いコンテンツ、主に大学時代に書き散らしたCDレビューやら、写真日記やら、なんと小説まであるという盛りだくさんな2000年4月までの日記「野村政行のこだわりの部屋」がこちら。&lt;br&gt;
-→&lt;a href=&#34;https://diary.a3size.com/mnomura/old/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;a href=&#34;https://diary.a3size.com/mnomura/old/index.html&#34;&gt;https://diary.a3size.com/mnomura/old/index.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;1997年9月15日が日付がついている最古の日記ですが、それ以前に書かれた日記はもうどこにも残っていません。モヒカン頭の写真とかがあったのですが失われてしまったかと思うと残念でなりません。その当時、バックアップし忘れただけなんですが。&lt;/p&gt;
-&lt;h2 id=&#34;著作権について&#34;&gt;著作権について&lt;/h2&gt;
-&lt;h3 id=&#34;許諾を得て使用している著作物&#34;&gt;許諾を得て使用している著作物&lt;/h3&gt;
-&lt;p&gt;Amazon.co.jp アソシエイトサイト内で使用されている書籍、CD、DVD、ゲーム等のカバーイメージには amazon.co.jp アソシエイトプログラムによって提供されているものが含まれています。&lt;/p&gt;
-&lt;p&gt;アソシエイトプログラムを利用しているのは、カバーイメージを使用するための手続きをamazon.co.jpに委任できるからです。アソシエイトによってお小遣いを稼がせてもらえるならば幸いですが、現在のところそんなものはもらえそうにありません。なので、そういうことが気になる方はクリックせずにURLからパラメータをコピって使ってください。僕もいつもそうしているので、「ケチ！」とか云いません。&lt;/p&gt;
-&lt;p&gt;もしも何年か後にもらえることになりましたらこのページにて使い道も含めて公開します（あまり大した使い道ではないですが）。&lt;/p&gt;
-&lt;h3 id=&#34;野村政行の著作物&#34;&gt;野村政行の著作物&lt;/h3&gt;
-&lt;p&gt;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;&lt;img src=&#34;https://i.creativecommons.org/l/by-nc/4.0/88x31.png&#34; alt=&#34;クリエイティブ・コモンズ・ライセンス&#34; width=&#34;88&#34; height=&#34;31&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;特別な表記があるものを除いて、このサイトの内容物は &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;クリエイティブ・コモンズ 表示 – 非営利 4.0 国際 ライセンス&lt;/a&gt;の下に提供されています。ライセンスの詳細はクリエイティブ・コモンズ・ライセンスのページでご確認ください。&lt;/p&gt;
-&lt;p&gt;念のために補足しますと、これは「著作者に事前・事後に承諾を必要としない」著作物の利用について規定しているものです。事前に著作者との契約（許可）がある場合にはその契約が優先されます。&lt;/p&gt;
-&lt;h2 id=&#34;注意事項&#34;&gt;注意事項&lt;/h2&gt;
-&lt;p&gt;正確な情報の配信を心がけておりますが、全ての情報を客観的事実であるとは保証できません。その情報が客観的なデータとして利用できるものか否かという判断は、その情報を利用せんとする方に委ねられており、その一切の責任を配信者として取ることはできません。 情報には常に「配信者の意思」が介在しています。そのことをくれぐれもお忘れなく。&lt;/p&gt;
-&lt;p&gt;……などといいつつも誹謗、中傷、犯罪助長、他人に不利益を与える恐れのある誤情報は訂正しますのでご指摘ください。誤字、脱字、支離滅裂、発想の貧困、下品な表現は、日記なので敢えて直さないつもりです。それも含めてお楽しみください。&lt;/p&gt;
-&lt;p&gt;リンクっていちいち報告するものじゃないし、逆にリンクされた側が気分を害したら「リンクしないでくれ」とお願いすることも（聞き入れられるかどうかはともかく）自由だと考えています。&lt;/p&gt;
-&lt;p&gt;Webサイトは生物なので、この注意事項も含めて、「そのとき公開されているもので全て」です。&lt;/p&gt;
-&lt;h3 id=&#34;いろんなリンク&#34;&gt;いろんなリンク&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/e/2PACX-1vRpc5DX-Aw_6eeZjT3SFNZBCz7tVNKTpFox77lW_kG6-2KQHiQY0erbuITxNp0_DopC3KJ00qJuo1xz/pubhtml?gid=432144618&amp;amp;single=true&#34;&gt;個人的な映画ランキング2017&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1mXWmPNwnH5qu4sd4G8VrnFbaUzctMnXxY6HetVUh5Xg/pubhtml?gid=1123529751&amp;amp;single=true&#34;&gt;個人的な映画ランキング2016&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1mXWmPNwnH5qu4sd4G8VrnFbaUzctMnXxY6HetVUh5Xg/pubhtml?gid=0&amp;amp;single=true&#34;&gt;個人的な映画ランキング2015&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://king-nomura.tumblr.com/&#34;&gt;WEBとかその辺(Tumblr)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
