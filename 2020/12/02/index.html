@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.86.0-DEV" />
+<meta name="generator" content="Hugo 0.109.0-DEV">
 <meta name="author" content="野村政行">
 
 <title>レンタルサーバを使うのをやめた -  野村政行の「堪忍袋の緒を締めろ！」</title>
@@ -35,9 +35,7 @@
 
 
 <link rel="shortcut icon" href="https://diary.a3size.com/images/favicon.ico">
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/solid.js" integrity="sha384-Q7KAHqDd5trmfsv85beYZBsUmw0lsreFBQZfsEhzUtUn5HhpjVzwY0Aq4z8DY9sA" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/brands.js" integrity="sha384-6jhVhr5a+Z1nLr9h+fd7ocMEo847wnGFelCHddaOOACUeZNoQwFXTxh4ysXVam8u" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/fontawesome.js" integrity="sha384-M2FSA4xMm1G9m4CNXM49UcDHeWcDZNucAlz1WVHxohug0Uw1K+IpUhp/Wjg0y6qG" crossorigin="anonymous"></script>
+<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://diary.a3size.com/css/main.min.css" media="all">
 
   </head>
@@ -75,7 +73,7 @@
     <div class="article-content">
       <p><a href="/2018/04/21/">2018年の日記</a>では、この日記サイトは BitBucket → Wercher → GitHub Pages という流れで公開されていると書いた。</p>
 <p>素敵な自動化をしたはずなのに、そのあとは6本しか日記を更新しておらず全然その恩恵を生かすことはできなかった。まあ、自動化という「手段を整えることが目的」だからね。買い物でも、お金を払う瞬間がもっともアガった、なんてことは良くあることで。で、月末と年末で支払い関係やデスクトップ周りの見直しをしていた勢いで、2006年からずっと惰性で使い続けていたさくらのレンタルサーバーを次回は契約更新しないことにした。不満があるわけでもないが、レンタルサーバを借りてWebとメールを管理する、というスタイルに時代遅れ感もあったので。</p>
-<p>この日記サイトとは別に用意していたWebサイト(<a href="http://www.a3size.com">www.a3size.com</a>)は<a href="https://www.netlify.com">Netlify</a>に置くことにした。無料で静的Webサイトをホスティングしてくれる。しかもGitHubと連携できるし、CIも回せるらしい。とりあえずはGitHubと連携させて、FTPアップロードなる古の儀式を廃止した。これでhttpdサーバが不要になったので、レンタルサーバはいつでも解約できる。</p>
+<p>この日記サイトとは別に用意していたWebサイト(<a href="https://www.a3size.com">www.a3size.com</a>)は<a href="https://www.netlify.com">Netlify</a>に置くことにした。無料で静的Webサイトをホスティングしてくれる。しかもGitHubと連携できるし、CIも回せるらしい。とりあえずはGitHubと連携させて、FTPアップロードなる古の儀式を廃止した。これでhttpdサーバが不要になったので、レンタルサーバはいつでも解約できる。</p>
 <p>ドメインはGoogle Domainsに移管した。すでに独自ドメインでGmailを利用しているので、集約先としてちょうどよかった。今後何かサーバリソースが必要になったら、まずはGCP(Google Cloud Platform)を候補にしようかと思っている。</p>
 <p>ついでなのでこの日記サイトも、上記で書いたような3社のサービスを連携させるではなく、GitHub → GitHub Actions → GitHub Pagesという風に、GitHubだけで完結するように変更した。ワークフローはこちらのサイトを参考にさせてもらった（ <a href="https://knsh14.github.io/posts/how-to-automate-deploying-hugo/">https://knsh14.github.io/posts/how-to-automate-deploying-hugo/</a> )。</p>
 <p>今回はとりあえず環境の変化だけのメモ書きだが、慣れない状況で全力でグーパンチ振り回していたら一年が終わろうとしていて、色々書き留めておかないとなぁ、と思っている。しわすー。</p>
@@ -127,6 +125,10 @@
           
             
             <li><a href="https://github.com/king-nomura" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
+            
+          
+            
+            <li><a href="https://fedibird.com/@king_nomura" target="_blank" rel="me noopener"><i class="fab fa-mastodon"></i> Mastodon</a></li>
             
           
         </ul>

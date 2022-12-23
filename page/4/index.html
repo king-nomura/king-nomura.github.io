@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.86.0-DEV" />
+<meta name="generator" content="Hugo 0.109.0-DEV">
 <meta name="author" content="野村政行">
 
 <title> 野村政行の「堪忍袋の緒を締めろ！」</title>
@@ -37,9 +37,7 @@
 
 
 <link rel="shortcut icon" href="https://diary.a3size.com/images/favicon.ico">
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/solid.js" integrity="sha384-Q7KAHqDd5trmfsv85beYZBsUmw0lsreFBQZfsEhzUtUn5HhpjVzwY0Aq4z8DY9sA" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/brands.js" integrity="sha384-6jhVhr5a+Z1nLr9h+fd7ocMEo847wnGFelCHddaOOACUeZNoQwFXTxh4ysXVam8u" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/fontawesome.js" integrity="sha384-M2FSA4xMm1G9m4CNXM49UcDHeWcDZNucAlz1WVHxohug0Uw1K+IpUhp/Wjg0y6qG" crossorigin="anonymous"></script>
+<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://diary.a3size.com/css/main.min.css" media="all">
 
   </head>
@@ -152,27 +150,27 @@
 <p>で、CMSの入れ替えとなると日記データの互換性が気になるわけだ。試しにネット上で見つけたコンバーターを利用させていただいてWordPressにぶっ込むテストをしてみたら、うーん。おおよそは上手くコンバートできているが、ちょくちょくおかしなところもあり。一つ一つの日記を丁寧に確認作業するとして、えーと投稿数は、……「932」ですか。うへぇ。一番古い日記(このCMSになってから)が2004年3月だもんなぁ。最近は全然日記書いていなかったけれども、チリも積もれば山となる。駄文も折り重ねれば月に届く。そうしてまた今日の分も書いているので、またコンバート対象の日記が増えるわけですよ。<a href="http://www.ginei.jp/">銀河の歴史がまた一ページ</a>ですよ。</p>
 <p>ところで、かなり今更ながら<a href="https://www.docker.com/">Docker</a>は便利だ、という話を、そういえばこの日記に記していなかったと思い唐突に書き留めておく。</p>
 <p>テスト用のdocker-compose.ymlなどいくつかのファイルを準備しておいて、今回みたいに「ちょっとWordPress立ち上げてみよう」と思ったらコピペしてちょいちょいっとすれば、作業用のWordPressがローカルPC内に立ち上がるという。これは便利すぎる。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
-</span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">db</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">a3size-db</span><span class="w">
-</span><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mysql:latest</span><span class="w">
-</span><span class="w">        </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">            </span>- <span class="l">./db:/var/lib/mysql</span><span class="w">
-</span><span class="w">        </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l">.env</span><span class="w">
-</span><span class="w">    </span><span class="nt">wordpress</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">a3size-web</span><span class="w">
-</span><span class="w">        </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
-</span><span class="w">            </span>- <span class="l">db</span><span class="w">
-</span><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">wordpress:latest</span><span class="w">
-</span><span class="w">        </span><span class="nt">ports</span><span class="p">:</span><span class="w">
-</span><span class="w">            </span>- <span class="m">8080</span><span class="p">:</span><span class="m">80</span><span class="w">
-</span><span class="w">        </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">            </span>- <span class="l">./wp_html:/var/www/html</span><span class="w">
-</span><span class="w">            </span>- <span class="l">./public/wp-content/plugins:/var/www/html/wp-content/plugins</span><span class="w">
-</span><span class="w">            </span>- <span class="l">./public/wp-content/themes/a3size:/var/www/html/wp-content/themes/a3size</span><span class="w">
-</span><span class="w">        </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l">.env</span><span class="w">
-</span></code></pre></div><p>詳しいことは気が向いたら書くことにする。そもそも今日はこんなことを書きたかったわけではなく、生存報告が目的なので。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">db</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">a3size-db</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mysql:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="l">./db:/var/lib/mysql</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l">.env</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">wordpress</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">a3size-web</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="l">db</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">wordpress:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="m">8080</span><span class="p">:</span><span class="m">80</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="l">./wp_html:/var/www/html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="l">./public/wp-content/plugins:/var/www/html/wp-content/plugins</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="l">./public/wp-content/themes/a3size:/var/www/html/wp-content/themes/a3size</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l">.env</span><span class="w">
+</span></span></span></code></pre></div><p>詳しいことは気が向いたら書くことにする。そもそも今日はこんなことを書きたかったわけではなく、生存報告が目的なので。</p>
 
       </div>
 
@@ -1701,6 +1699,10 @@
           
             
             <li><a href="https://github.com/king-nomura" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
+            
+          
+            
+            <li><a href="https://fedibird.com/@king_nomura" target="_blank" rel="me noopener"><i class="fab fa-mastodon"></i> Mastodon</a></li>
             
           
         </ul>

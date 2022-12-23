@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.86.0-DEV" />
+<meta name="generator" content="Hugo 0.109.0-DEV">
 <meta name="author" content="野村政行">
 
 <title>flickrはイケているか -  野村政行の「堪忍袋の緒を締めろ！」</title>
@@ -35,9 +35,7 @@
 
 
 <link rel="shortcut icon" href="https://diary.a3size.com/images/favicon.ico">
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/solid.js" integrity="sha384-Q7KAHqDd5trmfsv85beYZBsUmw0lsreFBQZfsEhzUtUn5HhpjVzwY0Aq4z8DY9sA" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/brands.js" integrity="sha384-6jhVhr5a+Z1nLr9h+fd7ocMEo847wnGFelCHddaOOACUeZNoQwFXTxh4ysXVam8u" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/fontawesome.js" integrity="sha384-M2FSA4xMm1G9m4CNXM49UcDHeWcDZNucAlz1WVHxohug0Uw1K+IpUhp/Wjg0y6qG" crossorigin="anonymous"></script>
+<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://diary.a3size.com/css/main.min.css" media="all">
 
   </head>
@@ -91,27 +89,27 @@
 </ul>
 <p>の4つができた。
 たとえば <code>&lt;img&gt;</code> タグをそのまま書くのではなく、</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;***&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;160&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;120&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;テスト&#34;</span> <span class="p">&gt;</span>
-↓
-{{<span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;***&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;160&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;120&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;テスト&#34;</span> <span class="p">&gt;</span>}}
-</code></pre></div><p>としておく。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;***&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;160&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;120&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;テスト&#34;</span> <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">↓
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;***&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;160&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;120&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;テスト&#34;</span> <span class="p">&gt;</span>}}
+</span></span></code></pre></div><p>としておく。</p>
 <p>これをPCでは、</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext">&lt;img
-src=&#34;{{ .Get &#34;src&#34; }}&#34;
-alt=&#34;{{ .Get &#34;alt&#34; }}&#34;
-{{ with (.Get &#34;width&#34;) }} width=&#34;{{ . }}&#34;{{ end }}
-{{ with (.Get &#34;height&#34;) }} height=&#34;{{ . }}&#34;{{ end }}
-/&gt;
-</code></pre></div><p>AMPでは、</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext">&lt;p&gt;
-&lt;amp-img
-src=&#34;{{ .Get &#34;src&#34; }}&#34;
-alt=&#34;{{ .Get &#34;alt&#34; }}&#34;
-{{ with (.Get &#34;width&#34;) }} width=&#34;{{ . }}&#34;{{ end }}
-{{ with (.Get &#34;height&#34;) }} height=&#34;{{ . }}&#34;{{ end }}
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;
-&lt;/p&gt;
-</code></pre></div><p>てな感じに。至極簡単な置きかえを行うことで、なんとなくAMP対応ができる。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">&lt;img
+</span></span><span class="line"><span class="cl">src=&#34;{{ .Get &#34;src&#34; }}&#34;
+</span></span><span class="line"><span class="cl">alt=&#34;{{ .Get &#34;alt&#34; }}&#34;
+</span></span><span class="line"><span class="cl">{{ with (.Get &#34;width&#34;) }} width=&#34;{{ . }}&#34;{{ end }}
+</span></span><span class="line"><span class="cl">{{ with (.Get &#34;height&#34;) }} height=&#34;{{ . }}&#34;{{ end }}
+</span></span><span class="line"><span class="cl">/&gt;
+</span></span></code></pre></div><p>AMPでは、</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">&lt;p&gt;
+</span></span><span class="line"><span class="cl">&lt;amp-img
+</span></span><span class="line"><span class="cl">src=&#34;{{ .Get &#34;src&#34; }}&#34;
+</span></span><span class="line"><span class="cl">alt=&#34;{{ .Get &#34;alt&#34; }}&#34;
+</span></span><span class="line"><span class="cl">{{ with (.Get &#34;width&#34;) }} width=&#34;{{ . }}&#34;{{ end }}
+</span></span><span class="line"><span class="cl">{{ with (.Get &#34;height&#34;) }} height=&#34;{{ . }}&#34;{{ end }}
+</span></span><span class="line"><span class="cl">layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;
+</span></span><span class="line"><span class="cl">&lt;/p&gt;
+</span></span></code></pre></div><p>てな感じに。至極簡単な置きかえを行うことで、なんとなくAMP対応ができる。</p>
 <p>車輪を再発明している感は否めない。</p>
 
     </div>
@@ -161,6 +159,10 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;
           
             
             <li><a href="https://github.com/king-nomura" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
+            
+          
+            
+            <li><a href="https://fedibird.com/@king_nomura" target="_blank" rel="me noopener"><i class="fab fa-mastodon"></i> Mastodon</a></li>
             
           
         </ul>

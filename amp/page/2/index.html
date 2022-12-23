@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<meta name="generator" content="Hugo 0.86.0-DEV" />
+<meta name="generator" content="Hugo 0.109.0-DEV">
 <meta name="author" content="野村政行">
 
 <title> 野村政行の「堪忍袋の緒を締めろ！」 -  野村政行の「堪忍袋の緒を締めろ！」</title>
@@ -268,20 +268,20 @@ Webページをテンプレートから自動生成するサービスとかも�
         <p><a href="/2018/04/21/">以前書いた</a>ように、この日記はMarkdown形式のテキストファイルを<a href="https://bitbucket.org/">BitBucket</a>のレポジトリにPUSHすると、CIサービスである<a href="http://www.wercker.com">Wercker</a>がWebhookされ、<a href="https://gohugo.io">Hugo</a>によってhtmlファイルを生成して、そのhtmlファイルを<a href="https://pages.github.com">GitHub Pages</a>にPUSHしている。</p>
 <p>その、日記用Markdownファイルを生成するスクリプトはAutomatorで書いた。これから、そのMarkdownファイル(拡張子は.md)を右クリックして「サービス」メニューからgitコミットするスクリプトのテストを行う。</p>
 <p>まずファイルをaddして、それからcommit。gitコマンド的には、いちどaddされているファイルをもう一回addしても問題ないようなので、何度でも実行可能。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="o">{</span>日記gitのルートディレクトリ<span class="o">}</span>
-
-<span class="nv">currentDate</span><span class="o">=</span><span class="sb">`</span>date +%FT%T%z <span class="p">|</span> sed -e <span class="s1">&#39;s/\(.\{22\}\)/\1:/&#39;</span><span class="sb">`</span>
-<span class="k">for</span> f in <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
-<span class="k">do</span>
-	<span class="nv">ext</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">f</span><span class="p">##*.</span><span class="si">}</span> <span class="p">|</span> sed <span class="s2">&#34;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&#34;</span><span class="sb">`</span>
-	<span class="k">if</span> <span class="o">[</span> <span class="nv">$ext</span> <span class="o">=</span> <span class="s2">&#34;md&#34;</span> -a ! -d <span class="nv">$f</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-		sed -i <span class="s1">&#39;&#39;</span> -e <span class="s1">&#39;s/^date: &#34;[^&#34;]*&#34;$/date: &#34;&#39;</span><span class="nv">$currentDate</span><span class="s1">&#39;&#34;/g&#39;</span> <span class="nv">$f</span>
-    /usr/bin/git add <span class="nv">$f</span>
-	<span class="k">fi</span>
-<span class="k">done</span>
-
-/usr/bin/git commit -m <span class="s1">&#39;[add|mod] dayly post&#39;</span>
-</code></pre></div><p>日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。日付フォーマットが<code>date</code>コマンドのままだとおかしくなる（タイムゾーン「+0900」ではダメで、「+09:00」だとOK）ので強引に変更している、など。強引でよろしくない感じのスクリプトだが、まあとりあえず動く。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> <span class="o">{</span>日記gitのルートディレクトリ<span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">currentDate</span><span class="o">=</span><span class="sb">`</span>date +%FT%T%z <span class="p">|</span> sed -e <span class="s1">&#39;s/\(.\{22\}\)/\1:/&#39;</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> f in <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">	<span class="nv">ext</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">f</span><span class="p">##*.</span><span class="si">}</span> <span class="p">|</span> sed <span class="s2">&#34;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&#34;</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="o">[</span> <span class="nv">$ext</span> <span class="o">=</span> <span class="s2">&#34;md&#34;</span> -a ! -d <span class="nv">$f</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">		sed -i <span class="s1">&#39;&#39;</span> -e <span class="s1">&#39;s/^date: &#34;[^&#34;]*&#34;$/date: &#34;&#39;</span><span class="nv">$currentDate</span><span class="s1">&#39;&#34;/g&#39;</span> <span class="nv">$f</span>
+</span></span><span class="line"><span class="cl">    /usr/bin/git add <span class="nv">$f</span>
+</span></span><span class="line"><span class="cl">	<span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/usr/bin/git commit -m <span class="s1">&#39;[add|mod] dayly post&#39;</span>
+</span></span></code></pre></div><p>日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。日付フォーマットが<code>date</code>コマンドのままだとおかしくなる（タイムゾーン「+0900」ではダメで、「+09:00」だとOK）ので強引に変更している、など。強引でよろしくない感じのスクリプトだが、まあとりあえず動く。</p>
 
       </div>
 

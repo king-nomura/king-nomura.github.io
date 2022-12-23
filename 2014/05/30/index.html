@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.86.0-DEV" />
+<meta name="generator" content="Hugo 0.109.0-DEV">
 <meta name="author" content="野村政行">
 
 <title>つまりiPhoneアプリ作ったからDLしてくれという話 -  野村政行の「堪忍袋の緒を締めろ！」</title>
@@ -35,9 +35,7 @@
 
 
 <link rel="shortcut icon" href="https://diary.a3size.com/images/favicon.ico">
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/solid.js" integrity="sha384-Q7KAHqDd5trmfsv85beYZBsUmw0lsreFBQZfsEhzUtUn5HhpjVzwY0Aq4z8DY9sA" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/brands.js" integrity="sha384-6jhVhr5a+Z1nLr9h+fd7ocMEo847wnGFelCHddaOOACUeZNoQwFXTxh4ysXVam8u" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/fontawesome.js" integrity="sha384-M2FSA4xMm1G9m4CNXM49UcDHeWcDZNucAlz1WVHxohug0Uw1K+IpUhp/Wjg0y6qG" crossorigin="anonymous"></script>
+<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://diary.a3size.com/css/main.min.css" media="all">
 
   </head>
@@ -78,7 +76,7 @@
 <p>登山やハイキングで、あっちに○○山があったはずだー、というときに使うと便利。あとは徹夜仕事で疲れたときに、いつもの殺風景なオフィスにARで山の位置を表示させることで更にダウナーな気分になれる。</p>
 <p>普段のお仕事では受託案件が主なのだが、このアプリは「みんなで作らない？」というお誘いを受けて参加した自主案件となっている。従って関係者全員の手弁当による開発である。野村は山に詳しくないのだが、その辺は企画された方にがっつりと監修していただいた。</p>
 <p>今は無料にて配布中。近いうちに有料化する予定なので（手弁当分の補填……）、興味を持たれた方、お情けでダウンロードしてもいいと思ってくださった方、今すぐにお願いします。</p>
-<p><img src="/files/2014/05/20140530_0.jpg" alt="構造の解説" width="590" height="530" /></p>
+<img src="/files/2014/05/20140530_0.jpg" alt="構造の解説" width="590" height="530" />
 <p>で、技術的な話を。</p>
 <p>今回のアプリは<a href="http://phonegap.com/" target="_blank">Adobe PhoneGap</a>(<a href="http://cordova.apache.org/" target="_blank">Apache Cordova</a>)を使って開発されている。ご存じない方に簡単に説明すると、アプリの中でWebブラウザ立ち上げてその中にHTMLで書かれたアプリっぽいものを表示してしまえばぱっと見アプリになるんじゃね？という裏技的な手法である。このHTMLをアプリにする手法についての利点や欠点は割愛させてもらうが、今回はパフォーマンスが厳しくないだろうという読みと、リスト表示部分などの開発コスト削減を目的にこの手法を選択した。</p>
 <p>HTMLの部分も大きく2つに別れていて、メインの山がレーダー表示部分がcanvas、その他の画面やポップアップ表示部分が非canvasとなっている。文字を流し込む部分は普通のHTMLが持っている各種処理に任せて、お絵かきしなくちゃいけない部分だけcanvasで描いた。canvasのお絵かきには<a href="http://www.createjs.com/#!/EaselJS" target="_blank">EaselJS</a>を使用した。</p>
@@ -135,6 +133,10 @@
           
             
             <li><a href="https://github.com/king-nomura" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
+            
+          
+            
+            <li><a href="https://fedibird.com/@king_nomura" target="_blank" rel="me noopener"><i class="fab fa-mastodon"></i> Mastodon</a></li>
             
           
         </ul>

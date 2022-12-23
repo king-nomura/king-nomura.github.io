@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.86.0-DEV" />
+<meta name="generator" content="Hugo 0.109.0-DEV">
 <meta name="author" content="野村政行">
 
 <title> 野村政行の「堪忍袋の緒を締めろ！」</title>
@@ -37,9 +37,7 @@
 
 
 <link rel="shortcut icon" href="https://diary.a3size.com/images/favicon.ico">
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/solid.js" integrity="sha384-Q7KAHqDd5trmfsv85beYZBsUmw0lsreFBQZfsEhzUtUn5HhpjVzwY0Aq4z8DY9sA" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/brands.js" integrity="sha384-6jhVhr5a+Z1nLr9h+fd7ocMEo847wnGFelCHddaOOACUeZNoQwFXTxh4ysXVam8u" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/fontawesome.js" integrity="sha384-M2FSA4xMm1G9m4CNXM49UcDHeWcDZNucAlz1WVHxohug0Uw1K+IpUhp/Wjg0y6qG" crossorigin="anonymous"></script>
+<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="https://diary.a3size.com/css/main.min.css" media="all">
 
   </head>
@@ -144,27 +142,27 @@
 </ul>
 <p>の4つができた。
 たとえば <code>&lt;img&gt;</code> タグをそのまま書くのではなく、</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;***&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;160&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;120&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;テスト&#34;</span> <span class="p">&gt;</span>
-↓
-{{<span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;***&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;160&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;120&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;テスト&#34;</span> <span class="p">&gt;</span>}}
-</code></pre></div><p>としておく。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;***&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;160&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;120&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;テスト&#34;</span> <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">↓
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;***&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;160&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;120&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;テスト&#34;</span> <span class="p">&gt;</span>}}
+</span></span></code></pre></div><p>としておく。</p>
 <p>これをPCでは、</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext">&lt;img
-src=&#34;{{ .Get &#34;src&#34; }}&#34;
-alt=&#34;{{ .Get &#34;alt&#34; }}&#34;
-{{ with (.Get &#34;width&#34;) }} width=&#34;{{ . }}&#34;{{ end }}
-{{ with (.Get &#34;height&#34;) }} height=&#34;{{ . }}&#34;{{ end }}
-/&gt;
-</code></pre></div><p>AMPでは、</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext">&lt;p&gt;
-&lt;amp-img
-src=&#34;{{ .Get &#34;src&#34; }}&#34;
-alt=&#34;{{ .Get &#34;alt&#34; }}&#34;
-{{ with (.Get &#34;width&#34;) }} width=&#34;{{ . }}&#34;{{ end }}
-{{ with (.Get &#34;height&#34;) }} height=&#34;{{ . }}&#34;{{ end }}
-layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;
-&lt;/p&gt;
-</code></pre></div><p>てな感じに。至極簡単な置きかえを行うことで、なんとなくAMP対応ができる。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">&lt;img
+</span></span><span class="line"><span class="cl">src=&#34;{{ .Get &#34;src&#34; }}&#34;
+</span></span><span class="line"><span class="cl">alt=&#34;{{ .Get &#34;alt&#34; }}&#34;
+</span></span><span class="line"><span class="cl">{{ with (.Get &#34;width&#34;) }} width=&#34;{{ . }}&#34;{{ end }}
+</span></span><span class="line"><span class="cl">{{ with (.Get &#34;height&#34;) }} height=&#34;{{ . }}&#34;{{ end }}
+</span></span><span class="line"><span class="cl">/&gt;
+</span></span></code></pre></div><p>AMPでは、</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">&lt;p&gt;
+</span></span><span class="line"><span class="cl">&lt;amp-img
+</span></span><span class="line"><span class="cl">src=&#34;{{ .Get &#34;src&#34; }}&#34;
+</span></span><span class="line"><span class="cl">alt=&#34;{{ .Get &#34;alt&#34; }}&#34;
+</span></span><span class="line"><span class="cl">{{ with (.Get &#34;width&#34;) }} width=&#34;{{ . }}&#34;{{ end }}
+</span></span><span class="line"><span class="cl">{{ with (.Get &#34;height&#34;) }} height=&#34;{{ . }}&#34;{{ end }}
+</span></span><span class="line"><span class="cl">layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;
+</span></span><span class="line"><span class="cl">&lt;/p&gt;
+</span></span></code></pre></div><p>てな感じに。至極簡単な置きかえを行うことで、なんとなくAMP対応ができる。</p>
 <p>車輪を再発明している感は否めない。</p>
 
       </div>
@@ -196,24 +194,24 @@ layout=&#34;responsive&#34;&gt;&lt;/amp-img&gt;
 <p>日記を一日分追加すると、その日の日記ページのHTMLができる。のみならず、トップページに直近5日分の日記が載っているのでそこも再生成。すると日記が一日分後ろに押し出されて、ページネーション（次のページ）があるのでその後ろのページ全部が再生成させる。また日記につけたタグから、そのタグのリストページも再生成される。結果、数百のファイルが再生成される。うわーお、無駄が多い。でもなぁ、日記を一日分ずつ読み込むのもちょっと馬鹿馬鹿しい。まあそれはともかく、自動的にhtmlは作れるようになった。</p>
 <p>では次は日記を新規作成するところだ。コマンドラインから <code>Hugo new ファイル名</code> でページのひな形が書き込まれたMarkdownファイルが完成する。これは楽チン……、と思いたいところだがもっと楽にしたい。</p>
 <p>Automatorを使って、例えば以下のような感じのシェルスクリプトをアプリ化（というかアイコン化）して、ボタン一発で今日の日記を作ってエディタを開く。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="s1">&#39;Hugoの作業ディレクトリ&#39;</span>
-
-<span class="c1"># この例では年別にファイルを格納したいので、post/YYYYディレクトリを作成している</span>
-<span class="nv">targetYear</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y&#34;</span><span class="sb">`</span>
-mkdir -p <span class="nv">$targetYear</span>
-
-<span class="c1"># 日付からファイル名を生成する。この例では post/YYYY/YYYY-MM-DD.mfd</span>
-<span class="nv">targetDate</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y-%m-%d&#34;</span><span class="sb">`</span>
-<span class="nv">targetFile</span><span class="o">=</span><span class="s2">&#34;post/</span><span class="nv">$targetYear</span><span class="s2">/</span><span class="nv">$targetDate</span><span class="s2">.md&#34;</span>
-
-<span class="c1"># 当該ファイルがなければ新規作成</span>
-<span class="k">if</span> <span class="o">[</span> ! -e <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-  /usr/local/bin/hugo new <span class="nv">$targetFile</span>
-<span class="k">fi</span>
-
-<span class="c1"># この例ではアプリを指定せずにファイルを開く</span>
-open <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span>
-</code></pre></div><p>これで、日記を書くところまでアイコンクリック一回でだけで進められる。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> <span class="s1">&#39;Hugoの作業ディレクトリ&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># この例では年別にファイルを格納したいので、post/YYYYディレクトリを作成している</span>
+</span></span><span class="line"><span class="cl"><span class="nv">targetYear</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y&#34;</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">mkdir -p <span class="nv">$targetYear</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 日付からファイル名を生成する。この例では post/YYYY/YYYY-MM-DD.mfd</span>
+</span></span><span class="line"><span class="cl"><span class="nv">targetDate</span><span class="o">=</span><span class="sb">`</span>date +<span class="s2">&#34;%Y-%m-%d&#34;</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl"><span class="nv">targetFile</span><span class="o">=</span><span class="s2">&#34;post/</span><span class="nv">$targetYear</span><span class="s2">/</span><span class="nv">$targetDate</span><span class="s2">.md&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 当該ファイルがなければ新規作成</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> ! -e <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">  /usr/local/bin/hugo new <span class="nv">$targetFile</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># この例ではアプリを指定せずにファイルを開く</span>
+</span></span><span class="line"><span class="cl">open <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><span class="s2">&#34;</span>
+</span></span></code></pre></div><p>これで、日記を書くところまでアイコンクリック一回でだけで進められる。</p>
 <p>本当は、日記を書き終えたあともcommitとpushをアイコンクリック一回でやりたいが、エラー処理とか連打時の動作とか考えるとちょっと面倒そうなので、いったんここまでとして、今日記を書いているこのファイルをこのあと手動でcommitしてpushすることにする。</p>
 <p>……コミット時のメッセージが日本語だとうまく動かない？</p>
 
@@ -1746,6 +1744,10 @@ open <span class="s2">&#34;content/</span><span class="nv">$targetFile</span><sp
           
             
             <li><a href="https://github.com/king-nomura" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
+            
+          
+            
+            <li><a href="https://fedibird.com/@king_nomura" target="_blank" rel="me noopener"><i class="fab fa-mastodon"></i> Mastodon</a></li>
             
           
         </ul>
