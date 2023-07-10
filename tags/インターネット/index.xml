@@ -1,105 +1,101 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>インターネット on  野村政行の「堪忍袋の緒を締めろ！」</title>
-    <link>http://diary.a3size.com/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88/</link>
+    <link>https://diary.a3size.com/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88/</link>
     <description>Recent content in インターネット on  野村政行の「堪忍袋の緒を締めろ！」</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Tue, 31 Mar 2015 03:00:01 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Dec 2020 10:04:35 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>レンタルサーバを使うのをやめた</title>
+      <link>https://diary.a3size.com/2020/12/02/</link>
+      <pubDate>Wed, 02 Dec 2020 10:04:35 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2020/12/02/</guid>
+      <description>2018年の日記では、この日記サイトは BitBucket → Wercher → GitHub Pages という流れで公開されていると書いた。 素敵な自動化をしたはずなのに、そのあとは6本しか日記を</description>
+    </item>
     
-	<atom:link href="http://diary.a3size.com/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ストレージを空けたいんだ</title>
+      <link>https://diary.a3size.com/2019/07/31/</link>
+      <pubDate>Wed, 31 Jul 2019 00:17:50 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2019/07/31/</guid>
+      <description>その昔はさぁ、ハードディスクってものがあるらしいよ、とかさぁ。遂にハードディスクが1GBの領域に到達したらしいよ、とかさぁ。 などというインタ</description>
+    </item>
     
+    <item>
+      <title>ハードウェアとサブスクリプション</title>
+      <link>https://diary.a3size.com/2019/07/05/</link>
+      <pubDate>Fri, 05 Jul 2019 00:09:32 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2019/07/05/</guid>
+      <description>梅雨が梅雨らしいジメジメ具合で、たまに外に出ようと思うと雨が降っている、とさえ思えてしまう。ちょっと大きめの荷物を運びたいのに、運べない。 ち</description>
+    </item>
+    
+    <item>
+      <title>GlideというPWAを作るサービスで遊んでみる</title>
+      <link>https://diary.a3size.com/2019/04/11/</link>
+      <pubDate>Thu, 11 Apr 2019 09:06:24 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2019/04/11/</guid>
+      <description>生きています（定型文）。 ネットサーフィンしていたら「Glide 」というサービスを見つけた。GoogleスプレッドシートからPWA(Progr</description>
+    </item>
+    
+    <item>
+      <title>しつこいけれど、また自動化の話</title>
+      <link>https://diary.a3size.com/2018/05/22/</link>
+      <pubDate>Tue, 22 May 2018 01:32:13 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2018/05/22/</guid>
+      <description>以前書いたように、この日記はMarkdown形式のテキストファイルをBitBucketのレポジトリにPUSHすると、CIサービスであるWer</description>
+    </item>
+    
+    <item>
+      <title>flickrはイケているか</title>
+      <link>https://diary.a3size.com/2018/04/24/</link>
+      <pubDate>Tue, 24 Apr 2018 01:37:00 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2018/04/24/</guid>
+      <description>日記のサムネイルにflickrの画像は使えないだろうか。という実験。 肝心の写真がイケていないというオチ、ではなくて。 試しにflickrのEm</description>
+    </item>
+    
+    <item>
+      <title>GitHub Pagesにお引っ越し</title>
+      <link>https://diary.a3size.com/2018/04/21/</link>
+      <pubDate>Sat, 21 Apr 2018 01:28:00 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2018/04/21/</guid>
+      <description>WordPressでこの日記をリニューアルすると以前書いたが、色々と考えてみた結果GitHub Pagesに引っ越した。 というのも、CPUパワ</description>
+    </item>
     
     <item>
       <title>最適化される退屈な近未来</title>
-      <link>http://diary.a3size.com/2015/03/31/</link>
+      <link>https://diary.a3size.com/2015/03/31/</link>
       <pubDate>Tue, 31 Mar 2015 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2015/03/31/</guid>
+      <guid>https://diary.a3size.com/2015/03/31/</guid>
       <description>ターゲティング広告や所謂「ビッグデータ（笑）」について考えてみたりすると、いつもいつも嫌な感じの近未来に想像が行き着いてしまう。 ちょっと前ま</description>
     </item>
     
     <item>
       <title>JavaScriptについての雑感</title>
-      <link>http://diary.a3size.com/2013/04/08/</link>
+      <link>https://diary.a3size.com/2013/04/08/</link>
       <pubDate>Mon, 08 Apr 2013 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2013/04/08/</guid>
+      <guid>https://diary.a3size.com/2013/04/08/</guid>
       <description>前回の日記と微妙に繋がっている話なのだが、多分繋がっているように書けていないと思うが。 JavaScriptはWebブラウザを使ったリッチなプ</description>
     </item>
     
     <item>
       <title>RSS終焉の足音が聞こえたのでWebサイトに関する雑感</title>
-      <link>http://diary.a3size.com/2013/04/05/</link>
+      <link>https://diary.a3size.com/2013/04/05/</link>
       <pubDate>Fri, 05 Apr 2013 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2013/04/05/</guid>
+      <guid>https://diary.a3size.com/2013/04/05/</guid>
       <description>個人の日記サイトが、ちまちまHTMLを手書きするところから始まって、ブログサービス→SNSへと移行していった経緯を考えてみる。 要は、自分で情</description>
-    </item>
-    
-    <item>
-      <title>Trust in Japanに協賛してきたよ</title>
-      <link>http://diary.a3size.com/2011/06/26/</link>
-      <pubDate>Sun, 26 Jun 2011 03:00:01 +0000</pubDate>
-      
-      <guid>http://diary.a3size.com/2011/06/26/</guid>
-      <description>Trust in Japanというプロジェクトがある。ツイートするたびに100円が寄付されるというプロジェクトだ。このプロジェクトの面白いところは、その1</description>
-    </item>
-    
-    <item>
-      <title>数多ある「賞」のどれかひとつにでも</title>
-      <link>http://diary.a3size.com/2010/12/09/</link>
-      <pubDate>Thu, 09 Dec 2010 03:00:01 +0000</pubDate>
-      
-      <guid>http://diary.a3size.com/2010/12/09/</guid>
-      <description>今年の文化庁メディア芸術祭の受賞作品が発表された。もう14回だとか。すっかり定着した感のある賞である。 で、この賞は意外に幅広い分野をカバーし</description>
-    </item>
-    
-    <item>
-      <title>制作者が語る「普通の人」とは</title>
-      <link>http://diary.a3size.com/2010/05/15/</link>
-      <pubDate>Sat, 15 May 2010 03:00:01 +0000</pubDate>
-      
-      <guid>http://diary.a3size.com/2010/05/15/</guid>
-      <description>先日、あるWEBサイトについて友人たちとTwitter上であれこれ考察していたときにふと思ったのだが。 自分は今、ユーザーとしてWEBサイトを</description>
-    </item>
-    
-    <item>
-      <title>「電子書籍の衝撃」の衝撃</title>
-      <link>http://diary.a3size.com/2010/04/22/</link>
-      <pubDate>Thu, 22 Apr 2010 03:00:01 +0000</pubDate>
-      
-      <guid>http://diary.a3size.com/2010/04/22/</guid>
-      <description>というわけで日記のタイトルは完全にダジャレなわけだが、佐々木俊尚「電子書籍の衝撃」は面白かった。この本、もちろん電子書籍としてディスカヴァー</description>
-    </item>
-    
-    <item>
-      <title>「不要なもの」としてのサービス</title>
-      <link>http://diary.a3size.com/2010/02/03/</link>
-      <pubDate>Wed, 03 Feb 2010 03:00:01 +0000</pubDate>
-      
-      <guid>http://diary.a3size.com/2010/02/03/</guid>
-      <description>インターネット上では新しいアイディア、仕組みを持ったサービスが次々と生まれている。発表されれば「革新的だ」「今までに無かった」といった煽りが</description>
-    </item>
-    
-    <item>
-      <title>日記書かなくなった</title>
-      <link>http://diary.a3size.com/2010/01/28/</link>
-      <pubDate>Thu, 28 Jan 2010 03:00:01 +0000</pubDate>
-      
-      <guid>http://diary.a3size.com/2010/01/28/</guid>
-      <description>Twitterのせいですっかり日記を書かなくなった。長文を書く練習を怠るのはよくないことだから、なるべく日記は書きたい。だが、日常の些末な出</description>
-    </item>
-    
-    <item>
-      <title>作ったアプリが次の目標へ進む</title>
-      <link>http://diary.a3size.com/2009/11/29/</link>
-      <pubDate>Sun, 29 Nov 2009 03:00:01 +0000</pubDate>
-      
-      <guid>http://diary.a3size.com/2009/11/29/</guid>
-      <description>おかげさまで作成に関わったiPhoneアプリが想像以上の広がりをみせている。これは関わった人間として嬉しい。反面、サーバーが重くてサービスと</description>
     </item>
     
   </channel>

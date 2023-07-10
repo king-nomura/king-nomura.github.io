@@ -1,105 +1,101 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>マンガ・アニメ on  野村政行の「堪忍袋の緒を締めろ！」</title>
-    <link>http://diary.a3size.com/tags/%E3%83%9E%E3%83%B3%E3%82%AC%E3%82%A2%E3%83%8B%E3%83%A1/</link>
+    <link>https://diary.a3size.com/tags/%E3%83%9E%E3%83%B3%E3%82%AC%E3%82%A2%E3%83%8B%E3%83%A1/</link>
     <description>Recent content in マンガ・アニメ on  野村政行の「堪忍袋の緒を締めろ！」</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Thu, 04 Jan 2018 03:00:01 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jan 2020 09:21:44 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/tags/%E3%83%9E%E3%83%B3%E3%82%AC%E3%82%A2%E3%83%8B%E3%83%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2019年の映画の話</title>
+      <link>https://diary.a3size.com/2020/01/13/</link>
+      <pubDate>Mon, 13 Jan 2020 09:21:44 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2020/01/13/</guid>
+      <description>去年の秋あたりから「期間が読めない」類の案件をいくつか参加させていただいた（今も）。面白い案件だし参加させていただける嬉しさがある一方で、ス</description>
+    </item>
     
-	<atom:link href="http://diary.a3size.com/tags/%E3%83%9E%E3%83%B3%E3%82%AC%E3%82%A2%E3%83%8B%E3%83%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ハードウェアとサブスクリプション</title>
+      <link>https://diary.a3size.com/2019/07/05/</link>
+      <pubDate>Fri, 05 Jul 2019 00:09:32 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2019/07/05/</guid>
+      <description>梅雨が梅雨らしいジメジメ具合で、たまに外に出ようと思うと雨が降っている、とさえ思えてしまう。ちょっと大きめの荷物を運びたいのに、運べない。 ち</description>
+    </item>
     
+    <item>
+      <title>GlideというPWAを作るサービスで遊んでみる</title>
+      <link>https://diary.a3size.com/2019/04/11/</link>
+      <pubDate>Thu, 11 Apr 2019 09:06:24 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2019/04/11/</guid>
+      <description>生きています（定型文）。 ネットサーフィンしていたら「Glide 」というサービスを見つけた。GoogleスプレッドシートからPWA(Progr</description>
+    </item>
+    
+    <item>
+      <title>2018年は映画を観ていない</title>
+      <link>https://diary.a3size.com/2019/01/02/</link>
+      <pubDate>Wed, 02 Jan 2019 22:33:45 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2019/01/02/</guid>
+      <description>気づいたらまたしても日記書いていなかったじゃないか。しかも去年の映画視聴記録もまとめていないじゃないか。 というわけで、急いで作った：もう一度</description>
+    </item>
     
     <item>
       <title>2017年に観た映画について</title>
-      <link>http://diary.a3size.com/2018/01/04/</link>
+      <link>https://diary.a3size.com/2018/01/04/</link>
       <pubDate>Thu, 04 Jan 2018 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2018/01/04/</guid>
+      <guid>https://diary.a3size.com/2018/01/04/</guid>
       <description>この日記をWordPressに移行しようと思って、どうせやるならデザイン変えようと思って、そう思っていたらなんと年を越していた。壮大な「やる</description>
     </item>
     
     <item>
       <title>今年観た映画の話</title>
-      <link>http://diary.a3size.com/2016/12/26/</link>
+      <link>https://diary.a3size.com/2016/12/26/</link>
       <pubDate>Mon, 26 Dec 2016 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2016/12/26/</guid>
+      <guid>https://diary.a3size.com/2016/12/26/</guid>
       <description>今年は秋からものすごく忙しくなってしまって、あまり映画を観に行けなかった。もう今年は観に行けなさそうなので、今年ももう一度観たい映画ランキン</description>
     </item>
     
     <item>
       <title>今年観た映画の話</title>
-      <link>http://diary.a3size.com/2015/12/27/</link>
+      <link>https://diary.a3size.com/2015/12/27/</link>
       <pubDate>Sun, 27 Dec 2015 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2015/12/27/</guid>
+      <guid>https://diary.a3size.com/2015/12/27/</guid>
       <description>今年観た映画をメモして、「ああ、もう一回観たいなぁ」と思っているかどうかで並べ替えてみた。 で、それをGoogleドキュメントで晒してみたりす</description>
     </item>
     
     <item>
       <title>最近観た映画メモ</title>
-      <link>http://diary.a3size.com/2014/02/05/</link>
+      <link>https://diary.a3size.com/2014/02/05/</link>
       <pubDate>Wed, 05 Feb 2014 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2014/02/05/</guid>
+      <guid>https://diary.a3size.com/2014/02/05/</guid>
       <description>もう2月かぁ。確定申告の季節だねぇ。 この数ヶ月で観た映画の中では「ゼロ・グラビティ」と「かぐや姫の物語」が心に刺さりまくった。ストーリーは既</description>
     </item>
     
     <item>
       <title>「PSYCHO-PASS」第2話の日常描写でガッカリした</title>
-      <link>http://diary.a3size.com/2012/10/25/</link>
+      <link>https://diary.a3size.com/2012/10/25/</link>
       <pubDate>Thu, 25 Oct 2012 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2012/10/25/</guid>
+      <guid>https://diary.a3size.com/2012/10/25/</guid>
       <description>久しぶりに日記に何か書いておこうという目的だけで、今まさに考えていることだけ書いてみる。 SFというか、未来でカッコいいガジェットがバンバン出</description>
     </item>
     
     <item>
       <title>7月に観た映画の話</title>
-      <link>http://diary.a3size.com/2012/08/07/</link>
+      <link>https://diary.a3size.com/2012/08/07/</link>
       <pubDate>Tue, 07 Aug 2012 03:00:01 +0000</pubDate>
       
-      <guid>http://diary.a3size.com/2012/08/07/</guid>
+      <guid>https://diary.a3size.com/2012/08/07/</guid>
       <description>サム・ワーシントン主演「崖っぷちの男」を何故か観てしまった。「フォーン・ブース」のように一つのシチュエーションで起こる様々な出来事を中心に進</description>
-    </item>
-    
-    <item>
-      <title>連休なので映画を観たよ</title>
-      <link>http://diary.a3size.com/2012/05/02/</link>
-      <pubDate>Wed, 02 May 2012 03:00:01 +0000</pubDate>
-      
-      <guid>http://diary.a3size.com/2012/05/02/</guid>
-      <description>沖浦啓之監督の待望の新作「ももへの手紙」を観た。興行成績、大丈夫なのかなぁ。本当に客が少なかった。 まず文句を言いたい。7年も作っていたせいで</description>
-    </item>
-    
-    <item>
-      <title>アカデミー賞に関係ありそうでそうでもない最近観た映画</title>
-      <link>http://diary.a3size.com/2012/04/10/</link>
-      <pubDate>Tue, 10 Apr 2012 03:00:01 +0000</pubDate>
-      
-      <guid>http://diary.a3size.com/2012/04/10/</guid>
-      <description>そういや、このところ観た映画の話を書いていなかった。一気に書くよー。 ブラッド･ピット主演「マネーボール」がレンタル開始された。時が経つのは早</description>
-    </item>
-    
-    <item>
-      <title>最近観た映画の話</title>
-      <link>http://diary.a3size.com/2012/02/17/</link>
-      <pubDate>Fri, 17 Feb 2012 03:00:01 +0000</pubDate>
-      
-      <guid>http://diary.a3size.com/2012/02/17/</guid>
-      <description>映画の鑑賞方法を変えた。 これまでは会社員だったので日常に「通勤」という時間が存在していた。通勤、それ自体は単に移動するためだけに存在する非常</description>
-    </item>
-    
-    <item>
-      <title>最近借りてみた邦画</title>
-      <link>http://diary.a3size.com/2011/11/16/</link>
-      <pubDate>Wed, 16 Nov 2011 03:00:01 +0000</pubDate>
-      
-      <guid>http://diary.a3size.com/2011/11/16/</guid>
-      <description>立て込んでいたのにかこつけて日記を書かないでいたら、一ヶ月以上間が開いてしまうだなんて！ ちょっといくらなんでも酷すぎる。というわけでとりあえ</description>
     </item>
     
   </channel>
