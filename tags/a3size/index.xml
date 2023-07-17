@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Wed, 02 Dec 2020 10:04:35 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/tags/a3size/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 08:23:38 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/tags/a3size/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>おひとりさまインスタンスでなんとかしたい</title>
+      <link>https://diary.a3size.com/2023/07/18/</link>
+      <pubDate>Tue, 18 Jul 2023 08:23:38 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2023/07/18/</guid>
+      <description>おい、2022年は一日も日記書いていないぞ。 Twitterで時折ツイートしているから生存確認できているだろうと油断していた。インターネット、</description>
+    </item>
+    
     <item>
       <title>レンタルサーバを使うのをやめた</title>
       <link>https://diary.a3size.com/2020/12/02/</link>
@@ -87,15 +96,6 @@
       
       <guid>https://diary.a3size.com/2014/02/05/</guid>
       <description>もう2月かぁ。確定申告の季節だねぇ。 この数ヶ月で観た映画の中では「ゼロ・グラビティ」と「かぐや姫の物語」が心に刺さりまくった。ストーリーは既</description>
-    </item>
-    
-    <item>
-      <title>日記の設定を微調整</title>
-      <link>https://diary.a3size.com/2011/04/19/</link>
-      <pubDate>Tue, 19 Apr 2011 03:00:01 +0000</pubDate>
-      
-      <guid>https://diary.a3size.com/2011/04/19/</guid>
-      <description>iPhone用（というか横が480pxのデバイス用）のスタイルをCSSに書き加えたり、FeedBurnerを試験的に導入してみたりと、ちょこ</description>
     </item>
     
   </channel>

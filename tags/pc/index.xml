@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Wed, 21 Jul 2021 01:20:14 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/tags/pc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 08:23:38 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/tags/pc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>おひとりさまインスタンスでなんとかしたい</title>
+      <link>https://diary.a3size.com/2023/07/18/</link>
+      <pubDate>Tue, 18 Jul 2023 08:23:38 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2023/07/18/</guid>
+      <description>おい、2022年は一日も日記書いていないぞ。 Twitterで時折ツイートしているから生存確認できているだろうと油断していた。インターネット、</description>
+    </item>
+    
     <item>
       <title>2006年に買ったマウスを静音マウスにする</title>
       <link>https://diary.a3size.com/2021/07/21/</link>
@@ -87,15 +96,6 @@
       
       <guid>https://diary.a3size.com/2016/10/18/</guid>
       <description>ここまでの日記で、そこそこの金額と労力を費やしてOculus RiftによるVR環境を構築したことを書いた。そう、安くないんだ。なので、この買</description>
-    </item>
-    
-    <item>
-      <title>約7年以上ぶりにPCを組み立てた話・終「シミュレーション不足」</title>
-      <link>https://diary.a3size.com/2016/09/28/</link>
-      <pubDate>Wed, 28 Sep 2016 03:00:01 +0000</pubDate>
-      
-      <guid>https://diary.a3size.com/2016/09/28/</guid>
-      <description>前回までのおっさん is Strangeは：Windows 7のインストールは順調に進んだ。 起動したWindows 7にまずはドライバをぶち込んでいく</description>
     </item>
     
   </channel>

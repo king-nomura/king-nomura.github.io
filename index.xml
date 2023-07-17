@@ -7,7 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Wed, 21 Jul 2021 01:20:14 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 08:23:38 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>おひとりさまインスタンスでなんとかしたい</title>
+      <link>https://diary.a3size.com/2023/07/18/</link>
+      <pubDate>Tue, 18 Jul 2023 08:23:38 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2023/07/18/</guid>
+      <description>&lt;p&gt;おい、2022年は一日も日記書いていないぞ。
+Twitterで時折ツイートしているから生存確認できているだろうと油断していた。インターネット、とりわけSNSは不思議なもので、自宅に引きこもっているだけの零細フリーランスなのに社会に繋がっているような錯覚を与える。他人の書き込みを眺めていいねボタンを押すだけで、なにか社会の裾のところにしがみついているような感覚。ところが、昨年後半からそのTwitterの運営が迷走しだした。
+考えてみれば、落書きのようなメモ書きとはいえ、一応は自分の著作物である。SNSというプラットフォームは商品を並べたり配送を依頼する場所であって、工場を貸してもらっているわけではない。ちゃんと自分のドメインで製造して管理して、並べたり配送したりするところから他者にお願いするのが「筋」なのではないか。
+そこで&lt;a href=&#34;https://github.com/mastodon/mastodon&#34;&gt;Mastodon&lt;/a&gt;などでお馴染みの、&lt;a href=&#34;https://ja.wikipedia.org/wiki/ActivityPub&#34;&gt;ActivityPub&lt;/a&gt;に対応したインスタンス（サーバー）を立ち上げることにした。自分の発言を自分のドメインに置くための、いわゆる「おひとりさまインスタンス」である。
+Google Cloud Platform (GCP) の無料枠でe2-microというスペックのVMインスタンス（簡単にいうとレンタルサーバー）を一つもらえる。これで&lt;a href=&#34;https://pleroma.social&#34;&gt;Pleroma&lt;/a&gt;という実装（ActivityPubに対応したソフトウェア）を使ってインスタンスを立ち上げた（&lt;a href=&#34;https://social.a3size.com/@king_nomura&#34;&gt;https://social.a3size.com/@king_nomura&lt;/a&gt;）。これからはこちらを「自分が発言するときの」メインのSNSに出来ないかな、と考えている。PleromaはMastodonよりも軽量らしく、またビューワーとしてこのインスタンスを利用しているのは自分ひとりしかいないので、それほどの負荷にはならなそうだ。また、将来もしも別の実装に取り替えたくなっても、まあデータのインポートエクスポートでなんとかなるんじゃないかなぁ、と楽観的に考えている。
+将来的に&lt;a href=&#34;https://www.threads.net&#34;&gt;Threads&lt;/a&gt;もActivityPubに対応することが発表されているので、そうなればThreads上のユーザーをフォローしやすくなるし、自分のアドレス（ @king_&lt;a href=&#34;mailto:nomura@social.a3size.com&#34;&gt;nomura@social.a3size.com&lt;/a&gt; ）も伝えやすくなるだろう。相手がどこのサービスのインスタンスに所属しているかをいちいち気にしないで良い、というのがスマートで美しい。自分のアドレスが自分のドメインなのも、「ちゃんとしている」感じが嬉しい。
+なので、SNSならなんでもいいという人はとりあえずThreadsにしたらいいんじゃないかな、などと考えている2023年なのでありました。&lt;/p&gt;
+</description>
+    </item>
+    
     <item>
       <title>2006年に買ったマウスを静音マウスにする</title>
       <link>https://diary.a3size.com/2021/07/21/</link>
@@ -225,32 +241,6 @@ Webページをテンプレートから自動生成するサービスとかも�
 &lt;p&gt;翻訳の質にしてもいくつもの選択肢がある。専門チームを作る、外部の翻訳サービスを使う、「機械翻訳」を噛ますだけの場合もあれば、最悪ファンが作った翻訳を使うという選択肢さえあるが、それでも翻訳コストは無料にはならない。なぜなら、わざわざ「英語を日本語に差し替える」作業が発生するからだ。&lt;/p&gt;
 &lt;p&gt;本作、「LiS:BtS」の日本語吹き替えは見事なできばえだが、それでもPC版では音声のズレなど不自然な箇所はいくつかあった。そもそも翻訳は、音声であっても文字であっても、元々の英語と吹き替えの日本語の長さが違うから、単に差し替えるだけではなくて詰めたり伸ばしたりしないとおかしなことになる。ゲームの場合はさらに条件分岐で表現が変わる可能性があるので、作業量が増える。&lt;/p&gt;
 &lt;p&gt;世界の面白いゲームを日本語でプレイしたければ、日本語でプレイしたいユーザーがここにいるぞ！ということを発信しなければならない。さもなくば、頑張って英語を覚えるしかない。ゲームに限らず他のものでもそうなのだが。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>しつこいけれど、また自動化の話</title>
-      <link>https://diary.a3size.com/2018/05/22/</link>
-      <pubDate>Tue, 22 May 2018 01:32:13 +0900</pubDate>
-      
-      <guid>https://diary.a3size.com/2018/05/22/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://diary.a3size.com/2018/04/21/&#34;&gt;以前書いた&lt;/a&gt;ように、この日記はMarkdown形式のテキストファイルを&lt;a href=&#34;https://bitbucket.org/&#34;&gt;BitBucket&lt;/a&gt;のレポジトリにPUSHすると、CIサービスである&lt;a href=&#34;http://www.wercker.com&#34;&gt;Wercker&lt;/a&gt;がWebhookされ、&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt;によってhtmlファイルを生成して、そのhtmlファイルを&lt;a href=&#34;https://pages.github.com&#34;&gt;GitHub Pages&lt;/a&gt;にPUSHしている。&lt;/p&gt;
-&lt;p&gt;その、日記用Markdownファイルを生成するスクリプトはAutomatorで書いた。これから、そのMarkdownファイル(拡張子は.md)を右クリックして「サービス」メニューからgitコミットするスクリプトのテストを行う。&lt;/p&gt;
-&lt;p&gt;まずファイルをaddして、それからcommit。gitコマンド的には、いちどaddされているファイルをもう一回addしても問題ないようなので、何度でも実行可能。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;日記gitのルートディレクトリ&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;currentDate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;date +%FT%T%z &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/\(.\{22\}\)/\1:/&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; f in &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nv&#34;&gt;ext&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;##*.&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/&amp;#34;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$ext&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;md&amp;#34;&lt;/span&gt; -a ! -d &lt;span class=&#34;nv&#34;&gt;$f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt; -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/^date: &amp;#34;[^&amp;#34;]*&amp;#34;$/date: &amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$currentDate&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;/g&amp;#39;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$f&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    /usr/bin/git add &lt;span class=&#34;nv&#34;&gt;$f&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/bin/git commit -m &lt;span class=&#34;s1&#34;&gt;&amp;#39;[add|mod] dayly post&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;日記の中の日付(日記の更新日)はcommitした瞬間の日付に上書きしている。日付フォーマットが&lt;code&gt;date&lt;/code&gt;コマンドのままだとおかしくなる（タイムゾーン「+0900」ではダメで、「+09:00」だとOK）ので強引に変更している、など。強引でよろしくない感じのスクリプトだが、まあとりあえず動く。&lt;/p&gt;
 </description>
     </item>
     

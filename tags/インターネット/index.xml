@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>nomura masayuki</copyright>
-    <lastBuildDate>Wed, 02 Dec 2020 10:04:35 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 08:23:38 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/tags/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>おひとりさまインスタンスでなんとかしたい</title>
+      <link>https://diary.a3size.com/2023/07/18/</link>
+      <pubDate>Tue, 18 Jul 2023 08:23:38 +0900</pubDate>
+      
+      <guid>https://diary.a3size.com/2023/07/18/</guid>
+      <description>おい、2022年は一日も日記書いていないぞ。 Twitterで時折ツイートしているから生存確認できているだろうと油断していた。インターネット、</description>
+    </item>
+    
     <item>
       <title>レンタルサーバを使うのをやめた</title>
       <link>https://diary.a3size.com/2020/12/02/</link>
@@ -87,15 +96,6 @@
       
       <guid>https://diary.a3size.com/2013/04/08/</guid>
       <description>前回の日記と微妙に繋がっている話なのだが、多分繋がっているように書けていないと思うが。 JavaScriptはWebブラウザを使ったリッチなプ</description>
-    </item>
-    
-    <item>
-      <title>RSS終焉の足音が聞こえたのでWebサイトに関する雑感</title>
-      <link>https://diary.a3size.com/2013/04/05/</link>
-      <pubDate>Fri, 05 Apr 2013 03:00:01 +0000</pubDate>
-      
-      <guid>https://diary.a3size.com/2013/04/05/</guid>
-      <description>個人の日記サイトが、ちまちまHTMLを手書きするところから始まって、ブログサービス→SNSへと移行していった経緯を考えてみる。 要は、自分で情</description>
     </item>
     
   </channel>
