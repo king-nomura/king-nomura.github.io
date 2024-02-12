@@ -1,159 +1,22 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.116.0-DEV">
-<meta name="author" content="野村政行">
-
-<title>そろそろ日記をリニューアルしたい（有言不実行） -  野村政行の「堪忍袋の緒を締めろ！」</title>
-
-
-<link rel="amphtml" type="text/html" href="https://diary.a3size.com/amp/2017/08/30/">
-
-<meta property="og:site_name" content=" 野村政行の「堪忍袋の緒を締めろ！」">
-<meta property="og:title" content="そろそろ日記をリニューアルしたい（有言不実行）">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:app_id" content="361503227564013">
-<meta property="og:url" content="https://diary.a3size.com/2017/08/30/">
-
-<meta property="og:image" content="https://diary.a3size.com/images/ogp.png">
-<meta name="twitter:image" content="https://diary.a3size.com/images/ogp.png">
-
-
-
-<meta name="description" content="ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろう...">
-<meta property="og:description" content="ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろう...">
-<meta name="twitter:description" content="ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろう...">
-
-
-
-
-
-<link rel="alternate" type="application/rss+xml" title=" 野村政行の「堪忍袋の緒を締めろ！」" href="https://diary.a3size.com/index.xml" />
-
-
-<link rel="shortcut icon" href="https://diary.a3size.com/images/favicon.ico">
-<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="https://diary.a3size.com/css/main.min.css" media="all">
-<link rel="me" href="https://fedibird.com/@king_nomura">
-<link rel="me" href="https://social.a3size.com/@king_nomura">
-
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="header">
-        <nav class="nav">
-  <a href="https://diary.a3size.com/" class="nav-logo">
-    <img src="https://diary.a3size.com/images/title.svg" alt="野村政行の「堪忍袋の緒を締めろ！」">
-  </a>
-
-  <ul class="nav-links">
-    
-      
-      <li><a href="/tags"><i class="fas fa-tags"></i> Tags</a></li>
-      
-    
-      
-      <li><a href="/about/"><i class="fas fa-info-circle"></i> About</a></li>
-      
-    
-  </ul>
-</nav>
-
-      </header>
-
-
-<main class="content" role="main">
-  <article class="article">
-    
-    <span class="article-date"><i class="fas fa-book"></i> 2017-08-30</span>
-    
-    <h1 class="article-title">そろそろ日記をリニューアルしたい（有言不実行）</h1>
-
-    <div class="article-content">
-      <p>ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろうか、と何度も考えていた。</p>
-<p>で、CMSの入れ替えとなると日記データの互換性が気になるわけだ。試しにネット上で見つけたコンバーターを利用させていただいてWordPressにぶっ込むテストをしてみたら、うーん。おおよそは上手くコンバートできているが、ちょくちょくおかしなところもあり。一つ一つの日記を丁寧に確認作業するとして、えーと投稿数は、……「932」ですか。うへぇ。一番古い日記(このCMSになってから)が2004年3月だもんなぁ。最近は全然日記書いていなかったけれども、チリも積もれば山となる。駄文も折り重ねれば月に届く。そうしてまた今日の分も書いているので、またコンバート対象の日記が増えるわけですよ。<a href="http://www.ginei.jp/">銀河の歴史がまた一ページ</a>ですよ。</p>
-<p>ところで、かなり今更ながら<a href="https://www.docker.com/">Docker</a>は便利だ、という話を、そういえばこの日記に記していなかったと思い唐突に書き留めておく。</p>
-<p>テスト用のdocker-compose.ymlなどいくつかのファイルを準備しておいて、今回みたいに「ちょっとWordPress立ち上げてみよう」と思ったらコピペしてちょいちょいっとすれば、作業用のWordPressがローカルPC内に立ち上がるという。これは便利すぎる。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-YAML" data-lang="YAML"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">db</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">a3size-db</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mysql:latest</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="l">./db:/var/lib/mysql</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l">.env</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">wordpress</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">a3size-web</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="l">db</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">wordpress:latest</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">ports</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="m">8080</span><span class="p">:</span><span class="m">80</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="l">./wp_html:/var/www/html</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="l">./public/wp-content/plugins:/var/www/html/wp-content/plugins</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span>- <span class="l">./public/wp-content/themes/a3size:/var/www/html/wp-content/themes/a3size</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">env_file</span><span class="p">:</span><span class="w"> </span><span class="l">.env</span><span class="w">
-</span></span></span></code></pre></div><p>詳しいことは気が向いたら書くことにする。そもそも今日はこんなことを書きたかったわけではなく、生存報告が目的なので。</p>
-
-    </div>
- 
-    <hr>
-    <ul class="article-taxonomy">
-      
-    
-      
-      <li>
-        <i class="fas fa-tags"></i> <a href="/tags/a3size">a3size</a>
-      </li>
-      
-    </ul>
-  </article>
-
-</main>
-
-
-<ul class="page-links">
-  <li>
-    
-    <a href="https://diary.a3size.com/2017/05/31/" aria-label="Previous"><span aria-hidden="true"><i class="fas fa-angle-left"></i> 前へ</span></a>
-    
-  </li>
-  <li>
-    
-    <a href="https://diary.a3size.com/2018/01/04/" aria-label="Next"><span aria-hidden="true">次へ <i class="fas fa-angle-right"></i></span></a>
-    
-  </li>
-</ul>
-
-      <footer class="footer">
-        <ul class="footer-links">
-          
-            
-            <li><a href="https://social.a3size.com/@king_nomura" target="_blank" rel="noopener"> ActivityPub</a></li>
-            
-          
-            
-            <li><a href="https://diary.a3size.com/index.xml" type="application/rss+xml" target="_blank"><i class="fas fa-rss"></i> RSSフィード</a></li>
-            
-          
-            
-            <li><a href="https://github.com/king-nomura" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
-            
-          
-            
-            <li><a href="https://www.facebook.com/nomura.masayuki" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-            
-          
-        </ul>
-        <p><small class="footer-copyright">author: nomura masayuki</small></p>
-      </footer>
-
-    </div>
-
-  </body>
-</html>
-
+<!doctype html><html lang=ja><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.122.0"><meta name=author content="野村政行"><title>そろそろ日記をリニューアルしたい（有言不実行） - 野村政行の「堪忍袋の緒を締めろ！」</title>
+<link rel=amphtml type=text/html href=https://diary.a3size.com/amp/2017/08/30/><meta property="og:site_name" content=" 野村政行の「堪忍袋の緒を締めろ！」"><meta property="og:title" content="そろそろ日記をリニューアルしたい（有言不実行）"><meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:app_id" content="361503227564013"><meta property="og:url" content="https://diary.a3size.com/2017/08/30/"><meta property="og:image" content="https://diary.a3size.com/images/ogp.png"><meta name=twitter:image content="https://diary.a3size.com/images/ogp.png"><meta name=description content="ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろう..."><meta property="og:description" content="ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろう..."><meta name=twitter:description content="ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろう..."><link rel=alternate type=application/rss+xml title=" 野村政行の「堪忍袋の緒を締めろ！」" href=https://diary.a3size.com/index.xml><link rel="shortcut icon" href=https://diary.a3size.com/images/favicon.ico><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css><link rel=stylesheet href=https://diary.a3size.com/css/main.min.css media=all><link rel=me href=https://fedibird.com/@king_nomura><link rel=me href=https://social.a3size.com/@king_nomura></head><body><div class=wrapper><header class=header><nav class=nav><a href=https://diary.a3size.com/ class=nav-logo><img src=https://diary.a3size.com/images/title.svg alt=野村政行の「堪忍袋の緒を締めろ！」></a><ul class=nav-links><li><a href=/tags><i class="fas fa-tags"></i> Tags</a></li><li><a href=/about/><i class="fas fa-info-circle"></i> About</a></li></ul></nav></header><main class=content role=main><article class=article><span class=article-date><i class="fas fa-book"></i> 2017-08-30</span><h1 class=article-title>そろそろ日記をリニューアルしたい（有言不実行）</h1><div class=article-content><p>ここ数年、この日記のシステムを別のCMS（簡単にいえば日記を書くプログラムのこと）、例えばWordPressなどに引っ越したらどうなるだろうか、と何度も考えていた。</p><p>で、CMSの入れ替えとなると日記データの互換性が気になるわけだ。試しにネット上で見つけたコンバーターを利用させていただいてWordPressにぶっ込むテストをしてみたら、うーん。おおよそは上手くコンバートできているが、ちょくちょくおかしなところもあり。一つ一つの日記を丁寧に確認作業するとして、えーと投稿数は、……「932」ですか。うへぇ。一番古い日記(このCMSになってから)が2004年3月だもんなぁ。最近は全然日記書いていなかったけれども、チリも積もれば山となる。駄文も折り重ねれば月に届く。そうしてまた今日の分も書いているので、またコンバート対象の日記が増えるわけですよ。<a href=http://www.ginei.jp/>銀河の歴史がまた一ページ</a>ですよ。</p><p>ところで、かなり今更ながら<a href=https://www.docker.com/>Docker</a>は便利だ、という話を、そういえばこの日記に記していなかったと思い唐突に書き留めておく。</p><p>テスト用のdocker-compose.ymlなどいくつかのファイルを準備しておいて、今回みたいに「ちょっとWordPress立ち上げてみよう」と思ったらコピペしてちょいちょいっとすれば、作業用のWordPressがローカルPC内に立ち上がるという。これは便利すぎる。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-YAML data-lang=YAML><span class=line><span class=cl><span class=nt>version</span><span class=p>:</span><span class=w> </span><span class=s1>&#39;3&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>services</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>db</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>container_name</span><span class=p>:</span><span class=w> </span><span class=l>a3size-db</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>image</span><span class=p>:</span><span class=w> </span><span class=l>mysql:latest</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>volumes</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=l>./db:/var/lib/mysql</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>env_file</span><span class=p>:</span><span class=w> </span><span class=l>.env</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>wordpress</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>container_name</span><span class=p>:</span><span class=w> </span><span class=l>a3size-web</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>depends_on</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=l>db</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>image</span><span class=p>:</span><span class=w> </span><span class=l>wordpress:latest</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>ports</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=m>8080</span><span class=p>:</span><span class=m>80</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>volumes</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=l>./wp_html:/var/www/html</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=l>./public/wp-content/plugins:/var/www/html/wp-content/plugins</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span>- <span class=l>./public/wp-content/themes/a3size:/var/www/html/wp-content/themes/a3size</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>env_file</span><span class=p>:</span><span class=w> </span><span class=l>.env</span><span class=w>
+</span></span></span></code></pre></div><p>詳しいことは気が向いたら書くことにする。そもそも今日はこんなことを書きたかったわけではなく、生存報告が目的なので。</p></div><hr><ul class=article-taxonomy><li><i class="fas fa-tags"></i> <a href=/tags/a3size>a3size</a></li></ul></article></main><ul class=page-links><li><a href=https://diary.a3size.com/2017/05/31/ aria-label=Previous><span aria-hidden=true><i class="fas fa-angle-left"></i> 前へ</span></a></li><li><a href=https://diary.a3size.com/2018/01/04/ aria-label=Next><span aria-hidden=true>次へ <i class="fas fa-angle-right"></i></span></a></li></ul><footer class=footer><ul class=footer-links><li><a href=https://social.a3size.com/@king_nomura target=_blank rel=noopener>ActivityPub</a></li><li><a href=https://diary.a3size.com/index.xml type=application/rss+xml target=_blank><i class="fas fa-rss"></i> RSSフィード</a></li><li><a href=https://github.com/king-nomura target=_blank rel=noopener><i class="fab fa-github"></i> GitHub</a></li><li><a href=https://www.facebook.com/nomura.masayuki target=_blank rel=noopener><i class="fab fa-facebook-f"></i> Facebook</a></li></ul><p><small class=footer-copyright>author: nomura masayuki</small></p></footer></div></body></html>
