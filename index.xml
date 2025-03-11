@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>野村政行の「堪忍袋の緒を締めろ！」</title><link>https://diary.a3size.com/</link><description>Recent content on 野村政行の「堪忍袋の緒を締めろ！」</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>nomura masayuki</copyright><lastBuildDate>Fri, 03 May 2024 17:12:45 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml"/><item><title>「文章のどこかに『生成AI』を入れてください」</title><link>https://diary.a3size.com/2024/05/03/</link><pubDate>Fri, 03 May 2024 17:12:45 +0900</pubDate><guid>https://diary.a3size.com/2024/05/03/</guid><description>&lt;p>すごいなぁ、とは思うんですよ。生成AI。文章にしても、絵にしても、音楽にしても。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>野村政行の「堪忍袋の緒を締めろ！」</title><link>https://diary.a3size.com/</link><description>Recent content on 野村政行の「堪忍袋の緒を締めろ！」</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>nomura masayuki</copyright><lastBuildDate>Tue, 11 Mar 2025 08:08:03 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Obsidianで日記サイトを構築して、ついでにAIと戯れる</title><link>https://diary.a3size.com/2025/03/11/</link><pubDate>Tue, 11 Mar 2025 08:08:03 +0900</pubDate><guid>https://diary.a3size.com/2025/03/11/</guid><description>&lt;p>この日記はHugoで生成している。Hugoの書式はMarkdownなので、テキストエディタでも書くことはできるがリッチエディタっぽいツールを使うとさらに便利になる。そこで&lt;a href="https://obsidian.md">Obsidian&lt;/a>だ。Obsidianはオープンソースのメモアプリで、拡張性が魅力だが、まずは基本機能の「デイリーノート」をそのまんまHugoのフォーマットに合わせて使うこととする。
+Obsidianは「保管庫」と呼ばれるフォルダを指定してその中にある .md ファイルのひとつひとつをメモとして扱う。フォルダやファイルの構成をHugoのcontentディレクトリのままにできるので、そのまま読み書きできる。
+例えば以下のようなテンプレートをデイリーノートのテンプレートとして指定すると、いきなりHugoのドラフトページを書き始められる。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">---
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">title: titleを入れる
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">date: {{date:YYYY-MM-DD}}T{{time:HH:mm:ss}}+09:00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">url: {{date:YYYY/MM/DD/}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tags:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">-&lt;/span> PC
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">draft: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">本文を入れる
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="書き終わったらgitにあげる">書き終わったらGitにあげる&lt;/h2>
+&lt;p>拡張機能「git」を導入する。これで、書いた日記をGitHubにpushできるはずだ。
+Obsidianは保管庫に指定したフォルダに隠しフォルダを作って諸々の設定を保存している。なので、&lt;code>.gitignore&lt;/code>　でそのディレクトリを除外しておくことにする。&lt;/p>
+&lt;pre tabindex="0">&lt;code>.obsidian
+&lt;/code>&lt;/pre>&lt;p>Git Source Panelを表示すると、この日記ファイルがまだstageされていないことがわかる。ここから諸々の操作が可能なようだ。デフォルトのコミットメッセージは &lt;code>vault backup: {{date}}&lt;/code> となっている。ここにも変数使えるのね。&lt;/p>
+&lt;h2 id="さらにaiを導入してみる">さらにAIを導入してみる&lt;/h2>
+&lt;p>いまナウで最先端なAIというやつを入れてみる。
+近頃はコードを書くときにはGitHub Copilotをメインで使っているが、日記はコードじゃないので使わない。ちょっとしたコードを書いたり雑多な質問にはChat GPTを使っているがこれはWebベースで使っているし自分は課金していないのでAPIとして組み込むには向かない。ここでは拡張機能「copilot」を使ってGoogle Gemini APIの無料枠を導入してみることにする。
+AIには日記の誤字・脱字を直してもらったり、読みやすいように校正してもらいたい。だが、日記のような砕けた文章を校正してくれるだろうか。「自分っぽい書き方」をしているところとの相性が気になる。&lt;/p>
+&lt;p>よーし、校正をお願いしてみるか。chatウインドウから&lt;/p>
+&lt;pre tabindex="0">&lt;code>この記事の校正をお願いします。誤字や脱字、読みづらいところなどがあれば指摘してください
+&lt;/code>&lt;/pre>&lt;p>……、お願いします。&lt;/p>
+&lt;pre tabindex="0">&lt;code>校正をご希望の記事が提供されていません。
+&lt;/code>&lt;/pre>&lt;p>……、はい。開いているページを「{activeNote}」と書いて指定しないといかんのね。&lt;/p>
+&lt;pre tabindex="0">&lt;code>{activeNote}の校正をお願いします。誤字や脱字、読みづらいところなどがあれば指摘してください
+&lt;/code>&lt;/pre>&lt;p>……、おお。割と平たい文章になるように言い回しを提案してくれるじゃないか。ただ、なんというか、いわゆる「いかがでしたかブログ」っぽい文章にどんどん直されていく印象もあり。この校正そのまんまは受け入れ難いなぁ。&lt;/p>
+&lt;pre tabindex="0">&lt;code>- 「いまナウで最先端なAIというやつを入れてみる。」→ 「最新のAIを導入してみます。」
+&lt;/code>&lt;/pre>&lt;p>これとか受け入れ難い。ナウで最先端なほうが良くないですか？ダメですか？そうですか。&lt;/p>
+&lt;p>というわけで、今日の日記はここまで書いたObsidianの使い方を実験するための日記でした。最後に今日の日記を要約してください、AIさん。&lt;/p>
+&lt;pre tabindex="0">&lt;code>この日記は、Hugoで生成している日記サイトの作成に、Obsidianというメモアプリを活用する試みについて書かれています。Obsidianのデイリーノート機能をHugoのフォーマットに合わせて使用し、日記を書き終わった後はObsidianの拡張機能「git」を使ってGitHubにpushする方法を試しています。さらに、Google Gemini APIを導入してAIによる校正を試していますが、AIによる校正は文章を平坦にし、「いかがでしたかブログ」のような印象を与えるため、全面的には受け入れられないと感じています。全体として、Obsidianの様々な機能を活用して日記サイトを構築する実験的な内容となっています。
+&lt;/code>&lt;/pre>&lt;p>あ、あなたの文体を否定的に書いた部分をそのまま要約に採用しましたね……。最後にちくりと人間側を腐しておきたいと……。&lt;/p></description></item><item><title>「文章のどこかに『生成AI』を入れてください」</title><link>https://diary.a3size.com/2024/05/03/</link><pubDate>Fri, 03 May 2024 17:12:45 +0900</pubDate><guid>https://diary.a3size.com/2024/05/03/</guid><description>&lt;p>すごいなぁ、とは思うんですよ。生成AI。文章にしても、絵にしても、音楽にしても。&lt;/p>
 &lt;p>自分だってAIをまったく使っていないわけではない。いろんなプログラミング支援AIを試してみて、今はGitHub Copilotに落ち着きそうだ。&lt;/p>
 &lt;p>プログラミング支援AIは、そのサジェストの出し方、手の差し伸べ方が非常に上手い。冗長な内容の入力途中で残りを補完してくれる、というものならこれまでもあった。最近は、変数名の付け方がちゃんとしているとその単語の意味まで理解して補完してくれる。&lt;/p>
 &lt;p>この間ですね、&lt;code>email&lt;/code>で&lt;code>validation&lt;/code>という名前の関数を使ったif文を書いていたら、変数&lt;code>message&lt;/code>を作ろうとしたらそこに&lt;code>&amp;quot;メールアドレスが違います&amp;quot;&lt;/code>を代入してきたんですよ。へえ、AI君やるじゃない、と思うでしょ。それで、その&lt;code>message&lt;/code>を仮想配列に変えて&lt;code>&amp;quot;ja&amp;quot;&lt;/code>というキーをつけたら、今度はAIがその次の行に&lt;code>&amp;quot;en&amp;quot;&lt;/code>をキーにして&lt;code>&amp;quot;email address is incorrect.&amp;quot;&lt;/code>って書いてきたんですよ、これにはまぁ驚いたねぇ、頼もしいわぁAI先輩かっこいいっす。&lt;/p>
@@ -18,7 +50,7 @@
 &lt;p>なので、SNSならなんでもいいという人はとりあえずThreadsにしたらいいんじゃないかな、などと考えている2023年なのでありました。&lt;/p></description></item><item><title>2006年に買ったマウスを静音マウスにする</title><link>https://diary.a3size.com/2021/07/21/</link><pubDate>Wed, 21 Jul 2021 01:20:14 +0900</pubDate><guid>https://diary.a3size.com/2021/07/21/</guid><description>&lt;p>普段、Macではトラックパッド（Magic Trackpad 2）を、主にゲーム（とかブラウザ確認とか）に使っているWindowsマシンではマウスを使っている。このWindowsのマウスは、LogitechのMX Revolutionで、2006年に買ったものだ&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>。しばらくWindows機を立ち上げていなかったのでブランクはありつつも、もう15年も使ってきたマウスだ。&lt;/p>
 &lt;p>Magic Trackpad 2のクリック音は「コツッ」という少しくぐもった音色で（わざとそういう音を鳴らしているところが凄い）、MX Revolutionのクリック音は「カチッ」といういかにもなマイクロスイッチの音色だ。この、「カチッ」という音は、いろんな音がなっている中でなら気にならないが、比較的高い音でキンキン鳴るように聞こえて、ちょっと「カチカチカチカチ」と連打するとあまり気分が良い音とは思えなくなってきた。そこで、思い切ってスイッチを換装することにした。
 こちらがスイッチ換装作業の様子。元々ついていたスイッチを外して、新しいスイッチをつけたところだ。&lt;/p>
-&lt;img src="https://diary.a3size.com/files/2021/07/mx-revolution-mod.jpg" alt="MX Revolutionのスイッチを換装した" width="756" height="876" />
+&lt;p>&lt;amp-img src="https://diary.a3size.com/files/2021/07/mx-revolution-mod.jpg" alt="MX Revolutionのスイッチを換装した" width="756" height="876" layout="responsive">&lt;/amp-img>&lt;/p>
 &lt;p>静音マウス改造は実に様々な方がチャレンジされていて、その多くの方が静音スイッチの部品として「Kailh ミュートマイクロスイッチ」などの名前で検索すると出てくる6mm × 6mm × 7.3mmのマイクロスイッチを使用している。なるほど、これをMX Revolutionに乗せてしまえばいいのだな？とやや乱暴に思いついて、それを実行した。写真を見て貰えばわかるが、左下側に転がっているのがもともとついていた3本足の長方形スイッチで、付け替えた静音タイプのスイッチは正方形。うっかりするとクリックする部分がうまく噛み合わなくて押せなくなってしまうのだが、あまり深く考えずに実行してしまった。&lt;/p>
 &lt;p>ちなみに、このKailhのマイクロスイッチ、Amazonなどでも買えるのだがmercariで出品されているものを購入すると1個あたり100円未満で買えるというので、初めてmercariを使った。次に使うのは何年後になるだろうか。&lt;/p>
 &lt;p>実際の換装作業だが、知識のある方なら写真から想像つくと思うが、元々あったスイッチを取るためにハンダを吸い取るのに大変手間取ってしまった。吸い取り器じゃなくて吸い取り線で頑張ったんだぜ、これ。その結果、基盤パターンがもげてしまったので仕方なくリード線で配線を繋ぎ直した（マウス左ボタンの付近の黄色いリード線がそれ）。この場所以外にも、写真には写っていないが「マウスを持ったとき手前にくる側」にも基盤と部品がハンダ付けされている部分があり、そもそも先にそこを外さないとこのスイッチ換装の作業自体ができない構造になっているが、これもなかなか取れなかった。体感では、全体の作業の合わせておよそ2/3くらいをハンダを取るのに費やした気がする。&lt;/p>
@@ -110,15 +142,8 @@
 &lt;p>雑誌が電子になることで、物理的な紙の移動がなくなり、もろもろ単純に楽チンになった。発売日に天気やカバンの大きさを気にして外出する必要が無くなった。読んだ後に雑誌を積んでおく場所を少し空けることができた（まだ嫁サマが読んでいる女性向けマンガ雑誌がデジタルに移行していない）。そして、読んだ紙を捨てる（廃品回収に出す）という環境に対してやや後ろめたい行為をしなくてよくなった。捨てるためにビニール紐で縛ったりするのも面倒な上に「この紐はなんのために？」とか考えだすと色々とモヤモヤしてしまうものだが、それが無くなった。紙には紙の良さがあるし読みやすさもあると理解しているつもりだが、それを上回る心の楽さを感じている。&lt;/p>
 &lt;p>本当は単行本や書籍もなるべく電子で買いたいのだが、それでも「これは紙で持っておきたい」と思う書籍もままあって、まだまだ書店という業態には潰れないでいてほしいなぁと願っている。もっともっと店舗数は少なくなってしまうんだろうが。&lt;/p>
 &lt;p>さて、この他にも音楽などのサブスクリプションの話やら、そこからさらにキャッシュレスの話を書こうかと思ったんだが、今日はなんだか「7payの話」でもちきりなので、もうお腹いっぱい。&lt;/p></description></item><item><title>GlideというPWAを作るサービスで遊んでみる</title><link>https://diary.a3size.com/2019/04/11/</link><pubDate>Thu, 11 Apr 2019 09:06:24 +0900</pubDate><guid>https://diary.a3size.com/2019/04/11/</guid><description>&lt;p>生きています（定型文）。&lt;/p>
-&lt;p>ネットサーフィンしていたら「&lt;a href="https://www.glideapps.com">Glide&lt;/a> 」というサービスを見つけた。GoogleスプレッドシートからPWA(Progressive Web Apps)を生成できるというので、試しに4年前から書いている&lt;a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRpc5DX-Aw_6eeZjT3SFNZBCz7tVNKTpFox77lW_kG6-2KQHiQY0erbuITxNp0_DopC3KJ00qJuo1xz/pubhtml?gid=2109559652&amp;single=true">「もう一度観たい映画」のスプレッドシート&lt;/a>をPWA化してみた。
+&lt;p>ネットサーフィンしていたら「&lt;a href="https://www.glideapps.com">Glide&lt;/a> 」というサービスを見つけた。GoogleスプレッドシートからPWA(Progressive Web Apps)を生成できるというので、試しに4年前から書いている&lt;a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRpc5DX-Aw_6eeZjT3SFNZBCz7tVNKTpFox77lW_kG6-2KQHiQY0erbuITxNp0_DopC3KJ00qJuo1xz/pubhtml?gid=2109559652&amp;amp;single=true">「もう一度観たい映画」のスプレッドシート&lt;/a>をPWA化してみた。
 それがこちら：&lt;a href="https://go.glideapps.com/play/QCfXmev81rT0GeuwHc2C">もう一度観たい映画&lt;/a>&lt;/p>
 &lt;p>正味10分くらいでこれくらいの出来。すごいなぁ。デザインとかは全然作り込めないんだが、とにかく楽チンすぎる。
 Webページをテンプレートから自動生成するサービスとかも最近は良い出来なので、趣味的、同人的なものなら一からアプリ作らずにこういうサービスを使ってしまった方がいいんだろうな。
-例えば地元のグルメマップ、商店街アプリとかに使う。スプレッドシートのほうの工夫次第で（Googleフォームを組み合わせるなど）、更新作業も楽にしたりクーポン発行とかもできるんじゃないかな。&lt;/p></description></item><item><title>2018年は映画を観ていない</title><link>https://diary.a3size.com/2019/01/02/</link><pubDate>Wed, 02 Jan 2019 22:33:45 +0900</pubDate><guid>https://diary.a3size.com/2019/01/02/</guid><description>&lt;p>気づいたらまたしても日記書いていなかったじゃないか。しかも去年の映画視聴記録もまとめていないじゃないか。&lt;/p>
-&lt;p>というわけで、急いで作った：&lt;a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRpc5DX-Aw_6eeZjT3SFNZBCz7tVNKTpFox77lW_kG6-2KQHiQY0erbuITxNp0_DopC3KJ00qJuo1xz/pubhtml?gid=2109559652&amp;single=true" target="_blank">もう一度観たい映画2018&lt;/a>&lt;/p>
-&lt;p>いつものように、もう一度観たいかどうかという観点で順番をつけているが、大まかな雰囲気で並べているんだなぁと思ってもらいたい。&lt;/p>
-&lt;p>そんなことより、圧倒的に2018年は観ている本数が少ない。Amazonプライムでもっぱらドラマシリーズものに手を出してしまっているせいで、自宅でもあまり映画は観ていない。
-観たかった映画とうまくタイミングが合わなかっただけではなく、観たい映画自体がちょっと少なかった印象がある。ここ数年見逃していた作品や、ルーツ的なものや関連作品として古い作品への興味が高まっているので、本当はレンタルなどでもっとそういう作品を見るべきなのだろう。&lt;/p>
-&lt;p>例えば、今更ながら「ロッキー」を観た。さすが、面白いよね、「ロッキー」。さすがに古い作品だし低予算ならではの淡白さもありながら、これが若者たちに受け入れられた時代背景なども含めて興味深い作品だと思う。&lt;/p>
-&lt;p>というわけで2019年はひょっとすると古い作品をたくさん観るかもしれない。&lt;/p>
-&lt;p>……いやまてよ、やっぱりたくさんは観ないかもしれない。今、Amazonプライムでずっと「ゲーム・オブ・スローンズ」を観ているので、それが観終わるまではちょっと……。&lt;/p></description></item></channel></rss>
+例えば地元のグルメマップ、商店街アプリとかに使う。スプレッドシートのほうの工夫次第で（Googleフォームを組み合わせるなど）、更新作業も楽にしたりクーポン発行とかもできるんじゃないかな。&lt;/p></description></item></channel></rss>
