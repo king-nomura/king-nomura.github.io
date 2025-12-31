@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>野村政行の「堪忍袋の緒を締めろ！」</title><link>https://diary.a3size.com/</link><description>Recent content on 野村政行の「堪忍袋の緒を締めろ！」</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>nomura masayuki</copyright><lastBuildDate>Fri, 25 Apr 2025 08:55:40 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml"/><item><title>AIでiOSアプリを作ってリリースする</title><link>https://diary.a3size.com/2025/04/25/</link><pubDate>Fri, 25 Apr 2025 08:55:40 +0900</pubDate><guid>https://diary.a3size.com/2025/04/25/</guid><description>&lt;h2 id="2025426追記"&gt;(2025.4.26追記)&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>野村政行の「堪忍袋の緒を締めろ！」</title><link>https://diary.a3size.com/</link><description>Recent content on 野村政行の「堪忍袋の緒を締めろ！」</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>nomura masayuki</copyright><lastBuildDate>Wed, 31 Dec 2025 17:51:00 +0900</lastBuildDate><atom:link href="https://diary.a3size.com/index.xml" rel="self" type="application/rss+xml"/><item><title>ActivityPubへの投稿を静的HTMLにも保存しておく</title><link>https://diary.a3size.com/2025/12/31/</link><pubDate>Wed, 31 Dec 2025 17:51:00 +0900</pubDate><guid>https://diary.a3size.com/2025/12/31/</guid><description>&lt;p&gt;巨大な企業SNSからActivityPubに移住して早3年が過ぎた。完全に移住したわけではなく、世間一般の情報を得るためには巨大な企業SNSの検索機能を使わせてもらっているし、ググればそちらのSNSの投稿はヒットするので、そういう活用の仕方はさせてもらっている。自分の投稿をそちらにアップしなくなっただけだ。
+で、ActivityPubのほうにはそれなりに投稿しているのだが、この投稿はGoogleなどの検索エンジンからはクロールできない。ActivityPubのフロントエンドに&lt;a href="https://soapbox.pub"&gt;Soapbox&lt;/a&gt;というものを使っているのだが、これはsingle-page application (SPA)、つまりjavaScriptがその都度ActivityPub APIから情報を取得して画面に表示しているため、検索エンジンのBotがクロールしようと思ってもこの機能が動作しないため投稿の中身がクロールできない。
+どうしようもないゴミ発言を拾われないのはいいことではあるが、流石に寂しい。
+どうしようもないゴミ発言も自分で責任をもって管理したい。そのために自分のドメインで公開しているのだから、検索エンジンくんが欲しいというなら、まあ、提供してもいい。&lt;/p&gt;
+&lt;p&gt;というかですね。&lt;/p&gt;
+&lt;p&gt;検索エンジン様に拾っていただかないと、世間からみて生きているかどうかわからない、ということに気づきました。
+ごめんなさい。生きています。ゴミ発言ですが拾ってください。&lt;/p&gt;
+&lt;p&gt;そこで、ActivityPubのRSS feedや、outbox を読み取って静的HTMLとして出力するプログラムを開発した。
+&lt;a href="https://github.com/king-nomura/feedToHtml"&gt;https://github.com/king-nomura/feedToHtml&lt;/a&gt;
+Node.jsで動くのでローカルでも、サーバでもわりとどこでも動かせるんじゃないかと思う。
+このプログラムの開発にはがっつりと&lt;a href="https://claude.ai/code"&gt;Claude Code&lt;/a&gt;を使った。自分ひとりで作ったものではないのでREADMEにもちゃんと記載した。いや、記載させた。自分で自分のことを書くの恥ずかしかったろ、Claude Code君よ。&lt;/p&gt;
+&lt;p&gt;とりあえず出力結果はこちら。 → &lt;a href="https://social.a3size.com/static/2025/2025-12.html"&gt;@king_nomuraの投稿&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;今年はここまで。&lt;/p&gt;</description></item><item><title>AIでiOSアプリを作ってリリースする</title><link>https://diary.a3size.com/2025/04/25/</link><pubDate>Fri, 25 Apr 2025 08:55:40 +0900</pubDate><guid>https://diary.a3size.com/2025/04/25/</guid><description>&lt;h2 id="2025426追記"&gt;(2025.4.26追記)&lt;/h2&gt;
 &lt;p&gt;「Vibe Coding」では、コードを人間が読んではいけないそうです。あくまでAIが作った成果を楽しむもので、どう実装したか確認したらそれはただの「コーディングアシスト」だから、だそうで。ということは自分はVibe Coding界隈とは相入れないんだな、というのを確信しました。ごめんなさい。&lt;/p&gt;
 &lt;h2 id="きっかけ"&gt;きっかけ&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://github.blog/news-insights/product-news/github-copilot-the-agent-awakens/"&gt;今年の2月にGitHub Copilotにエージェントモードが追加された&lt;/a&gt;。
@@ -161,13 +173,4 @@ AIには日記の誤字・脱字を直してもらったり、読みやすいよ
 &lt;p&gt;データをオンラインストレージにおくにはセキュリティの不安がある。そもそも契約上オンラインストレージが利用できない案件もある。とはいえ、例えば「念のため取っておいているデータ」を外付けストレージに入れて持ち歩いたら、今度はそのストレージの故障や紛失が怖い。そう考えると下手なモバイルストレージよりも適正に運用できているオンラインストレージのほうが安全じゃないだろうか。&lt;/p&gt;
 &lt;p&gt;そんあわけで、今更ながらG Suiteの契約をすることにした。これまで無料のGoogleドライブは使っていたが、無料サービスは有料サービスに比べて、サービス運営側の匙加減でデータを消されてしまう（アカウントを凍結されてしまう）可能性があるし、そもそも15GBの容量ではデータのバックアップ先として足りない。そこで、G Suiteだ。&lt;/p&gt;
 &lt;p&gt;証明書やパスワード、ログのようなファイルは例外として、移動できそうなファイルはオンラインストレージに退避させることができるのではないか、と考えてぼちぼちファイルを移動させている。手始めにプライベートな実験ファイルなどから。それでも結構な量のデータがストレージに入ったままになっていてびっくりした。2000年のファイルって、何に使うんだよ。このインターネット老人会め。&lt;/p&gt;
-&lt;p&gt;そんなこんなで何もしないのに比べて40〜50GB程度は空き容量が増えた。ほかにもシステム関連のごみファイルが、何回もOSをアップデートしたりマシンを引っ越したりしているせいで大量にたまっているような気がするが、これを消すにはOSのクリーンインストールがひつようということで、流石にそれはめんどくさい。ひとまずジリ貧な状態乗り切ったからヨシ。&lt;/p&gt;</description></item><item><title>ハードウェアとサブスクリプション</title><link>https://diary.a3size.com/2019/07/05/</link><pubDate>Fri, 05 Jul 2019 00:09:32 +0900</pubDate><guid>https://diary.a3size.com/2019/07/05/</guid><description>&lt;p&gt;梅雨が梅雨らしいジメジメ具合で、たまに外に出ようと思うと雨が降っている、とさえ思えてしまう。ちょっと大きめの荷物を運びたいのに、運べない。&lt;/p&gt;
-&lt;p&gt;ちなみに荷物とは「Oculus Rift」と書いてある大きな箱2つのことで、つまりOculus Rift Sを買ったことで、初代のOculus Riftのほうはこのまま置いておいても仕舞っておいても場所を取って邪魔になるので、人に譲ることにしたのだ。&lt;/p&gt;
-&lt;p&gt;ハードウェアが場所を取ってしまうのは仕方がない。所有権の移動自体は手続きの問題だが、このハードウェアを渡すには、この物質を運ぶしかない。&lt;/p&gt;
-&lt;p&gt;いかんなぁ。このままでは家の中がモノで埋まってしまう。空間を確保せねば。圧縮せねば。&lt;/p&gt;
-&lt;p&gt;で、やはり一番圧縮しやすいのは「情報」だ。まずは書籍だ。とくに雑誌は、定期的に本屋から我が家に移動し、定期的に廃品回収に回される。中に書かれている情報は変化しないのに、紙だけが移動している。&lt;/p&gt;
-&lt;p&gt;そこでサブスクリプションである。野村が最近読んでいる雑誌は2冊だった。ちょっとした米袋のような質量の月刊アフタヌーンについては、 &lt;a href="https://comic-days.com/"&gt;コミックDAYS&lt;/a&gt; を契約することで我が家に運ぶ必要が無くなってとても嬉しかった。もう一冊、ヤングキングアワーズを購読していたのだが、これはそもそも売っている書店が少ないのに加えて電子版もなかなか見当たらない。唯一、発売日から10日遅れて &lt;a href="https://magazinewalker.jp/"&gt;マガジン WALKER&lt;/a&gt; で読めることを知ったので、これも先月より契約することにした。&lt;/p&gt;
-&lt;p&gt;どちらのサブスクリプションも、実は月額がそれぞれ目的の雑誌一冊分の代金に近い。つまり、金額だけを見ればすでにお得。マガジンWALKERはアップ日が遅いし、他に読みたい雑誌がないし、インターフェースも悪いのだが、若干金額がお得なので我慢できそうだ。コミックDAYSのほうは発売日＝アップ日（しかも午前0時）だし、うっかり他誌もファンになってしまったし、なによりあの凶器のような質量を持ち上げずに読めるので十分にお得だ。&lt;/p&gt;
-&lt;p&gt;雑誌が電子になることで、物理的な紙の移動がなくなり、もろもろ単純に楽チンになった。発売日に天気やカバンの大きさを気にして外出する必要が無くなった。読んだ後に雑誌を積んでおく場所を少し空けることができた（まだ嫁サマが読んでいる女性向けマンガ雑誌がデジタルに移行していない）。そして、読んだ紙を捨てる（廃品回収に出す）という環境に対してやや後ろめたい行為をしなくてよくなった。捨てるためにビニール紐で縛ったりするのも面倒な上に「この紐はなんのために？」とか考えだすと色々とモヤモヤしてしまうものだが、それが無くなった。紙には紙の良さがあるし読みやすさもあると理解しているつもりだが、それを上回る心の楽さを感じている。&lt;/p&gt;
-&lt;p&gt;本当は単行本や書籍もなるべく電子で買いたいのだが、それでも「これは紙で持っておきたい」と思う書籍もままあって、まだまだ書店という業態には潰れないでいてほしいなぁと願っている。もっともっと店舗数は少なくなってしまうんだろうが。&lt;/p&gt;
-&lt;p&gt;さて、この他にも音楽などのサブスクリプションの話やら、そこからさらにキャッシュレスの話を書こうかと思ったんだが、今日はなんだか「7payの話」でもちきりなので、もうお腹いっぱい。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;そんなこんなで何もしないのに比べて40〜50GB程度は空き容量が増えた。ほかにもシステム関連のごみファイルが、何回もOSをアップデートしたりマシンを引っ越したりしているせいで大量にたまっているような気がするが、これを消すにはOSのクリーンインストールがひつようということで、流石にそれはめんどくさい。ひとまずジリ貧な状態乗り切ったからヨシ。&lt;/p&gt;</description></item></channel></rss>
